@@ -1,0 +1,69 @@
+{
+ "A_first100_truncation": {
+  "per_year": {
+   "2015": {
+    "n_sampled": 40,
+    "share_cbc_gt_100": 0.45,
+    "median_cbc": 95.5,
+    "max_cbc": 1853
+   },
+   "2016": {
+    "n_sampled": 40,
+    "share_cbc_gt_100": 0.4,
+    "median_cbc": 73.5,
+    "max_cbc": 1787
+   },
+   "2017": {
+    "n_sampled": 40,
+    "share_cbc_gt_100": 0.5,
+    "median_cbc": 104.0,
+    "max_cbc": 593
+   },
+   "2018": {
+    "n_sampled": 40,
+    "share_cbc_gt_100": 0.4,
+    "median_cbc": 77.5,
+    "max_cbc": 765
+   },
+   "2019": {
+    "n_sampled": 40,
+    "share_cbc_gt_100": 0.35,
+    "median_cbc": 77.0,
+    "max_cbc": 466
+   },
+   "2020": {
+    "n_sampled": 40,
+    "share_cbc_gt_100": 0.4,
+    "median_cbc": 65.0,
+    "max_cbc": 739
+   }
+  },
+  "reading": "cited_by_count>100 的占比是截断生效比例的上界（全时段口径，窗口 [t,t+5] 内更少）"
+ },
+ "B_sampling_noise": {
+  "paper_level_std_pool": 0.428,
+  "pool_n": 1497,
+  "se_of_year_mean_40papers": 0.0677,
+  "oa_series": [
+   -0.5711,
+   -0.6262,
+   -0.6268,
+   -0.6221,
+   -0.5184,
+   -0.7487
+  ],
+  "oa_year_to_year_range": 0.2303,
+  "library_series": [
+   -0.3523,
+   -0.3905,
+   -0.3282,
+   -0.3664,
+   -0.3966,
+   -0.442
+  ],
+  "library_year_to_year_range": 0.1138,
+  "reading": "两序列的逐年变动幅度与 40 篇抽样标准误同量级 → 6 点 Spearman 秩相关无统计分辨力"
+ },
+ "C_citer_pool_difference": "OA 侧施引者为全网（含大量 ML/AI venue，参考文献列表长、重合度高 → 巩固票偏多）；库内侧限库内子网。方向上与 OA 系统性偏负一致（mean_diff = -0.2395）。METRICS.md M2 已预声明两侧数值不可直接比。",
+ "verdict_suggestion": "未过线主因 = B（6 点 × SE≈0.08 的秩相关本就无分辨力）+ A/C（系统性偏负偏移，方向可解释、已预声明）。口径表述建议：双口径仅保留『方向同为巩固（均<0）且量级同区间（−0.3~−0.75）』的弱一致性，不作逐年共变主张；W1 各面板 OA-CD5 曲线同受 40 篇/年噪声限制，逐年读数须平滑（3 年滑动）或只比水平。"
+}

@@ -1,0 +1,174 @@
+{
+ "funded_subset_share": {
+  "2016": {
+   "n": 919,
+   "external_sum": 0.0163,
+   "deep learning": 0.0033,
+   "reinforcement learning": 0.0098,
+   "LLM/GPT": 0.0,
+   "transformer": 0.0,
+   "explainable AI": 0.0033,
+   "genetic algorithm": 0.1534,
+   "multi-objective": 0.1948,
+   "prompt": 0.0
+  },
+  "2017": {
+   "n": 931,
+   "external_sum": 0.0204,
+   "deep learning": 0.0043,
+   "reinforcement learning": 0.0086,
+   "LLM/GPT": 0.0,
+   "transformer": 0.0011,
+   "explainable AI": 0.0064,
+   "genetic algorithm": 0.159,
+   "multi-objective": 0.2095,
+   "prompt": 0.0
+  },
+  "2018": {
+   "n": 1336,
+   "external_sum": 0.0337,
+   "deep learning": 0.0097,
+   "reinforcement learning": 0.015,
+   "LLM/GPT": 0.0,
+   "transformer": 0.0,
+   "explainable AI": 0.009,
+   "genetic algorithm": 0.1737,
+   "multi-objective": 0.2036,
+   "prompt": 0.0
+  },
+  "2019": {
+   "n": 1780,
+   "external_sum": 0.0427,
+   "deep learning": 0.0185,
+   "reinforcement learning": 0.0157,
+   "LLM/GPT": 0.0,
+   "transformer": 0.0,
+   "explainable AI": 0.0084,
+   "genetic algorithm": 0.1579,
+   "multi-objective": 0.2303,
+   "prompt": 0.0
+  },
+  "2020": {
+   "n": 1655,
+   "external_sum": 0.0429,
+   "deep learning": 0.0163,
+   "reinforcement learning": 0.0133,
+   "LLM/GPT": 0.0,
+   "transformer": 0.0,
+   "explainable AI": 0.0133,
+   "genetic algorithm": 0.1607,
+   "multi-objective": 0.2375,
+   "prompt": 0.0
+  },
+  "2021": {
+   "n": 1819,
+   "external_sum": 0.0605,
+   "deep learning": 0.0236,
+   "reinforcement learning": 0.022,
+   "LLM/GPT": 0.0,
+   "transformer": 0.0,
+   "explainable AI": 0.0148,
+   "genetic algorithm": 0.1572,
+   "multi-objective": 0.2622,
+   "prompt": 0.0
+  },
+  "2022": {
+   "n": 1670,
+   "external_sum": 0.085,
+   "deep learning": 0.0323,
+   "reinforcement learning": 0.0299,
+   "LLM/GPT": 0.0006,
+   "transformer": 0.0,
+   "explainable AI": 0.0222,
+   "genetic algorithm": 0.1449,
+   "multi-objective": 0.2377,
+   "prompt": 0.0
+  },
+  "2023": {
+   "n": 1866,
+   "external_sum": 0.0965,
+   "deep learning": 0.0407,
+   "reinforcement learning": 0.0311,
+   "LLM/GPT": 0.0011,
+   "transformer": 0.0005,
+   "explainable AI": 0.023,
+   "genetic algorithm": 0.1377,
+   "multi-objective": 0.2824,
+   "prompt": 0.0
+  },
+  "2024": {
+   "n": 2211,
+   "external_sum": 0.1271,
+   "deep learning": 0.0375,
+   "reinforcement learning": 0.0511,
+   "LLM/GPT": 0.0077,
+   "transformer": 0.0005,
+   "explainable AI": 0.0303,
+   "genetic algorithm": 0.1321,
+   "multi-objective": 0.3017,
+   "prompt": 0.0014
+  },
+  "2025": {
+   "n": 2233,
+   "external_sum": 0.1594,
+   "deep learning": 0.0349,
+   "reinforcement learning": 0.0658,
+   "LLM/GPT": 0.0148,
+   "transformer": 0.0036,
+   "explainable AI": 0.0403,
+   "genetic algorithm": 0.1411,
+   "multi-objective": 0.3372,
+   "prompt": 0.0027
+  }
+ },
+ "segments": {
+  "main_2020_2025": [
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ],
+  "robust_2016_2019": [
+   2016,
+   2017,
+   2018,
+   2019
+  ]
+ },
+ "caveat": "有基金文本的论文是选择后的子群体（偏应用/期刊论文）；份额一律在标题+摘要上量（与 terms.py 同口径），基金文本仅用于子群体选择、不做基金文本本身的模式匹配；2020 年前为低覆盖参考段，不作结论性表述（覆盖锚点见 funding_coverage.json）。",
+ "leadlag_funded_vs_full_ec": {
+  "note": "r(基金子群体份额_t, 全EC份额_{t-lag})；lag<0 = 基金侧先行；相关≠引导",
+  "lags": {
+   "-3": {
+    "r": 0.99,
+    "n": 7
+   },
+   "-2": {
+    "r": 0.98,
+    "n": 8
+   },
+   "-1": {
+    "r": 0.991,
+    "n": 9
+   },
+   "0": {
+    "r": 0.996,
+    "n": 10
+   },
+   "1": {
+    "r": 0.985,
+    "n": 10
+   },
+   "2": {
+    "r": 0.979,
+    "n": 10
+   },
+   "3": {
+    "r": 0.98,
+    "n": 10
+   }
+  }
+ }
+}

@@ -1,0 +1,3416 @@
+{
+ "computer_vision__S25538012": {
+  "1987": {
+   "n_papers": 7,
+   "n_refs": 214,
+   "median_age": 6.0,
+   "share_le1": 0.0514,
+   "share_ge5": 0.5888,
+   "share_ge10": 0.2664
+  },
+  "1988": {
+   "n_papers": 18,
+   "n_refs": 403,
+   "median_age": 6,
+   "share_le1": 0.0868,
+   "share_ge5": 0.598,
+   "share_ge10": 0.3002
+  },
+  "1989": {
+   "n_papers": 23,
+   "n_refs": 645,
+   "median_age": 5,
+   "share_le1": 0.0713,
+   "share_ge5": 0.5442,
+   "share_ge10": 0.2124
+  },
+  "1990": {
+   "n_papers": 24,
+   "n_refs": 762,
+   "median_age": 6.0,
+   "share_le1": 0.0722,
+   "share_ge5": 0.6365,
+   "share_ge10": 0.2835
+  },
+  "1991": {
+   "n_papers": 17,
+   "n_refs": 505,
+   "median_age": 5,
+   "share_le1": 0.0832,
+   "share_ge5": 0.5604,
+   "share_ge10": 0.2812
+  },
+  "1992": {
+   "n_papers": 33,
+   "n_refs": 851,
+   "median_age": 6,
+   "share_le1": 0.0529,
+   "share_ge5": 0.6663,
+   "share_ge10": 0.3114
+  },
+  "1993": {
+   "n_papers": 26,
+   "n_refs": 904,
+   "median_age": 5.0,
+   "share_le1": 0.1394,
+   "share_ge5": 0.5487,
+   "share_ge10": 0.2666
+  },
+  "1994": {
+   "n_papers": 24,
+   "n_refs": 660,
+   "median_age": 6.0,
+   "share_le1": 0.0576,
+   "share_ge5": 0.6106,
+   "share_ge10": 0.2682
+  },
+  "1995": {
+   "n_papers": 35,
+   "n_refs": 970,
+   "median_age": 7.0,
+   "share_le1": 0.0278,
+   "share_ge5": 0.701,
+   "share_ge10": 0.3381
+  },
+  "1996": {
+   "n_papers": 49,
+   "n_refs": 1533,
+   "median_age": 7,
+   "share_le1": 0.0215,
+   "share_ge5": 0.6791,
+   "share_ge10": 0.3425
+  },
+  "1997": {
+   "n_papers": 61,
+   "n_refs": 1810,
+   "median_age": 7.0,
+   "share_le1": 0.0298,
+   "share_ge5": 0.7293,
+   "share_ge10": 0.3779
+  },
+  "1998": {
+   "n_papers": 58,
+   "n_refs": 1818,
+   "median_age": 6.0,
+   "share_le1": 0.0314,
+   "share_ge5": 0.698,
+   "share_ge10": 0.3322
+  },
+  "1999": {
+   "n_papers": 59,
+   "n_refs": 1857,
+   "median_age": 6,
+   "share_le1": 0.0522,
+   "share_ge5": 0.6661,
+   "share_ge10": 0.3026
+  },
+  "2000": {
+   "n_papers": 65,
+   "n_refs": 1873,
+   "median_age": 7,
+   "share_le1": 0.055,
+   "share_ge5": 0.6786,
+   "share_ge10": 0.3374
+  },
+  "2001": {
+   "n_papers": 50,
+   "n_refs": 1630,
+   "median_age": 8.0,
+   "share_le1": 0.0405,
+   "share_ge5": 0.7245,
+   "share_ge10": 0.3957
+  },
+  "2002": {
+   "n_papers": 73,
+   "n_refs": 2175,
+   "median_age": 7,
+   "share_le1": 0.034,
+   "share_ge5": 0.6938,
+   "share_ge10": 0.3549
+  },
+  "2003": {
+   "n_papers": 59,
+   "n_refs": 2269,
+   "median_age": 6,
+   "share_le1": 0.1468,
+   "share_ge5": 0.6382,
+   "share_ge10": 0.3354
+  },
+  "2004": {
+   "n_papers": 79,
+   "n_refs": 2595,
+   "median_age": 7,
+   "share_le1": 0.0497,
+   "share_ge5": 0.6528,
+   "share_ge10": 0.3333
+  },
+  "2005": {
+   "n_papers": 47,
+   "n_refs": 1585,
+   "median_age": 6,
+   "share_le1": 0.0656,
+   "share_ge5": 0.5905,
+   "share_ge10": 0.3192
+  },
+  "2006": {
+   "n_papers": 141,
+   "n_refs": 5370,
+   "median_age": 6.0,
+   "share_le1": 0.0615,
+   "share_ge5": 0.5818,
+   "share_ge10": 0.3099
+  },
+  "2007": {
+   "n_papers": 104,
+   "n_refs": 4439,
+   "median_age": 5,
+   "share_le1": 0.077,
+   "share_ge5": 0.5873,
+   "share_ge10": 0.2735
+  },
+  "2008": {
+   "n_papers": 76,
+   "n_refs": 2886,
+   "median_age": 5.0,
+   "share_le1": 0.0769,
+   "share_ge5": 0.5922,
+   "share_ge10": 0.2814
+  },
+  "2009": {
+   "n_papers": 112,
+   "n_refs": 5482,
+   "median_age": 6.0,
+   "share_le1": 0.0507,
+   "share_ge5": 0.6403,
+   "share_ge10": 0.3066
+  },
+  "2010": {
+   "n_papers": 98,
+   "n_refs": 4443,
+   "median_age": 6,
+   "share_le1": 0.0648,
+   "share_ge5": 0.6403,
+   "share_ge10": 0.3018
+  },
+  "2011": {
+   "n_papers": 92,
+   "n_refs": 4369,
+   "median_age": 6,
+   "share_le1": 0.0478,
+   "share_ge5": 0.6249,
+   "share_ge10": 0.2458
+  },
+  "2012": {
+   "n_papers": 86,
+   "n_refs": 4103,
+   "median_age": 6,
+   "share_le1": 0.0682,
+   "share_ge5": 0.6381,
+   "share_ge10": 0.2891
+  },
+  "2013": {
+   "n_papers": 84,
+   "n_refs": 4408,
+   "median_age": 6.0,
+   "share_le1": 0.0606,
+   "share_ge5": 0.6425,
+   "share_ge10": 0.2967
+  },
+  "2014": {
+   "n_papers": 90,
+   "n_refs": 4490,
+   "median_age": 6.0,
+   "share_le1": 0.0606,
+   "share_ge5": 0.6263,
+   "share_ge10": 0.2857
+  },
+  "2015": {
+   "n_papers": 76,
+   "n_refs": 3992,
+   "median_age": 6.0,
+   "share_le1": 0.0566,
+   "share_ge5": 0.6333,
+   "share_ge10": 0.2853
+  },
+  "2016": {
+   "n_papers": 97,
+   "n_refs": 5636,
+   "median_age": 6.0,
+   "share_le1": 0.0635,
+   "share_ge5": 0.6366,
+   "share_ge10": 0.3098
+  },
+  "2017": {
+   "n_papers": 74,
+   "n_refs": 4418,
+   "median_age": 5.0,
+   "share_le1": 0.0557,
+   "share_ge5": 0.5598,
+   "share_ge10": 0.2637
+  },
+  "2018": {
+   "n_papers": 76,
+   "n_refs": 4705,
+   "median_age": 5,
+   "share_le1": 0.0893,
+   "share_ge5": 0.5458,
+   "share_ge10": 0.2614
+  },
+  "2019": {
+   "n_papers": 123,
+   "n_refs": 7500,
+   "median_age": 4.0,
+   "share_le1": 0.094,
+   "share_ge5": 0.4513,
+   "share_ge10": 0.2183
+  },
+  "2020": {
+   "n_papers": 118,
+   "n_refs": 8308,
+   "median_age": 4.0,
+   "share_le1": 0.0756,
+   "share_ge5": 0.4727,
+   "share_ge10": 0.1955
+  },
+  "2021": {
+   "n_papers": 132,
+   "n_refs": 9041,
+   "median_age": 4,
+   "share_le1": 0.0751,
+   "share_ge5": 0.4432,
+   "share_ge10": 0.1637
+  },
+  "2022": {
+   "n_papers": 150,
+   "n_refs": 10915,
+   "median_age": 5,
+   "share_le1": 0.0652,
+   "share_ge5": 0.5148,
+   "share_ge10": 0.1918
+  },
+  "2023": {
+   "n_papers": 150,
+   "n_refs": 9745,
+   "median_age": 5,
+   "share_le1": 0.0799,
+   "share_ge5": 0.5022,
+   "share_ge10": 0.1657
+  },
+  "2024": {
+   "n_papers": 150,
+   "n_refs": 10981,
+   "median_age": 4,
+   "share_le1": 0.0805,
+   "share_ge5": 0.4911,
+   "share_ge10": 0.1463
+  },
+  "2025": {
+   "n_papers": 150,
+   "n_refs": 9919,
+   "median_age": 4,
+   "share_le1": 0.0825,
+   "share_ge5": 0.4947,
+   "share_ge10": 0.1458
+  }
+ },
+ "control_theory__S184954342": {
+  "1985": {
+   "n_papers": 150,
+   "n_refs": 1824,
+   "median_age": 6.0,
+   "share_le1": 0.0806,
+   "share_ge5": 0.6096,
+   "share_ge10": 0.3092
+  },
+  "1986": {
+   "n_papers": 150,
+   "n_refs": 1591,
+   "median_age": 6,
+   "share_le1": 0.0905,
+   "share_ge5": 0.6072,
+   "share_ge10": 0.3388
+  },
+  "1987": {
+   "n_papers": 150,
+   "n_refs": 1725,
+   "median_age": 6,
+   "share_le1": 0.1049,
+   "share_ge5": 0.5791,
+   "share_ge10": 0.2945
+  },
+  "1988": {
+   "n_papers": 150,
+   "n_refs": 1710,
+   "median_age": 5.0,
+   "share_le1": 0.1018,
+   "share_ge5": 0.5643,
+   "share_ge10": 0.2731
+  },
+  "1989": {
+   "n_papers": 150,
+   "n_refs": 1933,
+   "median_age": 6,
+   "share_le1": 0.0662,
+   "share_ge5": 0.6022,
+   "share_ge10": 0.3026
+  },
+  "1990": {
+   "n_papers": 150,
+   "n_refs": 1865,
+   "median_age": 6,
+   "share_le1": 0.0788,
+   "share_ge5": 0.6166,
+   "share_ge10": 0.3067
+  },
+  "1991": {
+   "n_papers": 150,
+   "n_refs": 2154,
+   "median_age": 6.0,
+   "share_le1": 0.0525,
+   "share_ge5": 0.636,
+   "share_ge10": 0.351
+  },
+  "1992": {
+   "n_papers": 150,
+   "n_refs": 2046,
+   "median_age": 6.0,
+   "share_le1": 0.0567,
+   "share_ge5": 0.6373,
+   "share_ge10": 0.3456
+  },
+  "1993": {
+   "n_papers": 150,
+   "n_refs": 1918,
+   "median_age": 7.0,
+   "share_le1": 0.0501,
+   "share_ge5": 0.6637,
+   "share_ge10": 0.354
+  },
+  "1994": {
+   "n_papers": 150,
+   "n_refs": 1973,
+   "median_age": 6,
+   "share_le1": 0.0436,
+   "share_ge5": 0.6432,
+   "share_ge10": 0.332
+  },
+  "1995": {
+   "n_papers": 150,
+   "n_refs": 2251,
+   "median_age": 7,
+   "share_le1": 0.0622,
+   "share_ge5": 0.6837,
+   "share_ge10": 0.3625
+  },
+  "1996": {
+   "n_papers": 150,
+   "n_refs": 2106,
+   "median_age": 7.0,
+   "share_le1": 0.0598,
+   "share_ge5": 0.6705,
+   "share_ge10": 0.3784
+  },
+  "1997": {
+   "n_papers": 150,
+   "n_refs": 2278,
+   "median_age": 7.0,
+   "share_le1": 0.0487,
+   "share_ge5": 0.7164,
+   "share_ge10": 0.3876
+  },
+  "1998": {
+   "n_papers": 150,
+   "n_refs": 2401,
+   "median_age": 7,
+   "share_le1": 0.0454,
+   "share_ge5": 0.7039,
+   "share_ge10": 0.3628
+  },
+  "1999": {
+   "n_papers": 150,
+   "n_refs": 2419,
+   "median_age": 9,
+   "share_le1": 0.0256,
+   "share_ge5": 0.7739,
+   "share_ge10": 0.4709
+  },
+  "2000": {
+   "n_papers": 150,
+   "n_refs": 2444,
+   "median_age": 9.0,
+   "share_le1": 0.0319,
+   "share_ge5": 0.7803,
+   "share_ge10": 0.455
+  },
+  "2001": {
+   "n_papers": 150,
+   "n_refs": 2249,
+   "median_age": 8,
+   "share_le1": 0.0494,
+   "share_ge5": 0.7274,
+   "share_ge10": 0.4224
+  },
+  "2002": {
+   "n_papers": 150,
+   "n_refs": 2392,
+   "median_age": 8.0,
+   "share_le1": 0.051,
+   "share_ge5": 0.7324,
+   "share_ge10": 0.4352
+  },
+  "2003": {
+   "n_papers": 150,
+   "n_refs": 3096,
+   "median_age": 7.0,
+   "share_le1": 0.114,
+   "share_ge5": 0.6644,
+   "share_ge10": 0.3886
+  },
+  "2004": {
+   "n_papers": 150,
+   "n_refs": 3109,
+   "median_age": 7,
+   "share_le1": 0.0923,
+   "share_ge5": 0.66,
+   "share_ge10": 0.4024
+  },
+  "2005": {
+   "n_papers": 150,
+   "n_refs": 3106,
+   "median_age": 8.0,
+   "share_le1": 0.0724,
+   "share_ge5": 0.6639,
+   "share_ge10": 0.4305
+  },
+  "2006": {
+   "n_papers": 150,
+   "n_refs": 3243,
+   "median_age": 7,
+   "share_le1": 0.0444,
+   "share_ge5": 0.6522,
+   "share_ge10": 0.3848
+  },
+  "2007": {
+   "n_papers": 150,
+   "n_refs": 3348,
+   "median_age": 8.0,
+   "share_le1": 0.055,
+   "share_ge5": 0.6918,
+   "share_ge10": 0.4211
+  },
+  "2008": {
+   "n_papers": 150,
+   "n_refs": 3815,
+   "median_age": 7,
+   "share_le1": 0.0451,
+   "share_ge5": 0.6881,
+   "share_ge10": 0.3976
+  },
+  "2009": {
+   "n_papers": 150,
+   "n_refs": 3494,
+   "median_age": 8.0,
+   "share_le1": 0.0418,
+   "share_ge5": 0.729,
+   "share_ge10": 0.4216
+  },
+  "2010": {
+   "n_papers": 150,
+   "n_refs": 3920,
+   "median_age": 8.0,
+   "share_le1": 0.051,
+   "share_ge5": 0.711,
+   "share_ge10": 0.4023
+  },
+  "2011": {
+   "n_papers": 150,
+   "n_refs": 3713,
+   "median_age": 8,
+   "share_le1": 0.0522,
+   "share_ge5": 0.6897,
+   "share_ge10": 0.4061
+  },
+  "2012": {
+   "n_papers": 150,
+   "n_refs": 4008,
+   "median_age": 8.0,
+   "share_le1": 0.0467,
+   "share_ge5": 0.6964,
+   "share_ge10": 0.4062
+  },
+  "2013": {
+   "n_papers": 150,
+   "n_refs": 3761,
+   "median_age": 9,
+   "share_le1": 0.0471,
+   "share_ge5": 0.7166,
+   "share_ge10": 0.4608
+  },
+  "2014": {
+   "n_papers": 150,
+   "n_refs": 4378,
+   "median_age": 8.0,
+   "share_le1": 0.0418,
+   "share_ge5": 0.7238,
+   "share_ge10": 0.4447
+  },
+  "2015": {
+   "n_papers": 150,
+   "n_refs": 4172,
+   "median_age": 9.0,
+   "share_le1": 0.0436,
+   "share_ge5": 0.7414,
+   "share_ge10": 0.4672
+  },
+  "2016": {
+   "n_papers": 150,
+   "n_refs": 4513,
+   "median_age": 8,
+   "share_le1": 0.0512,
+   "share_ge5": 0.7219,
+   "share_ge10": 0.4432
+  },
+  "2017": {
+   "n_papers": 150,
+   "n_refs": 4889,
+   "median_age": 8,
+   "share_le1": 0.0442,
+   "share_ge5": 0.7245,
+   "share_ge10": 0.4522
+  },
+  "2018": {
+   "n_papers": 150,
+   "n_refs": 4705,
+   "median_age": 9,
+   "share_le1": 0.0544,
+   "share_ge5": 0.7239,
+   "share_ge10": 0.4538
+  },
+  "2019": {
+   "n_papers": 150,
+   "n_refs": 4994,
+   "median_age": 8.0,
+   "share_le1": 0.0933,
+   "share_ge5": 0.6878,
+   "share_ge10": 0.4463
+  },
+  "2020": {
+   "n_papers": 150,
+   "n_refs": 5384,
+   "median_age": 8.0,
+   "share_le1": 0.099,
+   "share_ge5": 0.6781,
+   "share_ge10": 0.4274
+  },
+  "2021": {
+   "n_papers": 150,
+   "n_refs": 5216,
+   "median_age": 8.0,
+   "share_le1": 0.1168,
+   "share_ge5": 0.6685,
+   "share_ge10": 0.4321
+  },
+  "2022": {
+   "n_papers": 150,
+   "n_refs": 4978,
+   "median_age": 8.0,
+   "share_le1": 0.0444,
+   "share_ge5": 0.717,
+   "share_ge10": 0.4562
+  },
+  "2023": {
+   "n_papers": 150,
+   "n_refs": 5309,
+   "median_age": 8,
+   "share_le1": 0.0439,
+   "share_ge5": 0.7182,
+   "share_ge10": 0.4545
+  },
+  "2024": {
+   "n_papers": 150,
+   "n_refs": 5071,
+   "median_age": 9,
+   "share_le1": 0.0414,
+   "share_ge5": 0.7324,
+   "share_ge10": 0.4745
+  },
+  "2025": {
+   "n_papers": 150,
+   "n_refs": 5094,
+   "median_age": 8.0,
+   "share_le1": 0.0373,
+   "share_ge5": 0.7367,
+   "share_ge10": 0.4603
+  }
+ },
+ "control_theory__S51360982": {
+  "1985": {
+   "n_papers": 81,
+   "n_refs": 1206,
+   "median_age": 6.0,
+   "share_le1": 0.0697,
+   "share_ge5": 0.602,
+   "share_ge10": 0.3109
+  },
+  "1986": {
+   "n_papers": 88,
+   "n_refs": 1049,
+   "median_age": 6,
+   "share_le1": 0.0801,
+   "share_ge5": 0.6215,
+   "share_ge10": 0.2717
+  },
+  "1987": {
+   "n_papers": 91,
+   "n_refs": 1123,
+   "median_age": 6,
+   "share_le1": 0.0614,
+   "share_ge5": 0.5984,
+   "share_ge10": 0.2796
+  },
+  "1988": {
+   "n_papers": 91,
+   "n_refs": 1446,
+   "median_age": 6.0,
+   "share_le1": 0.0574,
+   "share_ge5": 0.621,
+   "share_ge10": 0.3313
+  },
+  "1989": {
+   "n_papers": 106,
+   "n_refs": 1581,
+   "median_age": 6,
+   "share_le1": 0.0721,
+   "share_ge5": 0.5863,
+   "share_ge10": 0.2948
+  },
+  "1990": {
+   "n_papers": 111,
+   "n_refs": 1692,
+   "median_age": 7.0,
+   "share_le1": 0.0408,
+   "share_ge5": 0.6826,
+   "share_ge10": 0.3635
+  },
+  "1991": {
+   "n_papers": 127,
+   "n_refs": 1616,
+   "median_age": 6.0,
+   "share_le1": 0.0563,
+   "share_ge5": 0.6238,
+   "share_ge10": 0.2915
+  },
+  "1992": {
+   "n_papers": 141,
+   "n_refs": 1979,
+   "median_age": 6,
+   "share_le1": 0.0632,
+   "share_ge5": 0.6296,
+   "share_ge10": 0.285
+  },
+  "1993": {
+   "n_papers": 149,
+   "n_refs": 2615,
+   "median_age": 5,
+   "share_le1": 0.0459,
+   "share_ge5": 0.5793,
+   "share_ge10": 0.239
+  },
+  "1994": {
+   "n_papers": 150,
+   "n_refs": 2229,
+   "median_age": 7,
+   "share_le1": 0.0453,
+   "share_ge5": 0.6685,
+   "share_ge10": 0.3248
+  },
+  "1995": {
+   "n_papers": 150,
+   "n_refs": 2581,
+   "median_age": 7,
+   "share_le1": 0.0612,
+   "share_ge5": 0.6486,
+   "share_ge10": 0.3379
+  },
+  "1996": {
+   "n_papers": 150,
+   "n_refs": 2358,
+   "median_age": 7.0,
+   "share_le1": 0.0556,
+   "share_ge5": 0.6684,
+   "share_ge10": 0.3507
+  },
+  "1997": {
+   "n_papers": 150,
+   "n_refs": 2580,
+   "median_age": 7.0,
+   "share_le1": 0.0457,
+   "share_ge5": 0.6915,
+   "share_ge10": 0.3713
+  },
+  "1998": {
+   "n_papers": 142,
+   "n_refs": 2104,
+   "median_age": 6.0,
+   "share_le1": 0.0575,
+   "share_ge5": 0.6635,
+   "share_ge10": 0.3308
+  },
+  "1999": {
+   "n_papers": 150,
+   "n_refs": 2189,
+   "median_age": 7,
+   "share_le1": 0.0457,
+   "share_ge5": 0.6875,
+   "share_ge10": 0.365
+  },
+  "2000": {
+   "n_papers": 150,
+   "n_refs": 2809,
+   "median_age": 8,
+   "share_le1": 0.037,
+   "share_ge5": 0.7109,
+   "share_ge10": 0.3891
+  },
+  "2001": {
+   "n_papers": 150,
+   "n_refs": 2694,
+   "median_age": 8.0,
+   "share_le1": 0.0386,
+   "share_ge5": 0.7442,
+   "share_ge10": 0.399
+  },
+  "2002": {
+   "n_papers": 150,
+   "n_refs": 2275,
+   "median_age": 8,
+   "share_le1": 0.0453,
+   "share_ge5": 0.7204,
+   "share_ge10": 0.4132
+  },
+  "2003": {
+   "n_papers": 150,
+   "n_refs": 2522,
+   "median_age": 8.0,
+   "share_le1": 0.0825,
+   "share_ge5": 0.6955,
+   "share_ge10": 0.3969
+  },
+  "2004": {
+   "n_papers": 150,
+   "n_refs": 2817,
+   "median_age": 7,
+   "share_le1": 0.0852,
+   "share_ge5": 0.6347,
+   "share_ge10": 0.3632
+  },
+  "2005": {
+   "n_papers": 150,
+   "n_refs": 2797,
+   "median_age": 8,
+   "share_le1": 0.0737,
+   "share_ge5": 0.6768,
+   "share_ge10": 0.4079
+  },
+  "2006": {
+   "n_papers": 150,
+   "n_refs": 3303,
+   "median_age": 8,
+   "share_le1": 0.0481,
+   "share_ge5": 0.6812,
+   "share_ge10": 0.4163
+  },
+  "2007": {
+   "n_papers": 150,
+   "n_refs": 3642,
+   "median_age": 8.0,
+   "share_le1": 0.0535,
+   "share_ge5": 0.6867,
+   "share_ge10": 0.4165
+  },
+  "2008": {
+   "n_papers": 150,
+   "n_refs": 3058,
+   "median_age": 8.0,
+   "share_le1": 0.0484,
+   "share_ge5": 0.7168,
+   "share_ge10": 0.4281
+  },
+  "2009": {
+   "n_papers": 150,
+   "n_refs": 3418,
+   "median_age": 7.0,
+   "share_le1": 0.0532,
+   "share_ge5": 0.6872,
+   "share_ge10": 0.3721
+  },
+  "2010": {
+   "n_papers": 150,
+   "n_refs": 3499,
+   "median_age": 8,
+   "share_le1": 0.0643,
+   "share_ge5": 0.6976,
+   "share_ge10": 0.4098
+  },
+  "2011": {
+   "n_papers": 150,
+   "n_refs": 3889,
+   "median_age": 8,
+   "share_le1": 0.0445,
+   "share_ge5": 0.7043,
+   "share_ge10": 0.4148
+  },
+  "2012": {
+   "n_papers": 150,
+   "n_refs": 3901,
+   "median_age": 8,
+   "share_le1": 0.0441,
+   "share_ge5": 0.7175,
+   "share_ge10": 0.424
+  },
+  "2013": {
+   "n_papers": 150,
+   "n_refs": 3937,
+   "median_age": 7,
+   "share_le1": 0.0439,
+   "share_ge5": 0.6914,
+   "share_ge10": 0.3973
+  },
+  "2014": {
+   "n_papers": 150,
+   "n_refs": 5066,
+   "median_age": 9.0,
+   "share_le1": 0.0478,
+   "share_ge5": 0.7473,
+   "share_ge10": 0.4751
+  },
+  "2015": {
+   "n_papers": 150,
+   "n_refs": 4340,
+   "median_age": 8.0,
+   "share_le1": 0.0516,
+   "share_ge5": 0.7228,
+   "share_ge10": 0.4171
+  },
+  "2016": {
+   "n_papers": 150,
+   "n_refs": 4894,
+   "median_age": 8.0,
+   "share_le1": 0.0548,
+   "share_ge5": 0.6953,
+   "share_ge10": 0.4036
+  },
+  "2017": {
+   "n_papers": 150,
+   "n_refs": 4464,
+   "median_age": 8.0,
+   "share_le1": 0.0533,
+   "share_ge5": 0.6969,
+   "share_ge10": 0.42
+  },
+  "2018": {
+   "n_papers": 150,
+   "n_refs": 4544,
+   "median_age": 8.0,
+   "share_le1": 0.0482,
+   "share_ge5": 0.6915,
+   "share_ge10": 0.4093
+  },
+  "2019": {
+   "n_papers": 150,
+   "n_refs": 4611,
+   "median_age": 8,
+   "share_le1": 0.0449,
+   "share_ge5": 0.7159,
+   "share_ge10": 0.4455
+  },
+  "2020": {
+   "n_papers": 150,
+   "n_refs": 4759,
+   "median_age": 9,
+   "share_le1": 0.0504,
+   "share_ge5": 0.7224,
+   "share_ge10": 0.4596
+  },
+  "2021": {
+   "n_papers": 150,
+   "n_refs": 4982,
+   "median_age": 9.0,
+   "share_le1": 0.0474,
+   "share_ge5": 0.724,
+   "share_ge10": 0.4641
+  },
+  "2022": {
+   "n_papers": 150,
+   "n_refs": 4882,
+   "median_age": 9.0,
+   "share_le1": 0.0381,
+   "share_ge5": 0.7372,
+   "share_ge10": 0.4828
+  },
+  "2023": {
+   "n_papers": 150,
+   "n_refs": 4453,
+   "median_age": 8,
+   "share_le1": 0.0467,
+   "share_ge5": 0.7132,
+   "share_ge10": 0.45
+  },
+  "2024": {
+   "n_papers": 150,
+   "n_refs": 4595,
+   "median_age": 9,
+   "share_le1": 0.0376,
+   "share_ge5": 0.7502,
+   "share_ge10": 0.4729
+  },
+  "2025": {
+   "n_papers": 150,
+   "n_refs": 4471,
+   "median_age": 8,
+   "share_le1": 0.0403,
+   "share_ge5": 0.7343,
+   "share_ge10": 0.4567
+  }
+ },
+ "evolutionary_biology__S109682412": {
+  "1985": {
+   "n_papers": 150,
+   "n_refs": 3569,
+   "median_age": 8,
+   "share_le1": 0.0468,
+   "share_ge5": 0.7092,
+   "share_ge10": 0.4208
+  },
+  "1986": {
+   "n_papers": 150,
+   "n_refs": 3600,
+   "median_age": 7.0,
+   "share_le1": 0.0653,
+   "share_ge5": 0.685,
+   "share_ge10": 0.3961
+  },
+  "1987": {
+   "n_papers": 150,
+   "n_refs": 3407,
+   "median_age": 7,
+   "share_le1": 0.0657,
+   "share_ge5": 0.6619,
+   "share_ge10": 0.3851
+  },
+  "1988": {
+   "n_papers": 150,
+   "n_refs": 3745,
+   "median_age": 8,
+   "share_le1": 0.0545,
+   "share_ge5": 0.6937,
+   "share_ge10": 0.4005
+  },
+  "1989": {
+   "n_papers": 150,
+   "n_refs": 3668,
+   "median_age": 7.0,
+   "share_le1": 0.0684,
+   "share_ge5": 0.6679,
+   "share_ge10": 0.4016
+  },
+  "1990": {
+   "n_papers": 150,
+   "n_refs": 4269,
+   "median_age": 8,
+   "share_le1": 0.0651,
+   "share_ge5": 0.6927,
+   "share_ge10": 0.4273
+  },
+  "1991": {
+   "n_papers": 150,
+   "n_refs": 3781,
+   "median_age": 8,
+   "share_le1": 0.0484,
+   "share_ge5": 0.6982,
+   "share_ge10": 0.4089
+  },
+  "1992": {
+   "n_papers": 150,
+   "n_refs": 3956,
+   "median_age": 8.0,
+   "share_le1": 0.0531,
+   "share_ge5": 0.7171,
+   "share_ge10": 0.4368
+  },
+  "1994": {
+   "n_papers": 5,
+   "n_refs": 151,
+   "median_age": 12,
+   "share_le1": 0.0265,
+   "share_ge5": 0.8013,
+   "share_ge10": 0.5828
+  },
+  "1995": {
+   "n_papers": 23,
+   "n_refs": 784,
+   "median_age": 7.0,
+   "share_le1": 0.0651,
+   "share_ge5": 0.6964,
+   "share_ge10": 0.3686
+  },
+  "1996": {
+   "n_papers": 12,
+   "n_refs": 211,
+   "median_age": 10,
+   "share_le1": 0.0806,
+   "share_ge5": 0.7251,
+   "share_ge10": 0.5118
+  },
+  "1997": {
+   "n_papers": 21,
+   "n_refs": 387,
+   "median_age": 6,
+   "share_le1": 0.0827,
+   "share_ge5": 0.6718,
+   "share_ge10": 0.3152
+  },
+  "1998": {
+   "n_papers": 16,
+   "n_refs": 407,
+   "median_age": 7,
+   "share_le1": 0.0713,
+   "share_ge5": 0.6314,
+   "share_ge10": 0.3808
+  },
+  "1999": {
+   "n_papers": 95,
+   "n_refs": 3301,
+   "median_age": 8,
+   "share_le1": 0.0815,
+   "share_ge5": 0.6883,
+   "share_ge10": 0.4317
+  },
+  "2000": {
+   "n_papers": 150,
+   "n_refs": 5305,
+   "median_age": 8,
+   "share_le1": 0.0505,
+   "share_ge5": 0.7125,
+   "share_ge10": 0.4392
+  },
+  "2001": {
+   "n_papers": 150,
+   "n_refs": 5480,
+   "median_age": 8.0,
+   "share_le1": 0.052,
+   "share_ge5": 0.7144,
+   "share_ge10": 0.4431
+  },
+  "2002": {
+   "n_papers": 150,
+   "n_refs": 5432,
+   "median_age": 8.0,
+   "share_le1": 0.0527,
+   "share_ge5": 0.7147,
+   "share_ge10": 0.4543
+  },
+  "2003": {
+   "n_papers": 150,
+   "n_refs": 5829,
+   "median_age": 8,
+   "share_le1": 0.0623,
+   "share_ge5": 0.7073,
+   "share_ge10": 0.421
+  },
+  "2004": {
+   "n_papers": 150,
+   "n_refs": 6052,
+   "median_age": 7.0,
+   "share_le1": 0.0656,
+   "share_ge5": 0.6702,
+   "share_ge10": 0.3863
+  },
+  "2005": {
+   "n_papers": 150,
+   "n_refs": 5513,
+   "median_age": 8,
+   "share_le1": 0.0609,
+   "share_ge5": 0.7036,
+   "share_ge10": 0.4332
+  },
+  "2006": {
+   "n_papers": 150,
+   "n_refs": 5981,
+   "median_age": 8,
+   "share_le1": 0.0702,
+   "share_ge5": 0.6912,
+   "share_ge10": 0.4155
+  },
+  "2007": {
+   "n_papers": 150,
+   "n_refs": 6127,
+   "median_age": 8,
+   "share_le1": 0.0653,
+   "share_ge5": 0.7072,
+   "share_ge10": 0.4319
+  },
+  "2008": {
+   "n_papers": 150,
+   "n_refs": 5969,
+   "median_age": 8,
+   "share_le1": 0.0677,
+   "share_ge5": 0.6978,
+   "share_ge10": 0.4356
+  },
+  "2009": {
+   "n_papers": 150,
+   "n_refs": 6199,
+   "median_age": 8,
+   "share_le1": 0.0589,
+   "share_ge5": 0.7145,
+   "share_ge10": 0.4373
+  },
+  "2010": {
+   "n_papers": 150,
+   "n_refs": 6655,
+   "median_age": 8,
+   "share_le1": 0.0688,
+   "share_ge5": 0.7092,
+   "share_ge10": 0.4374
+  },
+  "2011": {
+   "n_papers": 150,
+   "n_refs": 6656,
+   "median_age": 8.0,
+   "share_le1": 0.0666,
+   "share_ge5": 0.7188,
+   "share_ge10": 0.4414
+  },
+  "2012": {
+   "n_papers": 150,
+   "n_refs": 6812,
+   "median_age": 8.5,
+   "share_le1": 0.0558,
+   "share_ge5": 0.7246,
+   "share_ge10": 0.4483
+  },
+  "2013": {
+   "n_papers": 150,
+   "n_refs": 7708,
+   "median_age": 9.0,
+   "share_le1": 0.0502,
+   "share_ge5": 0.749,
+   "share_ge10": 0.4805
+  },
+  "2014": {
+   "n_papers": 150,
+   "n_refs": 7317,
+   "median_age": 9,
+   "share_le1": 0.0555,
+   "share_ge5": 0.7487,
+   "share_ge10": 0.4803
+  },
+  "2015": {
+   "n_papers": 150,
+   "n_refs": 7640,
+   "median_age": 10.0,
+   "share_le1": 0.0535,
+   "share_ge5": 0.7791,
+   "share_ge10": 0.5168
+  },
+  "2016": {
+   "n_papers": 150,
+   "n_refs": 7255,
+   "median_age": 10,
+   "share_le1": 0.0555,
+   "share_ge5": 0.7625,
+   "share_ge10": 0.5032
+  },
+  "2017": {
+   "n_papers": 150,
+   "n_refs": 7536,
+   "median_age": 10.0,
+   "share_le1": 0.0447,
+   "share_ge5": 0.7877,
+   "share_ge10": 0.5349
+  },
+  "2018": {
+   "n_papers": 150,
+   "n_refs": 7739,
+   "median_age": 10,
+   "share_le1": 0.0589,
+   "share_ge5": 0.7628,
+   "share_ge10": 0.5304
+  },
+  "2019": {
+   "n_papers": 150,
+   "n_refs": 7486,
+   "median_age": 10.0,
+   "share_le1": 0.0518,
+   "share_ge5": 0.7769,
+   "share_ge10": 0.5232
+  },
+  "2020": {
+   "n_papers": 150,
+   "n_refs": 7069,
+   "median_age": 11,
+   "share_le1": 0.0372,
+   "share_ge5": 0.8056,
+   "share_ge10": 0.5677
+  },
+  "2021": {
+   "n_papers": 150,
+   "n_refs": 7951,
+   "median_age": 11,
+   "share_le1": 0.0848,
+   "share_ge5": 0.7669,
+   "share_ge10": 0.5568
+  },
+  "2022": {
+   "n_papers": 150,
+   "n_refs": 6934,
+   "median_age": 10.0,
+   "share_le1": 0.0779,
+   "share_ge5": 0.7374,
+   "share_ge10": 0.5198
+  },
+  "2023": {
+   "n_papers": 150,
+   "n_refs": 7259,
+   "median_age": 11,
+   "share_le1": 0.0393,
+   "share_ge5": 0.7672,
+   "share_ge10": 0.5552
+  },
+  "2024": {
+   "n_papers": 150,
+   "n_refs": 7226,
+   "median_age": 12.0,
+   "share_le1": 0.0361,
+   "share_ge5": 0.7927,
+   "share_ge10": 0.5729
+  },
+  "2025": {
+   "n_papers": 150,
+   "n_refs": 7194,
+   "median_age": 11.0,
+   "share_le1": 0.0357,
+   "share_ge5": 0.7941,
+   "share_ge10": 0.5478
+  }
+ },
+ "machine_learning_bull__S62148650": {
+  "1986": {
+   "n_papers": 32,
+   "n_refs": 656,
+   "median_age": 4.0,
+   "share_le1": 0.125,
+   "share_ge5": 0.4909,
+   "share_ge10": 0.25
+  },
+  "1987": {
+   "n_papers": 24,
+   "n_refs": 400,
+   "median_age": 4.0,
+   "share_le1": 0.1825,
+   "share_ge5": 0.4525,
+   "share_ge10": 0.215
+  },
+  "1988": {
+   "n_papers": 32,
+   "n_refs": 669,
+   "median_age": 3,
+   "share_le1": 0.2182,
+   "share_ge5": 0.4335,
+   "share_ge10": 0.2048
+  },
+  "1989": {
+   "n_papers": 39,
+   "n_refs": 857,
+   "median_age": 3,
+   "share_le1": 0.1342,
+   "share_ge5": 0.3652,
+   "share_ge10": 0.1704
+  },
+  "1990": {
+   "n_papers": 65,
+   "n_refs": 2075,
+   "median_age": 3,
+   "share_le1": 0.2058,
+   "share_ge5": 0.3465,
+   "share_ge10": 0.1354
+  },
+  "1991": {
+   "n_papers": 49,
+   "n_refs": 1237,
+   "median_age": 4,
+   "share_le1": 0.0849,
+   "share_ge5": 0.4826,
+   "share_ge10": 0.1884
+  },
+  "1992": {
+   "n_papers": 60,
+   "n_refs": 1424,
+   "median_age": 5.0,
+   "share_le1": 0.0787,
+   "share_ge5": 0.5169,
+   "share_ge10": 0.2058
+  },
+  "1993": {
+   "n_papers": 75,
+   "n_refs": 2108,
+   "median_age": 5.0,
+   "share_le1": 0.0489,
+   "share_ge5": 0.5935,
+   "share_ge10": 0.212
+  },
+  "1994": {
+   "n_papers": 104,
+   "n_refs": 2560,
+   "median_age": 6.0,
+   "share_le1": 0.0465,
+   "share_ge5": 0.648,
+   "share_ge10": 0.2281
+  },
+  "1995": {
+   "n_papers": 88,
+   "n_refs": 2213,
+   "median_age": 5,
+   "share_le1": 0.0569,
+   "share_ge5": 0.5942,
+   "share_ge10": 0.2404
+  },
+  "1996": {
+   "n_papers": 80,
+   "n_refs": 1932,
+   "median_age": 5.0,
+   "share_le1": 0.0652,
+   "share_ge5": 0.5704,
+   "share_ge10": 0.2179
+  },
+  "1997": {
+   "n_papers": 46,
+   "n_refs": 1517,
+   "median_age": 6,
+   "share_le1": 0.0593,
+   "share_ge5": 0.6144,
+   "share_ge10": 0.236
+  },
+  "1998": {
+   "n_papers": 47,
+   "n_refs": 1396,
+   "median_age": 5.0,
+   "share_le1": 0.091,
+   "share_ge5": 0.543,
+   "share_ge10": 0.2278
+  },
+  "1999": {
+   "n_papers": 43,
+   "n_refs": 1433,
+   "median_age": 5,
+   "share_le1": 0.0523,
+   "share_ge5": 0.5876,
+   "share_ge10": 0.254
+  },
+  "2000": {
+   "n_papers": 43,
+   "n_refs": 1779,
+   "median_age": 6,
+   "share_le1": 0.0225,
+   "share_ge5": 0.6818,
+   "share_ge10": 0.3148
+  },
+  "2001": {
+   "n_papers": 50,
+   "n_refs": 1371,
+   "median_age": 7,
+   "share_le1": 0.0321,
+   "share_ge5": 0.6944,
+   "share_ge10": 0.3625
+  },
+  "2002": {
+   "n_papers": 57,
+   "n_refs": 2399,
+   "median_age": 7,
+   "share_le1": 0.0417,
+   "share_ge5": 0.6674,
+   "share_ge10": 0.3677
+  },
+  "2003": {
+   "n_papers": 50,
+   "n_refs": 1920,
+   "median_age": 7.0,
+   "share_le1": 0.0542,
+   "share_ge5": 0.7057,
+   "share_ge10": 0.3161
+  },
+  "2004": {
+   "n_papers": 41,
+   "n_refs": 1463,
+   "median_age": 6,
+   "share_le1": 0.0752,
+   "share_ge5": 0.6391,
+   "share_ge10": 0.2919
+  },
+  "2005": {
+   "n_papers": 45,
+   "n_refs": 1278,
+   "median_age": 6.0,
+   "share_le1": 0.0493,
+   "share_ge5": 0.6628,
+   "share_ge10": 0.2919
+  },
+  "2006": {
+   "n_papers": 66,
+   "n_refs": 2426,
+   "median_age": 7.0,
+   "share_le1": 0.0416,
+   "share_ge5": 0.7012,
+   "share_ge10": 0.3784
+  },
+  "2007": {
+   "n_papers": 42,
+   "n_refs": 1335,
+   "median_age": 8,
+   "share_le1": 0.0382,
+   "share_ge5": 0.7618,
+   "share_ge10": 0.4142
+  },
+  "2008": {
+   "n_papers": 51,
+   "n_refs": 1865,
+   "median_age": 8,
+   "share_le1": 0.0574,
+   "share_ge5": 0.7083,
+   "share_ge10": 0.3812
+  },
+  "2009": {
+   "n_papers": 66,
+   "n_refs": 2408,
+   "median_age": 7.0,
+   "share_le1": 0.0623,
+   "share_ge5": 0.652,
+   "share_ge10": 0.3509
+  },
+  "2010": {
+   "n_papers": 83,
+   "n_refs": 3015,
+   "median_age": 7,
+   "share_le1": 0.0481,
+   "share_ge5": 0.6945,
+   "share_ge10": 0.3774
+  },
+  "2011": {
+   "n_papers": 150,
+   "n_refs": 5424,
+   "median_age": 9.0,
+   "share_le1": 0.0203,
+   "share_ge5": 0.8009,
+   "share_ge10": 0.4484
+  },
+  "2012": {
+   "n_papers": 49,
+   "n_refs": 2506,
+   "median_age": 7.0,
+   "share_le1": 0.0431,
+   "share_ge5": 0.7187,
+   "share_ge10": 0.3986
+  },
+  "2013": {
+   "n_papers": 101,
+   "n_refs": 4855,
+   "median_age": 7,
+   "share_le1": 0.0659,
+   "share_ge5": 0.6826,
+   "share_ge10": 0.3716
+  },
+  "2014": {
+   "n_papers": 46,
+   "n_refs": 2036,
+   "median_age": 8.0,
+   "share_le1": 0.0437,
+   "share_ge5": 0.7294,
+   "share_ge10": 0.419
+  },
+  "2015": {
+   "n_papers": 76,
+   "n_refs": 3953,
+   "median_age": 10,
+   "share_le1": 0.0273,
+   "share_ge5": 0.7989,
+   "share_ge10": 0.5133
+  },
+  "2016": {
+   "n_papers": 80,
+   "n_refs": 2955,
+   "median_age": 9,
+   "share_le1": 0.0244,
+   "share_ge5": 0.7875,
+   "share_ge10": 0.4643
+  },
+  "2017": {
+   "n_papers": 82,
+   "n_refs": 3800,
+   "median_age": 9.0,
+   "share_le1": 0.0437,
+   "share_ge5": 0.7618,
+   "share_ge10": 0.4955
+  },
+  "2018": {
+   "n_papers": 80,
+   "n_refs": 3303,
+   "median_age": 9,
+   "share_le1": 0.0403,
+   "share_ge5": 0.7681,
+   "share_ge10": 0.4992
+  },
+  "2019": {
+   "n_papers": 98,
+   "n_refs": 4160,
+   "median_age": 8.0,
+   "share_le1": 0.0575,
+   "share_ge5": 0.7159,
+   "share_ge10": 0.4327
+  },
+  "2020": {
+   "n_papers": 77,
+   "n_refs": 4012,
+   "median_age": 11.0,
+   "share_le1": 0.0282,
+   "share_ge5": 0.8133,
+   "share_ge10": 0.591
+  },
+  "2021": {
+   "n_papers": 150,
+   "n_refs": 7098,
+   "median_age": 8.0,
+   "share_le1": 0.0493,
+   "share_ge5": 0.6723,
+   "share_ge10": 0.4173
+  },
+  "2022": {
+   "n_papers": 150,
+   "n_refs": 6412,
+   "median_age": 6.0,
+   "share_le1": 0.0532,
+   "share_ge5": 0.6231,
+   "share_ge10": 0.3311
+  },
+  "2023": {
+   "n_papers": 150,
+   "n_refs": 7021,
+   "median_age": 6,
+   "share_le1": 0.0506,
+   "share_ge5": 0.6456,
+   "share_ge10": 0.3487
+  },
+  "2024": {
+   "n_papers": 150,
+   "n_refs": 6627,
+   "median_age": 7,
+   "share_le1": 0.0337,
+   "share_ge5": 0.6775,
+   "share_ge10": 0.3548
+  },
+  "2025": {
+   "n_papers": 150,
+   "n_refs": 5500,
+   "median_age": 7.0,
+   "share_le1": 0.0487,
+   "share_ge5": 0.6867,
+   "share_ge10": 0.3555
+  }
+ },
+ "nlp__S155526855": {
+  "1988": {
+   "n_papers": 18,
+   "n_refs": 115,
+   "median_age": 6,
+   "share_le1": 0.113,
+   "share_ge5": 0.6,
+   "share_ge10": 0.3391
+  },
+  "1991": {
+   "n_papers": 18,
+   "n_refs": 106,
+   "median_age": 6.0,
+   "share_le1": 0.1509,
+   "share_ge5": 0.6132,
+   "share_ge10": 0.2925
+  },
+  "1993": {
+   "n_papers": 13,
+   "n_refs": 111,
+   "median_age": 5,
+   "share_le1": 0.1261,
+   "share_ge5": 0.5405,
+   "share_ge10": 0.2703
+  },
+  "1995": {
+   "n_papers": 12,
+   "n_refs": 103,
+   "median_age": 5,
+   "share_le1": 0.1068,
+   "share_ge5": 0.5049,
+   "share_ge10": 0.2621
+  },
+  "1996": {
+   "n_papers": 17,
+   "n_refs": 110,
+   "median_age": 4.0,
+   "share_le1": 0.1273,
+   "share_ge5": 0.4909,
+   "share_ge10": 0.2091
+  },
+  "1997": {
+   "n_papers": 11,
+   "n_refs": 161,
+   "median_age": 7,
+   "share_le1": 0.0559,
+   "share_ge5": 0.6832,
+   "share_ge10": 0.3789
+  },
+  "2000": {
+   "n_papers": 39,
+   "n_refs": 872,
+   "median_age": 7.0,
+   "share_le1": 0.055,
+   "share_ge5": 0.703,
+   "share_ge10": 0.375
+  },
+  "2001": {
+   "n_papers": 39,
+   "n_refs": 672,
+   "median_age": 6.0,
+   "share_le1": 0.0699,
+   "share_ge5": 0.6012,
+   "share_ge10": 0.2604
+  },
+  "2002": {
+   "n_papers": 40,
+   "n_refs": 838,
+   "median_age": 7.0,
+   "share_le1": 0.0334,
+   "share_ge5": 0.679,
+   "share_ge10": 0.3604
+  },
+  "2003": {
+   "n_papers": 33,
+   "n_refs": 860,
+   "median_age": 6.0,
+   "share_le1": 0.0663,
+   "share_ge5": 0.6058,
+   "share_ge10": 0.2988
+  },
+  "2004": {
+   "n_papers": 28,
+   "n_refs": 701,
+   "median_age": 7,
+   "share_le1": 0.0499,
+   "share_ge5": 0.6805,
+   "share_ge10": 0.3509
+  },
+  "2005": {
+   "n_papers": 23,
+   "n_refs": 711,
+   "median_age": 7,
+   "share_le1": 0.0759,
+   "share_ge5": 0.6428,
+   "share_ge10": 0.3404
+  },
+  "2006": {
+   "n_papers": 37,
+   "n_refs": 855,
+   "median_age": 8,
+   "share_le1": 0.0503,
+   "share_ge5": 0.7193,
+   "share_ge10": 0.4175
+  },
+  "2007": {
+   "n_papers": 33,
+   "n_refs": 868,
+   "median_age": 7.0,
+   "share_le1": 0.0576,
+   "share_ge5": 0.644,
+   "share_ge10": 0.3456
+  },
+  "2008": {
+   "n_papers": 37,
+   "n_refs": 1306,
+   "median_age": 6.0,
+   "share_le1": 0.0337,
+   "share_ge5": 0.6164,
+   "share_ge10": 0.3216
+  },
+  "2009": {
+   "n_papers": 24,
+   "n_refs": 830,
+   "median_age": 8.0,
+   "share_le1": 0.0386,
+   "share_ge5": 0.7205,
+   "share_ge10": 0.4133
+  },
+  "2010": {
+   "n_papers": 41,
+   "n_refs": 1343,
+   "median_age": 7,
+   "share_le1": 0.0536,
+   "share_ge5": 0.6932,
+   "share_ge10": 0.3656
+  },
+  "2011": {
+   "n_papers": 48,
+   "n_refs": 2207,
+   "median_age": 8,
+   "share_le1": 0.0526,
+   "share_ge5": 0.7164,
+   "share_ge10": 0.4128
+  },
+  "2012": {
+   "n_papers": 45,
+   "n_refs": 2359,
+   "median_age": 7,
+   "share_le1": 0.0449,
+   "share_ge5": 0.6647,
+   "share_ge10": 0.3654
+  },
+  "2013": {
+   "n_papers": 28,
+   "n_refs": 1812,
+   "median_age": 7.0,
+   "share_le1": 0.0591,
+   "share_ge5": 0.6909,
+   "share_ge10": 0.3372
+  },
+  "2014": {
+   "n_papers": 104,
+   "n_refs": 3808,
+   "median_age": 9.0,
+   "share_le1": 0.0184,
+   "share_ge5": 0.8067,
+   "share_ge10": 0.4979
+  },
+  "2015": {
+   "n_papers": 30,
+   "n_refs": 1226,
+   "median_age": 8.0,
+   "share_le1": 0.0326,
+   "share_ge5": 0.7602,
+   "share_ge10": 0.4119
+  },
+  "2016": {
+   "n_papers": 36,
+   "n_refs": 2467,
+   "median_age": 7,
+   "share_le1": 0.0576,
+   "share_ge5": 0.6672,
+   "share_ge10": 0.3518
+  },
+  "2017": {
+   "n_papers": 25,
+   "n_refs": 1570,
+   "median_age": 8.0,
+   "share_le1": 0.0439,
+   "share_ge5": 0.6822,
+   "share_ge10": 0.4236
+  },
+  "2018": {
+   "n_papers": 32,
+   "n_refs": 2007,
+   "median_age": 8,
+   "share_le1": 0.0588,
+   "share_ge5": 0.7125,
+   "share_ge10": 0.4554
+  },
+  "2019": {
+   "n_papers": 22,
+   "n_refs": 1488,
+   "median_age": 8.0,
+   "share_le1": 0.0665,
+   "share_ge5": 0.6741,
+   "share_ge10": 0.4106
+  },
+  "2020": {
+   "n_papers": 26,
+   "n_refs": 1994,
+   "median_age": 6.0,
+   "share_le1": 0.0677,
+   "share_ge5": 0.5772,
+   "share_ge10": 0.334
+  },
+  "2021": {
+   "n_papers": 33,
+   "n_refs": 2222,
+   "median_age": 7.0,
+   "share_le1": 0.0819,
+   "share_ge5": 0.6269,
+   "share_ge10": 0.392
+  },
+  "2022": {
+   "n_papers": 33,
+   "n_refs": 2213,
+   "median_age": 5,
+   "share_le1": 0.0759,
+   "share_ge5": 0.5368,
+   "share_ge10": 0.3141
+  },
+  "2023": {
+   "n_papers": 33,
+   "n_refs": 2665,
+   "median_age": 5,
+   "share_le1": 0.1017,
+   "share_ge5": 0.5396,
+   "share_ge10": 0.3066
+  },
+  "2024": {
+   "n_papers": 37,
+   "n_refs": 2858,
+   "median_age": 5.0,
+   "share_le1": 0.148,
+   "share_ge5": 0.5003,
+   "share_ge10": 0.2589
+  },
+  "2025": {
+   "n_papers": 28,
+   "n_refs": 1481,
+   "median_age": 4,
+   "share_le1": 0.1742,
+   "share_ge5": 0.4362,
+   "share_ge10": 0.2309
+  }
+ },
+ "robotics__S133768115": {
+  "1988": {
+   "n_papers": 22,
+   "n_refs": 138,
+   "median_age": 4.0,
+   "share_le1": 0.0652,
+   "share_ge5": 0.4928,
+   "share_ge10": 0.1812
+  },
+  "1989": {
+   "n_papers": 30,
+   "n_refs": 328,
+   "median_age": 4.0,
+   "share_le1": 0.0793,
+   "share_ge5": 0.4878,
+   "share_ge10": 0.1646
+  },
+  "1990": {
+   "n_papers": 22,
+   "n_refs": 304,
+   "median_age": 4.0,
+   "share_le1": 0.1447,
+   "share_ge5": 0.4112,
+   "share_ge10": 0.1809
+  },
+  "1991": {
+   "n_papers": 47,
+   "n_refs": 618,
+   "median_age": 5.0,
+   "share_le1": 0.0388,
+   "share_ge5": 0.5599,
+   "share_ge10": 0.2217
+  },
+  "1992": {
+   "n_papers": 40,
+   "n_refs": 539,
+   "median_age": 6,
+   "share_le1": 0.0705,
+   "share_ge5": 0.6271,
+   "share_ge10": 0.2579
+  },
+  "1993": {
+   "n_papers": 24,
+   "n_refs": 209,
+   "median_age": 5,
+   "share_le1": 0.0909,
+   "share_ge5": 0.5311,
+   "share_ge10": 0.1722
+  },
+  "1994": {
+   "n_papers": 37,
+   "n_refs": 492,
+   "median_age": 6.0,
+   "share_le1": 0.0589,
+   "share_ge5": 0.6545,
+   "share_ge10": 0.2012
+  },
+  "1995": {
+   "n_papers": 60,
+   "n_refs": 1272,
+   "median_age": 5.0,
+   "share_le1": 0.0936,
+   "share_ge5": 0.5307,
+   "share_ge10": 0.1871
+  },
+  "1996": {
+   "n_papers": 80,
+   "n_refs": 835,
+   "median_age": 6,
+   "share_le1": 0.0623,
+   "share_ge5": 0.6431,
+   "share_ge10": 0.2695
+  },
+  "1997": {
+   "n_papers": 84,
+   "n_refs": 1625,
+   "median_age": 6,
+   "share_le1": 0.0714,
+   "share_ge5": 0.6092,
+   "share_ge10": 0.2505
+  },
+  "1998": {
+   "n_papers": 56,
+   "n_refs": 787,
+   "median_age": 6,
+   "share_le1": 0.0966,
+   "share_ge5": 0.6061,
+   "share_ge10": 0.2668
+  },
+  "1999": {
+   "n_papers": 72,
+   "n_refs": 1131,
+   "median_age": 6,
+   "share_le1": 0.0875,
+   "share_ge5": 0.6216,
+   "share_ge10": 0.2918
+  },
+  "2000": {
+   "n_papers": 75,
+   "n_refs": 1513,
+   "median_age": 7,
+   "share_le1": 0.0185,
+   "share_ge5": 0.7006,
+   "share_ge10": 0.347
+  },
+  "2001": {
+   "n_papers": 63,
+   "n_refs": 1024,
+   "median_age": 6.0,
+   "share_le1": 0.0713,
+   "share_ge5": 0.6211,
+   "share_ge10": 0.3037
+  },
+  "2002": {
+   "n_papers": 74,
+   "n_refs": 964,
+   "median_age": 7.0,
+   "share_le1": 0.0456,
+   "share_ge5": 0.6629,
+   "share_ge10": 0.3475
+  },
+  "2003": {
+   "n_papers": 72,
+   "n_refs": 1683,
+   "median_age": 5,
+   "share_le1": 0.199,
+   "share_ge5": 0.5478,
+   "share_ge10": 0.2793
+  },
+  "2004": {
+   "n_papers": 89,
+   "n_refs": 1785,
+   "median_age": 6,
+   "share_le1": 0.107,
+   "share_ge5": 0.5838,
+   "share_ge10": 0.321
+  },
+  "2005": {
+   "n_papers": 80,
+   "n_refs": 2185,
+   "median_age": 6,
+   "share_le1": 0.0691,
+   "share_ge5": 0.5593,
+   "share_ge10": 0.3272
+  },
+  "2006": {
+   "n_papers": 105,
+   "n_refs": 2675,
+   "median_age": 5,
+   "share_le1": 0.0677,
+   "share_ge5": 0.5548,
+   "share_ge10": 0.2979
+  },
+  "2007": {
+   "n_papers": 99,
+   "n_refs": 2621,
+   "median_age": 5,
+   "share_le1": 0.0744,
+   "share_ge5": 0.623,
+   "share_ge10": 0.2717
+  },
+  "2008": {
+   "n_papers": 104,
+   "n_refs": 2965,
+   "median_age": 6,
+   "share_le1": 0.0712,
+   "share_ge5": 0.6445,
+   "share_ge10": 0.2901
+  },
+  "2009": {
+   "n_papers": 102,
+   "n_refs": 3208,
+   "median_age": 6.0,
+   "share_le1": 0.0599,
+   "share_ge5": 0.6665,
+   "share_ge10": 0.3049
+  },
+  "2010": {
+   "n_papers": 88,
+   "n_refs": 2473,
+   "median_age": 7,
+   "share_le1": 0.0461,
+   "share_ge5": 0.6822,
+   "share_ge10": 0.2976
+  },
+  "2011": {
+   "n_papers": 138,
+   "n_refs": 4632,
+   "median_age": 7.0,
+   "share_le1": 0.0548,
+   "share_ge5": 0.6889,
+   "share_ge10": 0.3206
+  },
+  "2012": {
+   "n_papers": 141,
+   "n_refs": 5122,
+   "median_age": 7.0,
+   "share_le1": 0.0676,
+   "share_ge5": 0.6835,
+   "share_ge10": 0.337
+  },
+  "2013": {
+   "n_papers": 136,
+   "n_refs": 5725,
+   "median_age": 7,
+   "share_le1": 0.0521,
+   "share_ge5": 0.6989,
+   "share_ge10": 0.3333
+  },
+  "2014": {
+   "n_papers": 150,
+   "n_refs": 5901,
+   "median_age": 7,
+   "share_le1": 0.0585,
+   "share_ge5": 0.6833,
+   "share_ge10": 0.3555
+  },
+  "2015": {
+   "n_papers": 150,
+   "n_refs": 6587,
+   "median_age": 7,
+   "share_le1": 0.0506,
+   "share_ge5": 0.6886,
+   "share_ge10": 0.3859
+  },
+  "2016": {
+   "n_papers": 150,
+   "n_refs": 6182,
+   "median_age": 8.0,
+   "share_le1": 0.0485,
+   "share_ge5": 0.7124,
+   "share_ge10": 0.4021
+  },
+  "2017": {
+   "n_papers": 150,
+   "n_refs": 6535,
+   "median_age": 8,
+   "share_le1": 0.0525,
+   "share_ge5": 0.7057,
+   "share_ge10": 0.4017
+  },
+  "2018": {
+   "n_papers": 150,
+   "n_refs": 6317,
+   "median_age": 7,
+   "share_le1": 0.0619,
+   "share_ge5": 0.6771,
+   "share_ge10": 0.3662
+  },
+  "2019": {
+   "n_papers": 150,
+   "n_refs": 6825,
+   "median_age": 7,
+   "share_le1": 0.0567,
+   "share_ge5": 0.6743,
+   "share_ge10": 0.3719
+  },
+  "2020": {
+   "n_papers": 150,
+   "n_refs": 7002,
+   "median_age": 6.0,
+   "share_le1": 0.0754,
+   "share_ge5": 0.6234,
+   "share_ge10": 0.3372
+  },
+  "2021": {
+   "n_papers": 150,
+   "n_refs": 8451,
+   "median_age": 7,
+   "share_le1": 0.0801,
+   "share_ge5": 0.6466,
+   "share_ge10": 0.3676
+  },
+  "2022": {
+   "n_papers": 150,
+   "n_refs": 6681,
+   "median_age": 6,
+   "share_le1": 0.0709,
+   "share_ge5": 0.6303,
+   "share_ge10": 0.3288
+  },
+  "2023": {
+   "n_papers": 150,
+   "n_refs": 6071,
+   "median_age": 6,
+   "share_le1": 0.0679,
+   "share_ge5": 0.6508,
+   "share_ge10": 0.3413
+  },
+  "2024": {
+   "n_papers": 150,
+   "n_refs": 6515,
+   "median_age": 6,
+   "share_le1": 0.068,
+   "share_ge5": 0.6023,
+   "share_ge10": 0.3019
+  },
+  "2025": {
+   "n_papers": 150,
+   "n_refs": 5774,
+   "median_age": 6.0,
+   "share_le1": 0.0753,
+   "share_ge5": 0.5892,
+   "share_ge10": 0.2896
+  }
+ },
+ "robotics__S73484101": {
+  "1985": {
+   "n_papers": 21,
+   "n_refs": 271,
+   "median_age": 5,
+   "share_le1": 0.0443,
+   "share_ge5": 0.5904,
+   "share_ge10": 0.3026
+  },
+  "1986": {
+   "n_papers": 44,
+   "n_refs": 494,
+   "median_age": 5.0,
+   "share_le1": 0.1093,
+   "share_ge5": 0.5466,
+   "share_ge10": 0.2308
+  },
+  "1987": {
+   "n_papers": 29,
+   "n_refs": 340,
+   "median_age": 5.5,
+   "share_le1": 0.0794,
+   "share_ge5": 0.5912,
+   "share_ge10": 0.2706
+  },
+  "1988": {
+   "n_papers": 33,
+   "n_refs": 420,
+   "median_age": 4.0,
+   "share_le1": 0.081,
+   "share_ge5": 0.4738,
+   "share_ge10": 0.1929
+  },
+  "1989": {
+   "n_papers": 36,
+   "n_refs": 680,
+   "median_age": 5.0,
+   "share_le1": 0.0412,
+   "share_ge5": 0.5574,
+   "share_ge10": 0.2544
+  },
+  "1990": {
+   "n_papers": 42,
+   "n_refs": 626,
+   "median_age": 6.0,
+   "share_le1": 0.0304,
+   "share_ge5": 0.6805,
+   "share_ge10": 0.2492
+  },
+  "1991": {
+   "n_papers": 53,
+   "n_refs": 843,
+   "median_age": 6,
+   "share_le1": 0.032,
+   "share_ge5": 0.675,
+   "share_ge10": 0.2788
+  },
+  "1992": {
+   "n_papers": 44,
+   "n_refs": 759,
+   "median_age": 7,
+   "share_le1": 0.0316,
+   "share_ge5": 0.7181,
+   "share_ge10": 0.3096
+  },
+  "1993": {
+   "n_papers": 42,
+   "n_refs": 647,
+   "median_age": 6,
+   "share_le1": 0.0371,
+   "share_ge5": 0.694,
+   "share_ge10": 0.2519
+  },
+  "1994": {
+   "n_papers": 41,
+   "n_refs": 617,
+   "median_age": 6,
+   "share_le1": 0.0373,
+   "share_ge5": 0.7066,
+   "share_ge10": 0.248
+  },
+  "1995": {
+   "n_papers": 42,
+   "n_refs": 740,
+   "median_age": 7.0,
+   "share_le1": 0.0284,
+   "share_ge5": 0.7027,
+   "share_ge10": 0.2797
+  },
+  "1996": {
+   "n_papers": 36,
+   "n_refs": 739,
+   "median_age": 8,
+   "share_le1": 0.0257,
+   "share_ge5": 0.7659,
+   "share_ge10": 0.3599
+  },
+  "1997": {
+   "n_papers": 51,
+   "n_refs": 978,
+   "median_age": 8.0,
+   "share_le1": 0.0153,
+   "share_ge5": 0.7791,
+   "share_ge10": 0.3896
+  },
+  "1998": {
+   "n_papers": 81,
+   "n_refs": 1526,
+   "median_age": 8.0,
+   "share_le1": 0.021,
+   "share_ge5": 0.7857,
+   "share_ge10": 0.4155
+  },
+  "1999": {
+   "n_papers": 82,
+   "n_refs": 1551,
+   "median_age": 8,
+   "share_le1": 0.0619,
+   "share_ge5": 0.7182,
+   "share_ge10": 0.4043
+  },
+  "2000": {
+   "n_papers": 73,
+   "n_refs": 1476,
+   "median_age": 8.0,
+   "share_le1": 0.0461,
+   "share_ge5": 0.75,
+   "share_ge10": 0.4268
+  },
+  "2001": {
+   "n_papers": 54,
+   "n_refs": 1219,
+   "median_age": 7,
+   "share_le1": 0.0656,
+   "share_ge5": 0.6866,
+   "share_ge10": 0.3823
+  },
+  "2002": {
+   "n_papers": 64,
+   "n_refs": 1541,
+   "median_age": 7,
+   "share_le1": 0.0694,
+   "share_ge5": 0.6548,
+   "share_ge10": 0.3777
+  },
+  "2003": {
+   "n_papers": 57,
+   "n_refs": 1541,
+   "median_age": 5,
+   "share_le1": 0.2563,
+   "share_ge5": 0.5419,
+   "share_ge10": 0.2979
+  },
+  "2004": {
+   "n_papers": 69,
+   "n_refs": 1916,
+   "median_age": 5.0,
+   "share_le1": 0.108,
+   "share_ge5": 0.5548,
+   "share_ge10": 0.322
+  },
+  "2005": {
+   "n_papers": 63,
+   "n_refs": 2128,
+   "median_age": 6.0,
+   "share_le1": 0.0799,
+   "share_ge5": 0.5686,
+   "share_ge10": 0.3355
+  },
+  "2006": {
+   "n_papers": 69,
+   "n_refs": 2260,
+   "median_age": 5.0,
+   "share_le1": 0.0801,
+   "share_ge5": 0.5235,
+   "share_ge10": 0.3013
+  },
+  "2007": {
+   "n_papers": 76,
+   "n_refs": 2987,
+   "median_age": 6,
+   "share_le1": 0.07,
+   "share_ge5": 0.6488,
+   "share_ge10": 0.3147
+  },
+  "2008": {
+   "n_papers": 64,
+   "n_refs": 2278,
+   "median_age": 6.0,
+   "share_le1": 0.0496,
+   "share_ge5": 0.6602,
+   "share_ge10": 0.3433
+  },
+  "2009": {
+   "n_papers": 139,
+   "n_refs": 5038,
+   "median_age": 6.0,
+   "share_le1": 0.0538,
+   "share_ge5": 0.6463,
+   "share_ge10": 0.315
+  },
+  "2010": {
+   "n_papers": 71,
+   "n_refs": 3171,
+   "median_age": 6,
+   "share_le1": 0.0732,
+   "share_ge5": 0.596,
+   "share_ge10": 0.2822
+  },
+  "2011": {
+   "n_papers": 84,
+   "n_refs": 3663,
+   "median_age": 7,
+   "share_le1": 0.0519,
+   "share_ge5": 0.6609,
+   "share_ge10": 0.3079
+  },
+  "2012": {
+   "n_papers": 88,
+   "n_refs": 3787,
+   "median_age": 6,
+   "share_le1": 0.0739,
+   "share_ge5": 0.6541,
+   "share_ge10": 0.3219
+  },
+  "2013": {
+   "n_papers": 112,
+   "n_refs": 5005,
+   "median_age": 7,
+   "share_le1": 0.0657,
+   "share_ge5": 0.6743,
+   "share_ge10": 0.3602
+  },
+  "2014": {
+   "n_papers": 89,
+   "n_refs": 4011,
+   "median_age": 7,
+   "share_le1": 0.0683,
+   "share_ge5": 0.6562,
+   "share_ge10": 0.3565
+  },
+  "2015": {
+   "n_papers": 114,
+   "n_refs": 5436,
+   "median_age": 7.0,
+   "share_le1": 0.0543,
+   "share_ge5": 0.6558,
+   "share_ge10": 0.3503
+  },
+  "2016": {
+   "n_papers": 40,
+   "n_refs": 1801,
+   "median_age": 8,
+   "share_le1": 0.0516,
+   "share_ge5": 0.6996,
+   "share_ge10": 0.4409
+  },
+  "2017": {
+   "n_papers": 95,
+   "n_refs": 4393,
+   "median_age": 7,
+   "share_le1": 0.0473,
+   "share_ge5": 0.6815,
+   "share_ge10": 0.3758
+  },
+  "2018": {
+   "n_papers": 87,
+   "n_refs": 4252,
+   "median_age": 8.0,
+   "share_le1": 0.0496,
+   "share_ge5": 0.7081,
+   "share_ge10": 0.4167
+  },
+  "2019": {
+   "n_papers": 103,
+   "n_refs": 5062,
+   "median_age": 7.0,
+   "share_le1": 0.0541,
+   "share_ge5": 0.6833,
+   "share_ge10": 0.3775
+  },
+  "2020": {
+   "n_papers": 97,
+   "n_refs": 4605,
+   "median_age": 7,
+   "share_le1": 0.0356,
+   "share_ge5": 0.6884,
+   "share_ge10": 0.3859
+  },
+  "2021": {
+   "n_papers": 49,
+   "n_refs": 2663,
+   "median_age": 6,
+   "share_le1": 0.0597,
+   "share_ge5": 0.6297,
+   "share_ge10": 0.3425
+  },
+  "2022": {
+   "n_papers": 35,
+   "n_refs": 1737,
+   "median_age": 7,
+   "share_le1": 0.0357,
+   "share_ge5": 0.7214,
+   "share_ge10": 0.388
+  },
+  "2023": {
+   "n_papers": 90,
+   "n_refs": 5245,
+   "median_age": 7,
+   "share_le1": 0.0511,
+   "share_ge5": 0.7003,
+   "share_ge10": 0.3865
+  },
+  "2024": {
+   "n_papers": 112,
+   "n_refs": 6893,
+   "median_age": 6,
+   "share_le1": 0.0699,
+   "share_ge5": 0.6501,
+   "share_ge10": 0.3418
+  },
+  "2025": {
+   "n_papers": 120,
+   "n_refs": 6964,
+   "median_age": 6.0,
+   "share_le1": 0.0681,
+   "share_ge5": 0.6063,
+   "share_ge10": 0.2957
+  }
+ },
+ "operations_research__S103321696": {
+  "1985": {
+   "n_papers": 150,
+   "n_refs": 2054,
+   "median_age": 8.0,
+   "share_le1": 0.0419,
+   "share_ge5": 0.7293,
+   "share_ge10": 0.4206
+  },
+  "1986": {
+   "n_papers": 150,
+   "n_refs": 2401,
+   "median_age": 8,
+   "share_le1": 0.04,
+   "share_ge5": 0.7626,
+   "share_ge10": 0.3965
+  },
+  "1987": {
+   "n_papers": 150,
+   "n_refs": 1630,
+   "median_age": 8.0,
+   "share_le1": 0.0319,
+   "share_ge5": 0.7423,
+   "share_ge10": 0.4442
+  },
+  "1988": {
+   "n_papers": 150,
+   "n_refs": 1990,
+   "median_age": 8.0,
+   "share_le1": 0.0422,
+   "share_ge5": 0.7352,
+   "share_ge10": 0.4216
+  },
+  "1989": {
+   "n_papers": 150,
+   "n_refs": 2683,
+   "median_age": 8,
+   "share_le1": 0.0455,
+   "share_ge5": 0.7272,
+   "share_ge10": 0.4256
+  },
+  "1990": {
+   "n_papers": 150,
+   "n_refs": 2258,
+   "median_age": 8.0,
+   "share_le1": 0.0354,
+   "share_ge5": 0.7064,
+   "share_ge10": 0.4066
+  },
+  "1991": {
+   "n_papers": 150,
+   "n_refs": 2249,
+   "median_age": 9,
+   "share_le1": 0.0262,
+   "share_ge5": 0.7999,
+   "share_ge10": 0.4669
+  },
+  "1992": {
+   "n_papers": 150,
+   "n_refs": 2896,
+   "median_age": 9.0,
+   "share_le1": 0.0262,
+   "share_ge5": 0.7759,
+   "share_ge10": 0.4658
+  },
+  "1993": {
+   "n_papers": 150,
+   "n_refs": 2588,
+   "median_age": 8.0,
+   "share_le1": 0.0213,
+   "share_ge5": 0.7805,
+   "share_ge10": 0.444
+  },
+  "1994": {
+   "n_papers": 150,
+   "n_refs": 2335,
+   "median_age": 10,
+   "share_le1": 0.0218,
+   "share_ge5": 0.8004,
+   "share_ge10": 0.5036
+  },
+  "1995": {
+   "n_papers": 150,
+   "n_refs": 2638,
+   "median_age": 9.0,
+   "share_le1": 0.0277,
+   "share_ge5": 0.8082,
+   "share_ge10": 0.4989
+  },
+  "1996": {
+   "n_papers": 150,
+   "n_refs": 3375,
+   "median_age": 9,
+   "share_le1": 0.0273,
+   "share_ge5": 0.8062,
+   "share_ge10": 0.4954
+  },
+  "1997": {
+   "n_papers": 150,
+   "n_refs": 3454,
+   "median_age": 8.0,
+   "share_le1": 0.0457,
+   "share_ge5": 0.7255,
+   "share_ge10": 0.434
+  },
+  "1998": {
+   "n_papers": 150,
+   "n_refs": 3086,
+   "median_age": 9.0,
+   "share_le1": 0.0227,
+   "share_ge5": 0.8127,
+   "share_ge10": 0.4877
+  },
+  "1999": {
+   "n_papers": 150,
+   "n_refs": 3057,
+   "median_age": 10,
+   "share_le1": 0.02,
+   "share_ge5": 0.8224,
+   "share_ge10": 0.5371
+  },
+  "2000": {
+   "n_papers": 150,
+   "n_refs": 2928,
+   "median_age": 10.0,
+   "share_le1": 0.0174,
+   "share_ge5": 0.8163,
+   "share_ge10": 0.5171
+  },
+  "2001": {
+   "n_papers": 150,
+   "n_refs": 3108,
+   "median_age": 10.0,
+   "share_le1": 0.0158,
+   "share_ge5": 0.8362,
+   "share_ge10": 0.5421
+  },
+  "2002": {
+   "n_papers": 150,
+   "n_refs": 3809,
+   "median_age": 9,
+   "share_le1": 0.015,
+   "share_ge5": 0.7992,
+   "share_ge10": 0.4881
+  },
+  "2003": {
+   "n_papers": 150,
+   "n_refs": 3807,
+   "median_age": 9,
+   "share_le1": 0.0352,
+   "share_ge5": 0.7849,
+   "share_ge10": 0.4799
+  },
+  "2004": {
+   "n_papers": 150,
+   "n_refs": 3857,
+   "median_age": 10,
+   "share_le1": 0.0363,
+   "share_ge5": 0.7724,
+   "share_ge10": 0.5025
+  },
+  "2005": {
+   "n_papers": 150,
+   "n_refs": 4122,
+   "median_age": 9.0,
+   "share_le1": 0.0398,
+   "share_ge5": 0.7659,
+   "share_ge10": 0.4854
+  },
+  "2006": {
+   "n_papers": 150,
+   "n_refs": 4316,
+   "median_age": 10.0,
+   "share_le1": 0.0341,
+   "share_ge5": 0.782,
+   "share_ge10": 0.5271
+  },
+  "2007": {
+   "n_papers": 150,
+   "n_refs": 4259,
+   "median_age": 9,
+   "share_le1": 0.0411,
+   "share_ge5": 0.7647,
+   "share_ge10": 0.4966
+  },
+  "2008": {
+   "n_papers": 150,
+   "n_refs": 4112,
+   "median_age": 11.0,
+   "share_le1": 0.036,
+   "share_ge5": 0.7938,
+   "share_ge10": 0.5435
+  },
+  "2009": {
+   "n_papers": 150,
+   "n_refs": 4729,
+   "median_age": 9,
+   "share_le1": 0.0429,
+   "share_ge5": 0.7346,
+   "share_ge10": 0.4557
+  },
+  "2010": {
+   "n_papers": 150,
+   "n_refs": 4665,
+   "median_age": 9,
+   "share_le1": 0.0431,
+   "share_ge5": 0.7477,
+   "share_ge10": 0.4735
+  },
+  "2011": {
+   "n_papers": 150,
+   "n_refs": 4820,
+   "median_age": 10.0,
+   "share_le1": 0.0311,
+   "share_ge5": 0.7865,
+   "share_ge10": 0.5104
+  },
+  "2012": {
+   "n_papers": 150,
+   "n_refs": 5012,
+   "median_age": 9.0,
+   "share_le1": 0.0529,
+   "share_ge5": 0.7508,
+   "share_ge10": 0.4699
+  },
+  "2013": {
+   "n_papers": 150,
+   "n_refs": 6293,
+   "median_age": 9,
+   "share_le1": 0.0435,
+   "share_ge5": 0.7491,
+   "share_ge10": 0.4686
+  },
+  "2014": {
+   "n_papers": 150,
+   "n_refs": 5771,
+   "median_age": 10,
+   "share_le1": 0.0418,
+   "share_ge5": 0.7742,
+   "share_ge10": 0.502
+  },
+  "2015": {
+   "n_papers": 150,
+   "n_refs": 6218,
+   "median_age": 10.0,
+   "share_le1": 0.0444,
+   "share_ge5": 0.77,
+   "share_ge10": 0.504
+  },
+  "2016": {
+   "n_papers": 150,
+   "n_refs": 6550,
+   "median_age": 10.0,
+   "share_le1": 0.0463,
+   "share_ge5": 0.7644,
+   "share_ge10": 0.5058
+  },
+  "2017": {
+   "n_papers": 150,
+   "n_refs": 7076,
+   "median_age": 10.0,
+   "share_le1": 0.0384,
+   "share_ge5": 0.7766,
+   "share_ge10": 0.5085
+  },
+  "2018": {
+   "n_papers": 150,
+   "n_refs": 7073,
+   "median_age": 10,
+   "share_le1": 0.0478,
+   "share_ge5": 0.765,
+   "share_ge10": 0.5095
+  },
+  "2019": {
+   "n_papers": 150,
+   "n_refs": 6773,
+   "median_age": 10,
+   "share_le1": 0.0449,
+   "share_ge5": 0.7527,
+   "share_ge10": 0.503
+  },
+  "2020": {
+   "n_papers": 150,
+   "n_refs": 7373,
+   "median_age": 10,
+   "share_le1": 0.0472,
+   "share_ge5": 0.75,
+   "share_ge10": 0.501
+  },
+  "2021": {
+   "n_papers": 150,
+   "n_refs": 7553,
+   "median_age": 10,
+   "share_le1": 0.0528,
+   "share_ge5": 0.7455,
+   "share_ge10": 0.5022
+  },
+  "2022": {
+   "n_papers": 150,
+   "n_refs": 7522,
+   "median_age": 9.0,
+   "share_le1": 0.0513,
+   "share_ge5": 0.7241,
+   "share_ge10": 0.4694
+  },
+  "2023": {
+   "n_papers": 150,
+   "n_refs": 7435,
+   "median_age": 8,
+   "share_le1": 0.0495,
+   "share_ge5": 0.7007,
+   "share_ge10": 0.4562
+  },
+  "2024": {
+   "n_papers": 150,
+   "n_refs": 7774,
+   "median_age": 9.0,
+   "share_le1": 0.0531,
+   "share_ge5": 0.7256,
+   "share_ge10": 0.472
+  },
+  "2025": {
+   "n_papers": 150,
+   "n_refs": 8226,
+   "median_age": 9.0,
+   "share_le1": 0.0422,
+   "share_ge5": 0.7608,
+   "share_ge10": 0.4966
+  }
+ },
+ "operations_research__S33323087": {
+  "1985": {
+   "n_papers": 127,
+   "n_refs": 1769,
+   "median_age": 8,
+   "share_le1": 0.0317,
+   "share_ge5": 0.7581,
+   "share_ge10": 0.424
+  },
+  "1986": {
+   "n_papers": 133,
+   "n_refs": 2018,
+   "median_age": 8.0,
+   "share_le1": 0.0406,
+   "share_ge5": 0.7136,
+   "share_ge10": 0.3989
+  },
+  "1987": {
+   "n_papers": 128,
+   "n_refs": 1983,
+   "median_age": 8,
+   "share_le1": 0.056,
+   "share_ge5": 0.7418,
+   "share_ge10": 0.4473
+  },
+  "1988": {
+   "n_papers": 114,
+   "n_refs": 1727,
+   "median_age": 8,
+   "share_le1": 0.04,
+   "share_ge5": 0.7279,
+   "share_ge10": 0.4337
+  },
+  "1989": {
+   "n_papers": 103,
+   "n_refs": 2047,
+   "median_age": 9,
+   "share_le1": 0.0405,
+   "share_ge5": 0.7704,
+   "share_ge10": 0.4792
+  },
+  "1990": {
+   "n_papers": 109,
+   "n_refs": 2029,
+   "median_age": 8,
+   "share_le1": 0.0394,
+   "share_ge5": 0.7245,
+   "share_ge10": 0.4022
+  },
+  "1991": {
+   "n_papers": 113,
+   "n_refs": 1989,
+   "median_age": 9,
+   "share_le1": 0.0387,
+   "share_ge5": 0.7567,
+   "share_ge10": 0.456
+  },
+  "1992": {
+   "n_papers": 112,
+   "n_refs": 2275,
+   "median_age": 9,
+   "share_le1": 0.0308,
+   "share_ge5": 0.7604,
+   "share_ge10": 0.4703
+  },
+  "1993": {
+   "n_papers": 118,
+   "n_refs": 2162,
+   "median_age": 8.0,
+   "share_le1": 0.0338,
+   "share_ge5": 0.7525,
+   "share_ge10": 0.4431
+  },
+  "1994": {
+   "n_papers": 120,
+   "n_refs": 2904,
+   "median_age": 9.0,
+   "share_le1": 0.0262,
+   "share_ge5": 0.8051,
+   "share_ge10": 0.4855
+  },
+  "1995": {
+   "n_papers": 148,
+   "n_refs": 3156,
+   "median_age": 9.0,
+   "share_le1": 0.0219,
+   "share_ge5": 0.8042,
+   "share_ge10": 0.4613
+  },
+  "1996": {
+   "n_papers": 122,
+   "n_refs": 2539,
+   "median_age": 9,
+   "share_le1": 0.0272,
+   "share_ge5": 0.8003,
+   "share_ge10": 0.4927
+  },
+  "1997": {
+   "n_papers": 123,
+   "n_refs": 2451,
+   "median_age": 9,
+   "share_le1": 0.0212,
+   "share_ge5": 0.8119,
+   "share_ge10": 0.479
+  },
+  "1998": {
+   "n_papers": 145,
+   "n_refs": 3993,
+   "median_age": 10,
+   "share_le1": 0.0253,
+   "share_ge5": 0.8067,
+   "share_ge10": 0.5111
+  },
+  "1999": {
+   "n_papers": 126,
+   "n_refs": 3147,
+   "median_age": 9,
+   "share_le1": 0.0353,
+   "share_ge5": 0.7623,
+   "share_ge10": 0.4601
+  },
+  "2000": {
+   "n_papers": 116,
+   "n_refs": 3296,
+   "median_age": 9.0,
+   "share_le1": 0.0419,
+   "share_ge5": 0.7649,
+   "share_ge10": 0.4845
+  },
+  "2001": {
+   "n_papers": 123,
+   "n_refs": 3514,
+   "median_age": 9.0,
+   "share_le1": 0.0356,
+   "share_ge5": 0.7666,
+   "share_ge10": 0.4789
+  },
+  "2002": {
+   "n_papers": 109,
+   "n_refs": 3465,
+   "median_age": 10,
+   "share_le1": 0.0369,
+   "share_ge5": 0.7879,
+   "share_ge10": 0.5189
+  },
+  "2003": {
+   "n_papers": 113,
+   "n_refs": 4441,
+   "median_age": 10,
+   "share_le1": 0.0432,
+   "share_ge5": 0.7552,
+   "share_ge10": 0.5091
+  },
+  "2004": {
+   "n_papers": 150,
+   "n_refs": 5572,
+   "median_age": 11.0,
+   "share_le1": 0.0427,
+   "share_ge5": 0.799,
+   "share_ge10": 0.549
+  },
+  "2005": {
+   "n_papers": 150,
+   "n_refs": 4293,
+   "median_age": 9,
+   "share_le1": 0.0382,
+   "share_ge5": 0.7747,
+   "share_ge10": 0.4938
+  },
+  "2006": {
+   "n_papers": 150,
+   "n_refs": 5465,
+   "median_age": 10,
+   "share_le1": 0.0282,
+   "share_ge5": 0.8013,
+   "share_ge10": 0.5118
+  },
+  "2007": {
+   "n_papers": 150,
+   "n_refs": 4764,
+   "median_age": 10.0,
+   "share_le1": 0.0325,
+   "share_ge5": 0.8056,
+   "share_ge10": 0.5281
+  },
+  "2008": {
+   "n_papers": 150,
+   "n_refs": 5081,
+   "median_age": 9,
+   "share_le1": 0.0374,
+   "share_ge5": 0.7774,
+   "share_ge10": 0.4989
+  },
+  "2009": {
+   "n_papers": 150,
+   "n_refs": 4707,
+   "median_age": 10,
+   "share_le1": 0.0438,
+   "share_ge5": 0.7909,
+   "share_ge10": 0.5114
+  },
+  "2010": {
+   "n_papers": 150,
+   "n_refs": 5350,
+   "median_age": 10.0,
+   "share_le1": 0.0366,
+   "share_ge5": 0.795,
+   "share_ge10": 0.5262
+  },
+  "2011": {
+   "n_papers": 150,
+   "n_refs": 5281,
+   "median_age": 10,
+   "share_le1": 0.0383,
+   "share_ge5": 0.7826,
+   "share_ge10": 0.5124
+  },
+  "2012": {
+   "n_papers": 150,
+   "n_refs": 5323,
+   "median_age": 10,
+   "share_le1": 0.0393,
+   "share_ge5": 0.7894,
+   "share_ge10": 0.517
+  },
+  "2013": {
+   "n_papers": 150,
+   "n_refs": 5733,
+   "median_age": 11,
+   "share_le1": 0.0342,
+   "share_ge5": 0.8132,
+   "share_ge10": 0.5481
+  },
+  "2014": {
+   "n_papers": 150,
+   "n_refs": 6670,
+   "median_age": 10.0,
+   "share_le1": 0.0384,
+   "share_ge5": 0.784,
+   "share_ge10": 0.504
+  },
+  "2015": {
+   "n_papers": 150,
+   "n_refs": 7514,
+   "median_age": 10.0,
+   "share_le1": 0.0265,
+   "share_ge5": 0.8048,
+   "share_ge10": 0.5343
+  },
+  "2016": {
+   "n_papers": 150,
+   "n_refs": 6675,
+   "median_age": 10,
+   "share_le1": 0.0267,
+   "share_ge5": 0.8189,
+   "share_ge10": 0.5393
+  },
+  "2017": {
+   "n_papers": 150,
+   "n_refs": 7058,
+   "median_age": 11.0,
+   "share_le1": 0.0245,
+   "share_ge5": 0.8379,
+   "share_ge10": 0.5674
+  },
+  "2018": {
+   "n_papers": 150,
+   "n_refs": 6940,
+   "median_age": 11.0,
+   "share_le1": 0.0245,
+   "share_ge5": 0.8388,
+   "share_ge10": 0.5628
+  },
+  "2019": {
+   "n_papers": 150,
+   "n_refs": 6351,
+   "median_age": 11,
+   "share_le1": 0.0153,
+   "share_ge5": 0.8586,
+   "share_ge10": 0.5961
+  },
+  "2020": {
+   "n_papers": 150,
+   "n_refs": 6346,
+   "median_age": 12.0,
+   "share_le1": 0.0216,
+   "share_ge5": 0.8618,
+   "share_ge10": 0.6101
+  },
+  "2021": {
+   "n_papers": 150,
+   "n_refs": 6869,
+   "median_age": 12,
+   "share_le1": 0.0214,
+   "share_ge5": 0.8442,
+   "share_ge10": 0.6024
+  },
+  "2022": {
+   "n_papers": 150,
+   "n_refs": 6001,
+   "median_age": 11,
+   "share_le1": 0.0258,
+   "share_ge5": 0.8335,
+   "share_ge10": 0.5842
+  },
+  "2023": {
+   "n_papers": 150,
+   "n_refs": 6275,
+   "median_age": 12,
+   "share_le1": 0.018,
+   "share_ge5": 0.8378,
+   "share_ge10": 0.5944
+  },
+  "2024": {
+   "n_papers": 150,
+   "n_refs": 6820,
+   "median_age": 12.0,
+   "share_le1": 0.0152,
+   "share_ge5": 0.8516,
+   "share_ge10": 0.5978
+  },
+  "2025": {
+   "n_papers": 150,
+   "n_refs": 6998,
+   "median_age": 12.0,
+   "share_le1": 0.0214,
+   "share_ge5": 0.8311,
+   "share_ge10": 0.586
+  }
+ },
+ "nlp__S18088403": {
+  "1995": {
+   "n_papers": 18,
+   "n_refs": 329,
+   "median_age": 7,
+   "share_le1": 0.0729,
+   "share_ge5": 0.6869,
+   "share_ge10": 0.3617
+  },
+  "1996": {
+   "n_papers": 28,
+   "n_refs": 339,
+   "median_age": 5,
+   "share_le1": 0.0914,
+   "share_ge5": 0.5546,
+   "share_ge10": 0.2861
+  },
+  "1997": {
+   "n_papers": 14,
+   "n_refs": 301,
+   "median_age": 5,
+   "share_le1": 0.1063,
+   "share_ge5": 0.5748,
+   "share_ge10": 0.206
+  },
+  "1998": {
+   "n_papers": 17,
+   "n_refs": 277,
+   "median_age": 6,
+   "share_le1": 0.0289,
+   "share_ge5": 0.7184,
+   "share_ge10": 0.3827
+  },
+  "1999": {
+   "n_papers": 20,
+   "n_refs": 383,
+   "median_age": 6,
+   "share_le1": 0.0836,
+   "share_ge5": 0.5979,
+   "share_ge10": 0.2272
+  },
+  "2000": {
+   "n_papers": 23,
+   "n_refs": 365,
+   "median_age": 6,
+   "share_le1": 0.1233,
+   "share_ge5": 0.5726,
+   "share_ge10": 0.2192
+  },
+  "2001": {
+   "n_papers": 17,
+   "n_refs": 314,
+   "median_age": 5.0,
+   "share_le1": 0.1146,
+   "share_ge5": 0.5573,
+   "share_ge10": 0.2325
+  },
+  "2002": {
+   "n_papers": 21,
+   "n_refs": 446,
+   "median_age": 5.0,
+   "share_le1": 0.0583,
+   "share_ge5": 0.5897,
+   "share_ge10": 0.213
+  },
+  "2003": {
+   "n_papers": 18,
+   "n_refs": 428,
+   "median_age": 6.0,
+   "share_le1": 0.035,
+   "share_ge5": 0.6519,
+   "share_ge10": 0.2757
+  },
+  "2004": {
+   "n_papers": 16,
+   "n_refs": 571,
+   "median_age": 7,
+   "share_le1": 0.0525,
+   "share_ge5": 0.697,
+   "share_ge10": 0.3398
+  },
+  "2005": {
+   "n_papers": 26,
+   "n_refs": 691,
+   "median_age": 6,
+   "share_le1": 0.0362,
+   "share_ge5": 0.6599,
+   "share_ge10": 0.3111
+  },
+  "2006": {
+   "n_papers": 30,
+   "n_refs": 920,
+   "median_age": 7.0,
+   "share_le1": 0.05,
+   "share_ge5": 0.7217,
+   "share_ge10": 0.3717
+  },
+  "2007": {
+   "n_papers": 11,
+   "n_refs": 368,
+   "median_age": 7.0,
+   "share_le1": 0.0571,
+   "share_ge5": 0.7038,
+   "share_ge10": 0.3696
+  },
+  "2008": {
+   "n_papers": 17,
+   "n_refs": 596,
+   "median_age": 6.5,
+   "share_le1": 0.0487,
+   "share_ge5": 0.656,
+   "share_ge10": 0.3289
+  },
+  "2009": {
+   "n_papers": 14,
+   "n_refs": 657,
+   "median_age": 6,
+   "share_le1": 0.0563,
+   "share_ge5": 0.5845,
+   "share_ge10": 0.3105
+  },
+  "2010": {
+   "n_papers": 23,
+   "n_refs": 1123,
+   "median_age": 8,
+   "share_le1": 0.0472,
+   "share_ge5": 0.7133,
+   "share_ge10": 0.4283
+  },
+  "2011": {
+   "n_papers": 30,
+   "n_refs": 1363,
+   "median_age": 7,
+   "share_le1": 0.0477,
+   "share_ge5": 0.708,
+   "share_ge10": 0.3859
+  },
+  "2012": {
+   "n_papers": 29,
+   "n_refs": 1441,
+   "median_age": 7,
+   "share_le1": 0.0562,
+   "share_ge5": 0.6912,
+   "share_ge10": 0.3435
+  },
+  "2013": {
+   "n_papers": 29,
+   "n_refs": 1392,
+   "median_age": 7.0,
+   "share_le1": 0.0496,
+   "share_ge5": 0.7047,
+   "share_ge10": 0.3434
+  },
+  "2014": {
+   "n_papers": 12,
+   "n_refs": 608,
+   "median_age": 7.0,
+   "share_le1": 0.0625,
+   "share_ge5": 0.6497,
+   "share_ge10": 0.3372
+  },
+  "2015": {
+   "n_papers": 30,
+   "n_refs": 1561,
+   "median_age": 8,
+   "share_le1": 0.0545,
+   "share_ge5": 0.7476,
+   "share_ge10": 0.4081
+  },
+  "2016": {
+   "n_papers": 23,
+   "n_refs": 928,
+   "median_age": 7.0,
+   "share_le1": 0.0248,
+   "share_ge5": 0.6918,
+   "share_ge10": 0.3955
+  },
+  "2017": {
+   "n_papers": 25,
+   "n_refs": 1015,
+   "median_age": 9,
+   "share_le1": 0.0374,
+   "share_ge5": 0.7409,
+   "share_ge10": 0.469
+  },
+  "2018": {
+   "n_papers": 34,
+   "n_refs": 1869,
+   "median_age": 6,
+   "share_le1": 0.0605,
+   "share_ge5": 0.5912,
+   "share_ge10": 0.3066
+  },
+  "2019": {
+   "n_papers": 50,
+   "n_refs": 2693,
+   "median_age": 7,
+   "share_le1": 0.088,
+   "share_ge5": 0.6721,
+   "share_ge10": 0.3973
+  },
+  "2020": {
+   "n_papers": 48,
+   "n_refs": 2329,
+   "median_age": 7,
+   "share_le1": 0.0408,
+   "share_ge5": 0.6896,
+   "share_ge10": 0.3736
+  },
+  "2021": {
+   "n_papers": 26,
+   "n_refs": 1363,
+   "median_age": 7,
+   "share_le1": 0.0455,
+   "share_ge5": 0.6845,
+   "share_ge10": 0.3786
+  },
+  "2022": {
+   "n_papers": 53,
+   "n_refs": 3811,
+   "median_age": 5,
+   "share_le1": 0.0457,
+   "share_ge5": 0.5534,
+   "share_ge10": 0.2847
+  },
+  "2023": {
+   "n_papers": 49,
+   "n_refs": 2235,
+   "median_age": 6,
+   "share_le1": 0.0313,
+   "share_ge5": 0.6389,
+   "share_ge10": 0.3199
+  },
+  "2024": {
+   "n_papers": 7,
+   "n_refs": 237,
+   "median_age": 6,
+   "share_le1": 0.038,
+   "share_ge5": 0.654,
+   "share_ge10": 0.3038
+  }
+ }
+}

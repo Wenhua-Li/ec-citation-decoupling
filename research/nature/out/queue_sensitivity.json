@@ -1,0 +1,511 @@
+{
+ "queue_definition": "paper_domain tier='llm' AND confidence < 0.75",
+ "queue_composition": {
+  "EC": 1318,
+  "NON_EC": 1210
+ },
+ "pool_with_queue": {
+  "2000": {
+   "EC": 264,
+   "NON_EC": 625
+  },
+  "2001": {
+   "EC": 216,
+   "NON_EC": 719
+  },
+  "2002": {
+   "EC": 291,
+   "NON_EC": 740
+  },
+  "2003": {
+   "EC": 370,
+   "NON_EC": 725
+  },
+  "2004": {
+   "EC": 390,
+   "NON_EC": 952
+  },
+  "2005": {
+   "EC": 1072,
+   "NON_EC": 944
+  },
+  "2006": {
+   "EC": 1125,
+   "NON_EC": 1148
+  },
+  "2007": {
+   "EC": 1754,
+   "NON_EC": 2054
+  },
+  "2008": {
+   "EC": 1466,
+   "NON_EC": 1784
+  },
+  "2009": {
+   "EC": 1708,
+   "NON_EC": 3025
+  },
+  "2010": {
+   "EC": 1698,
+   "NON_EC": 1889
+  },
+  "2011": {
+   "EC": 1693,
+   "NON_EC": 2943
+  },
+  "2012": {
+   "EC": 1759,
+   "NON_EC": 2916
+  },
+  "2013": {
+   "EC": 2150,
+   "NON_EC": 3172
+  },
+  "2014": {
+   "EC": 2167,
+   "NON_EC": 3686
+  },
+  "2015": {
+   "EC": 2253,
+   "NON_EC": 3509
+  },
+  "2016": {
+   "EC": 2451,
+   "NON_EC": 3697
+  },
+  "2017": {
+   "EC": 2196,
+   "NON_EC": 3817
+  },
+  "2018": {
+   "EC": 2280,
+   "NON_EC": 4131
+  },
+  "2019": {
+   "EC": 2605,
+   "NON_EC": 4413
+  },
+  "2020": {
+   "EC": 2504,
+   "NON_EC": 5021
+  },
+  "2021": {
+   "EC": 2701,
+   "NON_EC": 6812
+  },
+  "2022": {
+   "EC": 2657,
+   "NON_EC": 7372
+  },
+  "2023": {
+   "EC": 2664,
+   "NON_EC": 8372
+  },
+  "2024": {
+   "EC": 2995,
+   "NON_EC": 10968
+  },
+  "2025": {
+   "EC": 2789,
+   "NON_EC": 10954
+  }
+ },
+ "pool_without_queue": {
+  "2000": {
+   "EC": 252,
+   "NON_EC": 613
+  },
+  "2001": {
+   "EC": 205,
+   "NON_EC": 713
+  },
+  "2002": {
+   "EC": 270,
+   "NON_EC": 729
+  },
+  "2003": {
+   "EC": 363,
+   "NON_EC": 711
+  },
+  "2004": {
+   "EC": 375,
+   "NON_EC": 940
+  },
+  "2005": {
+   "EC": 1060,
+   "NON_EC": 922
+  },
+  "2006": {
+   "EC": 1104,
+   "NON_EC": 1126
+  },
+  "2007": {
+   "EC": 1714,
+   "NON_EC": 2010
+  },
+  "2008": {
+   "EC": 1438,
+   "NON_EC": 1752
+  },
+  "2009": {
+   "EC": 1660,
+   "NON_EC": 2986
+  },
+  "2010": {
+   "EC": 1669,
+   "NON_EC": 1865
+  },
+  "2011": {
+   "EC": 1645,
+   "NON_EC": 2898
+  },
+  "2012": {
+   "EC": 1705,
+   "NON_EC": 2875
+  },
+  "2013": {
+   "EC": 2103,
+   "NON_EC": 3125
+  },
+  "2014": {
+   "EC": 2116,
+   "NON_EC": 3630
+  },
+  "2015": {
+   "EC": 2191,
+   "NON_EC": 3455
+  },
+  "2016": {
+   "EC": 2391,
+   "NON_EC": 3635
+  },
+  "2017": {
+   "EC": 2137,
+   "NON_EC": 3751
+  },
+  "2018": {
+   "EC": 2230,
+   "NON_EC": 4070
+  },
+  "2019": {
+   "EC": 2531,
+   "NON_EC": 4349
+  },
+  "2020": {
+   "EC": 2434,
+   "NON_EC": 4969
+  },
+  "2021": {
+   "EC": 2602,
+   "NON_EC": 6746
+  },
+  "2022": {
+   "EC": 2573,
+   "NON_EC": 7305
+  },
+  "2023": {
+   "EC": 2569,
+   "NON_EC": 8284
+  },
+  "2024": {
+   "EC": 2913,
+   "NON_EC": 10880
+  },
+  "2025": {
+   "EC": 2674,
+   "NON_EC": 10870
+  }
+ },
+ "balance_with_queue": {
+  "2002": {
+   "N_EC": 109,
+   "N_NON": 764,
+   "rate_NON_papers_cite_EC": 0.0183,
+   "rate_EC_papers_cite_NON": 0.1284
+  },
+  "2003": {
+   "N_EC": 126,
+   "N_NON": 766,
+   "rate_NON_papers_cite_EC": 0.017,
+   "rate_EC_papers_cite_NON": 0.1508
+  },
+  "2004": {
+   "N_EC": 143,
+   "N_NON": 999,
+   "rate_NON_papers_cite_EC": 0.034,
+   "rate_EC_papers_cite_NON": 0.2517
+  },
+  "2005": {
+   "N_EC": 150,
+   "N_NON": 1051,
+   "rate_NON_papers_cite_EC": 0.0504,
+   "rate_EC_papers_cite_NON": 0.4533
+  },
+  "2006": {
+   "N_EC": 251,
+   "N_NON": 1260,
+   "rate_NON_papers_cite_EC": 0.0984,
+   "rate_EC_papers_cite_NON": 0.5259
+  },
+  "2007": {
+   "N_EC": 330,
+   "N_NON": 1695,
+   "rate_NON_papers_cite_EC": 0.1451,
+   "rate_EC_papers_cite_NON": 0.7939
+  },
+  "2008": {
+   "N_EC": 410,
+   "N_NON": 1902,
+   "rate_NON_papers_cite_EC": 0.1703,
+   "rate_EC_papers_cite_NON": 0.8415
+  },
+  "2009": {
+   "N_EC": 604,
+   "N_NON": 2804,
+   "rate_NON_papers_cite_EC": 0.2093,
+   "rate_EC_papers_cite_NON": 1.1689
+  },
+  "2010": {
+   "N_EC": 557,
+   "N_NON": 2308,
+   "rate_NON_papers_cite_EC": 0.2812,
+   "rate_EC_papers_cite_NON": 1.2047
+  },
+  "2011": {
+   "N_EC": 832,
+   "N_NON": 2856,
+   "rate_NON_papers_cite_EC": 0.3599,
+   "rate_EC_papers_cite_NON": 1.494
+  },
+  "2012": {
+   "N_EC": 779,
+   "N_NON": 2712,
+   "rate_NON_papers_cite_EC": 0.4027,
+   "rate_EC_papers_cite_NON": 1.8293
+  },
+  "2013": {
+   "N_EC": 724,
+   "N_NON": 2398,
+   "rate_NON_papers_cite_EC": 0.5254,
+   "rate_EC_papers_cite_NON": 1.9613
+  },
+  "2014": {
+   "N_EC": 735,
+   "N_NON": 2769,
+   "rate_NON_papers_cite_EC": 0.5424,
+   "rate_EC_papers_cite_NON": 2.1483
+  },
+  "2015": {
+   "N_EC": 856,
+   "N_NON": 2804,
+   "rate_NON_papers_cite_EC": 0.6494,
+   "rate_EC_papers_cite_NON": 2.2909
+  },
+  "2016": {
+   "N_EC": 799,
+   "N_NON": 2757,
+   "rate_NON_papers_cite_EC": 0.6688,
+   "rate_EC_papers_cite_NON": 2.5232
+  },
+  "2017": {
+   "N_EC": 832,
+   "N_NON": 2747,
+   "rate_NON_papers_cite_EC": 0.6651,
+   "rate_EC_papers_cite_NON": 2.5517
+  },
+  "2018": {
+   "N_EC": 830,
+   "N_NON": 3117,
+   "rate_NON_papers_cite_EC": 0.64,
+   "rate_EC_papers_cite_NON": 2.7072
+  },
+  "2019": {
+   "N_EC": 854,
+   "N_NON": 3264,
+   "rate_NON_papers_cite_EC": 0.6924,
+   "rate_EC_papers_cite_NON": 2.9087
+  },
+  "2020": {
+   "N_EC": 928,
+   "N_NON": 3666,
+   "rate_NON_papers_cite_EC": 0.6639,
+   "rate_EC_papers_cite_NON": 2.82
+  },
+  "2021": {
+   "N_EC": 825,
+   "N_NON": 4318,
+   "rate_NON_papers_cite_EC": 0.6864,
+   "rate_EC_papers_cite_NON": 3.217
+  },
+  "2022": {
+   "N_EC": 680,
+   "N_NON": 4445,
+   "rate_NON_papers_cite_EC": 0.5802,
+   "rate_EC_papers_cite_NON": 3.1485
+  },
+  "2023": {
+   "N_EC": 813,
+   "N_NON": 5705,
+   "rate_NON_papers_cite_EC": 0.4706,
+   "rate_EC_papers_cite_NON": 2.941
+  },
+  "2024": {
+   "N_EC": 874,
+   "N_NON": 7608,
+   "rate_NON_papers_cite_EC": 0.4662,
+   "rate_EC_papers_cite_NON": 2.9931
+  },
+  "2025": {
+   "N_EC": 689,
+   "N_NON": 7681,
+   "rate_NON_papers_cite_EC": 0.3579,
+   "rate_EC_papers_cite_NON": 2.8026
+  }
+ },
+ "balance_without_queue": {
+  "2003": {
+   "N_EC": 123,
+   "N_NON": 754,
+   "rate_NON_papers_cite_EC": 0.0106,
+   "rate_EC_papers_cite_NON": 0.1463
+  },
+  "2004": {
+   "N_EC": 132,
+   "N_NON": 989,
+   "rate_NON_papers_cite_EC": 0.0263,
+   "rate_EC_papers_cite_NON": 0.1894
+  },
+  "2005": {
+   "N_EC": 141,
+   "N_NON": 1034,
+   "rate_NON_papers_cite_EC": 0.0455,
+   "rate_EC_papers_cite_NON": 0.3688
+  },
+  "2006": {
+   "N_EC": 234,
+   "N_NON": 1238,
+   "rate_NON_papers_cite_EC": 0.0679,
+   "rate_EC_papers_cite_NON": 0.4786
+  },
+  "2007": {
+   "N_EC": 306,
+   "N_NON": 1664,
+   "rate_NON_papers_cite_EC": 0.1088,
+   "rate_EC_papers_cite_NON": 0.6961
+  },
+  "2008": {
+   "N_EC": 387,
+   "N_NON": 1877,
+   "rate_NON_papers_cite_EC": 0.1385,
+   "rate_EC_papers_cite_NON": 0.7235
+  },
+  "2009": {
+   "N_EC": 568,
+   "N_NON": 2767,
+   "rate_NON_papers_cite_EC": 0.1735,
+   "rate_EC_papers_cite_NON": 1.0775
+  },
+  "2010": {
+   "N_EC": 532,
+   "N_NON": 2285,
+   "rate_NON_papers_cite_EC": 0.2302,
+   "rate_EC_papers_cite_NON": 1.109
+  },
+  "2011": {
+   "N_EC": 790,
+   "N_NON": 2818,
+   "rate_NON_papers_cite_EC": 0.3229,
+   "rate_EC_papers_cite_NON": 1.4013
+  },
+  "2012": {
+   "N_EC": 731,
+   "N_NON": 2679,
+   "rate_NON_papers_cite_EC": 0.3524,
+   "rate_EC_papers_cite_NON": 1.6306
+  },
+  "2013": {
+   "N_EC": 690,
+   "N_NON": 2366,
+   "rate_NON_papers_cite_EC": 0.4628,
+   "rate_EC_papers_cite_NON": 1.742
+  },
+  "2014": {
+   "N_EC": 696,
+   "N_NON": 2729,
+   "rate_NON_papers_cite_EC": 0.4617,
+   "rate_EC_papers_cite_NON": 1.9339
+  },
+  "2015": {
+   "N_EC": 811,
+   "N_NON": 2763,
+   "rate_NON_papers_cite_EC": 0.5805,
+   "rate_EC_papers_cite_NON": 2.053
+  },
+  "2016": {
+   "N_EC": 754,
+   "N_NON": 2716,
+   "rate_NON_papers_cite_EC": 0.5792,
+   "rate_EC_papers_cite_NON": 2.3064
+  },
+  "2017": {
+   "N_EC": 788,
+   "N_NON": 2694,
+   "rate_NON_papers_cite_EC": 0.5731,
+   "rate_EC_papers_cite_NON": 2.3249
+  },
+  "2018": {
+   "N_EC": 795,
+   "N_NON": 3066,
+   "rate_NON_papers_cite_EC": 0.531,
+   "rate_EC_papers_cite_NON": 2.4415
+  },
+  "2019": {
+   "N_EC": 797,
+   "N_NON": 3216,
+   "rate_NON_papers_cite_EC": 0.5796,
+   "rate_EC_papers_cite_NON": 2.675
+  },
+  "2020": {
+   "N_EC": 875,
+   "N_NON": 3634,
+   "rate_NON_papers_cite_EC": 0.5724,
+   "rate_EC_papers_cite_NON": 2.5371
+  },
+  "2021": {
+   "N_EC": 769,
+   "N_NON": 4275,
+   "rate_NON_papers_cite_EC": 0.5906,
+   "rate_EC_papers_cite_NON": 2.9428
+  },
+  "2022": {
+   "N_EC": 633,
+   "N_NON": 4405,
+   "rate_NON_papers_cite_EC": 0.5006,
+   "rate_EC_papers_cite_NON": 2.782
+  },
+  "2023": {
+   "N_EC": 758,
+   "N_NON": 5646,
+   "rate_NON_papers_cite_EC": 0.3962,
+   "rate_EC_papers_cite_NON": 2.5884
+  },
+  "2024": {
+   "N_EC": 815,
+   "N_NON": 7546,
+   "rate_NON_papers_cite_EC": 0.3973,
+   "rate_EC_papers_cite_NON": 2.6319
+  },
+  "2025": {
+   "N_EC": 611,
+   "N_NON": 7627,
+   "rate_NON_papers_cite_EC": 0.3092,
+   "rate_EC_papers_cite_NON": 2.3813
+  }
+ },
+ "headline_years": [
+  "2021",
+  "2024",
+  "2025"
+ ],
+ "note": "balance_stable 口径：稳定 8 刊源内双端篇均引用率；pool 口径：当年有参考文献列表的论文数（trade.py）。"
+}

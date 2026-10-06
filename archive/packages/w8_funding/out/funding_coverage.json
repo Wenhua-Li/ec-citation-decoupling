@@ -1,0 +1,132 @@
+{
+ "2000": {
+  "n_ec": 269,
+  "n_funded": 53,
+  "coverage": 0.197
+ },
+ "2001": {
+  "n_ec": 226,
+  "n_funded": 66,
+  "coverage": 0.292
+ },
+ "2002": {
+  "n_ec": 293,
+  "n_funded": 80,
+  "coverage": 0.273
+ },
+ "2003": {
+  "n_ec": 541,
+  "n_funded": 82,
+  "coverage": 0.1516
+ },
+ "2004": {
+  "n_ec": 669,
+  "n_funded": 103,
+  "coverage": 0.154
+ },
+ "2005": {
+  "n_ec": 1093,
+  "n_funded": 134,
+  "coverage": 0.1226
+ },
+ "2006": {
+  "n_ec": 1155,
+  "n_funded": 157,
+  "coverage": 0.1359
+ },
+ "2007": {
+  "n_ec": 1802,
+  "n_funded": 205,
+  "coverage": 0.1138
+ },
+ "2008": {
+  "n_ec": 1534,
+  "n_funded": 238,
+  "coverage": 0.1551
+ },
+ "2009": {
+  "n_ec": 1777,
+  "n_funded": 395,
+  "coverage": 0.2223
+ },
+ "2010": {
+  "n_ec": 1948,
+  "n_funded": 291,
+  "coverage": 0.1494
+ },
+ "2011": {
+  "n_ec": 1733,
+  "n_funded": 507,
+  "coverage": 0.2926
+ },
+ "2012": {
+  "n_ec": 1790,
+  "n_funded": 518,
+  "coverage": 0.2894
+ },
+ "2013": {
+  "n_ec": 2236,
+  "n_funded": 432,
+  "coverage": 0.1932
+ },
+ "2014": {
+  "n_ec": 2212,
+  "n_funded": 490,
+  "coverage": 0.2215
+ },
+ "2015": {
+  "n_ec": 2296,
+  "n_funded": 881,
+  "coverage": 0.3837
+ },
+ "2016": {
+  "n_ec": 2494,
+  "n_funded": 919,
+  "coverage": 0.3685
+ },
+ "2017": {
+  "n_ec": 2252,
+  "n_funded": 931,
+  "coverage": 0.4134
+ },
+ "2018": {
+  "n_ec": 2325,
+  "n_funded": 1336,
+  "coverage": 0.5746
+ },
+ "2019": {
+  "n_ec": 2655,
+  "n_funded": 1780,
+  "coverage": 0.6704
+ },
+ "2020": {
+  "n_ec": 2561,
+  "n_funded": 1655,
+  "coverage": 0.6462
+ },
+ "2021": {
+  "n_ec": 2749,
+  "n_funded": 1819,
+  "coverage": 0.6617
+ },
+ "2022": {
+  "n_ec": 2694,
+  "n_funded": 1670,
+  "coverage": 0.6199
+ },
+ "2023": {
+  "n_ec": 2689,
+  "n_funded": 1866,
+  "coverage": 0.6939
+ },
+ "2024": {
+  "n_ec": 3026,
+  "n_funded": 2211,
+  "coverage": 0.7307
+ },
+ "2025": {
+  "n_ec": 2815,
+  "n_funded": 2233,
+  "coverage": 0.7933
+ }
+}

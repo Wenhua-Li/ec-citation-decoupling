@@ -1,0 +1,18 @@
+﻿Test,Result,Source
+Two-dimensional stratification by cited-side reference count and citing-side resolution density,All 8 cells negative over 2018-20 (-0.08 to -0.25); 15-68% of the unstratified gap,Analysis output
+Stable comparison group of mixed venues,Divergence survives (2019: field -0.248 vs stable comparison +0.161),Analysis output
+Fixed journal set (single-anchor convention),"Outward rate 0.830 (2021) to 0.503 (2025); denominator +78%, numerator +8%",Analysis output
+Fixed journal set (two-sided convention),One-way decoupling: outside-in -48% vs inside-out held at 2.8-3.2,Analysis output
+Citation-window variants and bridging cohorts,CD3/CD5/CD10 stable; cd2 gap deepens to 2023 (-0.616) without rebound,Analysis output
+Citing pool held fixed (outside-citer yardstick only),"Gap negative in every year 2009-2023; 36-51% of the unadjusted gap, narrowing to -0.053 by 2021-23",Analysis output
+Shared-baseline citation edges removed,Gap survives in the 4 low-reference-density cells (-0.205 to -0.113); high-density cells mechanically explained,Analysis output
+Team-size bucket control,"Field lower within every bucket, by 0.34 to 0.73",Analysis output
+Within-journal change,Field CD5 falls from early to late period in 8 of 8 major sources,Analysis output
+Self-citations removed,Divergence holds (2019 gap -0.43),Analysis output
+Name-density sensitivity for self-citation,Random homonym probability 0.003%-0.013% and falling,Analysis output
+Uniform right-censoring,"607,204 rows beyond 2025 removed; cohorts to 2020",Analysis output
+Citation-source cross-check,"Series shape agrees across OpenCitations, Semantic Scholar and combined",Analysis output
+Cross-database comparison,Not year-level comparable (Spearman rho 0.086); external values used for profile comparison only,Analysis output
+Labelling quality,97% against a hand-checked gold standard of 200 papers,Analysis output
+Composition correction for first-direction choice,"Corrected ratio 0.930 to 0.663; no trend 2013-22, decline concentrated in 2023-25 (about 55% compositional)",Analysis output
+Subfield decomposition (entry heterogeneity),7 of 9 eligible families fall 48-77%; particle swarm rises 31.5%,Analysis output

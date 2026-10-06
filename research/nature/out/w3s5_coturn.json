@@ -1,0 +1,160 @@
+{
+ "granularity_A_indicator_variants": {
+  "positives": {
+   "expert_systems": {
+    "triggered": true,
+    "signal_year": 1982,
+    "cluster": [
+     [
+      "m1_median_age",
+      1983
+     ],
+     [
+      "m1_share_ge5",
+      1982
+     ]
+    ],
+    "lead_main": -5,
+    "hit_main": true
+   },
+   "symbolic_ai": {
+    "triggered": true,
+    "signal_year": 1984,
+    "cluster": [
+     [
+      "m1_median_age",
+      1984
+     ],
+     [
+      "m1_share_ge5",
+      1985
+     ]
+    ],
+    "lead_main": -10,
+    "hit_main": true
+   },
+   "fuzzy_logic": {
+    "triggered": true,
+    "signal_year": 1978,
+    "cluster": [
+     [
+      "m1_median_age",
+      1978
+     ],
+     [
+      "m1_share_ge5",
+      1978
+     ]
+    ],
+    "lead_main": -22,
+    "hit_main": false,
+    "lead_industrial": -13,
+    "hit_industrial": true
+   }
+  },
+  "negatives": {
+   "machine_learning_bull__S62148650": {
+    "triggered": false,
+    "signal_year": null,
+    "cluster": null,
+    "n_dims_or_metrics": 0,
+    "false_positive": false
+   },
+   "evolutionary_biology__S109682412": {
+    "triggered": true,
+    "signal_year": 1986,
+    "cluster": [
+     [
+      "m1_median_age",
+      1986
+     ],
+     [
+      "m1_share_ge5",
+      1988
+     ]
+    ],
+    "false_positive": true
+   }
+  },
+  "summary": {
+   "positives_triggered": "3/3",
+   "hits_main_anchor": "2/3",
+   "hits_industrial_anchor_FUZZY_only": 1,
+   "negative_fields_with_false_positive": "1/2"
+  }
+ },
+ "granularity_B_independent_dimensions": {
+  "positives": {
+   "expert_systems": {
+    "triggered": false,
+    "signal_year": null,
+    "cluster": null,
+    "n_dims_or_metrics": 0
+   },
+   "symbolic_ai": {
+    "triggered": false,
+    "signal_year": null,
+    "cluster": null,
+    "n_dims_or_metrics": 0
+   },
+   "fuzzy_logic": {
+    "triggered": false,
+    "signal_year": null,
+    "cluster": null,
+    "n_dims_or_metrics": 0
+   }
+  },
+  "negatives": {
+   "machine_learning_bull__S62148650": {
+    "triggered": false,
+    "signal_year": null,
+    "cluster": null,
+    "n_dims_or_metrics": 0,
+    "false_positive": false
+   },
+   "evolutionary_biology__S109682412": {
+    "triggered": false,
+    "signal_year": null,
+    "cluster": null,
+    "n_dims_or_metrics": 0,
+    "false_positive": false
+   }
+  },
+  "summary": {
+   "positives_triggered": "0/3",
+   "hits_main_anchor": "0/3",
+   "hits_industrial_anchor_FUZZY_only": 0,
+   "negative_fields_with_false_positive": "0/2"
+  }
+ },
+ "design_note": "A 口径把 m1 两变体各算一维（协议字面）；B 口径合并为引用记忆一维（独立读法）。A 的'改善'若主要由同维变体共转构成即为伪影，以 B 为准。",
+ "artifact_check_A": [
+  {
+   "case": "expert_systems",
+   "same_dimension_only": true,
+   "dims": [
+    "memory"
+   ]
+  },
+  {
+   "case": "symbolic_ai",
+   "same_dimension_only": true,
+   "dims": [
+    "memory"
+   ]
+  },
+  {
+   "case": "fuzzy_logic",
+   "same_dimension_only": true,
+   "dims": [
+    "memory"
+   ]
+  }
+ ],
+ "conclusion": {
+  "A_indicator_level": "正例 3/3 触发，但仅 2/3 落入提前窗（专家系统 −5、符号 AI −10；模糊逻辑 1978 触发、−22 超窗，仅产业口径 1991 下 −13 命中）；负例 JTB 1 次假阳性、ML 无——表面改善（假阳性 7→1）",
+  "A_artifact": "全部触发簇均由引用记忆维度的两个变体构成（同维共转）→ 改善系伪影",
+  "B_dimension_level": "独立维度（记忆/议程/颠覆）转折年相距 6–18 年，协同判据 0 触发（0/3 敏感度、0 假阳性）——不可判",
+  "final": "正文维持 W3 §3 个体指标表述（6/9 + 负例 7 次）；多维协同判据不作为回测验证的能力主张，仅作为协议设计属性（四维共趋势依据来自 EC 主面板 W5）；历史 OA 面板可用独立维 ≤2（CD 结构性缺席、知识收支未建），判据不具评估条件"
+ }
+}

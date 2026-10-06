@@ -1,0 +1,2236 @@
+{
+ "flow": [
+  {
+   "year": 2000,
+   "a_tier_only": false,
+   "pool_EC": 264,
+   "pool_NON": 625,
+   "EC_to_EC": 1,
+   "EC_to_NON": 0,
+   "NON_to_EC": 2,
+   "NON_to_NON": 35,
+   "import_per_ec_paper": 0.0,
+   "export_per_non_paper": 0.003,
+   "intra_ec_per_ec_paper": 0.004,
+   "intra_non_per_non_paper": 0.056,
+   "ratio_raw_edges": 0.0,
+   "ratio_citing_side_pools": 0.0,
+   "ratio_cited_side_pools": 0.0
+  },
+  {
+   "year": 2000,
+   "a_tier_only": true,
+   "pool_EC": 173,
+   "pool_NON": 10,
+   "EC_to_EC": 7,
+   "EC_to_NON": 0,
+   "NON_to_EC": 0,
+   "NON_to_NON": 0,
+   "import_per_ec_paper": 0.0,
+   "export_per_non_paper": 0.0,
+   "intra_ec_per_ec_paper": 0.04,
+   "intra_non_per_non_paper": 0.0,
+   "ratio_raw_edges": null,
+   "ratio_citing_side_pools": null,
+   "ratio_cited_side_pools": null
+  },
+  {
+   "year": 2001,
+   "a_tier_only": false,
+   "pool_EC": 216,
+   "pool_NON": 719,
+   "EC_to_EC": 11,
+   "EC_to_NON": 4,
+   "NON_to_EC": 4,
+   "NON_to_NON": 63,
+   "import_per_ec_paper": 0.019,
+   "export_per_non_paper": 0.006,
+   "intra_ec_per_ec_paper": 0.051,
+   "intra_non_per_non_paper": 0.088,
+   "ratio_raw_edges": 1.0,
+   "ratio_citing_side_pools": 3.329,
+   "ratio_cited_side_pools": 0.3
+  },
+  {
+   "year": 2001,
+   "a_tier_only": true,
+   "pool_EC": 115,
+   "pool_NON": 9,
+   "EC_to_EC": 25,
+   "EC_to_NON": 3,
+   "NON_to_EC": 0,
+   "NON_to_NON": 1,
+   "import_per_ec_paper": 0.026,
+   "export_per_non_paper": 0.0,
+   "intra_ec_per_ec_paper": 0.217,
+   "intra_non_per_non_paper": 0.111,
+   "ratio_raw_edges": null,
+   "ratio_citing_side_pools": null,
+   "ratio_cited_side_pools": null
+  },
+  {
+   "year": 2002,
+   "a_tier_only": false,
+   "pool_EC": 291,
+   "pool_NON": 740,
+   "EC_to_EC": 21,
+   "EC_to_NON": 15,
+   "NON_to_EC": 14,
+   "NON_to_NON": 138,
+   "import_per_ec_paper": 0.052,
+   "export_per_non_paper": 0.019,
+   "intra_ec_per_ec_paper": 0.072,
+   "intra_non_per_non_paper": 0.186,
+   "ratio_raw_edges": 1.071,
+   "ratio_citing_side_pools": 2.725,
+   "ratio_cited_side_pools": 0.421
+  },
+  {
+   "year": 2002,
+   "a_tier_only": true,
+   "pool_EC": 161,
+   "pool_NON": 3,
+   "EC_to_EC": 75,
+   "EC_to_NON": 4,
+   "NON_to_EC": 1,
+   "NON_to_NON": 0,
+   "import_per_ec_paper": 0.025,
+   "export_per_non_paper": 0.333,
+   "intra_ec_per_ec_paper": 0.466,
+   "intra_non_per_non_paper": 0.0,
+   "ratio_raw_edges": 4.0,
+   "ratio_citing_side_pools": 0.075,
+   "ratio_cited_side_pools": 214.667
+  },
+  {
+   "year": 2003,
+   "a_tier_only": false,
+   "pool_EC": 370,
+   "pool_NON": 725,
+   "EC_to_EC": 44,
+   "EC_to_NON": 20,
+   "NON_to_EC": 17,
+   "NON_to_NON": 206,
+   "import_per_ec_paper": 0.054,
+   "export_per_non_paper": 0.023,
+   "intra_ec_per_ec_paper": 0.119,
+   "intra_non_per_non_paper": 0.284,
+   "ratio_raw_edges": 1.176,
+   "ratio_citing_side_pools": 2.305,
+   "ratio_cited_side_pools": 0.6
+  },
+  {
+   "year": 2003,
+   "a_tier_only": true,
+   "pool_EC": 231,
+   "pool_NON": 10,
+   "EC_to_EC": 153,
+   "EC_to_NON": 8,
+   "NON_to_EC": 5,
+   "NON_to_NON": 2,
+   "import_per_ec_paper": 0.035,
+   "export_per_non_paper": 0.5,
+   "intra_ec_per_ec_paper": 0.662,
+   "intra_non_per_non_paper": 0.2,
+   "ratio_raw_edges": 1.6,
+   "ratio_citing_side_pools": 0.069,
+   "ratio_cited_side_pools": 36.96
+  },
+  {
+   "year": 2004,
+   "a_tier_only": false,
+   "pool_EC": 390,
+   "pool_NON": 952,
+   "EC_to_EC": 87,
+   "EC_to_NON": 37,
+   "NON_to_EC": 45,
+   "NON_to_NON": 397,
+   "import_per_ec_paper": 0.095,
+   "export_per_non_paper": 0.047,
+   "intra_ec_per_ec_paper": 0.223,
+   "intra_non_per_non_paper": 0.417,
+   "ratio_raw_edges": 0.822,
+   "ratio_citing_side_pools": 2.007,
+   "ratio_cited_side_pools": 0.337
+  },
+  {
+   "year": 2004,
+   "a_tier_only": true,
+   "pool_EC": 233,
+   "pool_NON": 8,
+   "EC_to_EC": 272,
+   "EC_to_NON": 5,
+   "NON_to_EC": 0,
+   "NON_to_NON": 0,
+   "import_per_ec_paper": 0.021,
+   "export_per_non_paper": 0.0,
+   "intra_ec_per_ec_paper": 1.167,
+   "intra_non_per_non_paper": 0.0,
+   "ratio_raw_edges": null,
+   "ratio_citing_side_pools": null,
+   "ratio_cited_side_pools": null
+  },
+  {
+   "year": 2005,
+   "a_tier_only": false,
+   "pool_EC": 1072,
+   "pool_NON": 944,
+   "EC_to_EC": 137,
+   "EC_to_NON": 72,
+   "NON_to_EC": 61,
+   "NON_to_NON": 579,
+   "import_per_ec_paper": 0.067,
+   "export_per_non_paper": 0.065,
+   "intra_ec_per_ec_paper": 0.128,
+   "intra_non_per_non_paper": 0.613,
+   "ratio_raw_edges": 1.18,
+   "ratio_citing_side_pools": 1.039,
+   "ratio_cited_side_pools": 1.34
+  },
+  {
+   "year": 2005,
+   "a_tier_only": true,
+   "pool_EC": 917,
+   "pool_NON": 38,
+   "EC_to_EC": 825,
+   "EC_to_NON": 43,
+   "NON_to_EC": 27,
+   "NON_to_NON": 7,
+   "import_per_ec_paper": 0.047,
+   "export_per_non_paper": 0.711,
+   "intra_ec_per_ec_paper": 0.9,
+   "intra_non_per_non_paper": 0.184,
+   "ratio_raw_edges": 1.593,
+   "ratio_citing_side_pools": 0.066,
+   "ratio_cited_side_pools": 38.432
+  },
+  {
+   "year": 2006,
+   "a_tier_only": false,
+   "pool_EC": 1125,
+   "pool_NON": 1148,
+   "EC_to_EC": 322,
+   "EC_to_NON": 138,
+   "NON_to_EC": 136,
+   "NON_to_NON": 919,
+   "import_per_ec_paper": 0.123,
+   "export_per_non_paper": 0.118,
+   "intra_ec_per_ec_paper": 0.286,
+   "intra_non_per_non_paper": 0.801,
+   "ratio_raw_edges": 1.015,
+   "ratio_citing_side_pools": 1.035,
+   "ratio_cited_side_pools": 0.994
+  },
+  {
+   "year": 2006,
+   "a_tier_only": true,
+   "pool_EC": 873,
+   "pool_NON": 37,
+   "EC_to_EC": 1083,
+   "EC_to_NON": 62,
+   "NON_to_EC": 19,
+   "NON_to_NON": 9,
+   "import_per_ec_paper": 0.071,
+   "export_per_non_paper": 0.514,
+   "intra_ec_per_ec_paper": 1.241,
+   "intra_non_per_non_paper": 0.243,
+   "ratio_raw_edges": 3.263,
+   "ratio_citing_side_pools": 0.138,
+   "ratio_cited_side_pools": 76.993
+  },
+  {
+   "year": 2007,
+   "a_tier_only": false,
+   "pool_EC": 1754,
+   "pool_NON": 2054,
+   "EC_to_EC": 735,
+   "EC_to_NON": 295,
+   "NON_to_EC": 286,
+   "NON_to_NON": 2052,
+   "import_per_ec_paper": 0.168,
+   "export_per_non_paper": 0.139,
+   "intra_ec_per_ec_paper": 0.419,
+   "intra_non_per_non_paper": 0.999,
+   "ratio_raw_edges": 1.031,
+   "ratio_citing_side_pools": 1.208,
+   "ratio_cited_side_pools": 0.881
+  },
+  {
+   "year": 2007,
+   "a_tier_only": true,
+   "pool_EC": 1252,
+   "pool_NON": 53,
+   "EC_to_EC": 1711,
+   "EC_to_NON": 96,
+   "NON_to_EC": 29,
+   "NON_to_NON": 6,
+   "import_per_ec_paper": 0.077,
+   "export_per_non_paper": 0.547,
+   "intra_ec_per_ec_paper": 1.367,
+   "intra_non_per_non_paper": 0.113,
+   "ratio_raw_edges": 3.31,
+   "ratio_citing_side_pools": 0.14,
+   "ratio_cited_side_pools": 78.199
+  },
+  {
+   "year": 2008,
+   "a_tier_only": false,
+   "pool_EC": 1466,
+   "pool_NON": 1784,
+   "EC_to_EC": 756,
+   "EC_to_NON": 350,
+   "NON_to_EC": 335,
+   "NON_to_NON": 2455,
+   "import_per_ec_paper": 0.239,
+   "export_per_non_paper": 0.188,
+   "intra_ec_per_ec_paper": 0.516,
+   "intra_non_per_non_paper": 1.376,
+   "ratio_raw_edges": 1.045,
+   "ratio_citing_side_pools": 1.271,
+   "ratio_cited_side_pools": 0.859
+  },
+  {
+   "year": 2008,
+   "a_tier_only": true,
+   "pool_EC": 1070,
+   "pool_NON": 89,
+   "EC_to_EC": 1900,
+   "EC_to_NON": 104,
+   "NON_to_EC": 48,
+   "NON_to_NON": 6,
+   "import_per_ec_paper": 0.097,
+   "export_per_non_paper": 0.539,
+   "intra_ec_per_ec_paper": 1.776,
+   "intra_non_per_non_paper": 0.067,
+   "ratio_raw_edges": 2.167,
+   "ratio_citing_side_pools": 0.18,
+   "ratio_cited_side_pools": 26.049
+  },
+  {
+   "year": 2009,
+   "a_tier_only": false,
+   "pool_EC": 1708,
+   "pool_NON": 3025,
+   "EC_to_EC": 1325,
+   "EC_to_NON": 687,
+   "NON_to_EC": 626,
+   "NON_to_NON": 4139,
+   "import_per_ec_paper": 0.402,
+   "export_per_non_paper": 0.207,
+   "intra_ec_per_ec_paper": 0.776,
+   "intra_non_per_non_paper": 1.368,
+   "ratio_raw_edges": 1.097,
+   "ratio_citing_side_pools": 1.944,
+   "ratio_cited_side_pools": 0.62
+  },
+  {
+   "year": 2009,
+   "a_tier_only": true,
+   "pool_EC": 1042,
+   "pool_NON": 60,
+   "EC_to_EC": 2254,
+   "EC_to_NON": 153,
+   "NON_to_EC": 39,
+   "NON_to_NON": 18,
+   "import_per_ec_paper": 0.147,
+   "export_per_non_paper": 0.65,
+   "intra_ec_per_ec_paper": 2.163,
+   "intra_non_per_non_paper": 0.3,
+   "ratio_raw_edges": 3.923,
+   "ratio_citing_side_pools": 0.226,
+   "ratio_cited_side_pools": 68.131
+  },
+  {
+   "year": 2010,
+   "a_tier_only": false,
+   "pool_EC": 1698,
+   "pool_NON": 1889,
+   "EC_to_EC": 1530,
+   "EC_to_NON": 691,
+   "NON_to_EC": 677,
+   "NON_to_NON": 4663,
+   "import_per_ec_paper": 0.407,
+   "export_per_non_paper": 0.358,
+   "intra_ec_per_ec_paper": 0.901,
+   "intra_non_per_non_paper": 2.469,
+   "ratio_raw_edges": 1.021,
+   "ratio_citing_side_pools": 1.135,
+   "ratio_cited_side_pools": 0.917
+  },
+  {
+   "year": 2010,
+   "a_tier_only": true,
+   "pool_EC": 1209,
+   "pool_NON": 80,
+   "EC_to_EC": 2869,
+   "EC_to_NON": 228,
+   "NON_to_EC": 68,
+   "NON_to_NON": 33,
+   "import_per_ec_paper": 0.189,
+   "export_per_non_paper": 0.85,
+   "intra_ec_per_ec_paper": 2.373,
+   "intra_non_per_non_paper": 0.412,
+   "ratio_raw_edges": 3.353,
+   "ratio_citing_side_pools": 0.222,
+   "ratio_cited_side_pools": 50.671
+  },
+  {
+   "year": 2011,
+   "a_tier_only": false,
+   "pool_EC": 1693,
+   "pool_NON": 2943,
+   "EC_to_EC": 2517,
+   "EC_to_NON": 1203,
+   "NON_to_EC": 945,
+   "NON_to_NON": 6677,
+   "import_per_ec_paper": 0.711,
+   "export_per_non_paper": 0.321,
+   "intra_ec_per_ec_paper": 1.487,
+   "intra_non_per_non_paper": 2.269,
+   "ratio_raw_edges": 1.273,
+   "ratio_citing_side_pools": 2.213,
+   "ratio_cited_side_pools": 0.732
+  },
+  {
+   "year": 2011,
+   "a_tier_only": true,
+   "pool_EC": 833,
+   "pool_NON": 94,
+   "EC_to_EC": 2653,
+   "EC_to_NON": 170,
+   "NON_to_EC": 32,
+   "NON_to_NON": 29,
+   "import_per_ec_paper": 0.204,
+   "export_per_non_paper": 0.34,
+   "intra_ec_per_ec_paper": 3.185,
+   "intra_non_per_non_paper": 0.309,
+   "ratio_raw_edges": 5.312,
+   "ratio_citing_side_pools": 0.599,
+   "ratio_cited_side_pools": 47.078
+  },
+  {
+   "year": 2012,
+   "a_tier_only": false,
+   "pool_EC": 1759,
+   "pool_NON": 2916,
+   "EC_to_EC": 2988,
+   "EC_to_NON": 1359,
+   "NON_to_EC": 1085,
+   "NON_to_NON": 8024,
+   "import_per_ec_paper": 0.773,
+   "export_per_non_paper": 0.372,
+   "intra_ec_per_ec_paper": 1.699,
+   "intra_non_per_non_paper": 2.752,
+   "ratio_raw_edges": 1.253,
+   "ratio_citing_side_pools": 2.076,
+   "ratio_cited_side_pools": 0.756
+  },
+  {
+   "year": 2012,
+   "a_tier_only": true,
+   "pool_EC": 943,
+   "pool_NON": 162,
+   "EC_to_EC": 3027,
+   "EC_to_NON": 227,
+   "NON_to_EC": 67,
+   "NON_to_NON": 46,
+   "import_per_ec_paper": 0.241,
+   "export_per_non_paper": 0.414,
+   "intra_ec_per_ec_paper": 3.21,
+   "intra_non_per_non_paper": 0.284,
+   "ratio_raw_edges": 3.388,
+   "ratio_citing_side_pools": 0.582,
+   "ratio_cited_side_pools": 19.722
+  },
+  {
+   "year": 2013,
+   "a_tier_only": false,
+   "pool_EC": 2150,
+   "pool_NON": 3172,
+   "EC_to_EC": 4247,
+   "EC_to_NON": 1485,
+   "NON_to_EC": 1393,
+   "NON_to_NON": 8796,
+   "import_per_ec_paper": 0.691,
+   "export_per_non_paper": 0.439,
+   "intra_ec_per_ec_paper": 1.975,
+   "intra_non_per_non_paper": 2.773,
+   "ratio_raw_edges": 1.066,
+   "ratio_citing_side_pools": 1.573,
+   "ratio_cited_side_pools": 0.723
+  },
+  {
+   "year": 2013,
+   "a_tier_only": true,
+   "pool_EC": 1151,
+   "pool_NON": 72,
+   "EC_to_EC": 3891,
+   "EC_to_NON": 236,
+   "NON_to_EC": 79,
+   "NON_to_NON": 37,
+   "import_per_ec_paper": 0.205,
+   "export_per_non_paper": 1.097,
+   "intra_ec_per_ec_paper": 3.381,
+   "intra_non_per_non_paper": 0.514,
+   "ratio_raw_edges": 2.987,
+   "ratio_citing_side_pools": 0.187,
+   "ratio_cited_side_pools": 47.756
+  },
+  {
+   "year": 2014,
+   "a_tier_only": false,
+   "pool_EC": 2167,
+   "pool_NON": 3686,
+   "EC_to_EC": 4789,
+   "EC_to_NON": 1613,
+   "NON_to_EC": 1770,
+   "NON_to_NON": 10277,
+   "import_per_ec_paper": 0.744,
+   "export_per_non_paper": 0.48,
+   "intra_ec_per_ec_paper": 2.21,
+   "intra_non_per_non_paper": 2.788,
+   "ratio_raw_edges": 0.911,
+   "ratio_citing_side_pools": 1.55,
+   "ratio_cited_side_pools": 0.536
+  },
+  {
+   "year": 2014,
+   "a_tier_only": true,
+   "pool_EC": 1187,
+   "pool_NON": 92,
+   "EC_to_EC": 4451,
+   "EC_to_NON": 325,
+   "NON_to_EC": 147,
+   "NON_to_NON": 54,
+   "import_per_ec_paper": 0.274,
+   "export_per_non_paper": 1.598,
+   "intra_ec_per_ec_paper": 3.75,
+   "intra_non_per_non_paper": 0.587,
+   "ratio_raw_edges": 2.211,
+   "ratio_citing_side_pools": 0.171,
+   "ratio_cited_side_pools": 28.525
+  },
+  {
+   "year": 2015,
+   "a_tier_only": false,
+   "pool_EC": 2253,
+   "pool_NON": 3509,
+   "EC_to_EC": 5923,
+   "EC_to_NON": 2005,
+   "NON_to_EC": 2004,
+   "NON_to_NON": 11898,
+   "import_per_ec_paper": 0.89,
+   "export_per_non_paper": 0.571,
+   "intra_ec_per_ec_paper": 2.629,
+   "intra_non_per_non_paper": 3.391,
+   "ratio_raw_edges": 1.0,
+   "ratio_citing_side_pools": 1.558,
+   "ratio_cited_side_pools": 0.642
+  },
+  {
+   "year": 2015,
+   "a_tier_only": true,
+   "pool_EC": 1244,
+   "pool_NON": 185,
+   "EC_to_EC": 5050,
+   "EC_to_NON": 380,
+   "NON_to_EC": 130,
+   "NON_to_NON": 70,
+   "import_per_ec_paper": 0.305,
+   "export_per_non_paper": 0.703,
+   "intra_ec_per_ec_paper": 4.059,
+   "intra_non_per_non_paper": 0.378,
+   "ratio_raw_edges": 2.923,
+   "ratio_citing_side_pools": 0.435,
+   "ratio_cited_side_pools": 19.656
+  },
+  {
+   "year": 2016,
+   "a_tier_only": false,
+   "pool_EC": 2451,
+   "pool_NON": 3697,
+   "EC_to_EC": 6081,
+   "EC_to_NON": 2144,
+   "NON_to_EC": 2102,
+   "NON_to_NON": 12403,
+   "import_per_ec_paper": 0.875,
+   "export_per_non_paper": 0.569,
+   "intra_ec_per_ec_paper": 2.481,
+   "intra_non_per_non_paper": 3.355,
+   "ratio_raw_edges": 1.02,
+   "ratio_citing_side_pools": 1.539,
+   "ratio_cited_side_pools": 0.676
+  },
+  {
+   "year": 2016,
+   "a_tier_only": true,
+   "pool_EC": 1428,
+   "pool_NON": 213,
+   "EC_to_EC": 6151,
+   "EC_to_NON": 514,
+   "NON_to_EC": 252,
+   "NON_to_NON": 112,
+   "import_per_ec_paper": 0.36,
+   "export_per_non_paper": 1.183,
+   "intra_ec_per_ec_paper": 4.307,
+   "intra_non_per_non_paper": 0.526,
+   "ratio_raw_edges": 2.04,
+   "ratio_citing_side_pools": 0.304,
+   "ratio_cited_side_pools": 13.674
+  },
+  {
+   "year": 2017,
+   "a_tier_only": false,
+   "pool_EC": 2196,
+   "pool_NON": 3817,
+   "EC_to_EC": 6949,
+   "EC_to_NON": 2306,
+   "NON_to_EC": 2229,
+   "NON_to_NON": 13977,
+   "import_per_ec_paper": 1.05,
+   "export_per_non_paper": 0.584,
+   "intra_ec_per_ec_paper": 3.164,
+   "intra_non_per_non_paper": 3.662,
+   "ratio_raw_edges": 1.035,
+   "ratio_citing_side_pools": 1.798,
+   "ratio_cited_side_pools": 0.595
+  },
+  {
+   "year": 2017,
+   "a_tier_only": true,
+   "pool_EC": 1103,
+   "pool_NON": 118,
+   "EC_to_EC": 6120,
+   "EC_to_NON": 482,
+   "NON_to_EC": 255,
+   "NON_to_NON": 95,
+   "import_per_ec_paper": 0.437,
+   "export_per_non_paper": 2.161,
+   "intra_ec_per_ec_paper": 5.549,
+   "intra_non_per_non_paper": 0.805,
+   "ratio_raw_edges": 1.89,
+   "ratio_citing_side_pools": 0.202,
+   "ratio_cited_side_pools": 17.669
+  },
+  {
+   "year": 2018,
+   "a_tier_only": false,
+   "pool_EC": 2280,
+   "pool_NON": 4131,
+   "EC_to_EC": 6481,
+   "EC_to_NON": 2389,
+   "NON_to_EC": 2347,
+   "NON_to_NON": 15447,
+   "import_per_ec_paper": 1.048,
+   "export_per_non_paper": 0.568,
+   "intra_ec_per_ec_paper": 2.843,
+   "intra_non_per_non_paper": 3.739,
+   "ratio_raw_edges": 1.018,
+   "ratio_citing_side_pools": 1.844,
+   "ratio_cited_side_pools": 0.562
+  },
+  {
+   "year": 2018,
+   "a_tier_only": true,
+   "pool_EC": 1297,
+   "pool_NON": 241,
+   "EC_to_EC": 6589,
+   "EC_to_NON": 587,
+   "NON_to_EC": 278,
+   "NON_to_NON": 144,
+   "import_per_ec_paper": 0.453,
+   "export_per_non_paper": 1.154,
+   "intra_ec_per_ec_paper": 5.08,
+   "intra_non_per_non_paper": 0.598,
+   "ratio_raw_edges": 2.112,
+   "ratio_citing_side_pools": 0.392,
+   "ratio_cited_side_pools": 11.364
+  },
+  {
+   "year": 2019,
+   "a_tier_only": false,
+   "pool_EC": 2605,
+   "pool_NON": 4413,
+   "EC_to_EC": 8132,
+   "EC_to_NON": 2739,
+   "NON_to_EC": 2756,
+   "NON_to_NON": 17869,
+   "import_per_ec_paper": 1.051,
+   "export_per_non_paper": 0.625,
+   "intra_ec_per_ec_paper": 3.122,
+   "intra_non_per_non_paper": 4.049,
+   "ratio_raw_edges": 0.994,
+   "ratio_citing_side_pools": 1.684,
+   "ratio_cited_side_pools": 0.587
+  },
+  {
+   "year": 2019,
+   "a_tier_only": true,
+   "pool_EC": 1505,
+   "pool_NON": 149,
+   "EC_to_EC": 8210,
+   "EC_to_NON": 828,
+   "NON_to_EC": 287,
+   "NON_to_NON": 152,
+   "import_per_ec_paper": 0.55,
+   "export_per_non_paper": 1.926,
+   "intra_ec_per_ec_paper": 5.455,
+   "intra_non_per_non_paper": 1.02,
+   "ratio_raw_edges": 2.885,
+   "ratio_citing_side_pools": 0.286,
+   "ratio_cited_side_pools": 29.141
+  },
+  {
+   "year": 2020,
+   "a_tier_only": false,
+   "pool_EC": 2504,
+   "pool_NON": 5021,
+   "EC_to_EC": 9410,
+   "EC_to_NON": 2923,
+   "NON_to_EC": 3099,
+   "NON_to_NON": 20555,
+   "import_per_ec_paper": 1.167,
+   "export_per_non_paper": 0.617,
+   "intra_ec_per_ec_paper": 3.758,
+   "intra_non_per_non_paper": 4.094,
+   "ratio_raw_edges": 0.943,
+   "ratio_citing_side_pools": 1.891,
+   "ratio_cited_side_pools": 0.47
+  },
+  {
+   "year": 2020,
+   "a_tier_only": true,
+   "pool_EC": 1303,
+   "pool_NON": 134,
+   "EC_to_EC": 8232,
+   "EC_to_NON": 755,
+   "NON_to_EC": 168,
+   "NON_to_NON": 157,
+   "import_per_ec_paper": 0.579,
+   "export_per_non_paper": 1.254,
+   "intra_ec_per_ec_paper": 6.318,
+   "intra_non_per_non_paper": 1.172,
+   "ratio_raw_edges": 4.494,
+   "ratio_citing_side_pools": 0.462,
+   "ratio_cited_side_pools": 43.7
+  },
+  {
+   "year": 2021,
+   "a_tier_only": false,
+   "pool_EC": 2701,
+   "pool_NON": 6812,
+   "EC_to_EC": 11537,
+   "EC_to_NON": 3691,
+   "NON_to_EC": 4202,
+   "NON_to_NON": 27465,
+   "import_per_ec_paper": 1.367,
+   "export_per_non_paper": 0.617,
+   "intra_ec_per_ec_paper": 4.271,
+   "intra_non_per_non_paper": 4.032,
+   "ratio_raw_edges": 0.878,
+   "ratio_citing_side_pools": 2.215,
+   "ratio_cited_side_pools": 0.348
+  },
+  {
+   "year": 2021,
+   "a_tier_only": true,
+   "pool_EC": 1247,
+   "pool_NON": 161,
+   "EC_to_EC": 8828,
+   "EC_to_NON": 873,
+   "NON_to_EC": 255,
+   "NON_to_NON": 165,
+   "import_per_ec_paper": 0.7,
+   "export_per_non_paper": 1.584,
+   "intra_ec_per_ec_paper": 7.079,
+   "intra_non_per_non_paper": 1.025,
+   "ratio_raw_edges": 3.424,
+   "ratio_citing_side_pools": 0.442,
+   "ratio_cited_side_pools": 26.516
+  },
+  {
+   "year": 2022,
+   "a_tier_only": false,
+   "pool_EC": 2657,
+   "pool_NON": 7372,
+   "EC_to_EC": 11495,
+   "EC_to_NON": 3325,
+   "NON_to_EC": 4159,
+   "NON_to_NON": 30217,
+   "import_per_ec_paper": 1.251,
+   "export_per_non_paper": 0.564,
+   "intra_ec_per_ec_paper": 4.326,
+   "intra_non_per_non_paper": 4.099,
+   "ratio_raw_edges": 0.799,
+   "ratio_citing_side_pools": 2.218,
+   "ratio_cited_side_pools": 0.288
+  },
+  {
+   "year": 2022,
+   "a_tier_only": true,
+   "pool_EC": 1392,
+   "pool_NON": 185,
+   "EC_to_EC": 9991,
+   "EC_to_NON": 1051,
+   "NON_to_EC": 436,
+   "NON_to_NON": 240,
+   "import_per_ec_paper": 0.755,
+   "export_per_non_paper": 2.357,
+   "intra_ec_per_ec_paper": 7.177,
+   "intra_non_per_non_paper": 1.297,
+   "ratio_raw_edges": 2.411,
+   "ratio_citing_side_pools": 0.32,
+   "ratio_cited_side_pools": 18.138
+  },
+  {
+   "year": 2023,
+   "a_tier_only": false,
+   "pool_EC": 2664,
+   "pool_NON": 8372,
+   "EC_to_EC": 13104,
+   "EC_to_NON": 3648,
+   "NON_to_EC": 4473,
+   "NON_to_NON": 34297,
+   "import_per_ec_paper": 1.369,
+   "export_per_non_paper": 0.534,
+   "intra_ec_per_ec_paper": 4.919,
+   "intra_non_per_non_paper": 4.097,
+   "ratio_raw_edges": 0.816,
+   "ratio_citing_side_pools": 2.563,
+   "ratio_cited_side_pools": 0.26
+  },
+  {
+   "year": 2023,
+   "a_tier_only": true,
+   "pool_EC": 1239,
+   "pool_NON": 147,
+   "EC_to_EC": 10481,
+   "EC_to_NON": 1037,
+   "NON_to_EC": 323,
+   "NON_to_NON": 222,
+   "import_per_ec_paper": 0.837,
+   "export_per_non_paper": 2.197,
+   "intra_ec_per_ec_paper": 8.459,
+   "intra_non_per_non_paper": 1.51,
+   "ratio_raw_edges": 3.211,
+   "ratio_citing_side_pools": 0.381,
+   "ratio_cited_side_pools": 27.06
+  },
+  {
+   "year": 2024,
+   "a_tier_only": false,
+   "pool_EC": 2995,
+   "pool_NON": 10968,
+   "EC_to_EC": 13212,
+   "EC_to_NON": 3939,
+   "NON_to_EC": 5588,
+   "NON_to_NON": 45428,
+   "import_per_ec_paper": 1.315,
+   "export_per_non_paper": 0.509,
+   "intra_ec_per_ec_paper": 4.411,
+   "intra_non_per_non_paper": 4.142,
+   "ratio_raw_edges": 0.705,
+   "ratio_citing_side_pools": 2.581,
+   "ratio_cited_side_pools": 0.192
+  },
+  {
+   "year": 2024,
+   "a_tier_only": true,
+   "pool_EC": 1602,
+   "pool_NON": 257,
+   "EC_to_EC": 13017,
+   "EC_to_NON": 1441,
+   "NON_to_EC": 450,
+   "NON_to_NON": 359,
+   "import_per_ec_paper": 0.9,
+   "export_per_non_paper": 1.751,
+   "intra_ec_per_ec_paper": 8.125,
+   "intra_non_per_non_paper": 1.397,
+   "ratio_raw_edges": 3.202,
+   "ratio_citing_side_pools": 0.514,
+   "ratio_cited_side_pools": 19.961
+  },
+  {
+   "year": 2025,
+   "a_tier_only": false,
+   "pool_EC": 2789,
+   "pool_NON": 10954,
+   "EC_to_EC": 11841,
+   "EC_to_NON": 3253,
+   "NON_to_EC": 4891,
+   "NON_to_NON": 42650,
+   "import_per_ec_paper": 1.166,
+   "export_per_non_paper": 0.447,
+   "intra_ec_per_ec_paper": 4.246,
+   "intra_non_per_non_paper": 3.894,
+   "ratio_raw_edges": 0.665,
+   "ratio_citing_side_pools": 2.612,
+   "ratio_cited_side_pools": 0.169
+  },
+  {
+   "year": 2025,
+   "a_tier_only": true,
+   "pool_EC": 1672,
+   "pool_NON": 199,
+   "EC_to_EC": 13693,
+   "EC_to_NON": 1862,
+   "NON_to_EC": 514,
+   "NON_to_NON": 346,
+   "import_per_ec_paper": 1.114,
+   "export_per_non_paper": 2.583,
+   "intra_ec_per_ec_paper": 8.19,
+   "intra_non_per_non_paper": 1.739,
+   "ratio_raw_edges": 3.623,
+   "ratio_citing_side_pools": 0.431,
+   "ratio_cited_side_pools": 30.437
+  }
+ ],
+ "classic_monopoly": [
+  {
+   "year": 2002,
+   "dst_group": "NON_EC",
+   "a_tier_only": false,
+   "share_top50": 0.0327,
+   "n": 153
+  },
+  {
+   "year": 2003,
+   "dst_group": "NON_EC",
+   "a_tier_only": false,
+   "share_top50": 0.0088,
+   "n": 226
+  },
+  {
+   "year": 2003,
+   "dst_group": "EC",
+   "a_tier_only": true,
+   "share_top50": 0.0443,
+   "n": 158
+  },
+  {
+   "year": 2004,
+   "dst_group": "EC",
+   "a_tier_only": false,
+   "share_top50": 0.0379,
+   "n": 132
+  },
+  {
+   "year": 2004,
+   "dst_group": "NON_EC",
+   "a_tier_only": false,
+   "share_top50": 0.0253,
+   "n": 434
+  },
+  {
+   "year": 2004,
+   "dst_group": "EC",
+   "a_tier_only": true,
+   "share_top50": 0.0441,
+   "n": 272
+  },
+  {
+   "year": 2005,
+   "dst_group": "EC",
+   "a_tier_only": false,
+   "share_top50": 0.0455,
+   "n": 198
+  },
+  {
+   "year": 2005,
+   "dst_group": "NON_EC",
+   "a_tier_only": false,
+   "share_top50": 0.0169,
+   "n": 651
+  },
+  {
+   "year": 2005,
+   "dst_group": "EC",
+   "a_tier_only": true,
+   "share_top50": 0.0516,
+   "n": 852
+  },
+  {
+   "year": 2006,
+   "dst_group": "EC",
+   "a_tier_only": false,
+   "share_top50": 0.059,
+   "n": 458
+  },
+  {
+   "year": 2006,
+   "dst_group": "NON_EC",
+   "a_tier_only": false,
+   "share_top50": 0.0284,
+   "n": 1057
+  },
+  {
+   "year": 2006,
+   "dst_group": "EC",
+   "a_tier_only": true,
+   "share_top50": 0.0617,
+   "n": 1102
+  },
+  {
+   "year": 2007,
+   "dst_group": "EC",
+   "a_tier_only": false,
+   "share_top50": 0.0646,
+   "n": 1021
+  },
+  {
+   "year": 2007,
+   "dst_group": "NON_EC",
+   "a_tier_only": false,
+   "share_top50": 0.0311,
+   "n": 2347
+  },
+  {
+   "year": 2007,
+   "dst_group": "EC",
+   "a_tier_only": true,
+   "share_top50": 0.0483,
+   "n": 1740
+  },
+  {
+   "year": 2007,
+   "dst_group": "NON_EC",
+   "a_tier_only": true,
+   "share_top50": 0.1078,
+   "n": 102
+  },
+  {
+   "year": 2008,
+   "dst_group": "EC",
+   "a_tier_only": false,
+   "share_top50": 0.0513,
+   "n": 1091
+  },
+  {
+   "year": 2008,
+   "dst_group": "NON_EC",
+   "a_tier_only": false,
+   "share_top50": 0.0235,
+   "n": 2805
+  },
+  {
+   "year": 2008,
+   "dst_group": "EC",
+   "a_tier_only": true,
+   "share_top50": 0.0431,
+   "n": 1948
+  },
+  {
+   "year": 2008,
+   "dst_group": "NON_EC",
+   "a_tier_only": true,
+   "share_top50": 0.0909,
+   "n": 110
+  },
+  {
+   "year": 2009,
+   "dst_group": "EC",
+   "a_tier_only": false,
+   "share_top50": 0.0482,
+   "n": 1951
+  },
+  {
+   "year": 2009,
+   "dst_group": "NON_EC",
+   "a_tier_only": false,
+   "share_top50": 0.0259,
+   "n": 4826
+  },
+  {
+   "year": 2009,
+   "dst_group": "EC",
+   "a_tier_only": true,
+   "share_top50": 0.0454,
+   "n": 2293
+  },
+  {
+   "year": 2009,
+   "dst_group": "NON_EC",
+   "a_tier_only": true,
+   "share_top50": 0.152,
+   "n": 171
+  },
+  {
+   "year": 2010,
+   "dst_group": "EC",
+   "a_tier_only": false,
+   "share_top50": 0.0512,
+   "n": 2207
+  },
+  {
+   "year": 2010,
+   "dst_group": "NON_EC",
+   "a_tier_only": false,
+   "share_top50": 0.0198,
+   "n": 5354
+  },
+  {
+   "year": 2010,
+   "dst_group": "EC",
+   "a_tier_only": true,
+   "share_top50": 0.0518,
+   "n": 2937
+  },
+  {
+   "year": 2010,
+   "dst_group": "NON_EC",
+   "a_tier_only": true,
+   "share_top50": 0.1341,
+   "n": 261
+  },
+  {
+   "year": 2011,
+   "dst_group": "EC",
+   "a_tier_only": false,
+   "share_top50": 0.0436,
+   "n": 3462
+  },
+  {
+   "year": 2011,
+   "dst_group": "NON_EC",
+   "a_tier_only": false,
+   "share_top50": 0.0195,
+   "n": 7880
+  },
+  {
+   "year": 2011,
+   "dst_group": "EC",
+   "a_tier_only": true,
+   "share_top50": 0.0652,
+   "n": 2685
+  },
+  {
+   "year": 2011,
+   "dst_group": "NON_EC",
+   "a_tier_only": true,
+   "share_top50": 0.1357,
+   "n": 199
+  },
+  {
+   "year": 2012,
+   "dst_group": "EC",
+   "a_tier_only": false,
+   "share_top50": 0.0425,
+   "n": 4073
+  },
+  {
+   "year": 2012,
+   "dst_group": "NON_EC",
+   "a_tier_only": false,
+   "share_top50": 0.0188,
+   "n": 9383
+  },
+  {
+   "year": 2012,
+   "dst_group": "EC",
+   "a_tier_only": true,
+   "share_top50": 0.0588,
+   "n": 3094
+  },
+  {
+   "year": 2012,
+   "dst_group": "NON_EC",
+   "a_tier_only": true,
+   "share_top50": 0.0989,
+   "n": 273
+  },
+  {
+   "year": 2013,
+   "dst_group": "EC",
+   "a_tier_only": false,
+   "share_top50": 0.0557,
+   "n": 5640
+  },
+  {
+   "year": 2013,
+   "dst_group": "NON_EC",
+   "a_tier_only": false,
+   "share_top50": 0.0207,
+   "n": 10281
+  },
+  {
+   "year": 2013,
+   "dst_group": "EC",
+   "a_tier_only": true,
+   "share_top50": 0.0632,
+   "n": 3970
+  },
+  {
+   "year": 2013,
+   "dst_group": "NON_EC",
+   "a_tier_only": true,
+   "share_top50": 0.1319,
+   "n": 273
+  },
+  {
+   "year": 2014,
+   "dst_group": "EC",
+   "a_tier_only": false,
+   "share_top50": 0.0532,
+   "n": 6559
+  },
+  {
+   "year": 2014,
+   "dst_group": "NON_EC",
+   "a_tier_only": false,
+   "share_top50": 0.0172,
+   "n": 11890
+  },
+  {
+   "year": 2014,
+   "dst_group": "EC",
+   "a_tier_only": true,
+   "share_top50": 0.0561,
+   "n": 4598
+  },
+  {
+   "year": 2014,
+   "dst_group": "NON_EC",
+   "a_tier_only": true,
+   "share_top50": 0.1055,
+   "n": 379
+  },
+  {
+   "year": 2015,
+   "dst_group": "EC",
+   "a_tier_only": false,
+   "share_top50": 0.0428,
+   "n": 7927
+  },
+  {
+   "year": 2015,
+   "dst_group": "NON_EC",
+   "a_tier_only": false,
+   "share_top50": 0.0182,
+   "n": 13903
+  },
+  {
+   "year": 2015,
+   "dst_group": "EC",
+   "a_tier_only": true,
+   "share_top50": 0.0548,
+   "n": 5180
+  },
+  {
+   "year": 2015,
+   "dst_group": "NON_EC",
+   "a_tier_only": true,
+   "share_top50": 0.1,
+   "n": 450
+  },
+  {
+   "year": 2016,
+   "dst_group": "EC",
+   "a_tier_only": false,
+   "share_top50": 0.0422,
+   "n": 8183
+  },
+  {
+   "year": 2016,
+   "dst_group": "NON_EC",
+   "a_tier_only": false,
+   "share_top50": 0.0155,
+   "n": 14547
+  },
+  {
+   "year": 2016,
+   "dst_group": "EC",
+   "a_tier_only": true,
+   "share_top50": 0.0489,
+   "n": 6403
+  },
+  {
+   "year": 2016,
+   "dst_group": "NON_EC",
+   "a_tier_only": true,
+   "share_top50": 0.0767,
+   "n": 626
+  },
+  {
+   "year": 2017,
+   "dst_group": "EC",
+   "a_tier_only": false,
+   "share_top50": 0.0445,
+   "n": 9178
+  },
+  {
+   "year": 2017,
+   "dst_group": "NON_EC",
+   "a_tier_only": false,
+   "share_top50": 0.0168,
+   "n": 16283
+  },
+  {
+   "year": 2017,
+   "dst_group": "EC",
+   "a_tier_only": true,
+   "share_top50": 0.0579,
+   "n": 6375
+  },
+  {
+   "year": 2017,
+   "dst_group": "NON_EC",
+   "a_tier_only": true,
+   "share_top50": 0.0832,
+   "n": 577
+  },
+  {
+   "year": 2018,
+   "dst_group": "EC",
+   "a_tier_only": false,
+   "share_top50": 0.0401,
+   "n": 8828
+  },
+  {
+   "year": 2018,
+   "dst_group": "NON_EC",
+   "a_tier_only": false,
+   "share_top50": 0.0145,
+   "n": 17836
+  },
+  {
+   "year": 2018,
+   "dst_group": "EC",
+   "a_tier_only": true,
+   "share_top50": 0.0537,
+   "n": 6867
+  },
+  {
+   "year": 2018,
+   "dst_group": "NON_EC",
+   "a_tier_only": true,
+   "share_top50": 0.0834,
+   "n": 731
+  },
+  {
+   "year": 2019,
+   "dst_group": "EC",
+   "a_tier_only": false,
+   "share_top50": 0.0438,
+   "n": 10888
+  },
+  {
+   "year": 2019,
+   "dst_group": "NON_EC",
+   "a_tier_only": false,
+   "share_top50": 0.0137,
+   "n": 20608
+  },
+  {
+   "year": 2019,
+   "dst_group": "EC",
+   "a_tier_only": true,
+   "share_top50": 0.0448,
+   "n": 8497
+  },
+  {
+   "year": 2019,
+   "dst_group": "NON_EC",
+   "a_tier_only": true,
+   "share_top50": 0.0622,
+   "n": 980
+  },
+  {
+   "year": 2020,
+   "dst_group": "EC",
+   "a_tier_only": false,
+   "share_top50": 0.0371,
+   "n": 12509
+  },
+  {
+   "year": 2020,
+   "dst_group": "NON_EC",
+   "a_tier_only": false,
+   "share_top50": 0.0119,
+   "n": 23478
+  },
+  {
+   "year": 2020,
+   "dst_group": "EC",
+   "a_tier_only": true,
+   "share_top50": 0.0444,
+   "n": 8400
+  },
+  {
+   "year": 2020,
+   "dst_group": "NON_EC",
+   "a_tier_only": true,
+   "share_top50": 0.0691,
+   "n": 912
+  },
+  {
+   "year": 2021,
+   "dst_group": "EC",
+   "a_tier_only": false,
+   "share_top50": 0.0306,
+   "n": 15739
+  },
+  {
+   "year": 2021,
+   "dst_group": "NON_EC",
+   "a_tier_only": false,
+   "share_top50": 0.0094,
+   "n": 31156
+  },
+  {
+   "year": 2021,
+   "dst_group": "EC",
+   "a_tier_only": true,
+   "share_top50": 0.0391,
+   "n": 9083
+  },
+  {
+   "year": 2021,
+   "dst_group": "NON_EC",
+   "a_tier_only": true,
+   "share_top50": 0.0665,
+   "n": 1038
+  },
+  {
+   "year": 2022,
+   "dst_group": "EC",
+   "a_tier_only": false,
+   "share_top50": 0.0309,
+   "n": 15654
+  },
+  {
+   "year": 2022,
+   "dst_group": "NON_EC",
+   "a_tier_only": false,
+   "share_top50": 0.008,
+   "n": 33542
+  },
+  {
+   "year": 2022,
+   "dst_group": "EC",
+   "a_tier_only": true,
+   "share_top50": 0.038,
+   "n": 10427
+  },
+  {
+   "year": 2022,
+   "dst_group": "NON_EC",
+   "a_tier_only": true,
+   "share_top50": 0.0643,
+   "n": 1291
+  },
+  {
+   "year": 2023,
+   "dst_group": "EC",
+   "a_tier_only": false,
+   "share_top50": 0.0283,
+   "n": 17577
+  },
+  {
+   "year": 2023,
+   "dst_group": "NON_EC",
+   "a_tier_only": false,
+   "share_top50": 0.0067,
+   "n": 37945
+  },
+  {
+   "year": 2023,
+   "dst_group": "EC",
+   "a_tier_only": true,
+   "share_top50": 0.0331,
+   "n": 10804
+  },
+  {
+   "year": 2023,
+   "dst_group": "NON_EC",
+   "a_tier_only": true,
+   "share_top50": 0.0596,
+   "n": 1259
+  },
+  {
+   "year": 2024,
+   "dst_group": "EC",
+   "a_tier_only": false,
+   "share_top50": 0.0267,
+   "n": 18800
+  },
+  {
+   "year": 2024,
+   "dst_group": "NON_EC",
+   "a_tier_only": false,
+   "share_top50": 0.0056,
+   "n": 49367
+  },
+  {
+   "year": 2024,
+   "dst_group": "EC",
+   "a_tier_only": true,
+   "share_top50": 0.029,
+   "n": 13467
+  },
+  {
+   "year": 2024,
+   "dst_group": "NON_EC",
+   "a_tier_only": true,
+   "share_top50": 0.045,
+   "n": 1800
+  },
+  {
+   "year": 2025,
+   "dst_group": "EC",
+   "a_tier_only": false,
+   "share_top50": 0.0259,
+   "n": 16732
+  },
+  {
+   "year": 2025,
+   "dst_group": "NON_EC",
+   "a_tier_only": false,
+   "share_top50": 0.0054,
+   "n": 45903
+  },
+  {
+   "year": 2025,
+   "dst_group": "EC",
+   "a_tier_only": true,
+   "share_top50": 0.0255,
+   "n": 14207
+  },
+  {
+   "year": 2025,
+   "dst_group": "NON_EC",
+   "a_tier_only": true,
+   "share_top50": 0.0403,
+   "n": 2208
+  }
+ ],
+ "top50": {
+  "EC": [
+   {
+    "acc": "2002236970378",
+    "year": 2002
+   },
+   {
+    "acc": "20074910963776",
+    "year": 2007
+   },
+   {
+    "acc": "2003227489908",
+    "year": 2003
+   },
+   {
+    "acc": "20113014167916",
+    "year": 2011
+   },
+   {
+    "acc": "2002186933261",
+    "year": 2002
+   },
+   {
+    "acc": "20143318060087",
+    "year": 2014
+   },
+   {
+    "acc": "20110913706586",
+    "year": 2011
+   },
+   {
+    "acc": "20064210185481",
+    "year": 2006
+   },
+   {
+    "acc": "20094212384651",
+    "year": 2009
+   },
+   {
+    "acc": "20071410524599",
+    "year": 2007
+   },
+   {
+    "acc": "20091912074177",
+    "year": 2009
+   },
+   {
+    "acc": "2005279193726",
+    "year": 2005
+   },
+   {
+    "acc": "2006239926845",
+    "year": 2006
+   },
+   {
+    "acc": "20071310509564",
+    "year": 2006
+   },
+   {
+    "acc": "20091912074183",
+    "year": 2009
+   },
+   {
+    "acc": "20110713671796",
+    "year": 2011
+   },
+   {
+    "acc": "13776153",
+    "year": 2003
+   },
+   {
+    "acc": "20113014167918",
+    "year": 2011
+   },
+   {
+    "acc": "2004318292908",
+    "year": 2004
+   },
+   {
+    "acc": "20154401477974",
+    "year": 2004
+   },
+   {
+    "acc": "20091712048294",
+    "year": 2009
+   },
+   {
+    "acc": "20154801619592",
+    "year": 2000
+   },
+   {
+    "acc": "2004318292906",
+    "year": 2004
+   },
+   {
+    "acc": "20124315605501",
+    "year": 2011
+   },
+   {
+    "acc": "2000525410947",
+    "year": 2000
+   },
+   {
+    "acc": "2006069684573",
+    "year": 2006
+   },
+   {
+    "acc": "20143318060082",
+    "year": 2014
+   },
+   {
+    "acc": "2001385595027",
+    "year": 2001
+   },
+   {
+    "acc": "2004318292907",
+    "year": 2004
+   },
+   {
+    "acc": "2003227489910",
+    "year": 2003
+   },
+   {
+    "acc": "20064610236461",
+    "year": 2007
+   },
+   {
+    "acc": "20082411317420",
+    "year": 2008
+   },
+   {
+    "acc": "20164703035629",
+    "year": 2016
+   },
+   {
+    "acc": "20174904488577",
+    "year": 2017
+   },
+   {
+    "acc": "2006069684571",
+    "year": 2006
+   },
+   {
+    "acc": "2004318294357",
+    "year": 2004
+   },
+   {
+    "acc": "20085011778827",
+    "year": 2008
+   },
+   {
+    "acc": "20163202701574",
+    "year": 2016
+   },
+   {
+    "acc": "20073710809665",
+    "year": 2008
+   },
+   {
+    "acc": "20081111140773",
+    "year": 2008
+   },
+   {
+    "acc": "2004258223389",
+    "year": 2004
+   },
+   {
+    "acc": "2000415304545",
+    "year": 2000
+   },
+   {
+    "acc": "20081111140774",
+    "year": 2008
+   },
+   {
+    "acc": "20110913706590",
+    "year": 2011
+   },
+   {
+    "acc": "2005189071790",
+    "year": 2005
+   },
+   {
+    "acc": "20123215329257",
+    "year": 2012
+   },
+   {
+    "acc": "20161002057405",
+    "year": 2015
+   },
+   {
+    "acc": "2006129769385",
+    "year": 2006
+   },
+   {
+    "acc": "20110413619852",
+    "year": 2011
+   },
+   {
+    "acc": "2004478468222",
+    "year": 2004
+   }
+  ],
+  "NON_EC": [
+   {
+    "acc": "20094712471156",
+    "year": 2009
+   },
+   {
+    "acc": "20100912743828",
+    "year": 2010
+   },
+   {
+    "acc": "2001115505212",
+    "year": 2000
+   },
+   {
+    "acc": "2002236969864",
+    "year": 2002
+   },
+   {
+    "acc": "20071210504701",
+    "year": 2006
+   },
+   {
+    "acc": "20072810696985",
+    "year": 2007
+   },
+   {
+    "acc": "2000525410875",
+    "year": 2000
+   },
+   {
+    "acc": "20075010976753",
+    "year": 2008
+   },
+   {
+    "acc": "2002236969866",
+    "year": 2002
+   },
+   {
+    "acc": "20100612693981",
+    "year": 2010
+   },
+   {
+    "acc": "20132316388556",
+    "year": 2013
+   },
+   {
+    "acc": "2001206506265",
+    "year": 2001
+   },
+   {
+    "acc": "20104813444358",
+    "year": 2011
+   },
+   {
+    "acc": "20191106624361",
+    "year": 2018
+   },
+   {
+    "acc": "2001075462371",
+    "year": 2001
+   },
+   {
+    "acc": "2004118058785",
+    "year": 2004
+   },
+   {
+    "acc": "20160201783405",
+    "year": 2016
+   },
+   {
+    "acc": "2005379358944",
+    "year": 2005
+   },
+   {
+    "acc": "20124515654250",
+    "year": 2013
+   },
+   {
+    "acc": "2003507777611",
+    "year": 2004
+   },
+   {
+    "acc": "2004148101951",
+    "year": 2004
+   },
+   {
+    "acc": "20075210987948",
+    "year": 2007
+   },
+   {
+    "acc": "20120814779612",
+    "year": 2012
+   },
+   {
+    "acc": "20094612450899",
+    "year": 2010
+   },
+   {
+    "acc": "20073110721289",
+    "year": 2006
+   },
+   {
+    "acc": "2002266988522",
+    "year": 2002
+   },
+   {
+    "acc": "2003227489907",
+    "year": 2003
+   },
+   {
+    "acc": "2005078843611",
+    "year": 2005
+   },
+   {
+    "acc": "2000145053763",
+    "year": 2000
+   },
+   {
+    "acc": "2004368344759",
+    "year": 2004
+   },
+   {
+    "acc": "20174904492406",
+    "year": 2018
+   },
+   {
+    "acc": "2005399389912",
+    "year": 2006
+   },
+   {
+    "acc": "20071810584987",
+    "year": 2007
+   },
+   {
+    "acc": "20081411181102",
+    "year": 2008
+   },
+   {
+    "acc": "20090311859759",
+    "year": 2009
+   },
+   {
+    "acc": "2005469469084",
+    "year": 2005
+   },
+   {
+    "acc": "20080911123094",
+    "year": 2008
+   },
+   {
+    "acc": "20203509115447",
+    "year": 2021
+   },
+   {
+    "acc": "2005439434420",
+    "year": 2005
+   },
+   {
+    "acc": "20064410201917",
+    "year": 2006
+   },
+   {
+    "acc": "20065010299591",
+    "year": 2006
+   },
+   {
+    "acc": "2004438419866",
+    "year": 2004
+   },
+   {
+    "acc": "20064210183163",
+    "year": 2007
+   },
+   {
+    "acc": "20074310880248",
+    "year": 2007
+   },
+   {
+    "acc": "20102613035112",
+    "year": 2010
+   },
+   {
+    "acc": "2005399389913",
+    "year": 2006
+   },
+   {
+    "acc": "20144800259166",
+    "year": 2014
+   },
+   {
+    "acc": "20082911378214",
+    "year": 2008
+   },
+   {
+    "acc": "20113014172398",
+    "year": 2011
+   },
+   {
+    "acc": "20085111786007",
+    "year": 2008
+   }
+  ]
+ },
+ "fixed_venue_flow": [
+  {
+   "year": 2000,
+   "pool_EC": 62,
+   "pool_NON": 540,
+   "EC_to_NON": 0,
+   "NON_to_EC": 2,
+   "import_per_ec_paper": 0.0,
+   "export_per_non_paper": 0.004,
+   "ratio_raw_edges": 0.0,
+   "ratio_citing_side_pools": 0.0,
+   "ratio_cited_side_pools": 0.0
+  },
+  {
+   "year": 2001,
+   "pool_EC": 80,
+   "pool_NON": 702,
+   "EC_to_NON": 4,
+   "NON_to_EC": 3,
+   "import_per_ec_paper": 0.05,
+   "export_per_non_paper": 0.004,
+   "ratio_raw_edges": 1.333,
+   "ratio_citing_side_pools": 11.7,
+   "ratio_cited_side_pools": 0.152
+  },
+  {
+   "year": 2002,
+   "pool_EC": 109,
+   "pool_NON": 727,
+   "EC_to_NON": 14,
+   "NON_to_EC": 13,
+   "import_per_ec_paper": 0.128,
+   "export_per_non_paper": 0.018,
+   "ratio_raw_edges": 1.077,
+   "ratio_citing_side_pools": 7.183,
+   "ratio_cited_side_pools": 0.161
+  },
+  {
+   "year": 2003,
+   "pool_EC": 125,
+   "pool_NON": 707,
+   "EC_to_NON": 19,
+   "NON_to_EC": 17,
+   "import_per_ec_paper": 0.152,
+   "export_per_non_paper": 0.024,
+   "ratio_raw_edges": 1.118,
+   "ratio_citing_side_pools": 6.321,
+   "ratio_cited_side_pools": 0.198
+  },
+  {
+   "year": 2004,
+   "pool_EC": 141,
+   "pool_NON": 938,
+   "EC_to_NON": 36,
+   "NON_to_EC": 42,
+   "import_per_ec_paper": 0.255,
+   "export_per_non_paper": 0.045,
+   "ratio_raw_edges": 0.857,
+   "ratio_citing_side_pools": 5.702,
+   "ratio_cited_side_pools": 0.129
+  },
+  {
+   "year": 2005,
+   "pool_EC": 140,
+   "pool_NON": 897,
+   "EC_to_NON": 67,
+   "NON_to_EC": 58,
+   "import_per_ec_paper": 0.479,
+   "export_per_non_paper": 0.065,
+   "ratio_raw_edges": 1.155,
+   "ratio_citing_side_pools": 7.401,
+   "ratio_cited_side_pools": 0.18
+  },
+  {
+   "year": 2006,
+   "pool_EC": 235,
+   "pool_NON": 1092,
+   "EC_to_NON": 131,
+   "NON_to_EC": 132,
+   "import_per_ec_paper": 0.557,
+   "export_per_non_paper": 0.121,
+   "ratio_raw_edges": 0.992,
+   "ratio_citing_side_pools": 4.612,
+   "ratio_cited_side_pools": 0.214
+  },
+  {
+   "year": 2007,
+   "pool_EC": 310,
+   "pool_NON": 1631,
+   "EC_to_NON": 249,
+   "NON_to_EC": 244,
+   "import_per_ec_paper": 0.803,
+   "export_per_non_paper": 0.15,
+   "ratio_raw_edges": 1.02,
+   "ratio_citing_side_pools": 5.369,
+   "ratio_cited_side_pools": 0.194
+  },
+  {
+   "year": 2008,
+   "pool_EC": 374,
+   "pool_NON": 1672,
+   "EC_to_NON": 332,
+   "NON_to_EC": 316,
+   "import_per_ec_paper": 0.888,
+   "export_per_non_paper": 0.189,
+   "ratio_raw_edges": 1.051,
+   "ratio_citing_side_pools": 4.697,
+   "ratio_cited_side_pools": 0.235
+  },
+  {
+   "year": 2009,
+   "pool_EC": 567,
+   "pool_NON": 2605,
+   "EC_to_NON": 649,
+   "NON_to_EC": 556,
+   "import_per_ec_paper": 1.145,
+   "export_per_non_paper": 0.213,
+   "ratio_raw_edges": 1.167,
+   "ratio_citing_side_pools": 5.363,
+   "ratio_cited_side_pools": 0.254
+  },
+  {
+   "year": 2010,
+   "pool_EC": 450,
+   "pool_NON": 1788,
+   "EC_to_NON": 656,
+   "NON_to_EC": 661,
+   "import_per_ec_paper": 1.458,
+   "export_per_non_paper": 0.37,
+   "ratio_raw_edges": 0.992,
+   "ratio_citing_side_pools": 3.943,
+   "ratio_cited_side_pools": 0.25
+  },
+  {
+   "year": 2011,
+   "pool_EC": 826,
+   "pool_NON": 2795,
+   "EC_to_NON": 1158,
+   "NON_to_EC": 925,
+   "import_per_ec_paper": 1.402,
+   "export_per_non_paper": 0.331,
+   "ratio_raw_edges": 1.252,
+   "ratio_citing_side_pools": 4.236,
+   "ratio_cited_side_pools": 0.37
+  },
+  {
+   "year": 2012,
+   "pool_EC": 779,
+   "pool_NON": 2712,
+   "EC_to_NON": 1329,
+   "NON_to_EC": 1062,
+   "import_per_ec_paper": 1.706,
+   "export_per_non_paper": 0.392,
+   "ratio_raw_edges": 1.251,
+   "ratio_citing_side_pools": 4.357,
+   "ratio_cited_side_pools": 0.359
+  },
+  {
+   "year": 2013,
+   "pool_EC": 724,
+   "pool_NON": 2398,
+   "EC_to_NON": 1318,
+   "NON_to_EC": 1235,
+   "import_per_ec_paper": 1.82,
+   "export_per_non_paper": 0.515,
+   "ratio_raw_edges": 1.067,
+   "ratio_citing_side_pools": 3.535,
+   "ratio_cited_side_pools": 0.322
+  },
+  {
+   "year": 2014,
+   "pool_EC": 735,
+   "pool_NON": 2769,
+   "EC_to_NON": 1503,
+   "NON_to_EC": 1464,
+   "import_per_ec_paper": 2.045,
+   "export_per_non_paper": 0.529,
+   "ratio_raw_edges": 1.027,
+   "ratio_citing_side_pools": 3.868,
+   "ratio_cited_side_pools": 0.273
+  },
+  {
+   "year": 2015,
+   "pool_EC": 856,
+   "pool_NON": 2802,
+   "EC_to_NON": 1881,
+   "NON_to_EC": 1863,
+   "import_per_ec_paper": 2.197,
+   "export_per_non_paper": 0.665,
+   "ratio_raw_edges": 1.01,
+   "ratio_citing_side_pools": 3.305,
+   "ratio_cited_side_pools": 0.308
+  },
+  {
+   "year": 2016,
+   "pool_EC": 799,
+   "pool_NON": 2757,
+   "EC_to_NON": 1901,
+   "NON_to_EC": 1871,
+   "import_per_ec_paper": 2.379,
+   "export_per_non_paper": 0.679,
+   "ratio_raw_edges": 1.016,
+   "ratio_citing_side_pools": 3.506,
+   "ratio_cited_side_pools": 0.294
+  },
+  {
+   "year": 2017,
+   "pool_EC": 832,
+   "pool_NON": 2746,
+   "EC_to_NON": 2058,
+   "NON_to_EC": 1853,
+   "import_per_ec_paper": 2.474,
+   "export_per_non_paper": 0.675,
+   "ratio_raw_edges": 1.111,
+   "ratio_citing_side_pools": 3.666,
+   "ratio_cited_side_pools": 0.337
+  },
+  {
+   "year": 2018,
+   "pool_EC": 830,
+   "pool_NON": 3116,
+   "EC_to_NON": 2191,
+   "NON_to_EC": 2029,
+   "import_per_ec_paper": 2.64,
+   "export_per_non_paper": 0.651,
+   "ratio_raw_edges": 1.08,
+   "ratio_citing_side_pools": 4.054,
+   "ratio_cited_side_pools": 0.288
+  },
+  {
+   "year": 2019,
+   "pool_EC": 854,
+   "pool_NON": 3263,
+   "EC_to_NON": 2385,
+   "NON_to_EC": 2370,
+   "import_per_ec_paper": 2.793,
+   "export_per_non_paper": 0.726,
+   "ratio_raw_edges": 1.006,
+   "ratio_citing_side_pools": 3.845,
+   "ratio_cited_side_pools": 0.263
+  },
+  {
+   "year": 2020,
+   "pool_EC": 928,
+   "pool_NON": 3666,
+   "EC_to_NON": 2548,
+   "NON_to_EC": 2592,
+   "import_per_ec_paper": 2.746,
+   "export_per_non_paper": 0.707,
+   "ratio_raw_edges": 0.983,
+   "ratio_citing_side_pools": 3.883,
+   "ratio_cited_side_pools": 0.249
+  },
+  {
+   "year": 2021,
+   "pool_EC": 825,
+   "pool_NON": 4318,
+   "EC_to_NON": 2519,
+   "NON_to_EC": 3113,
+   "import_per_ec_paper": 3.053,
+   "export_per_non_paper": 0.721,
+   "ratio_raw_edges": 0.809,
+   "ratio_citing_side_pools": 4.235,
+   "ratio_cited_side_pools": 0.155
+  },
+  {
+   "year": 2022,
+   "pool_EC": 680,
+   "pool_NON": 4444,
+   "EC_to_NON": 2096,
+   "NON_to_EC": 2787,
+   "import_per_ec_paper": 3.082,
+   "export_per_non_paper": 0.627,
+   "ratio_raw_edges": 0.752,
+   "ratio_citing_side_pools": 4.915,
+   "ratio_cited_side_pools": 0.115
+  },
+  {
+   "year": 2023,
+   "pool_EC": 813,
+   "pool_NON": 5705,
+   "EC_to_NON": 2420,
+   "NON_to_EC": 2957,
+   "import_per_ec_paper": 2.977,
+   "export_per_non_paper": 0.518,
+   "ratio_raw_edges": 0.818,
+   "ratio_citing_side_pools": 5.743,
+   "ratio_cited_side_pools": 0.117
+  },
+  {
+   "year": 2024,
+   "pool_EC": 874,
+   "pool_NON": 7606,
+   "EC_to_NON": 2612,
+   "NON_to_EC": 4128,
+   "import_per_ec_paper": 2.989,
+   "export_per_non_paper": 0.543,
+   "ratio_raw_edges": 0.633,
+   "ratio_citing_side_pools": 5.507,
+   "ratio_cited_side_pools": 0.073
+  },
+  {
+   "year": 2025,
+   "pool_EC": 689,
+   "pool_NON": 7680,
+   "EC_to_NON": 2035,
+   "NON_to_EC": 3426,
+   "import_per_ec_paper": 2.954,
+   "export_per_non_paper": 0.446,
+   "ratio_raw_edges": 0.594,
+   "ratio_citing_side_pools": 6.621,
+   "ratio_cited_side_pools": 0.053
+  }
+ ],
+ "fixed_venue_sources": [
+  "Applied Soft Computing Journal",
+  "Computers and Industrial Engineering",
+  "Computers and Operations Research",
+  "Engineering Applications of Artificial Intelligence",
+  "European Journal of Operational Research",
+  "Expert Systems with Applications",
+  "IEEE Transactions on Fuzzy Systems",
+  "Information Sciences"
+ ]
+}

@@ -1,0 +1,294 @@
+{
+ "freeze_ref": "research/nature/R3E_FREEZE.md sha256 d3596e7b...a8495 (2026-10-01)",
+ "denominators": {
+  "N_G1": 18031,
+  "N_G2": 53184
+ },
+ "validity_other_rate": 0.026,
+ "subfamilies": [
+  {
+   "family": "ga",
+   "n_G1": 1725,
+   "n_G2": 1185,
+   "share_G1": 0.0957,
+   "share_G2": 0.0223,
+   "eligible": true,
+   "z": 43.017,
+   "p_raw": 0.0,
+   "rel_decline": 0.7671,
+   "p_BH": 0.0
+  },
+  {
+   "family": "general_ec",
+   "n_G1": 1309,
+   "n_G2": 1479,
+   "share_G1": 0.0726,
+   "share_G2": 0.0278,
+   "eligible": true,
+   "z": 26.797,
+   "p_raw": 0.0,
+   "rel_decline": 0.6169,
+   "p_BH": 0.0
+  },
+  {
+   "family": "emo",
+   "n_G1": 839,
+   "n_G2": 1948,
+   "share_G1": 0.0465,
+   "share_G2": 0.0366,
+   "eligible": true,
+   "z": 5.926,
+   "p_raw": 0.0,
+   "rel_decline": 0.2128,
+   "p_BH": 0.0
+  },
+  {
+   "family": "particle_swarm",
+   "n_G1": 457,
+   "n_G2": 1773,
+   "share_G1": 0.0253,
+   "share_G2": 0.0333,
+   "eligible": true,
+   "z": -5.325,
+   "p_raw": 1.0,
+   "rel_decline": -0.3153,
+   "p_BH": 1.0
+  },
+  {
+   "family": "other_swarm_bio",
+   "n_G1": 119,
+   "n_G2": 1697,
+   "share_G1": 0.0066,
+   "share_G2": 0.0319,
+   "eligible": false
+  },
+  {
+   "family": "other_metaheuristic",
+   "n_G1": 509,
+   "n_G2": 714,
+   "share_G1": 0.0282,
+   "share_G2": 0.0134,
+   "eligible": true,
+   "z": 13.223,
+   "p_raw": 0.0,
+   "rel_decline": 0.5244,
+   "p_BH": 0.0
+  },
+  {
+   "family": "OTHER",
+   "n_G1": 472,
+   "n_G2": 720,
+   "share_G1": 0.0262,
+   "share_G2": 0.0135,
+   "eligible": true,
+   "z": 11.433,
+   "p_raw": 0.0,
+   "rel_decline": 0.4828,
+   "p_BH": 0.0
+  },
+  {
+   "family": "genetic_programming",
+   "n_G1": 596,
+   "n_G2": 526,
+   "share_G1": 0.0331,
+   "share_G2": 0.0099,
+   "eligible": true,
+   "z": 21.586,
+   "p_raw": 0.0,
+   "rel_decline": 0.7008,
+   "p_BH": 0.0
+  },
+  {
+   "family": "differential_evolution",
+   "n_G1": 143,
+   "n_G2": 868,
+   "share_G1": 0.0079,
+   "share_G2": 0.0163,
+   "eligible": false
+  },
+  {
+   "family": "generic_heuristic",
+   "n_G1": 162,
+   "n_G2": 540,
+   "share_G1": 0.009,
+   "share_G2": 0.0102,
+   "eligible": false
+  },
+  {
+   "family": "memetic_hybrid",
+   "n_G1": 253,
+   "n_G2": 347,
+   "share_G1": 0.014,
+   "share_G2": 0.0065,
+   "eligible": true,
+   "z": 9.531,
+   "p_raw": 0.0,
+   "rel_decline": 0.535,
+   "p_BH": 0.0
+  },
+  {
+   "family": "ant_colony",
+   "n_G1": 195,
+   "n_G2": 379,
+   "share_G1": 0.0108,
+   "share_G2": 0.0071,
+   "eligible": false
+  },
+  {
+   "family": "evolution_strategies",
+   "n_G1": 235,
+   "n_G2": 311,
+   "share_G1": 0.013,
+   "share_G2": 0.0058,
+   "eligible": true,
+   "z": 9.559,
+   "p_raw": 0.0,
+   "rel_decline": 0.5513,
+   "p_BH": 0.0
+  },
+  {
+   "family": "neuroevolution",
+   "n_G1": 56,
+   "n_G2": 229,
+   "share_G1": 0.0031,
+   "share_G2": 0.0043,
+   "eligible": false
+  },
+  {
+   "family": "eda",
+   "n_G1": 103,
+   "n_G2": 105,
+   "share_G1": 0.0057,
+   "share_G2": 0.002,
+   "eligible": false
+  },
+  {
+   "family": "lcs",
+   "n_G1": 139,
+   "n_G2": 39,
+   "share_G1": 0.0077,
+   "share_G2": 0.0007,
+   "eligible": false
+  },
+  {
+   "family": "hyper_heuristic",
+   "n_G1": 22,
+   "n_G2": 65,
+   "share_G1": 0.0012,
+   "share_G2": 0.0012,
+   "eligible": false
+  },
+  {
+   "family": "genetic_fuzzy",
+   "n_G1": 31,
+   "n_G2": 21,
+   "share_G1": 0.0017,
+   "share_G2": 0.0004,
+   "eligible": false
+  }
+ ],
+ "trigger_input_A": {
+  "cond1_ge3_subfamilies": true,
+  "cond1_all_eligible_decline_ge25_signif_rawBH": false,
+  "cond3_validity_le10pct": true,
+  "note": "条件 2（R3-G 方向一致）不在本包；三条件与 R3-G 判读合并后按 FREEZE §1 机械裁决轨 A/B"
+ },
+ "migration_by_subfamily_descriptive": {
+  "ga": {
+   "moves_EC_to_NON": 577,
+   "EC_period_ends": 7758,
+   "rate": 0.0744
+  },
+  "OTHER": {
+   "moves_EC_to_NON": 811,
+   "EC_period_ends": 7649,
+   "rate": 0.106
+  },
+  "emo": {
+   "moves_EC_to_NON": 528,
+   "EC_period_ends": 7548,
+   "rate": 0.07
+  },
+  "general_ec": {
+   "moves_EC_to_NON": 387,
+   "EC_period_ends": 7446,
+   "rate": 0.052
+  },
+  "particle_swarm": {
+   "moves_EC_to_NON": 551,
+   "EC_period_ends": 6977,
+   "rate": 0.079
+  },
+  "other_swarm_bio": {
+   "moves_EC_to_NON": 351,
+   "EC_period_ends": 4810,
+   "rate": 0.073
+  },
+  "other_metaheuristic": {
+   "moves_EC_to_NON": 378,
+   "EC_period_ends": 3621,
+   "rate": 0.1044
+  },
+  "differential_evolution": {
+   "moves_EC_to_NON": 219,
+   "EC_period_ends": 3414,
+   "rate": 0.0641
+  },
+  "genetic_programming": {
+   "moves_EC_to_NON": 132,
+   "EC_period_ends": 3300,
+   "rate": 0.04
+  },
+  "ant_colony": {
+   "moves_EC_to_NON": 138,
+   "EC_period_ends": 1998,
+   "rate": 0.0691
+  },
+  "memetic_hybrid": {
+   "moves_EC_to_NON": 140,
+   "EC_period_ends": 1825,
+   "rate": 0.0767
+  },
+  "generic_heuristic": {
+   "moves_EC_to_NON": 178,
+   "EC_period_ends": 1750,
+   "rate": 0.1017
+  },
+  "evolution_strategies": {
+   "moves_EC_to_NON": 56,
+   "EC_period_ends": 1283,
+   "rate": 0.0436
+  },
+  "eda": {
+   "moves_EC_to_NON": 37,
+   "EC_period_ends": 637,
+   "rate": 0.0581
+  },
+  "neuroevolution": {
+   "moves_EC_to_NON": 20,
+   "EC_period_ends": 636,
+   "rate": 0.0314
+  },
+  "lcs": {
+   "moves_EC_to_NON": 14,
+   "EC_period_ends": 387,
+   "rate": 0.0362
+  },
+  "hyper_heuristic": {
+   "moves_EC_to_NON": 16,
+   "EC_period_ends": 321,
+   "rate": 0.0498
+  },
+  "genetic_fuzzy": {
+   "moves_EC_to_NON": 11,
+   "EC_period_ends": 180,
+   "rate": 0.0611
+  }
+ },
+ "consistency": {
+  "first_choice_yearly_vs_PKG_A": "PASS",
+  "sum_subfamily_shares_G1": 0.4083,
+  "sum_subfamily_shares_G2": 0.2432,
+  "note": "sum(subfamily shares) 应等于期内合并 EC 首秀份额"
+ }
+}

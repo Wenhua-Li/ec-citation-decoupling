@@ -1,0 +1,10 @@
+﻿Reading,Formula,Numerator,Denominator,Unit,Window,Source
+Outward citation strength,N(out to field) / N(out papers),Citations from comparison papers to field papers,Comparison papers in the fixed venue set,per paper,Per year,Analysis outputs
+First-direction choice share,N(first papers tagged field) / N(first papers),First papers tagged as field,All first papers that year,share,Per year,Analysis output; entrant series
+Composition-corrected ratio,Observed share / expected share from corpus composition,Observed first-choice share,Expected share from composition,ratio,Per year,Analysis output
+Disruption index CD5,"(N+ - N-) / |Q|, |Q| >= 3",Disruptive citing votes,Citing papers in window with in-corpus references,index,"[t, t+5]",Analysis output
+Resolution rate,N(in-corpus references) / N(references),References resolving to corpus papers,Total distinct references,share,Per year,Analysis outputs
+Youth preference ratio,I(1) / I(6),Intensity received by 1-year-old papers,Intensity received by 6-year-old papers,ratio,Per citing year,Analysis outputs
+Cohort immediacy,w01 / (w01 + w23),Citations received in window years 0-1,Citations received in window years 0-3,share,Cohort-fixed,Analysis outputs
+Agenda external sum,Sum of shares of five external-topic patterns,Papers matching any external topic,Field papers that year,share,Per year,Analysis output
+Self-citation rate,Self-citing edges / all citing edges,Edges whose author names match,All citing edges,share,Per year,Analysis output

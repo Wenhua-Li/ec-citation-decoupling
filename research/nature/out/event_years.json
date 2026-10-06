@@ -1,0 +1,28 @@
+{
+  "_note": "W2-C 事件年表。锚定年在 METRICS.md 预注册区间内取值；执行代理只核对史料来源并取值，不做史实裁决（SOP §8）。来源核对日期：2026-09-29。",
+  "expert_systems": {
+    "event_year": 1987,
+    "basis": "1987 年 Lisp 机专用硬件市场崩溃，成为第二次人工智能寒冬（AI winter）开端；专家系统商业衰退期 1987–1993。取预注册区间（商业衰退 1987–1993）下限 1987 为公开衰退起点。",
+    "sources": [
+      {"title": "AI winter — Wikipedia（1987 Lisp 机市场崩溃→第二次 AI 寒冬；引用 Russell & Norvig 等标准史料）", "url": "https://en.wikipedia.org/wiki/AI_winter"},
+      {"title": "AI Watch — Historical Evolution of AI（欧盟联合研究中心 JRC120469 报告，含 1980 年代专家系统兴衰与寒冬叙述）", "url": "https://publications.jrc.ec.europa.eu/repository/bitstream/JRC120469/jrc120469_historical_evolution_of_ai-v1.1.pdf"},
+      {"title": "Russell & Norvig, Artificial Intelligence: A Modern Approach, §1.3 The History of Artificial Intelligence（教科书史料：1980 年代专家系统繁荣与 1987 年后衰退）", "url": "https://aima.cs.berkeley.edu/"}
+    ]
+  },
+  "symbolic_ai": {
+    "event_year": 1994,
+    "basis": "符号 AI（symbolic AI / GOFAI）作为 AI 主导范式持续到 1990 年代中期，此后让位于统计学习路线；取预注册区间（1994–2000）下限 1994，与预实验实测产出峰值年（1994，2,422 篇/年）一致。",
+    "sources": [
+      {"title": "Symbolic artificial intelligence — Wikipedia（主导范式从 1950 年代中期至 1990 年代中期，其后统计方法兴起）", "url": "https://en.wikipedia.org/wiki/Symbolic_artificial_intelligence"},
+      {"title": "Stanford CS221 AI History lecture notes（1990 年代 SVM 等统计学习成为偏好工具）", "url": "https://stanford-cs221.github.io/autumn2020-extra/modules/general/history-6pp.pdf"}
+    ]
+  },
+  "fuzzy_logic": {
+    "event_year": 2000,
+    "basis": "取预注册区间（退潮 2000–2005）下限 2000，与预实验实测产出峰值年（2000，2,641 篇/年）一致。注意：日本产业/媒体'模糊热潮（fuzzy boom）'的巅峰更早（约 1990–1992），学界产出的 bibliometric 峰值滞后于产业热潮；此口径差异已登记 OPEN_QUESTIONS.md。",
+    "sources": [
+      {"title": "Bellon & Bosc (1992), Fuzzy boom in Japan, International Journal of Approximate Reasoning（日本模糊热潮的学名与时段描述）", "url": "https://onlinelibrary.wiley.com/doi/10.1002/int.4550070402"},
+      {"title": "T.-D. Lin (2009), Japan Fuzzified: The Development of Fuzzy Logic Research in Japan, University of Edinburgh（日本模糊逻辑研究的组织化发展与退潮）", "url": "https://era.ed.uk/items/0808775b-000c-4bd2-bf81-18f53862e99d"}
+    ]
+  }
+}

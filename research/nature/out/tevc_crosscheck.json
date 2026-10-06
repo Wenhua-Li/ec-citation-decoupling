@@ -1,0 +1,54 @@
+{
+ "definition": "OA 抽样 CD5（M2：每面板×年 40 篇、前 100 施引者、窗口 [t,t+5]、施引者须有参考文献） vs 库内 A_pure_ec CD5（disruption.py：库内子网、施引者限库内且有库内参考文献）。两者数值不直接可比，仅校验趋势方向（METRICS.md M2）。",
+ "oa_panel": "TEVC（OpenAlex primary_location.source.id:S93787993），2015–2020",
+ "library_series": "disruption.json rows[].A_pure_ec.mean（库内 A 类纯 EC 期刊，2000–2020 窗口右删失前）",
+ "per_year": {
+  "2015": {
+   "oa_mean": -0.5711,
+   "oa_n_valid": 40,
+   "oa_n_sampled": 40,
+   "library_A_pure_ec_mean": -0.3523
+  },
+  "2016": {
+   "oa_mean": -0.6262,
+   "oa_n_valid": 39,
+   "oa_n_sampled": 40,
+   "library_A_pure_ec_mean": -0.3905
+  },
+  "2017": {
+   "oa_mean": -0.6268,
+   "oa_n_valid": 40,
+   "oa_n_sampled": 40,
+   "library_A_pure_ec_mean": -0.3282
+  },
+  "2018": {
+   "oa_mean": -0.6221,
+   "oa_n_valid": 40,
+   "oa_n_sampled": 40,
+   "library_A_pure_ec_mean": -0.3664
+  },
+  "2019": {
+   "oa_mean": -0.5184,
+   "oa_n_valid": 39,
+   "oa_n_sampled": 40,
+   "library_A_pure_ec_mean": -0.3966
+  },
+  "2020": {
+   "oa_mean": -0.7487,
+   "oa_n_valid": 39,
+   "oa_n_sampled": 40,
+   "library_A_pure_ec_mean": -0.442
+  }
+ },
+ "spearman_rho": 0.0857,
+ "mean_diff_oa_minus_library": -0.2395,
+ "thresholds": {
+  "rho_min": 0.6,
+  "abs_mean_diff_max": 0.2
+ },
+ "pass": false,
+ "warnings": [
+  "OA 侧每篇仅取前 100 个施引者（OpenAlex 返回顺序非随机，偏向高显示度施引者），CD 为抽样估计；",
+  "OA 侧施引者含全网文献，库内侧限于库内子网；两侧差异已在 METRICS.md M2 声明。"
+ ]
+}

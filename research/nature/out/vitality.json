@@ -1,0 +1,207 @@
+{
+ "years_common": [
+  2006,
+  2007,
+  2008,
+  2009,
+  2010,
+  2011,
+  2012,
+  2013,
+  2014,
+  2015,
+  2016,
+  2017,
+  2018,
+  2019,
+  2020
+ ],
+ "n": 15,
+ "series": {
+  "D1_disruption": {
+   "2006": 0.1349,
+   "2007": 0.0739,
+   "2008": 0.0465,
+   "2009": 0.0481,
+   "2010": -0.1155,
+   "2011": 0.0058,
+   "2012": -0.066,
+   "2013": -0.1537,
+   "2014": -0.156,
+   "2015": -0.1898,
+   "2016": -0.2313,
+   "2017": -0.2084,
+   "2018": -0.2119,
+   "2019": -0.2482,
+   "2020": -0.2426
+  },
+  "D2_outflow": {
+   "2006": 0.115,
+   "2007": 0.166,
+   "2008": 0.196,
+   "2009": 0.232,
+   "2010": 0.321,
+   "2011": 0.397,
+   "2012": 0.456,
+   "2013": 0.598,
+   "2014": 0.624,
+   "2015": 0.759,
+   "2016": 0.749,
+   "2017": 0.759,
+   "2018": 0.732,
+   "2019": 0.815,
+   "2020": 0.803
+  },
+  "D3_youth": {
+   "2006": 0.472,
+   "2007": 0.491,
+   "2008": 0.387,
+   "2009": 0.638,
+   "2010": 0.712,
+   "2011": 0.765,
+   "2012": 0.791,
+   "2013": 0.869,
+   "2014": 0.824,
+   "2015": 0.908,
+   "2016": 1.092,
+   "2017": 0.982,
+   "2018": 1.163,
+   "2019": 1.364,
+   "2020": 1.255
+  },
+  "D4_external": {
+   "2006": 0.0191,
+   "2007": 0.0144,
+   "2008": 0.0202,
+   "2009": 0.012400000000000001,
+   "2010": 0.0123,
+   "2011": 0.0121,
+   "2012": 0.0118,
+   "2013": 0.0166,
+   "2014": 0.0168,
+   "2015": 0.0178,
+   "2016": 0.0124,
+   "2017": 0.021699999999999997,
+   "2018": 0.035699999999999996,
+   "2019": 0.049300000000000004,
+   "2020": 0.0566
+  }
+ },
+ "corr": {
+  "D1_disruption~D1_disruption": {
+   "pearson": 1.0,
+   "spearman": 1.0
+  },
+  "D1_disruption~D2_outflow": {
+   "pearson": -0.962,
+   "spearman": -0.956
+  },
+  "D2_outflow~D1_disruption": {
+   "pearson": -0.962,
+   "spearman": -0.956
+  },
+  "D1_disruption~D3_youth": {
+   "pearson": -0.907,
+   "spearman": -0.961
+  },
+  "D3_youth~D1_disruption": {
+   "pearson": -0.907,
+   "spearman": -0.961
+  },
+  "D1_disruption~D4_external": {
+   "pearson": -0.514,
+   "spearman": -0.486
+  },
+  "D4_external~D1_disruption": {
+   "pearson": -0.514,
+   "spearman": -0.486
+  },
+  "D2_outflow~D2_outflow": {
+   "pearson": 1.0,
+   "spearman": 1.0
+  },
+  "D2_outflow~D3_youth": {
+   "pearson": 0.925,
+   "spearman": 0.953
+  },
+  "D3_youth~D2_outflow": {
+   "pearson": 0.925,
+   "spearman": 0.953
+  },
+  "D2_outflow~D4_external": {
+   "pearson": 0.543,
+   "spearman": 0.477
+  },
+  "D4_external~D2_outflow": {
+   "pearson": 0.543,
+   "spearman": 0.477
+  },
+  "D3_youth~D3_youth": {
+   "pearson": 1.0,
+   "spearman": 1.0
+  },
+  "D3_youth~D4_external": {
+   "pearson": 0.692,
+   "spearman": 0.461
+  },
+  "D4_external~D3_youth": {
+   "pearson": 0.692,
+   "spearman": 0.461
+  },
+  "D4_external~D4_external": {
+   "pearson": 1.0,
+   "spearman": 1.0
+  }
+ },
+ "corr_first_difference": {
+  "D1_disruption~D1_disruption": {
+   "pearson": 1.0
+  },
+  "D1_disruption~D2_outflow": {
+   "pearson": -0.33
+  },
+  "D2_outflow~D1_disruption": {
+   "pearson": -0.33
+  },
+  "D1_disruption~D3_youth": {
+   "pearson": -0.127
+  },
+  "D3_youth~D1_disruption": {
+   "pearson": -0.127
+  },
+  "D1_disruption~D4_external": {
+   "pearson": 0.11
+  },
+  "D4_external~D1_disruption": {
+   "pearson": 0.11
+  },
+  "D2_outflow~D2_outflow": {
+   "pearson": 1.0
+  },
+  "D2_outflow~D3_youth": {
+   "pearson": 0.148
+  },
+  "D3_youth~D2_outflow": {
+   "pearson": 0.148
+  },
+  "D2_outflow~D4_external": {
+   "pearson": -0.131
+  },
+  "D4_external~D2_outflow": {
+   "pearson": -0.131
+  },
+  "D3_youth~D3_youth": {
+   "pearson": 1.0
+  },
+  "D3_youth~D4_external": {
+   "pearson": -0.179
+  },
+  "D4_external~D3_youth": {
+   "pearson": -0.179
+  },
+  "D4_external~D4_external": {
+   "pearson": 1.0
+  }
+ },
+ "note": "D1 队列止 2020，公共区间 2006-2020；D4 为五词份额之和（一文可多计，量级指标）；水平相关受共同趋势影响（两个趋势序列的相关可能是伪相关），一阶差分相关用于检验去趋势后的逐年协同；相关性高不等于因果；W5 合成与否据此判定"
+}

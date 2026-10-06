@@ -1,0 +1,2 @@
+﻿Metric,Correlation,Mean difference,Truncation,Verdict
+"Spearman rho, corpus-external vs corpus-internal disruption, anchor venue",0.086,-0.24,Sampler covers a bounded share of true citation counts,Not year-level comparable; external values used for within-field profile only

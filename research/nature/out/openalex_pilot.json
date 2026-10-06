@@ -1,0 +1,1033 @@
+{
+ "source_id": "S93787993",
+ "oa_total": 1048,
+ "oa_with_doi": 1048,
+ "doi_hit_in_our_lib": 656,
+ "hit_rate": 0.626,
+ "oa_only_sample_titles": [
+  "Guest Editorial Special Issue on Theoretical Foundations of Evolutionary Computation",
+  "Erratum to “R2-Based Hypervolume Contribution Approximation” [Feb 20 185-192]",
+  "Introducing IEEE Collabratec",
+  "Table of contents",
+  "IEEE Transactions on Evolutionary Computation Society Information",
+  "Introducing IEEE Collabratec",
+  "IEEE Transactions on Evolutionary Computation publication information",
+  "IEEE Transactions on Evolutionary Computation Society Information",
+  "IEEE Access",
+  "IEEE Transactions on Evolutionary Computation information for authors",
+  "TechRxiv: Share Your Preprint Research with the World!",
+  "IEEE Transactions on Evolutionary Computation information for authors",
+  "Table of contents",
+  "IEEE Transactions on Evolutionary Computation information for authors",
+  "Table of contents",
+  "IEEE Transactions on Evolutionary Computation publication information",
+  "Table of contents",
+  "Introducing IEEE Collabratec",
+  "Introducing IEEE Collabratec",
+  "IEEE Congress on Evolutionary Computation Call for Papers"
+ ],
+ "ref_count_compare_sample": [
+  {
+   "doi": "10.1109/tevc.2020.3004012",
+   "oa_refs": 69,
+   "our_refs": 48
+  },
+  {
+   "doi": "10.1109/tevc.2020.3013290",
+   "oa_refs": 160,
+   "our_refs": 125
+  },
+  {
+   "doi": "10.1109/tevc.2020.2968743",
+   "oa_refs": 66,
+   "our_refs": 56
+  },
+  {
+   "doi": "10.1109/tevc.2020.2981949",
+   "oa_refs": 39,
+   "our_refs": 26
+  },
+  {
+   "doi": "10.1109/tevc.2020.3004027",
+   "oa_refs": 47,
+   "our_refs": 45
+  },
+  {
+   "doi": "10.1109/tevc.2020.3008822",
+   "oa_refs": 66,
+   "our_refs": 52
+  },
+  {
+   "doi": "10.1109/tevc.2020.3024708",
+   "oa_refs": 93,
+   "our_refs": 33
+  },
+  {
+   "doi": "10.1109/tevc.2020.2978158",
+   "oa_refs": 130,
+   "our_refs": 116
+  },
+  {
+   "doi": "10.1109/tevc.2020.2999100",
+   "oa_refs": 71,
+   "our_refs": 64
+  },
+  {
+   "doi": "10.1109/tevc.2020.2979740",
+   "oa_refs": 85,
+   "our_refs": 77
+  },
+  {
+   "doi": "10.1109/tevc.2020.3016049",
+   "oa_refs": 102,
+   "our_refs": 87
+  },
+  {
+   "doi": "10.1109/tevc.2020.3044711",
+   "oa_refs": 94,
+   "our_refs": 51
+  },
+  {
+   "doi": "10.1109/tevc.2020.3017865",
+   "oa_refs": 63,
+   "our_refs": 49
+  },
+  {
+   "doi": "10.1109/tevc.2020.2967501",
+   "oa_refs": 72,
+   "our_refs": 53
+  },
+  {
+   "doi": "10.1109/tevc.2020.2964705",
+   "oa_refs": 59,
+   "our_refs": 48
+  },
+  {
+   "doi": "10.1109/tevc.2020.2985323",
+   "oa_refs": 66,
+   "our_refs": 59
+  },
+  {
+   "doi": "10.1109/tevc.2020.2992387",
+   "oa_refs": 40,
+   "our_refs": 29
+  },
+  {
+   "doi": "10.1109/tevc.2020.3023480",
+   "oa_refs": 52,
+   "our_refs": 39
+  },
+  {
+   "doi": "10.1109/tevc.2020.3047835",
+   "oa_refs": 64,
+   "our_refs": 45
+  },
+  {
+   "doi": "10.1109/tevc.2020.2991040",
+   "oa_refs": 55,
+   "our_refs": 43
+  },
+  {
+   "doi": "10.1109/tevc.2020.3009390",
+   "oa_refs": 32,
+   "our_refs": 30
+  },
+  {
+   "doi": "10.1109/tevc.2020.3011829",
+   "oa_refs": 47,
+   "our_refs": 44
+  },
+  {
+   "doi": "10.1109/tevc.2020.3002229",
+   "oa_refs": 58,
+   "our_refs": 49
+  },
+  {
+   "doi": "10.1109/tevc.2020.3040272",
+   "oa_refs": 111,
+   "our_refs": 52
+  },
+  {
+   "doi": "10.1109/tevc.2020.2975381",
+   "oa_refs": 53,
+   "our_refs": 43
+  },
+  {
+   "doi": "10.1109/tevc.2020.2987559",
+   "oa_refs": 92,
+   "our_refs": 112
+  },
+  {
+   "doi": "10.1109/tevc.2020.2991717",
+   "oa_refs": 52,
+   "our_refs": 45
+  },
+  {
+   "doi": "10.1109/tevc.2020.3027620",
+   "oa_refs": 56,
+   "our_refs": 42
+  },
+  {
+   "doi": "10.1109/tevc.2020.2985672",
+   "oa_refs": 52,
+   "our_refs": 40
+  },
+  {
+   "doi": "10.1109/tevc.2020.3034769",
+   "oa_refs": 67,
+   "our_refs": 63
+  },
+  {
+   "doi": "10.1109/tevc.2020.3047220",
+   "oa_refs": 114,
+   "our_refs": 30
+  },
+  {
+   "doi": "10.1109/tevc.2020.2987361",
+   "oa_refs": 38,
+   "our_refs": 32
+  },
+  {
+   "doi": "10.1109/tevc.2020.3008877",
+   "oa_refs": 40,
+   "our_refs": 36
+  },
+  {
+   "doi": "10.1109/tevc.2020.3035825",
+   "oa_refs": 51,
+   "our_refs": 41
+  },
+  {
+   "doi": "10.1109/tevc.2020.3011959",
+   "oa_refs": 49,
+   "our_refs": 55
+  },
+  {
+   "doi": "10.1109/tevc.2020.3020046",
+   "oa_refs": 40,
+   "our_refs": 34
+  },
+  {
+   "doi": "10.1109/tevc.2020.2985497",
+   "oa_refs": 26,
+   "our_refs": 17
+  },
+  {
+   "doi": "10.1109/tevc.2020.2987804",
+   "oa_refs": 59,
+   "our_refs": 50
+  },
+  {
+   "doi": "10.1109/tevc.2020.2986348",
+   "oa_refs": 67,
+   "our_refs": 43
+  },
+  {
+   "doi": "10.1109/tevc.2020.2966014",
+   "oa_refs": 57,
+   "our_refs": 56
+  },
+  {
+   "doi": "10.1109/tevc.2020.2983311",
+   "oa_refs": 32,
+   "our_refs": 26
+  },
+  {
+   "doi": "10.1109/tevc.2020.2994314",
+   "oa_refs": 37,
+   "our_refs": 24
+  },
+  {
+   "doi": "10.1109/tevc.2020.3046569",
+   "oa_refs": 55,
+   "our_refs": 41
+  },
+  {
+   "doi": "10.1109/tevc.2020.3020423",
+   "oa_refs": 66,
+   "our_refs": 57
+  },
+  {
+   "doi": "10.1109/tevc.2020.3032090",
+   "oa_refs": 97,
+   "our_refs": 93
+  },
+  {
+   "doi": "10.1109/tevc.2020.2969965",
+   "oa_refs": 16,
+   "our_refs": 13
+  },
+  {
+   "doi": "10.1109/tevc.2020.2990626",
+   "oa_refs": 37,
+   "our_refs": 24
+  },
+  {
+   "doi": "10.1109/tevc.2020.2980111",
+   "oa_refs": 40,
+   "our_refs": 20
+  },
+  {
+   "doi": "10.1109/tevc.2020.2983664",
+   "oa_refs": 59,
+   "our_refs": 42
+  },
+  {
+   "doi": "10.1109/tevc.2020.3039698",
+   "oa_refs": 47,
+   "our_refs": 35
+  },
+  {
+   "doi": "10.1109/tevc.2020.2985450",
+   "oa_refs": 40,
+   "our_refs": 40
+  },
+  {
+   "doi": "10.1109/tevc.2020.3036578",
+   "oa_refs": 55,
+   "our_refs": 58
+  },
+  {
+   "doi": "10.1109/tevc.2021.3073648",
+   "oa_refs": 61,
+   "our_refs": 43
+  },
+  {
+   "doi": "10.1109/tevc.2021.3066301",
+   "oa_refs": 44,
+   "our_refs": 30
+  },
+  {
+   "doi": "10.1109/tevc.2021.3065707",
+   "oa_refs": 63,
+   "our_refs": 70
+  },
+  {
+   "doi": "10.1109/tevc.2021.3106168",
+   "oa_refs": 70,
+   "our_refs": 62
+  },
+  {
+   "doi": "10.1109/tevc.2021.3078441",
+   "oa_refs": 58,
+   "our_refs": 43
+  },
+  {
+   "doi": "10.1109/tevc.2021.3100056",
+   "oa_refs": 64,
+   "our_refs": 58
+  },
+  {
+   "doi": "10.1109/tevc.2021.3139437",
+   "oa_refs": 136,
+   "our_refs": 124
+  },
+  {
+   "doi": "10.1109/tevc.2021.3063606",
+   "oa_refs": 85,
+   "our_refs": 76
+  },
+  {
+   "doi": "10.1109/tevc.2021.3131236",
+   "oa_refs": 81,
+   "our_refs": 60
+  },
+  {
+   "doi": "10.1109/tevc.2021.3111209",
+   "oa_refs": 50,
+   "our_refs": 43
+  },
+  {
+   "doi": "10.1109/tevc.2021.3089155",
+   "oa_refs": 42,
+   "our_refs": 40
+  },
+  {
+   "doi": "10.1109/tevc.2021.3068157",
+   "oa_refs": 52,
+   "our_refs": 44
+  },
+  {
+   "doi": "10.1109/tevc.2021.3115795",
+   "oa_refs": 69,
+   "our_refs": 62
+  },
+  {
+   "doi": "10.1109/tevc.2021.3113923",
+   "oa_refs": 69,
+   "our_refs": 69
+  },
+  {
+   "doi": "10.1109/tevc.2021.3060811",
+   "oa_refs": 65,
+   "our_refs": 57
+  },
+  {
+   "doi": "10.1109/tevc.2021.3051608",
+   "oa_refs": 62,
+   "our_refs": 62
+  },
+  {
+   "doi": "10.1109/tevc.2021.3118593",
+   "oa_refs": 55,
+   "our_refs": 49
+  },
+  {
+   "doi": "10.1109/tevc.2021.3060012",
+   "oa_refs": 298,
+   "our_refs": 229
+  },
+  {
+   "doi": "10.1109/tevc.2021.3101697",
+   "oa_refs": 52,
+   "our_refs": 47
+  },
+  {
+   "doi": "10.1109/tevc.2021.3064835",
+   "oa_refs": 58,
+   "our_refs": 51
+  },
+  {
+   "doi": "10.1109/tevc.2021.3060014",
+   "oa_refs": 140,
+   "our_refs": 126
+  },
+  {
+   "doi": "10.1109/tevc.2021.3079985",
+   "oa_refs": 270,
+   "our_refs": 159
+  },
+  {
+   "doi": "10.1109/tevc.2021.3134804",
+   "oa_refs": 64,
+   "our_refs": 53
+  },
+  {
+   "doi": "10.1109/tevc.2021.3067015",
+   "oa_refs": 54,
+   "our_refs": 44
+  },
+  {
+   "doi": "10.1109/tevc.2021.3060833",
+   "oa_refs": 83,
+   "our_refs": 40
+  },
+  {
+   "doi": "10.1109/tevc.2021.3085906",
+   "oa_refs": 35,
+   "our_refs": 28
+  },
+  {
+   "doi": "10.1109/tevc.2021.3052173",
+   "oa_refs": 52,
+   "our_refs": 50
+  },
+  {
+   "doi": "10.1109/tevc.2021.3065659",
+   "oa_refs": 63,
+   "our_refs": 57
+  },
+  {
+   "doi": "10.1109/tevc.2021.3131124",
+   "oa_refs": 41,
+   "our_refs": 33
+  },
+  {
+   "doi": "10.1109/tevc.2021.3061466",
+   "oa_refs": 77,
+   "our_refs": 33
+  },
+  {
+   "doi": "10.1109/tevc.2021.3095481",
+   "oa_refs": 89,
+   "our_refs": 83
+  },
+  {
+   "doi": "10.1109/tevc.2021.3066606",
+   "oa_refs": 53,
+   "our_refs": 44
+  },
+  {
+   "doi": "10.1109/tevc.2021.3076514",
+   "oa_refs": 145,
+   "our_refs": 123
+  },
+  {
+   "doi": "10.1109/tevc.2021.3106975",
+   "oa_refs": 76,
+   "our_refs": 69
+  },
+  {
+   "doi": "10.1109/tevc.2021.3107435",
+   "oa_refs": 42,
+   "our_refs": 34
+  },
+  {
+   "doi": "10.1109/tevc.2021.3056143",
+   "oa_refs": 83,
+   "our_refs": 73
+  },
+  {
+   "doi": "10.1109/tevc.2021.3130835",
+   "oa_refs": 262,
+   "our_refs": 247
+  },
+  {
+   "doi": "10.1109/tevc.2021.3103936",
+   "oa_refs": 65,
+   "our_refs": 49
+  },
+  {
+   "doi": "10.1109/tevc.2021.3097339",
+   "oa_refs": 39,
+   "our_refs": 38
+  },
+  {
+   "doi": "10.1109/tevc.2021.3081478",
+   "oa_refs": 57,
+   "our_refs": 43
+  },
+  {
+   "doi": "10.1109/tevc.2021.3115036",
+   "oa_refs": 57,
+   "our_refs": 54
+  },
+  {
+   "doi": "10.1109/tevc.2021.3056514",
+   "oa_refs": 65,
+   "our_refs": 40
+  },
+  {
+   "doi": "10.1109/tevc.2021.3099448",
+   "oa_refs": 85,
+   "our_refs": 51
+  },
+  {
+   "doi": "10.1109/tevc.2021.3102863",
+   "oa_refs": 60,
+   "our_refs": 62
+  },
+  {
+   "doi": "10.1109/tevc.2021.3098257",
+   "oa_refs": 74,
+   "our_refs": 58
+  },
+  {
+   "doi": "10.1109/tevc.2021.3119933",
+   "oa_refs": 47,
+   "our_refs": 42
+  },
+  {
+   "doi": "10.1109/tevc.2021.3099487",
+   "oa_refs": 75,
+   "our_refs": 64
+  },
+  {
+   "doi": "10.1109/tevc.2021.3064508",
+   "oa_refs": 47,
+   "our_refs": 33
+  },
+  {
+   "doi": "10.1109/tevc.2021.3110130",
+   "oa_refs": 59,
+   "our_refs": 56
+  },
+  {
+   "doi": "10.1109/tevc.2021.3136667",
+   "oa_refs": 71,
+   "our_refs": 37
+  },
+  {
+   "doi": "10.1109/tevc.2021.3083315",
+   "oa_refs": 49,
+   "our_refs": 23
+  },
+  {
+   "doi": "10.1109/tevc.2021.3098523",
+   "oa_refs": 41,
+   "our_refs": 39
+  },
+  {
+   "doi": "10.1109/tevc.2021.3055076",
+   "oa_refs": 104,
+   "our_refs": 41
+  },
+  {
+   "doi": "10.1109/tevc.2021.3055538",
+   "oa_refs": 40,
+   "our_refs": 33
+  },
+  {
+   "doi": "10.1109/tevc.2021.3068842",
+   "oa_refs": 88,
+   "our_refs": 32
+  },
+  {
+   "doi": "10.1109/tevc.2020.3048174",
+   "oa_refs": 54,
+   "our_refs": 45
+  },
+  {
+   "doi": "10.1109/tevc.2021.3049131",
+   "oa_refs": 73,
+   "our_refs": 57
+  },
+  {
+   "doi": "10.1109/tevc.2021.3095313",
+   "oa_refs": 53,
+   "our_refs": 49
+  },
+  {
+   "doi": "10.1109/tevc.2021.3135020",
+   "oa_refs": 55,
+   "our_refs": 48
+  },
+  {
+   "doi": "10.1109/tevc.2021.3103386",
+   "oa_refs": 57,
+   "our_refs": 59
+  },
+  {
+   "doi": "10.1109/tevc.2021.3078486",
+   "oa_refs": 61,
+   "our_refs": 54
+  },
+  {
+   "doi": "10.1109/tevc.2021.3088631",
+   "oa_refs": 180,
+   "our_refs": 158
+  },
+  {
+   "doi": "10.1109/tevc.2021.3117116",
+   "oa_refs": 54,
+   "our_refs": 45
+  },
+  {
+   "doi": "10.1109/tevc.2021.3059661",
+   "oa_refs": 51,
+   "our_refs": 36
+  },
+  {
+   "doi": "10.1109/tevc.2021.3083362",
+   "oa_refs": 78,
+   "our_refs": 43
+  },
+  {
+   "doi": "10.1109/tevc.2021.3099289",
+   "oa_refs": 66,
+   "our_refs": 51
+  },
+  {
+   "doi": "10.1109/tevc.2021.3095261",
+   "oa_refs": 79,
+   "our_refs": 74
+  },
+  {
+   "doi": "10.1109/tevc.2021.3064943",
+   "oa_refs": 76,
+   "our_refs": 43
+  },
+  {
+   "doi": "10.1109/tevc.2021.3094542",
+   "oa_refs": 52,
+   "our_refs": 52
+  },
+  {
+   "doi": "10.1109/tevc.2021.3063217",
+   "oa_refs": 73,
+   "our_refs": 58
+  },
+  {
+   "doi": "10.1109/tevc.2021.3117702",
+   "oa_refs": 52,
+   "our_refs": 44
+  },
+  {
+   "doi": "10.1109/tevc.2021.3133874",
+   "oa_refs": 59,
+   "our_refs": 49
+  },
+  {
+   "doi": "10.1109/tevc.2021.3082112",
+   "oa_refs": 68,
+   "our_refs": 51
+  },
+  {
+   "doi": "10.1109/tevc.2021.3110780",
+   "oa_refs": 49,
+   "our_refs": 41
+  },
+  {
+   "doi": "10.1109/tevc.2021.3097937",
+   "oa_refs": 101,
+   "our_refs": 32
+  },
+  {
+   "doi": "10.1109/tevc.2021.3061545",
+   "oa_refs": 56,
+   "our_refs": 49
+  },
+  {
+   "doi": "10.1109/tevc.2021.3131952",
+   "oa_refs": 54,
+   "our_refs": 52
+  },
+  {
+   "doi": "10.1109/tevc.2021.3100576",
+   "oa_refs": 64,
+   "our_refs": 36
+  },
+  {
+   "doi": "10.1109/tevc.2021.3117990",
+   "oa_refs": 50,
+   "our_refs": 46
+  },
+  {
+   "doi": "10.1109/tevc.2021.3097043",
+   "oa_refs": 57,
+   "our_refs": 62
+  },
+  {
+   "doi": "10.1109/tevc.2021.3079843",
+   "oa_refs": 38,
+   "our_refs": 28
+  },
+  {
+   "doi": "10.1109/tevc.2021.3102241",
+   "oa_refs": 68,
+   "our_refs": 57
+  },
+  {
+   "doi": "10.1109/tevc.2021.3089050",
+   "oa_refs": 51,
+   "our_refs": 51
+  },
+  {
+   "doi": "10.1109/tevc.2021.3086308",
+   "oa_refs": 51,
+   "our_refs": 41
+  },
+  {
+   "doi": "10.1109/tevc.2021.3091615",
+   "oa_refs": 89,
+   "our_refs": 85
+  },
+  {
+   "doi": "10.1109/tevc.2021.3078478",
+   "oa_refs": 71,
+   "our_refs": 66
+  },
+  {
+   "doi": "10.1109/tevc.2021.3060899",
+   "oa_refs": 36,
+   "our_refs": 33
+  },
+  {
+   "doi": "10.1109/tevc.2021.3068574",
+   "oa_refs": 55,
+   "our_refs": 51
+  },
+  {
+   "doi": "10.1109/tevc.2021.3084119",
+   "oa_refs": 52,
+   "our_refs": 49
+  },
+  {
+   "doi": "10.1109/tevc.2021.3129278",
+   "oa_refs": 78,
+   "our_refs": 74
+  },
+  {
+   "doi": "10.1109/tevc.2021.3079320",
+   "oa_refs": 113,
+   "our_refs": 61
+  },
+  {
+   "doi": "10.1109/tevc.2021.3135691",
+   "oa_refs": 60,
+   "our_refs": 60
+  },
+  {
+   "doi": "10.1109/tevc.2021.3051172",
+   "oa_refs": 63,
+   "our_refs": 60
+  },
+  {
+   "doi": "10.1109/tevc.2021.3070271",
+   "oa_refs": 45,
+   "our_refs": 34
+  },
+  {
+   "doi": "10.1109/tevc.2021.3122191",
+   "oa_refs": 46,
+   "our_refs": 46
+  },
+  {
+   "doi": "10.1109/tevc.2021.3066285",
+   "oa_refs": 82,
+   "our_refs": 32
+  },
+  {
+   "doi": "10.1109/tevc.2021.3058687",
+   "oa_refs": 41,
+   "our_refs": 37
+  },
+  {
+   "doi": "10.1109/tevc.2021.3105565",
+   "oa_refs": 67,
+   "our_refs": 61
+  },
+  {
+   "doi": "10.1109/tevc.2021.3093114",
+   "oa_refs": 32,
+   "our_refs": 32
+  },
+  {
+   "doi": "10.1109/tevc.2021.3109576",
+   "oa_refs": 63,
+   "our_refs": 60
+  },
+  {
+   "doi": "10.1109/tevc.2021.3096669",
+   "oa_refs": 45,
+   "our_refs": 34
+  },
+  {
+   "doi": "10.1109/tevc.2021.3116121",
+   "oa_refs": 46,
+   "our_refs": 41
+  },
+  {
+   "doi": "10.1109/tevc.2021.3068816",
+   "oa_refs": 40,
+   "our_refs": 30
+  },
+  {
+   "doi": "10.1109/tevc.2021.3120980",
+   "oa_refs": 70,
+   "our_refs": 58
+  },
+  {
+   "doi": "10.1109/tevc.2021.3123960",
+   "oa_refs": 35,
+   "our_refs": 34
+  },
+  {
+   "doi": "10.1109/tevc.2021.3061442",
+   "oa_refs": 27,
+   "our_refs": 24
+  },
+  {
+   "doi": "10.1109/tevc.2021.3080683",
+   "oa_refs": 45,
+   "our_refs": 40
+  },
+  {
+   "doi": "10.1109/tevc.2021.3104343",
+   "oa_refs": 44,
+   "our_refs": 39
+  },
+  {
+   "doi": "10.1109/tevc.2021.3127633",
+   "oa_refs": 55,
+   "our_refs": 56
+  },
+  {
+   "doi": "10.1109/tevc.2021.3087802",
+   "oa_refs": 56,
+   "our_refs": 49
+  },
+  {
+   "doi": "10.1109/tevc.2021.3110506",
+   "oa_refs": 51,
+   "our_refs": 42
+  },
+  {
+   "doi": "10.1109/tevc.2021.3120111",
+   "oa_refs": 46,
+   "our_refs": 44
+  },
+  {
+   "doi": "10.1109/tevc.2021.3092343",
+   "oa_refs": 41,
+   "our_refs": 39
+  },
+  {
+   "doi": "10.1109/tevc.2021.3139263",
+   "oa_refs": 49,
+   "our_refs": 44
+  },
+  {
+   "doi": "10.1109/tevc.2021.3139304",
+   "oa_refs": 59,
+   "our_refs": 51
+  },
+  {
+   "doi": "10.1109/tevc.2021.3137369",
+   "oa_refs": 79,
+   "our_refs": 61
+  },
+  {
+   "doi": "10.1109/tevc.2021.3106672",
+   "oa_refs": 39,
+   "our_refs": 45
+  },
+  {
+   "doi": "10.1109/tevc.2021.3050465",
+   "oa_refs": 66,
+   "our_refs": 53
+  },
+  {
+   "doi": "10.1109/tevc.2021.3111232",
+   "oa_refs": 33,
+   "our_refs": 28
+  },
+  {
+   "doi": "10.1109/tevc.2021.3108185",
+   "oa_refs": 88,
+   "our_refs": 66
+  },
+  {
+   "doi": "10.1109/tevc.2021.3095156",
+   "oa_refs": 46,
+   "our_refs": 49
+  },
+  {
+   "doi": "10.1109/tevc.2021.3081167",
+   "oa_refs": 76,
+   "our_refs": 52
+  },
+  {
+   "doi": "10.1109/tevc.2022.3155533",
+   "oa_refs": 208,
+   "our_refs": 204
+  },
+  {
+   "doi": "10.1109/tevc.2022.3145582",
+   "oa_refs": 60,
+   "our_refs": 51
+  },
+  {
+   "doi": "10.1109/tevc.2022.3175065",
+   "oa_refs": 61,
+   "our_refs": 42
+  },
+  {
+   "doi": "10.1109/tevc.2022.3175832",
+   "oa_refs": 53,
+   "our_refs": 53
+  },
+  {
+   "doi": "10.1109/tevc.2022.3155757",
+   "oa_refs": 42,
+   "our_refs": 39
+  },
+  {
+   "doi": "10.1109/tevc.2022.3230822",
+   "oa_refs": 62,
+   "our_refs": 55
+  },
+  {
+   "doi": "10.1109/tevc.2022.3225509",
+   "oa_refs": 308,
+   "our_refs": 271
+  },
+  {
+   "doi": "10.1109/tevc.2022.3232776",
+   "oa_refs": 71,
+   "our_refs": 72
+  },
+  {
+   "doi": "10.1109/tevc.2022.3224600",
+   "oa_refs": 48,
+   "our_refs": 38
+  },
+  {
+   "doi": "10.1109/tevc.2022.3152582",
+   "oa_refs": 70,
+   "our_refs": 61
+  },
+  {
+   "doi": "10.1109/tevc.2022.3159000",
+   "oa_refs": 83,
+   "our_refs": 66
+  },
+  {
+   "doi": "10.1109/tevc.2022.3168052",
+   "oa_refs": 63,
+   "our_refs": 54
+  },
+  {
+   "doi": "10.1109/tevc.2022.3215743",
+   "oa_refs": 49,
+   "our_refs": 47
+  },
+  {
+   "doi": "10.1109/tevc.2022.3155593",
+   "oa_refs": 58,
+   "our_refs": 58
+  },
+  {
+   "doi": "10.1109/tevc.2022.3222844",
+   "oa_refs": 57,
+   "our_refs": 56
+  },
+  {
+   "doi": "10.1109/tevc.2022.3199775",
+   "oa_refs": 59,
+   "our_refs": 49
+  },
+  {
+   "doi": "10.1109/tevc.2022.3219238",
+   "oa_refs": 39,
+   "our_refs": 38
+  },
+  {
+   "doi": "10.1109/tevc.2022.3213006",
+   "oa_refs": 67,
+   "our_refs": 63
+  },
+  {
+   "doi": "10.1109/tevc.2022.3175226",
+   "oa_refs": 69,
+   "our_refs": 58
+  },
+  {
+   "doi": "10.1109/tevc.2022.3149601",
+   "oa_refs": 67,
+   "our_refs": 61
+  },
+  {
+   "doi": "10.1109/tevc.2022.3154416",
+   "oa_refs": 57,
+   "our_refs": 46
+  },
+  {
+   "doi": "10.1109/tevc.2022.3220747",
+   "oa_refs": 216,
+   "our_refs": 211
+  },
+  {
+   "doi": "10.1109/tevc.2022.3185665",
+   "oa_refs": 99,
+   "our_refs": 84
+  },
+  {
+   "doi": "10.1109/tevc.2022.3193287",
+   "oa_refs": 57,
+   "our_refs": 46
+  },
+  {
+   "doi": "10.1109/tevc.2022.3160458",
+   "oa_refs": 46,
+   "our_refs": 44
+  },
+  {
+   "doi": "10.1109/tevc.2022.3166815",
+   "oa_refs": 61,
+   "our_refs": 59
+  }
+ ],
+ "ref_count_median_oa": 59,
+ "ref_count_median_ours": 49
+}

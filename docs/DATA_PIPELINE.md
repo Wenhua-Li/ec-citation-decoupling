@@ -1,0 +1,191 @@
+# 数据获取途径与清洗操作说明（DATA_PIPELINE.md）
+
+本文回答一个问题：**这 146,785 篇文献的库是怎么来的**——数据从哪里获取、经过哪些清洗与增强操作、留痕和备份在哪里、出问题怎么恢复。
+怎么**使用**这个库（字段含义、检索方法、统计注意事项）见另一份文档：[DATA_USAGE.md](DATA_USAGE.md)。
+
+---
+
+## 0. 30 秒速览：数据是怎么变成现在这个库的
+
+| 时间 | 做了什么 | 结果 |
+|---|---|---|
+| 2026-09-26 | 86 个 EI 导出 CSV 经 `python -m ecdb build` 导入，两轮清洗 + 去重 | 166,002 篇入库 |
+| 2026-09-26 ~ 27 | `eccite` 从旧项目库迁移 + 三个公开 API 抓取引文 | 参考文献列表 735 万条、被引列表 1,144 万条 |
+| 2026-09-27 | `ecdb enrich` 12 项数据增强 + 范围裁剪（保留 2000–2025 年、核心字段完整） | 删 19,199 篇，余 **146,785 篇** |
+| 2026-09-27 ~ 28 | `ecdomain` 领域打标（EC / 非EC），金标准人工评估准确率 97% | EC 47,834 篇（32.6%） |
+
+原始数据、备份与过程留痕已全部归档至 `archive/`（清单见 [archive/ARCHIVE_INDEX.md](../archive/ARCHIVE_INDEX.md)）。
+
+---
+
+## 1. 数据获取途径
+
+### 1.1 文献主数据：EI Compendex 数据库导出
+
+- **来源平台**：Engineering Village 平台的 EI Compendex（工程索引）数据库。
+- **导出格式**：detailed（详细）格式 CSV，共 86 个文件、469 MB，存于 `archive/data_from_EI/`（原始数据唯一副本）。
+- **venue_tag（来源标签）**：由导出文件名推导（小写化），如 `tevc`、`gecco_21_25`、`eswa_26_1`。它是**导出批次标签，不是刊名**——同一期刊可能分多个批次导出。
+- **检索与导出细节**：暂不记录（用户 2026-09-29 决定）。原始 CSV 的文件名与批次标签（venue_tag）是获取方式的直接线索；如日后需要补记 EI 检索式、导出设置、导出日期等信息，再行补入本节。
+
+### 1.2 引文数据：一个旧库迁移 + 三个公开 API
+
+引文数据（每篇论文的参考文献列表与被引列表）由 `eccite` 子系统建设，来源四路：
+
+| 来源 | 提供什么 | 限制 |
+|---|---|---|
+| EC_History 旧项目库迁移 | 旧项目已完成的 Crossref 出边 + Semantic Scholar / OpenCitations 入边，按 DOI 映射迁入，覆盖约 9.1 万篇（`migrated=1`） | 2026-09-26 快照，之后旧库不再更新 |
+| Crossref API（`/works/{DOI}` 接口） | 参考文献列表（出版商存缴，含条目顺序）+ 被引总数 | 约 1/3 参考条目无 DOI；个别出版商不存缴 |
+| Semantic Scholar API（批量接口） | 被引列表 + 真实被引总数 + S2 内部编号 | 未认证接口：单篇被引列表最多返回约 1 万条（截断只留最近的，**总数字段不受影响**） |
+| OpenCitations COCI | 被引列表（Crossref DOI 体系内完整） | 不含非 Crossref 来源（如部分 arXiv 预印本） |
+
+- **不用 OpenAlex**：旧项目抓取时两次被封禁，本轮不碰。
+- **限速与礼貌策略**：各源按最小请求间隔抓取；收到限流响应（HTTP 429）自动降速并重试；Crossref 请求头带联系邮箱（当前为占位邮箱）。
+- **断点缓存**：所有抓取的原始响应按规范化 DOI 为键追加写入 `cache_citations/*.jsonl`（共约 740 MB）。**这些缓存不能删**——主库即使被整库重建，也能凭缓存零 API 调用恢复全部引文表（见第 5 节）。
+
+**无 DOI 论文的 DOI 找回**（两轮标题匹配，命中条件统一为"规范化标题完全相等 + 发表年份相差不超过 1 年"）：
+1. 第一轮 `eccite match-doi`：查 Crossref；
+2. 第二轮 `eccite match-doi-s2`：OpenAlex 优先、Semantic Scholar 兜底。
+找回的 DOI 写入引文元数据表（`doi_source='title_match'` 标记），并由 `ecdb enrich writeback-doi` 回写主库 `papers.doi`。**注意口径**：这些 DOI 不是 EI 原始数据自带的，做严格元数据统计时需区分。仍无 DOI 的论文多为 1990 年代 EI 独家收录的会议论文，经三源确查无记录。
+
+### 1.3 领域打标数据（EC / 非EC）
+
+`ecdomain` 子系统按四层判定给每篇论文打 `EC`（进化计算）或 `NON_EC` 标签，存于主库 `paper_domain` 表：
+
+1. **刊源分层**：78 个来源标签分为 A（纯 EC 刊源，20.9%）、B（计算智能大类，17.9%）、C（混合应用，61.1%）三层；
+2. **规则层**：A 层直接判 EC，部分 C 层按刊源直接判非EC，其余进入待判；
+3. **LLM 层**（大语言模型，MiniMax-M3）：待判论文由 LLM 按统一评分标准判定，低置信的进入人工复核队列；
+4. **人工金标准**：分层抽样 200 篇人工标注，回评准确率 97%。
+
+最终：EC 47,834 篇、非EC 98,951 篇；低置信待人工复核 2,528 篇（队列文件在 `archive/labeling/low_confidence_review.csv`，属遗留事项，见 progress.md）。
+
+---
+
+## 2. 清洗操作（`ecdb build` 流程，规则在 `ecdb/importer.py` + `ecdb/cleaning.py`）
+
+### 2.1 解析规则（CSV → 数据库行）
+
+- CSV 以 `utf-8-sig` 编码读入（去掉 Windows 记事本式 BOM 头），标准 csv 模块解析；
+- 作者按 EI 原始格式 `"Yazdani, Danial (1)"` 拆出姓名与机构编号（`name_display` 存为 "Danial Yazdani" 名前姓后格式）；
+- 机构按 `(数字)` 标记切分；`(Shenzhen)` 这类非数字括号不切；
+- 关键词按 `" - "` 或分号切分；DOI 统一小写并剥离 `https://doi.org/` 前缀；
+- `pub_year` 取 4 位整数；空字符串一律存 NULL（数据库空值）。
+
+### 2.2 第一轮：入库门槛（文献类型过滤）
+
+只保留 **JA（期刊论文）** 和 **CA（会议论文）** 两种类型，其余 2,686 行剔除：勘误 565、会议前言 340、撤稿通知 80、书章 65、预印本 13、在线优先 719、博士论文 2、类型空值 901 等。
+同一篇论文出现在多个导出文件（EI 多重标引）时按主键合并：后处理文件的非空字段覆盖，来源文件列表取并集。
+
+### 2.3 第二轮：噪声规则（标题启发式，R/E/F/D 十条）
+
+设计依据：先对全库普查确认剩余噪声均为零头（编辑寄语类约 600 条、撤稿更正 34 条等），且无摘要的记录约一半是正经研究论文（早期会议论文 EI 未收录摘要），**不能按"无摘要"一刀切**。
+
+| 规则 | 类别 | 模式（大小写不敏感） | 实际命中 |
+|---|---|---|---|
+| R1 | 撤稿/更正通知 | 标题以 retract / erratum / withdraw / corrigendum / correction 等开头 | 31 |
+| E1 | 编辑寄语 | 标题以 editorial / guest editorial 开头 | 293 |
+| E2 | 编辑寄语 | 标题含 editorial board / editor-in-chief / masthead 等 | 66 |
+| E3 | 专刊导言 | 标题含 "special issue" **且**有佐证（无摘要、或无关键词、或参考文献≤1、或以 introduction to 开头） | 183 |
+| F1 | 前言杂项 | 标题等于或以 preface / foreword / welcome / acknowledg / in memoriam / obituary 等通用短题开头 | 275 |
+| F2 | 论文集前言 | 标题含 proceedings of，或以 program / abstracts of 开头 | 48 |
+| F3 | 非研究杂项 | 标题含 front/back matter / call for papers / announcement / calendar 等 | 70 |
+| F4 | 前言（无字段佐证） | 无作者且无摘要 | 27 |
+| D1 | 评论回复 | 标题以 comment on / reply to / response to / discussion 等开头 | 105 |
+
+合计剔除 1,098 条。E3 的佐证条件是为了**保护题名含 "Special issue" 的正经文章**（有摘要 + 有关键词 + 参考文献充足的保留）。
+
+### 2.4 重复文献去重（导入完成后全局执行）
+
+- **同 DOI 组**：同一非空 DOI 的多条记录（EI 库内多重标引，如 EJOR 一文三录）；
+- **同题同年组**：规范化标题（小写字母数字）≥25 字符、同 `pub_year`、DOI 互不相同或缺失（各会议各自的 "Preface" 等通用短题已被 F1 先行剔除）；
+- **保留者选择**（确定性打分）：有摘要 > 摘要长度 > 有作者 > 有关键词 > 有 DOI > 参考文献数，平手取编号较小者；
+- **合并后删除**：落选者的来源文件列表与空缺字段先合并进保留者（回填 340 组 / 673 字段次），再物理删除。
+- 两轮合计删除 742 条重复。
+
+### 2.5 质量标签（`quality_flags` 字段）
+
+保留下来的记录若缺字段不删除、只打标签：`no_abstract`（多为 EI 未收录摘要的早期会议论文——**是正经研究论文，仅缺摘要**）、`no_doi`、`no_keywords`、`no_authors`、`short_paper`（页码跨度≤2 且无文章号）、`no_affiliations`。用法见 DATA_USAGE.md。
+
+### 2.6 清洗留痕
+
+每次 build 自动生成清洗报告（概览数字、各规则命中数与 5 条样例、去重组明细、回填日志）。最新一版（2026-09-26）已随归档移至 `archive/db_cleaning_report.md`；重跑 build 会再生成到 `db/cleaning_report.md`。
+
+---
+
+## 3. 数据增强与范围裁剪（`ecdb enrich`，2026-09-27，一次性完成）
+
+全库质量审查（总报告 `archive/audit/data_quality_report.html`）后的一次性补全，全部为**对库的持久性变更**：
+
+| 变更 | 说明 | 明细留痕 |
+|---|---|---|
+| **范围裁剪（用户确认的方案 A）** | 保留 `pub_year ∈ [2000, 2025]` 且摘要/DOI/作者完整的论文；删除 19,199 篇（年份出界 17,767 + 字段缺失 1,432）。**引文数据不按年份过滤**：保留论文的参考文献/被引列表原样保留，被删论文名下的引文行作孤儿清理，库内引文网络重建后 1,908,020 边。裁剪前备份 `archive/db_backup/ec_papers.db.bak-scope-20260927` | `archive/audit/scope_deleted.csv` |
+| DOI 回写 | 标题匹配找回的 DOI 回写 `papers.doi`；与其他论文撞车的跳过 | `archive/audit/doi_writeback.csv` 等 |
+| 摘要补全 | 有 DOI 且无摘要的论文按 DOI 从三个来源取摘要（≥80 字符、排除占位文本） | `archive/audit/abstract_fill.csv` |
+| 占位摘要清理 | 205 条 "No abstract available" 置为空值 | — |
+| 作者回填 | 3 篇无作者的实质研究论文按 DOI 补作者与机构 | `archive/audit/authors_fill.csv` |
+| 年份修正 | 1 条年份与 DOI/卷期冲突的记录按正式出版年修正（2014→1995） | — |
+| 坏 DOI 修正 | `10.1016./j.cor.2003.11.016` → 去掉多余点 | — |
+| 垃圾关键词删除 | 216 行单字符关键词（解析伪影） | — |
+| 悬挂机构引用清理 | 作者指向不存在机构编号的引用摘除 | — |
+| publisher 回填 | 缺失出版商按同批次众数回填（推导值，权威性弱于原始数据） | — |
+| 非研究文献删除 | 18 条采访/编委名单/卷首语/会议致辞 | `archive/audit/deletion_review.csv` |
+| 质量标签重算 | 按清洗口径重算并新增 `no_affiliations` | — |
+
+> ⚠️ **重要**：`python -m ecdb build` 重新导入原始 CSV 会**覆盖**以上全部增强（DOI 回写、摘要、作者、出版商都回到 CSV 原始状态）。重建后必须重跑 enrich 步骤。
+
+---
+
+## 4. 引文数据建设流程（`eccite`）
+
+执行顺序（各步骤幂等、可重跑）：
+
+```
+init（建表）→ migrate（旧库迁移）→ fetch-s2 / fetch-cr / fetch-coci（三源抓取）
+→ match-doi / match-doi-s2（无 DOI 论文标题匹配找回）
+→ load（缓存入库）→ edges（重建库内引文网络）→ validate（验收）/ report（覆盖率报告）
+→ reconcile（主库变动后对账）
+```
+
+- **存储**：四张引文表建在主库内（表结构与字段含义见 DATA_USAGE.md 第 5 节）；
+- **写入方式**：小事务分批提交 + 忙等待 60 秒，与主库的其他操作可并存；
+- **验收**：2026-09-27 通过全部 14 项验收检查（迁移完整性、抓取覆盖、数据质量、幂等性四组），报告在 `archive/reports/`；
+- **已知口径差异（遗留）**：`paper_cit_edges` 当前 990,612 行，与验收时 1,908,020 不一致（疑似对账收尾时重建所致）。分析脚本均自行从参考文献列表回连计算，不依赖此表；投稿前应 `python -m eccite edges` 重建核对。见 progress.md 遗留事项。
+
+---
+
+## 5. 备份与恢复
+
+### 备份位置（均在 `archive/db_backup/`）
+
+| 文件 | 是什么节点的快照 |
+|---|---|
+| `ec_papers.db.bak-scope-20260927` | **范围裁剪前**（166,002 篇全量，2026-09-27）——回到裁剪前的唯一凭据 |
+
+> 更早的两个备份（`ec_papers.db.bak`、`ec_papers.db.bak-20260927`）已于 2026-09-29 经用户确认删除，释放 6.9 GB。
+
+### 常见恢复场景
+
+| 场景 | 操作 |
+|---|---|
+| 想回到范围裁剪之前的状态 | 用 `archive/db_backup/ec_papers.db.bak-scope-20260927` 覆盖 `db/ec_papers.db`（覆盖前先留一份当前快照） |
+| `build --rebuild` 整库重建后引文表丢失 | `python -m eccite init` → `python -m eccite migrate --meta-only`（需 EC_History 旧库）→ `python -m eccite load`——从 `cache_citations/*.jsonl` **零 API 调用**恢复 |
+| 重建后增强丢失 | 重跑 `python -m ecdb enrich <step>` 各步骤（见第 3 节警告） |
+| 新增了 EI 导出想入库 | CSV 放回 `data_from_EI/`（或设环境变量 `ECDB_DATA` 指向 `archive/data_from_EI`）→ `python -m ecdb build`（仅用户明确要求时运行） |
+
+### 动库前的约定
+
+任何会修改数据库的操作（build、enrich、eccite 写入）之前：先复制一份 `db/ec_papers.db` 为带日期的快照放入 `archive/db_backup/`，再动手。
+
+---
+
+## 6. 原始数据与留痕总索引
+
+详见 [archive/ARCHIVE_INDEX.md](../archive/ARCHIVE_INDEX.md)。常用入口：
+
+| 内容 | 位置 |
+|---|---|
+| 86 个 EI 原始 CSV | `archive/data_from_EI/` |
+| 清洗报告（规则命中/去重明细/回填日志） | `archive/db_cleaning_report.md` |
+| 数据质量审查总报告 | `archive/audit/data_quality_report.html` |
+| 引文验收与覆盖率报告 | `archive/reports/` |
+| 领域打标报告、venue 核定说明 | `archive/reports/`、`archive/labeling/` |
+| 人工金标准（200 篇） | `archive/labeling/gold_set_200.csv` |

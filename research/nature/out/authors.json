@@ -1,0 +1,386 @@
+{
+ "entrants": [
+  {
+   "year": 2003,
+   "papers": 1334,
+   "share_papers_with_newcomer": 0.8568,
+   "share_papers_with_veteran15": 0.0
+  },
+  {
+   "year": 2004,
+   "papers": 1688,
+   "share_papers_with_newcomer": 0.8217,
+   "share_papers_with_veteran15": 0.0
+  },
+  {
+   "year": 2005,
+   "papers": 2192,
+   "share_papers_with_newcomer": 0.8189,
+   "share_papers_with_veteran15": 0.0
+  },
+  {
+   "year": 2006,
+   "papers": 2478,
+   "share_papers_with_newcomer": 0.8067,
+   "share_papers_with_veteran15": 0.0
+  },
+  {
+   "year": 2007,
+   "papers": 3942,
+   "share_papers_with_newcomer": 0.8138,
+   "share_papers_with_veteran15": 0.0
+  },
+  {
+   "year": 2008,
+   "papers": 3555,
+   "share_papers_with_newcomer": 0.7693,
+   "share_papers_with_veteran15": 0.0
+  },
+  {
+   "year": 2009,
+   "papers": 5012,
+   "share_papers_with_newcomer": 0.7885,
+   "share_papers_with_veteran15": 0.0
+  },
+  {
+   "year": 2010,
+   "papers": 4382,
+   "share_papers_with_newcomer": 0.7437,
+   "share_papers_with_veteran15": 0.0
+  },
+  {
+   "year": 2011,
+   "papers": 4752,
+   "share_papers_with_newcomer": 0.7574,
+   "share_papers_with_veteran15": 0.0
+  },
+  {
+   "year": 2012,
+   "papers": 4717,
+   "share_papers_with_newcomer": 0.7662,
+   "share_papers_with_veteran15": 0.0
+  },
+  {
+   "year": 2013,
+   "papers": 5420,
+   "share_papers_with_newcomer": 0.7694,
+   "share_papers_with_veteran15": 0.0
+  },
+  {
+   "year": 2014,
+   "papers": 5957,
+   "share_papers_with_newcomer": 0.7754,
+   "share_papers_with_veteran15": 0.0
+  },
+  {
+   "year": 2015,
+   "papers": 5872,
+   "share_papers_with_newcomer": 0.7626,
+   "share_papers_with_veteran15": 0.0659
+  },
+  {
+   "year": 2016,
+   "papers": 6252,
+   "share_papers_with_newcomer": 0.7718,
+   "share_papers_with_veteran15": 0.102
+  },
+  {
+   "year": 2017,
+   "papers": 6157,
+   "share_papers_with_newcomer": 0.7582,
+   "share_papers_with_veteran15": 0.1402
+  },
+  {
+   "year": 2018,
+   "papers": 6573,
+   "share_papers_with_newcomer": 0.7621,
+   "share_papers_with_veteran15": 0.169
+  },
+  {
+   "year": 2019,
+   "papers": 7214,
+   "share_papers_with_newcomer": 0.7562,
+   "share_papers_with_veteran15": 0.2082
+  },
+  {
+   "year": 2020,
+   "papers": 7729,
+   "share_papers_with_newcomer": 0.7715,
+   "share_papers_with_veteran15": 0.2441
+  },
+  {
+   "year": 2021,
+   "papers": 9591,
+   "share_papers_with_newcomer": 0.7631,
+   "share_papers_with_veteran15": 0.2657
+  },
+  {
+   "year": 2022,
+   "papers": 10080,
+   "share_papers_with_newcomer": 0.7718,
+   "share_papers_with_veteran15": 0.3192
+  },
+  {
+   "year": 2023,
+   "papers": 11076,
+   "share_papers_with_newcomer": 0.7962,
+   "share_papers_with_veteran15": 0.3301
+  },
+  {
+   "year": 2024,
+   "papers": 14058,
+   "share_papers_with_newcomer": 0.7975,
+   "share_papers_with_veteran15": 0.3696
+  },
+  {
+   "year": 2025,
+   "papers": 13793,
+   "share_papers_with_newcomer": 0.8071,
+   "share_papers_with_veteran15": 0.3902
+  }
+ ],
+ "self_citation": [
+  {
+   "year": 2002,
+   "rate": 0.3074,
+   "n": 296
+  },
+  {
+   "year": 2003,
+   "rate": 0.2528,
+   "n": 538
+  },
+  {
+   "year": 2004,
+   "rate": 0.218,
+   "n": 991
+  },
+  {
+   "year": 2005,
+   "rate": 0.228,
+   "n": 2171
+  },
+  {
+   "year": 2006,
+   "rate": 0.1967,
+   "n": 3386
+  },
+  {
+   "year": 2007,
+   "rate": 0.1827,
+   "n": 6989
+  },
+  {
+   "year": 2008,
+   "rate": 0.154,
+   "n": 7889
+  },
+  {
+   "year": 2009,
+   "rate": 0.1431,
+   "n": 12553
+  },
+  {
+   "year": 2010,
+   "rate": 0.1422,
+   "n": 14180
+  },
+  {
+   "year": 2011,
+   "rate": 0.1187,
+   "n": 19204
+  },
+  {
+   "year": 2012,
+   "rate": 0.1134,
+   "n": 22436
+  },
+  {
+   "year": 2013,
+   "rate": 0.1205,
+   "n": 26120
+  },
+  {
+   "year": 2014,
+   "rate": 0.1168,
+   "n": 31048
+  },
+  {
+   "year": 2015,
+   "rate": 0.1119,
+   "n": 36145
+  },
+  {
+   "year": 2016,
+   "rate": 0.1177,
+   "n": 39563
+  },
+  {
+   "year": 2017,
+   "rate": 0.1226,
+   "n": 42767
+  },
+  {
+   "year": 2018,
+   "rate": 0.1222,
+   "n": 45391
+  },
+  {
+   "year": 2019,
+   "rate": 0.1179,
+   "n": 55440
+  },
+  {
+   "year": 2020,
+   "rate": 0.124,
+   "n": 61034
+  },
+  {
+   "year": 2021,
+   "rate": 0.1221,
+   "n": 81097
+  },
+  {
+   "year": 2022,
+   "rate": 0.1194,
+   "n": 89145
+  },
+  {
+   "year": 2023,
+   "rate": 0.1099,
+   "n": 96921
+  },
+  {
+   "year": 2024,
+   "rate": 0.1097,
+   "n": 118453
+  },
+  {
+   "year": 2025,
+   "rate": 0.1014,
+   "n": 108914
+  }
+ ],
+ "reciprocity": [
+  {
+   "year": 2002,
+   "rate": 0.0372,
+   "n": 296
+  },
+  {
+   "year": 2003,
+   "rate": 0.026,
+   "n": 538
+  },
+  {
+   "year": 2004,
+   "rate": 0.0061,
+   "n": 991
+  },
+  {
+   "year": 2005,
+   "rate": 0.0143,
+   "n": 2171
+  },
+  {
+   "year": 2006,
+   "rate": 0.0095,
+   "n": 3386
+  },
+  {
+   "year": 2007,
+   "rate": 0.008,
+   "n": 6989
+  },
+  {
+   "year": 2008,
+   "rate": 0.0071,
+   "n": 7889
+  },
+  {
+   "year": 2009,
+   "rate": 0.0029,
+   "n": 12553
+  },
+  {
+   "year": 2010,
+   "rate": 0.0027,
+   "n": 14180
+  },
+  {
+   "year": 2011,
+   "rate": 0.0014,
+   "n": 19204
+  },
+  {
+   "year": 2012,
+   "rate": 0.0013,
+   "n": 22436
+  },
+  {
+   "year": 2013,
+   "rate": 0.0011,
+   "n": 26120
+  },
+  {
+   "year": 2014,
+   "rate": 0.0015,
+   "n": 31048
+  },
+  {
+   "year": 2015,
+   "rate": 0.0009,
+   "n": 36145
+  },
+  {
+   "year": 2016,
+   "rate": 0.0012,
+   "n": 39563
+  },
+  {
+   "year": 2017,
+   "rate": 0.0012,
+   "n": 42767
+  },
+  {
+   "year": 2018,
+   "rate": 0.0014,
+   "n": 45391
+  },
+  {
+   "year": 2019,
+   "rate": 0.001,
+   "n": 55440
+  },
+  {
+   "year": 2020,
+   "rate": 0.0009,
+   "n": 61034
+  },
+  {
+   "year": 2021,
+   "rate": 0.0007,
+   "n": 81097
+  },
+  {
+   "year": 2022,
+   "rate": 0.0007,
+   "n": 89145
+  },
+  {
+   "year": 2023,
+   "rate": 0.0006,
+   "n": 96921
+  },
+  {
+   "year": 2024,
+   "rate": 0.0006,
+   "n": 118453
+  },
+  {
+   "year": 2025,
+   "rate": 0.0004,
+   "n": 108914
+  }
+ ]
+}

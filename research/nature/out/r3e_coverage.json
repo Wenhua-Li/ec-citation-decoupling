@@ -1,0 +1,115 @@
+{
+  "generated": "R3-E' design-phase diagnostic",
+  "frozen_note": "构成诊断，未触碰新人数据",
+  "iterations": [
+    {
+      "label": "v1",
+      "n_ec_papers": 47834,
+      "assigned_counts": {
+        "OTHER": 9782,
+        "general_ec": 6480,
+        "ga": 5922,
+        "emo": 5253,
+        "particle_swarm": 5011,
+        "genetic_programming": 3415,
+        "differential_evolution": 3132,
+        "other_swarm_bio": 2222,
+        "memetic_hybrid": 1753,
+        "ant_colony": 1438,
+        "evolution_strategies": 1260,
+        "eda": 652,
+        "neuroevolution": 624,
+        "lcs": 406,
+        "hyper_heuristic": 348,
+        "genetic_fuzzy": 136
+      },
+      "other_rate_all": 0.2045,
+      "other_rate_by_window": {
+        "G1_2003_2007": [
+          0.1911,
+          1005,
+          5260
+        ],
+        "G2_2019_2022": [
+          0.216,
+          2302,
+          10659
+        ]
+      }
+    },
+    {
+      "label": "v2",
+      "n_ec_papers": 47834,
+      "assigned_counts": {
+        "emo": 7635,
+        "general_ec": 7401,
+        "ga": 5671,
+        "particle_swarm": 5011,
+        "genetic_programming": 3415,
+        "other_metaheuristic": 3150,
+        "differential_evolution": 3132,
+        "other_swarm_bio": 2222,
+        "generic_heuristic": 1864,
+        "memetic_hybrid": 1753,
+        "OTHER": 1716,
+        "ant_colony": 1438,
+        "evolution_strategies": 1260,
+        "eda": 652,
+        "neuroevolution": 624,
+        "lcs": 406,
+        "hyper_heuristic": 348,
+        "genetic_fuzzy": 136
+      },
+      "other_rate_all": 0.0359,
+      "other_rate_by_window": {
+        "G1_2003_2007": [
+          0.0295,
+          155,
+          5260
+        ],
+        "G2_2019_2022": [
+          0.0391,
+          417,
+          10659
+        ]
+      }
+    },
+    {
+      "label": "v3",
+      "n_ec_papers": 47834,
+      "assigned_counts": {
+        "emo": 7509,
+        "general_ec": 7090,
+        "ga": 5578,
+        "particle_swarm": 5011,
+        "other_swarm_bio": 3599,
+        "genetic_programming": 3415,
+        "differential_evolution": 3132,
+        "other_metaheuristic": 2958,
+        "memetic_hybrid": 1729,
+        "generic_heuristic": 1713,
+        "ant_colony": 1438,
+        "evolution_strategies": 1260,
+        "OTHER": 1242,
+        "eda": 652,
+        "neuroevolution": 624,
+        "lcs": 404,
+        "hyper_heuristic": 344,
+        "genetic_fuzzy": 136
+      },
+      "other_rate_all": 0.026,
+      "other_rate_by_window": {
+        "G1_2003_2007": [
+          0.026,
+          137,
+          5260
+        ],
+        "G2_2019_2022": [
+          0.0273,
+          291,
+          10659
+        ]
+      }
+    }
+  ]
+}

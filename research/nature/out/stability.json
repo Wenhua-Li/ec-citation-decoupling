@@ -1,0 +1,676 @@
+{
+ "a_resolution_rate": {
+  "EC": [
+   {
+    "year": 2002,
+    "mean_rate": 0.0387,
+    "n": 249
+   },
+   {
+    "year": 2003,
+    "mean_rate": 0.0632,
+    "n": 302
+   },
+   {
+    "year": 2004,
+    "mean_rate": 0.1042,
+    "n": 354
+   },
+   {
+    "year": 2005,
+    "mean_rate": 0.1236,
+    "n": 859
+   },
+   {
+    "year": 2006,
+    "mean_rate": 0.1613,
+    "n": 958
+   },
+   {
+    "year": 2007,
+    "mean_rate": 0.1784,
+    "n": 1487
+   },
+   {
+    "year": 2008,
+    "mean_rate": 0.1978,
+    "n": 1276
+   },
+   {
+    "year": 2009,
+    "mean_rate": 0.2122,
+    "n": 1530
+   },
+   {
+    "year": 2010,
+    "mean_rate": 0.248,
+    "n": 1545
+   },
+   {
+    "year": 2011,
+    "mean_rate": 0.2427,
+    "n": 1541
+   },
+   {
+    "year": 2012,
+    "mean_rate": 0.2593,
+    "n": 1718
+   },
+   {
+    "year": 2013,
+    "mean_rate": 0.2693,
+    "n": 2032
+   },
+   {
+    "year": 2014,
+    "mean_rate": 0.2839,
+    "n": 2051
+   },
+   {
+    "year": 2015,
+    "mean_rate": 0.311,
+    "n": 2150
+   },
+   {
+    "year": 2016,
+    "mean_rate": 0.3203,
+    "n": 2357
+   },
+   {
+    "year": 2017,
+    "mean_rate": 0.328,
+    "n": 2155
+   },
+   {
+    "year": 2018,
+    "mean_rate": 0.335,
+    "n": 2160
+   },
+   {
+    "year": 2019,
+    "mean_rate": 0.3609,
+    "n": 2473
+   },
+   {
+    "year": 2020,
+    "mean_rate": 0.3475,
+    "n": 2401
+   },
+   {
+    "year": 2021,
+    "mean_rate": 0.3574,
+    "n": 2624
+   },
+   {
+    "year": 2022,
+    "mean_rate": 0.3727,
+    "n": 2604
+   },
+   {
+    "year": 2023,
+    "mean_rate": 0.3844,
+    "n": 2626
+   },
+   {
+    "year": 2024,
+    "mean_rate": 0.3834,
+    "n": 2958
+   },
+   {
+    "year": 2025,
+    "mean_rate": 0.4056,
+    "n": 2736
+   }
+  ],
+  "NON_EC": [
+   {
+    "year": 2002,
+    "mean_rate": 0.0156,
+    "n": 635
+   },
+   {
+    "year": 2003,
+    "mean_rate": 0.026,
+    "n": 666
+   },
+   {
+    "year": 2004,
+    "mean_rate": 0.0383,
+    "n": 851
+   },
+   {
+    "year": 2005,
+    "mean_rate": 0.0492,
+    "n": 865
+   },
+   {
+    "year": 2006,
+    "mean_rate": 0.0631,
+    "n": 1058
+   },
+   {
+    "year": 2007,
+    "mean_rate": 0.0901,
+    "n": 1895
+   },
+   {
+    "year": 2008,
+    "mean_rate": 0.11,
+    "n": 1690
+   },
+   {
+    "year": 2009,
+    "mean_rate": 0.1081,
+    "n": 2894
+   },
+   {
+    "year": 2010,
+    "mean_rate": 0.1572,
+    "n": 1835
+   },
+   {
+    "year": 2011,
+    "mean_rate": 0.1532,
+    "n": 2858
+   },
+   {
+    "year": 2012,
+    "mean_rate": 0.166,
+    "n": 2857
+   },
+   {
+    "year": 2013,
+    "mean_rate": 0.15,
+    "n": 3107
+   },
+   {
+    "year": 2014,
+    "mean_rate": 0.1501,
+    "n": 3610
+   },
+   {
+    "year": 2015,
+    "mean_rate": 0.168,
+    "n": 3461
+   },
+   {
+    "year": 2016,
+    "mean_rate": 0.1613,
+    "n": 3640
+   },
+   {
+    "year": 2017,
+    "mean_rate": 0.1744,
+    "n": 3767
+   },
+   {
+    "year": 2018,
+    "mean_rate": 0.1755,
+    "n": 4055
+   },
+   {
+    "year": 2019,
+    "mean_rate": 0.1798,
+    "n": 4329
+   },
+   {
+    "year": 2020,
+    "mean_rate": 0.1782,
+    "n": 4977
+   },
+   {
+    "year": 2021,
+    "mean_rate": 0.1785,
+    "n": 6771
+   },
+   {
+    "year": 2022,
+    "mean_rate": 0.1816,
+    "n": 7349
+   },
+   {
+    "year": 2023,
+    "mean_rate": 0.1734,
+    "n": 8315
+   },
+   {
+    "year": 2024,
+    "mean_rate": 0.1678,
+    "n": 10900
+   },
+   {
+    "year": 2025,
+    "mean_rate": 0.1514,
+    "n": 10893
+   }
+  ]
+ },
+ "b_stable_control_cd5": {
+  "stable_sources": [
+   "Applied Soft Computing Journal",
+   "Computers and Industrial Engineering",
+   "Computers and Operations Research",
+   "Engineering Applications of Artificial Intelligence",
+   "European Journal of Operational Research",
+   "Expert Systems with Applications",
+   "IEEE Transactions on Fuzzy Systems",
+   "Information Sciences"
+  ],
+  "series": {
+   "EC": [
+    {
+     "year": 2002,
+     "n": 43,
+     "mean": 0.5116
+    },
+    {
+     "year": 2003,
+     "n": 64,
+     "mean": 0.3367
+    },
+    {
+     "year": 2004,
+     "n": 89,
+     "mean": 0.2677
+    },
+    {
+     "year": 2005,
+     "n": 279,
+     "mean": 0.2127
+    },
+    {
+     "year": 2006,
+     "n": 354,
+     "mean": 0.1349
+    },
+    {
+     "year": 2007,
+     "n": 449,
+     "mean": 0.0739
+    },
+    {
+     "year": 2008,
+     "n": 396,
+     "mean": 0.0465
+    },
+    {
+     "year": 2009,
+     "n": 642,
+     "mean": 0.0481
+    },
+    {
+     "year": 2010,
+     "n": 629,
+     "mean": -0.1155
+    },
+    {
+     "year": 2011,
+     "n": 713,
+     "mean": 0.0058
+    },
+    {
+     "year": 2012,
+     "n": 793,
+     "mean": -0.066
+    },
+    {
+     "year": 2013,
+     "n": 942,
+     "mean": -0.1537
+    },
+    {
+     "year": 2014,
+     "n": 966,
+     "mean": -0.156
+    },
+    {
+     "year": 2015,
+     "n": 1109,
+     "mean": -0.1898
+    },
+    {
+     "year": 2016,
+     "n": 1063,
+     "mean": -0.2313
+    },
+    {
+     "year": 2017,
+     "n": 1118,
+     "mean": -0.2084
+    },
+    {
+     "year": 2018,
+     "n": 1162,
+     "mean": -0.2119
+    },
+    {
+     "year": 2019,
+     "n": 1402,
+     "mean": -0.2482
+    },
+    {
+     "year": 2020,
+     "n": 1327,
+     "mean": -0.2426
+    }
+   ],
+   "NON_EC_all": [
+    {
+     "year": 2002,
+     "n": 40,
+     "mean": 0.2789
+    },
+    {
+     "year": 2003,
+     "n": 59,
+     "mean": 0.3475
+    },
+    {
+     "year": 2004,
+     "n": 119,
+     "mean": 0.2312
+    },
+    {
+     "year": 2005,
+     "n": 162,
+     "mean": 0.2601
+    },
+    {
+     "year": 2006,
+     "n": 242,
+     "mean": 0.1136
+    },
+    {
+     "year": 2007,
+     "n": 566,
+     "mean": 0.1527
+    },
+    {
+     "year": 2008,
+     "n": 595,
+     "mean": 0.1562
+    },
+    {
+     "year": 2009,
+     "n": 933,
+     "mean": 0.1429
+    },
+    {
+     "year": 2010,
+     "n": 760,
+     "mean": 0.0435
+    },
+    {
+     "year": 2011,
+     "n": 956,
+     "mean": 0.0967
+    },
+    {
+     "year": 2012,
+     "n": 1115,
+     "mean": 0.0841
+    },
+    {
+     "year": 2013,
+     "n": 1110,
+     "mean": 0.1174
+    },
+    {
+     "year": 2014,
+     "n": 1410,
+     "mean": 0.1245
+    },
+    {
+     "year": 2015,
+     "n": 1564,
+     "mean": 0.0997
+    },
+    {
+     "year": 2016,
+     "n": 1694,
+     "mean": 0.1122
+    },
+    {
+     "year": 2017,
+     "n": 1924,
+     "mean": 0.1272
+    },
+    {
+     "year": 2018,
+     "n": 2153,
+     "mean": 0.1457
+    },
+    {
+     "year": 2019,
+     "n": 2335,
+     "mean": 0.2012
+    },
+    {
+     "year": 2020,
+     "n": 2755,
+     "mean": 0.2784
+    }
+   ],
+   "NON_EC_stable": [
+    {
+     "year": 2002,
+     "n": 39,
+     "mean": 0.2732
+    },
+    {
+     "year": 2003,
+     "n": 59,
+     "mean": 0.3475
+    },
+    {
+     "year": 2004,
+     "n": 117,
+     "mean": 0.2333
+    },
+    {
+     "year": 2005,
+     "n": 154,
+     "mean": 0.2948
+    },
+    {
+     "year": 2006,
+     "n": 240,
+     "mean": 0.1159
+    },
+    {
+     "year": 2007,
+     "n": 552,
+     "mean": 0.161
+    },
+    {
+     "year": 2008,
+     "n": 588,
+     "mean": 0.1562
+    },
+    {
+     "year": 2009,
+     "n": 920,
+     "mean": 0.1358
+    },
+    {
+     "year": 2010,
+     "n": 750,
+     "mean": 0.0402
+    },
+    {
+     "year": 2011,
+     "n": 948,
+     "mean": 0.0946
+    },
+    {
+     "year": 2012,
+     "n": 1095,
+     "mean": 0.0841
+    },
+    {
+     "year": 2013,
+     "n": 1012,
+     "mean": 0.0913
+    },
+    {
+     "year": 2014,
+     "n": 1267,
+     "mean": 0.1092
+    },
+    {
+     "year": 2015,
+     "n": 1351,
+     "mean": 0.0625
+    },
+    {
+     "year": 2016,
+     "n": 1405,
+     "mean": 0.0606
+    },
+    {
+     "year": 2017,
+     "n": 1421,
+     "mean": 0.071
+    },
+    {
+     "year": 2018,
+     "n": 1769,
+     "mean": 0.1092
+    },
+    {
+     "year": 2019,
+     "n": 1833,
+     "mean": 0.1612
+    },
+    {
+     "year": 2020,
+     "n": 2022,
+     "mean": 0.2426
+    }
+   ]
+  }
+ },
+ "c_cd5_2d_strata": {
+  "2005-07|EC|Rp5-10|Rq11-20": {
+   "mean": -0.311,
+   "n": 50
+  },
+  "2005-07|EC|Rp5-10|Rq5-10": {
+   "mean": -0.177,
+   "n": 151
+  },
+  "2005-07|NON_EC|Rp5-10|Rq11-20": {
+   "mean": -0.385,
+   "n": 58
+  },
+  "2005-07|NON_EC|Rp5-10|Rq5-10": {
+   "mean": -0.15,
+   "n": 98
+  },
+  "2018-20|NON_EC|Rp11-20|Rq11-20": {
+   "mean": -0.09,
+   "n": 1206
+  },
+  "2018-20|NON_EC|Rp11-20|Rq21-40": {
+   "mean": -0.355,
+   "n": 225
+  },
+  "2018-20|NON_EC|Rp11-20|Rq5-10": {
+   "mean": 0.141,
+   "n": 272
+  },
+  "2018-20|NON_EC|Rp21-40|Rq11-20": {
+   "mean": -0.236,
+   "n": 253
+  },
+  "2018-20|NON_EC|Rp21-40|Rq21-40": {
+   "mean": -0.533,
+   "n": 126
+  },
+  "2018-20|NON_EC|Rp21-40|Rq5-10": {
+   "mean": 0.081,
+   "n": 35
+  },
+  "2018-20|NON_EC|Rp5-10|Rq11-20": {
+   "mean": 0.119,
+   "n": 1426
+  },
+  "2018-20|NON_EC|Rp5-10|Rq21-40": {
+   "mean": -0.111,
+   "n": 108
+  },
+  "2018-20|NON_EC|Rp5-10|Rq5-10": {
+   "mean": 0.293,
+   "n": 1174
+  },
+  "2018-20|NON_EC|Rp>40|Rq11-20": {
+   "mean": -0.229,
+   "n": 30
+  },
+  "2018-20|EC|Rp11-20|Rq11-20": {
+   "mean": -0.261,
+   "n": 716
+  },
+  "2018-20|EC|Rp11-20|Rq21-40": {
+   "mean": -0.486,
+   "n": 558
+  },
+  "2018-20|EC|Rp11-20|Rq5-10": {
+   "mean": -0.064,
+   "n": 108
+  },
+  "2018-20|EC|Rp21-40|Rq11-20": {
+   "mean": -0.315,
+   "n": 229
+  },
+  "2018-20|EC|Rp21-40|Rq21-40": {
+   "mean": -0.679,
+   "n": 493
+  },
+  "2018-20|EC|Rp5-10|Rq11-20": {
+   "mean": -0.098,
+   "n": 574
+  },
+  "2018-20|EC|Rp5-10|Rq21-40": {
+   "mean": -0.334,
+   "n": 256
+  },
+  "2018-20|EC|Rp5-10|Rq5-10": {
+   "mean": 0.048,
+   "n": 278
+  },
+  "2018-20|EC|Rp>40|Rq21-40": {
+   "mean": -0.799,
+   "n": 59
+  }
+ },
+ "d_highres_cd5": {
+  "sources": [
+   "2021 IEEE Congress on Evolutionary Computation, CEC 2021 - Proceedings",
+   "2021 IEEE Symposium Series on Computational Intelligence, SSCI 2021 - Proceedings",
+   "2022 IEEE Congress on Evolutionary Computation, CEC 2022 - Conference Proceedings",
+   "2023 IEEE Congress on Evolutionary Computation, CEC 2023",
+   "2023 IEEE Symposium Series on Computational Intelligence, SSCI 2023",
+   "2024 IEEE Congress on Evolutionary Computation, CEC 2024 - Proceedings",
+   "2025 IEEE Congress on Evolutionary Computation, CEC 2025",
+   "GECCO 2021 - Proceedings of the 2021 Genetic and Evolutionary Computation Conference",
+   "GECCO 2021 Companion - Proceedings of the 2021 Genetic and Evolutionary Computation Conference Companion",
+   "GECCO 2022 - Proceedings of the 2022 Genetic and Evolutionary Computation Conference",
+   "GECCO 2022 Companion - Proceedings of the 2022 Genetic and Evolutionary Computation Conference",
+   "GECCO 2023 - Proceedings of the 2023 Genetic and Evolutionary Computation Conference",
+   "GECCO 2023 Companion - Proceedings of the 2023 Genetic and Evolutionary Computation Conference Companion",
+   "GECCO 2024 - Proceedings of the 2024 Genetic and Evolutionary Computation Conference",
+   "GECCO 2024 Companion - Proceedings of the 2024 Genetic and Evolutionary Computation Conference Companion",
+   "GECCO 2025 - Proceedings of the 2025 Genetic and Evolutionary Computation Conference",
+   "GECCO 2025 Companion - Proceedings of the 2025 Genetic and Evolutionary Computation Conference Companion",
+   "IEEE Transactions on Artificial Intelligence",
+   "IEEE/CAA Journal of Automatica Sinica",
+   "Information sciences",
+   "Proceedings of the 2022 IEEE Symposium Series on Computational Intelligence, SSCI 2022"
+  ],
+  "series": {
+   "EC": [],
+   "NON_EC": []
+  }
+ }
+}

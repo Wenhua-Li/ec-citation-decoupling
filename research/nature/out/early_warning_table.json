@@ -1,0 +1,350 @@
+{
+ "method": "METRICS.md M4：以 z = direction×值 统一方向（z 上升=衰退信号）；对 z 的 3 年滑动均值取一阶差分首次由负转正年与谷值年（衰退方向极值年，须为内点且其后确有上升）中更早者为转折年；提前量 = 转折年 − 事件锚定年；命中 = 提前量 ∈ [−15, −1]。年龄结构序列仅纳入 n_papers ≥ 30 的年份、CD 序列仅纳入完整窗口且 n_valid ≥ 30（mean 非空）的年份；缺年年份不外推，滑动均值窗口内用可得点（≥2/3）。噪声敏感性由负例对照的假阳性次数刻画。",
+ "discipline": "3 案例 × 4 指标小样本：只报告命中率与假阳性次数，不做统计显著性检验（PLAN v3 F14）。",
+ "event_years_file": "out/event_years.json",
+ "rows": [
+  {
+   "case": "expert_systems",
+   "metric": "m1_median_age",
+   "turning_year": 1983,
+   "event_year": 1987,
+   "lead_years": -4,
+   "hit": true
+  },
+  {
+   "case": "expert_systems",
+   "metric": "m1_share_ge5",
+   "turning_year": 1982,
+   "event_year": 1987,
+   "lead_years": -5,
+   "hit": true
+  },
+  {
+   "case": "expert_systems",
+   "metric": "m3_theme_share",
+   "turning_year": 1990,
+   "event_year": 1987,
+   "lead_years": 3,
+   "hit": false
+  },
+  {
+   "case": "symbolic_ai",
+   "metric": "m1_median_age",
+   "turning_year": 1984,
+   "event_year": 1994,
+   "lead_years": -10,
+   "hit": true
+  },
+  {
+   "case": "symbolic_ai",
+   "metric": "m1_share_ge5",
+   "turning_year": 1985,
+   "event_year": 1994,
+   "lead_years": -9,
+   "hit": true
+  },
+  {
+   "case": "symbolic_ai",
+   "metric": "m3_theme_share",
+   "turning_year": 1993,
+   "event_year": 1994,
+   "lead_years": -1,
+   "hit": true
+  },
+  {
+   "case": "fuzzy_logic",
+   "metric": "m1_median_age",
+   "turning_year": 1978,
+   "event_year": 2000,
+   "lead_years": -22,
+   "hit": false
+  },
+  {
+   "case": "fuzzy_logic",
+   "metric": "m1_share_ge5",
+   "turning_year": 1978,
+   "event_year": 2000,
+   "lead_years": -22,
+   "hit": false
+  },
+  {
+   "case": "fuzzy_logic",
+   "metric": "m3_theme_share",
+   "turning_year": 1996,
+   "event_year": 2000,
+   "lead_years": -4,
+   "hit": true
+  }
+ ],
+ "cases": {
+  "expert_systems": {
+   "m1_median_age": {
+    "series_years": 14,
+    "turning_year": 1983,
+    "event_year": 1987,
+    "lead_years": -4,
+    "hit": true,
+    "detail": {
+     "first_rise_year": 1987,
+     "trough_year": 1983,
+     "chosen": 1983,
+     "n_years": 14
+    }
+   },
+   "m1_share_ge5": {
+    "series_years": 14,
+    "turning_year": 1982,
+    "event_year": 1987,
+    "lead_years": -5,
+    "hit": true,
+    "detail": {
+     "first_rise_year": 1982,
+     "trough_year": 1983,
+     "chosen": 1982,
+     "n_years": 14
+    }
+   },
+   "m2_cd5": {
+    "series_years": 0,
+    "turning_year": null,
+    "event_year": 1987,
+    "lead_years": null,
+    "hit": null,
+    "detail": {
+     "reason": "too_short",
+     "n_years": 0
+    }
+   },
+   "m3_theme_share": {
+    "series_years": 16,
+    "turning_year": 1990,
+    "event_year": 1987,
+    "lead_years": 3,
+    "hit": false,
+    "detail": {
+     "first_rise_year": 1991,
+     "trough_year": 1990,
+     "chosen": 1990,
+     "n_years": 16
+    }
+   }
+  },
+  "symbolic_ai": {
+   "m1_median_age": {
+    "series_years": 16,
+    "turning_year": 1984,
+    "event_year": 1994,
+    "lead_years": -10,
+    "hit": true,
+    "detail": {
+     "first_rise_year": 1986,
+     "trough_year": 1984,
+     "chosen": 1984,
+     "n_years": 16
+    }
+   },
+   "m1_share_ge5": {
+    "series_years": 16,
+    "turning_year": 1985,
+    "event_year": 1994,
+    "lead_years": -9,
+    "hit": true,
+    "detail": {
+     "first_rise_year": 1986,
+     "trough_year": 1985,
+     "chosen": 1985,
+     "n_years": 16
+    }
+   },
+   "m2_cd5": {
+    "series_years": 0,
+    "turning_year": null,
+    "event_year": 1994,
+    "lead_years": null,
+    "hit": null,
+    "detail": {
+     "reason": "too_short",
+     "n_years": 0
+    }
+   },
+   "m3_theme_share": {
+    "series_years": 16,
+    "turning_year": 1993,
+    "event_year": 1994,
+    "lead_years": -1,
+    "hit": true,
+    "detail": {
+     "first_rise_year": 1994,
+     "trough_year": 1993,
+     "chosen": 1993,
+     "n_years": 16
+    }
+   }
+  },
+  "fuzzy_logic": {
+   "m1_median_age": {
+    "series_years": 26,
+    "turning_year": 1978,
+    "event_year": 2000,
+    "lead_years": -22,
+    "hit": false,
+    "detail": {
+     "first_rise_year": 1979,
+     "trough_year": 1978,
+     "chosen": 1978,
+     "n_years": 26
+    }
+   },
+   "m1_share_ge5": {
+    "series_years": 26,
+    "turning_year": 1978,
+    "event_year": 2000,
+    "lead_years": -22,
+    "hit": false,
+    "detail": {
+     "first_rise_year": 1979,
+     "trough_year": 1978,
+     "chosen": 1978,
+     "n_years": 26
+    }
+   },
+   "m2_cd5": {
+    "series_years": 0,
+    "turning_year": null,
+    "event_year": 2000,
+    "lead_years": null,
+    "hit": null,
+    "detail": {
+     "reason": "too_short",
+     "n_years": 0
+    }
+   },
+   "m3_theme_share": {
+    "series_years": 26,
+    "turning_year": 1996,
+    "event_year": 2000,
+    "lead_years": -4,
+    "hit": true,
+    "detail": {
+     "first_rise_year": 1996,
+     "trough_year": 2000,
+     "chosen": 1996,
+     "n_years": 26
+    }
+   }
+  }
+ },
+ "summary": {
+  "n_metric_case_pairs": 9,
+  "n_hit": 6,
+  "hit_rate": 0.667,
+  "per_metric_hits": {
+   "m1_median_age": "2/3",
+   "m1_share_ge5": "2/3",
+   "m2_cd5": "0/0",
+   "m3_theme_share": "2/3"
+  },
+  "hit_years_summary": [
+   -4,
+   -5,
+   -10,
+   -9,
+   -1,
+   -4
+  ]
+ },
+ "negative_controls": {
+  "machine_learning_bull__S62148650": {
+   "m1_median_age": {
+    "series_years": 39,
+    "turning_year": 2006,
+    "false_positive": true,
+    "detail": {
+     "first_rise_year": 2006,
+     "trough_year": 1988,
+     "chosen": 2006,
+     "n_years": 38
+    }
+   },
+   "m1_share_ge5": {
+    "series_years": 39,
+    "turning_year": 1989,
+    "false_positive": true,
+    "detail": {
+     "first_rise_year": 1990,
+     "trough_year": 1989,
+     "chosen": 1989,
+     "n_years": 38
+    }
+   },
+   "m2_cd5": {
+    "series_years": 2,
+    "turning_year": null,
+    "false_positive": false,
+    "detail": {
+     "reason": "too_short",
+     "n_years": 0
+    }
+   },
+   "m3_theme_share": {
+    "series_years": 40,
+    "turning_year": 1995,
+    "false_positive": true,
+    "detail": {
+     "first_rise_year": 1995,
+     "trough_year": 2008,
+     "chosen": 1995,
+     "n_years": 40
+    }
+   }
+  },
+  "evolutionary_biology__S109682412": {
+   "m1_median_age": {
+    "series_years": 35,
+    "turning_year": 1986,
+    "false_positive": true,
+    "detail": {
+     "first_rise_year": 1989,
+     "trough_year": 1986,
+     "chosen": 1986,
+     "n_years": 35
+    }
+   },
+   "m1_share_ge5": {
+    "series_years": 35,
+    "turning_year": 1988,
+    "false_positive": true,
+    "detail": {
+     "first_rise_year": 1989,
+     "trough_year": 1988,
+     "chosen": 1988,
+     "n_years": 35
+    }
+   },
+   "m2_cd5": {
+    "series_years": 22,
+    "turning_year": 2005,
+    "false_positive": true,
+    "detail": {
+     "first_rise_year": 2005,
+     "trough_year": 2020,
+     "chosen": 2005,
+     "n_years": 21
+    }
+   },
+   "m3_theme_share": {
+    "series_years": 41,
+    "turning_year": 1995,
+    "false_positive": true,
+    "detail": {
+     "first_rise_year": 1995,
+     "trough_year": 2023,
+     "chosen": 1995,
+     "n_years": 41
+    }
+   }
+  }
+ },
+ "negative_false_positive_count": 7,
+ "wording_template": "指标在 N/M 个案例中先于事件年转折（描述性，不做检验）"
+}

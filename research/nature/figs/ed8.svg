@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="518.740157pt" height="252pt" viewBox="0 0 518.740157 252" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-06T13:27:00.090479</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 252 
+L 518.740157 252 
+L 518.740157 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="text_1">
+    <g id="patch_2">
+     <path d="M 59.295805 61.121466 
+L 144.363805 61.121466 
+Q 147.423805 61.121466 147.423805 58.061466 
+L 147.423805 43.259513 
+Q 147.423805 40.199513 144.363805 40.199513 
+L 59.295805 40.199513 
+Q 56.235805 40.199513 56.235805 43.259513 
+L 56.235805 58.061466 
+Q 56.235805 61.121466 59.295805 61.121466 
+z
+" style="fill: #f4f4f4; stroke: #7f7f7f; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 6.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(90.870117 48.719766)">Corpus</text>
+    <text style="font-size: 6.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(59.295805 56.120743)">146,785 papers, 2000–2025</text>
+   </g>
+   <g id="text_2">
+    <g id="patch_3">
+     <path d="M 36.524305 103.578907 
+L 167.135305 103.578907 
+Q 170.195305 103.578907 170.195305 100.518907 
+L 170.195305 85.716688 
+Q 170.195305 82.656688 167.135305 82.656688 
+L 36.524305 82.656688 
+Q 33.464305 82.656688 33.464305 85.716688 
+L 33.464305 100.518907 
+Q 33.464305 103.578907 36.524305 103.578907 
+z
+" style="fill: #f4f4f4; stroke: #0072b2; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 6.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(81.04093 91.176942)">Field labelling</text>
+    <text style="font-size: 6.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(36.524305 98.578052)">47,834 papers; gold standard n = 200, 97%</text>
+   </g>
+   <g id="text_3">
+    <g id="patch_4">
+     <path d="M 34.356805 146.036216 
+L 169.302805 146.036216 
+Q 172.362805 146.036216 172.362805 142.976216 
+L 172.362805 128.173997 
+Q 172.362805 125.113997 169.302805 125.113997 
+L 34.356805 125.113997 
+Q 31.296805 125.113997 31.296805 128.173997 
+L 31.296805 142.976216 
+Q 31.296805 146.036216 34.356805 146.036216 
+z
+" style="fill: #f4f4f4; stroke: #0072b2; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 6.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(65.734024 133.634251)">In-corpus citation edges</text>
+    <text style="font-size: 6.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(34.356805 141.03536)">922,842 edges; 607,204 rows right-censored</text>
+   </g>
+   <g id="text_4">
+    <g id="patch_5">
+     <path d="M 16.603492 188.493524 
+L 187.056117 188.493524 
+Q 190.116117 188.493524 190.116117 185.433524 
+L 190.116117 170.631305 
+Q 190.116117 167.571305 187.056117 167.571305 
+L 16.603492 167.571305 
+Q 13.543492 167.571305 13.543492 170.631305 
+L 13.543492 185.433524 
+Q 13.543492 188.493524 16.603492 188.493524 
+z
+" style="fill: #f4f4f4; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 6.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(62.331367 176.091559)">Four behavioural readings</text>
+    <text style="font-size: 6.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(16.603492 183.492669)">outward strength / first direction / disruption / citation age</text>
+   </g>
+   <g id="text_5">
+    <g id="patch_6">
+     <path d="M 22.269274 230.950766 
+L 181.390336 230.950766 
+Q 184.450336 230.950766 184.450336 227.890766 
+L 184.450336 213.08868 
+Q 184.450336 210.02868 181.390336 210.02868 
+L 22.269274 210.02868 
+Q 19.209274 210.02868 19.209274 213.08868 
+L 19.209274 227.890766 
+Q 19.209274 230.950766 22.269274 230.950766 
+z
+" style="fill: #f4f4f4; stroke: #009e73; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 6.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(72.538274 218.548934)">Comparison design</text>
+    <text style="font-size: 6.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(22.269274 225.950044)">stable 8-venue set; 2-D strata; seven external panels</text>
+   </g>
+   <g id="patch_7">
+    <path d="M 101.829805 66.156248 
+Q 101.829805 71.886601 101.829805 76.610723 
+" style="fill: none; stroke: #000000; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 103.229805 73.810723 
+L 101.829805 76.610723 
+L 100.429805 73.810723 
+z
+" style="stroke: #000000; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 101.829805 108.613556 
+Q 101.829805 114.343909 101.829805 119.068032 
+" style="fill: none; stroke: #000000; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 103.229805 116.268032 
+L 101.829805 119.068032 
+L 100.429805 116.268032 
+z
+" style="stroke: #000000; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 101.829805 151.070865 
+Q 101.829805 156.801218 101.829805 161.52534 
+" style="fill: none; stroke: #000000; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 103.229805 158.72534 
+L 101.829805 161.52534 
+L 100.429805 158.72534 
+z
+" style="stroke: #000000; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 101.829805 193.528174 
+Q 101.829805 199.258526 101.829805 203.982649 
+" style="fill: none; stroke: #000000; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 103.229805 201.182649 
+L 101.829805 203.982649 
+L 100.429805 201.182649 
+z
+" style="stroke: #000000; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="7.56" y="11.962831" transform="rotate(-0 7.56 11.962831)">a</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="14.724505" y="12.173281" transform="rotate(-0 14.724505 12.173281)">Measurement pipeline</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="text_8">
+    <g id="patch_11">
+     <path d="M 285.982165 81.586362 
+L 428.857602 81.586362 
+Q 431.917602 81.586362 431.917602 78.526362 
+L 431.917602 48.92219 
+Q 431.917602 45.86219 428.857602 45.86219 
+L 285.982165 45.86219 
+Q 282.922165 45.86219 282.922165 48.92219 
+L 282.922165 78.526362 
+Q 282.922165 81.586362 285.982165 81.586362 
+z
+" style="fill: #fbfbfb; stroke: #d55e00; stroke-width: 0.9; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 6.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(317.165477 54.382444)">Citation-channel resolution</text>
+    <text style="font-size: 6.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(294.491727 61.783421)">0.406 (field) vs 0.151 (comparison), 2025;</text>
+    <text style="font-size: 6.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(285.982165 69.18453)">disruption index monotone in reference density;</text>
+    <text style="font-size: 6.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(305.267602 76.58564)">all comparisons made within strata</text>
+   </g>
+   <g id="text_9">
+    <g id="patch_12">
+     <path d="M 205.094571 141.68162 
+L 509.745196 141.68162 
+Q 512.805196 141.68162 512.805196 138.62162 
+L 512.805196 123.819401 
+Q 512.805196 120.759401 509.745196 120.759401 
+L 205.094571 120.759401 
+Q 202.034571 120.759401 202.034571 123.819401 
+L 202.034571 138.62162 
+Q 202.034571 141.68162 205.094571 141.68162 
+z
+" style="fill: #fbfbfb; stroke: #7f7f7f; stroke-width: 0.9; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 6.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(333.797852 129.279655)">Temporal range</text>
+    <text style="font-size: 6.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(205.094571 136.680764)">in-corpus 2000–2025; cohorts to 2020; benchmark-suite technical report outside the corpus boundary</text>
+   </g>
+   <g id="text_10">
+    <g id="patch_13">
+     <path d="M 295.811352 216.578831 
+L 419.028415 216.578831 
+Q 422.088415 216.578831 422.088415 213.518831 
+L 422.088415 183.914659 
+Q 422.088415 180.854659 419.028415 180.854659 
+L 295.811352 180.854659 
+Q 292.751352 180.854659 292.751352 183.914659 
+L 292.751352 213.518831 
+Q 292.751352 216.578831 295.811352 216.578831 
+z
+" style="fill: #fbfbfb; stroke: #cc79a7; stroke-width: 0.9; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 6.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(333.984852 189.374913)">External panels</text>
+    <text style="font-size: 6.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(304.881384 196.775889)">96,170 papers across seven fields;</text>
+    <text style="font-size: 6.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(299.781384 204.176866)">low-resolution outline of direction only;</text>
+    <text style="font-size: 6.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(295.811352 211.577975)">cross-database readings not comparable</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="267.639117" y="11.962831" transform="rotate(-0 267.639117 11.962831)">b</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="274.462455" y="12.173144" transform="rotate(-0 274.462455 12.173144)">Range and blind spots</text>
+   </g>
+  </g>
+ </g>
+</svg>

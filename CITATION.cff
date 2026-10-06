@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: >-
+  If you use this repository, please cite it together with the paper once it
+  is published.
+title: "One-way decoupling of a field's citation exchange at its output peak — analysis code and derived data"
+authors:
+  - family-names: Li
+    given-names: Wenhua
+    orcid: "https://orcid.org/0000-0001-5657-7384"
+  - family-names: Wang
+    given-names: Rui
+    orcid: "https://orcid.org/0000-0001-9048-2979"
+  - family-names: Zhang
+    given-names: Tao
+    orcid: "https://orcid.org/0000-0002-0432-2942"
+  - family-names: Lu
+    given-names: Xin
+    orcid: "https://orcid.org/0000-0002-3547-6493"
+version: 1.0.0
+date-released: "2026-10-06"
+# RELEASE-TIME: 建仓后填 identifier 与 repository-url（推送前必改）
+# identifier:
+#   type: url
+#   value: "https://doi.org/10.5281/zenodo.XXXXXXX"
+repository-code: "https://github.com/Wenhua-Li/ec-citation-decoupling"
+type: dataset
+keywords:
+  - science of science
+  - citation analysis
+  - disruption index
+  - evolutionary computation
+  - field vitality
+license: MIT
