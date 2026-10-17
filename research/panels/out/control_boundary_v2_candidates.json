@@ -1,0 +1,235 @@
+{
+ "run_utc": "2026-10-15T07:28:48Z",
+ "spec": {
+  "candidates": "每刊 primary_location.source.id 过滤 + group_by=primary_topic.id 前十（全库年份，不设窗）",
+  "selection_rule": "前3交集唯一 -> common_top3_unique；交集不唯一且两刊 argmax 一致 -> common_top3+consistent_argmax；交集空且 argmax 一致 -> consistent_argmax；其余 INDETERMINATE（不事后择优）",
+  "topic_filter": "primary_topic.id（两阶段一致）",
+  "year_window_main": [
+   1990,
+   2024
+  ],
+  "year_window_sensitivity": {
+   "edge_drop_last_year": [
+    1990,
+    2023
+   ],
+   "post_2000": [
+    2000,
+    2024
+   ]
+  },
+  "min_anchor_per_year": 50,
+  "min_years": 20,
+  "min_diff_pairs": 10,
+  "min_topic_total": 200,
+  "anchor_definition": "该单位所有 works 的 publication_year 年度量（无类型过滤，含日期窗；与 w1_panels.json total 同定义）",
+  "anchor_source": "OpenAlex 当次快照（同日抓取；本地 w1_panels.json 仅作交叉核验）",
+  "main_unit": "pooled = 两刊锚点逐年和 / 两刊主题曲线逐年和",
+  "rho": "并列平均秩 Spearman；水平 / 一阶差分（相邻合格年）/ 线性去趋势",
+  "pass_threshold": 0.8
+ },
+ "candidates": {
+  "Automatica": {
+   "source_id": "S51360982",
+   "top": [
+    {
+     "topic_id": "T10046",
+     "display_name": "Stability and Control of Uncertain Systems",
+     "count": 2789,
+     "rank": 1
+    },
+    {
+     "topic_id": "T11236",
+     "display_name": "Control Systems and Identification",
+     "count": 1935,
+     "rank": 2
+    },
+    {
+     "topic_id": "T10791",
+     "display_name": "Advanced Control Systems Optimization",
+     "count": 1341,
+     "rank": 3
+    },
+    {
+     "topic_id": "T10249",
+     "display_name": "Distributed Control Multi-Agent Systems",
+     "count": 1288,
+     "rank": 4
+    },
+    {
+     "topic_id": "T10040",
+     "display_name": "Adaptive Control of Nonlinear Systems",
+     "count": 875,
+     "rank": 5
+    },
+    {
+     "topic_id": "T11081",
+     "display_name": "Advanced Control Systems Design",
+     "count": 875,
+     "rank": 6
+    },
+    {
+     "topic_id": "T12772",
+     "display_name": "Control and Stability of Dynamical Systems",
+     "count": 526,
+     "rank": 7
+    },
+    {
+     "topic_id": "T11110",
+     "display_name": "Stability and Controllability of Differential Equations",
+     "count": 457,
+     "rank": 8
+    },
+    {
+     "topic_id": "T10711",
+     "display_name": "Target Tracking and Data Fusion in Sensor Networks",
+     "count": 433,
+     "rank": 9
+    },
+    {
+     "topic_id": "T10876",
+     "display_name": "Fault Detection and Control Systems",
+     "count": 288,
+     "rank": 10
+    }
+   ],
+   "non_topic_groups": [],
+   "empty": false
+  },
+  "IEEE Transactions on Automatic Control": {
+   "source_id": "S184954342",
+   "top": [
+    {
+     "topic_id": "T10046",
+     "display_name": "Stability and Control of Uncertain Systems",
+     "count": 4200,
+     "rank": 1
+    },
+    {
+     "topic_id": "T11236",
+     "display_name": "Control Systems and Identification",
+     "count": 2737,
+     "rank": 2
+    },
+    {
+     "topic_id": "T11081",
+     "display_name": "Advanced Control Systems Design",
+     "count": 2570,
+     "rank": 3
+    },
+    {
+     "topic_id": "T10791",
+     "display_name": "Advanced Control Systems Optimization",
+     "count": 2302,
+     "rank": 4
+    },
+    {
+     "topic_id": "T10249",
+     "display_name": "Distributed Control Multi-Agent Systems",
+     "count": 1703,
+     "rank": 5
+    },
+    {
+     "topic_id": "T12772",
+     "display_name": "Control and Stability of Dynamical Systems",
+     "count": 1168,
+     "rank": 6
+    },
+    {
+     "topic_id": "T10040",
+     "display_name": "Adaptive Control of Nonlinear Systems",
+     "count": 1130,
+     "rank": 7
+    },
+    {
+     "topic_id": "T10711",
+     "display_name": "Target Tracking and Data Fusion in Sensor Networks",
+     "count": 955,
+     "rank": 8
+    },
+    {
+     "topic_id": "T11110",
+     "display_name": "Stability and Controllability of Differential Equations",
+     "count": 657,
+     "rank": 9
+    },
+    {
+     "topic_id": "T11125",
+     "display_name": "Petri Nets in System Modeling",
+     "count": 525,
+     "rank": 10
+    }
+   ],
+   "non_topic_groups": [],
+   "empty": false
+  }
+ },
+ "selection": {
+  "top3": {
+   "Automatica": [
+    "T10046",
+    "T11236",
+    "T10791"
+   ],
+   "IEEE Transactions on Automatic Control": [
+    "T10046",
+    "T11236",
+    "T11081"
+   ]
+  },
+  "argmax": {
+   "Automatica": "T10046",
+   "IEEE Transactions on Automatic Control": "T10046"
+  },
+  "common_top3": [
+   "T10046",
+   "T11236"
+  ],
+  "argmax_agreement": true,
+  "certain": true,
+  "rule": "common_top3+consistent_argmax",
+  "topic_id": "T10046",
+  "flags": [
+   "前3交集含 2 项，由一致 argmax 收敛"
+  ],
+  "reasons": [],
+  "legacy_audit": {
+   "T10820": {
+    "desc": "control_boundary_fix.py 语义规则选中（Fuzzy Logic and Control Systems）",
+    "Automatica": null,
+    "IEEE Transactions on Automatic Control": null
+   },
+   "T11542": {
+    "desc": "W1 原版盲选首命中（Behavioral Health and Interventions）",
+    "Automatica": null,
+    "IEEE Transactions on Automatic Control": null
+   }
+  },
+  "topic_display_name": "Stability and Control of Uncertain Systems"
+ },
+ "api": {
+  "calls": [
+   {
+    "purpose": "candidates:Automatica",
+    "url": "https://api.openalex.org/works?filter=primary_location.source.id:S51360982&group_by=primary_topic.id&per-page=10&mailto=ecmap.project@outlook.com",
+    "t": "2026-10-15T07:28:48Z",
+    "status": "OK",
+    "n_groups_or_results": 10
+   },
+   {
+    "purpose": "candidates:IEEE Transactions on Automatic Control",
+    "url": "https://api.openalex.org/works?filter=primary_location.source.id:S184954342&group_by=primary_topic.id&per-page=10&mailto=ecmap.project@outlook.com",
+    "t": "2026-10-15T07:28:50Z",
+    "status": "OK",
+    "n_groups_or_results": 10
+   },
+   {
+    "purpose": "topic_names",
+    "url": "https://api.openalex.org/topics?filter=openalex:T10046|T11236|T10791|T10249|T10040|T11081|T12772|T11110|T10711|T10876|T11125&per-page=50&select=id,display_name&mailto=ecmap.project@outlook.com",
+    "t": "2026-10-15T07:28:55Z",
+    "status": "OK",
+    "n_groups_or_results": 0
+   }
+  ]
+ }
+}

@@ -1,0 +1,104 @@
+{
+ "design": {
+  "lag": [
+   [
+    2005,
+    2007
+   ],
+   [
+    2011,
+    2013
+   ]
+  ],
+  "main": [
+   [
+    2011,
+    2013
+   ],
+   [
+    2021,
+    2023
+   ]
+  ],
+  "robustness_note": "4-year lag windows + edges>=3 variant tried 2026-10-15 and REJECTED: per-source growth dispersion is inherently fragile below ~3 edges/100 papers (1-2 edges flip signs); lag-prediction stays honestly thin, soft wording retained",
+  "dispersion_gradient_hypothesis": "econ > psych > math"
+ },
+ "directions": {
+  "economics->mathematics": {
+   "n_sources": 5,
+   "lag_disp_sd": null,
+   "lag_mixed_signs": false,
+   "raw": null,
+   "laspeyres": null,
+   "paasche": null,
+   "width_pp": null,
+   "main_mixed_signs": false,
+   "per_source_main_growth": {}
+  },
+  "mathematics->economics": {
+   "n_sources": 4,
+   "lag_disp_sd": null,
+   "lag_mixed_signs": false,
+   "raw": null,
+   "laspeyres": null,
+   "paasche": null,
+   "width_pp": null,
+   "main_mixed_signs": false,
+   "per_source_main_growth": {}
+  },
+  "economics->psychology": {
+   "n_sources": 5,
+   "lag_disp_sd": null,
+   "lag_mixed_signs": false,
+   "raw": 3.7573,
+   "laspeyres": 4.3646,
+   "paasche": 4.0182,
+   "width_pp": 34.64,
+   "main_mixed_signs": false,
+   "per_source_main_growth": {
+    "S203860005": 3.755,
+    "S23254222": 4.332,
+    "S88935262": 3.7411,
+    "S95323914": 1.5098
+   }
+  },
+  "psychology->economics": {
+   "n_sources": 4,
+   "lag_disp_sd": 7.4986,
+   "lag_mixed_signs": false,
+   "raw": 1.4696,
+   "laspeyres": 1.8384,
+   "paasche": 1.5174,
+   "width_pp": 32.1,
+   "main_mixed_signs": false,
+   "per_source_main_growth": {
+    "S35223124": 0.4698,
+    "S58854535": 2.3478,
+    "S62013203": 0.1338,
+    "S88198767": 8.1191
+   }
+  },
+  "mathematics->psychology": {
+   "n_sources": 4,
+   "lag_disp_sd": null,
+   "lag_mixed_signs": false,
+   "raw": null,
+   "laspeyres": null,
+   "paasche": null,
+   "width_pp": null,
+   "main_mixed_signs": false,
+   "per_source_main_growth": {}
+  },
+  "psychology->mathematics": {
+   "n_sources": 4,
+   "lag_disp_sd": null,
+   "lag_mixed_signs": false,
+   "raw": null,
+   "laspeyres": null,
+   "paasche": null,
+   "width_pp": null,
+   "main_mixed_signs": false,
+   "per_source_main_growth": {}
+  }
+ }
+}

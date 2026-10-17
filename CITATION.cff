@@ -16,8 +16,8 @@ authors:
   - family-names: Lu
     given-names: Xin
     orcid: "https://orcid.org/0000-0002-3547-6493"
-version: 1.0.0
-date-released: "2026-10-06"
+version: 2.0.0
+date-released: "2026-10-17"
 # RELEASE-TIME: 建仓后填 identifier 与 repository-url（推送前必改）
 # identifier:
 #   type: url

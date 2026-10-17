@@ -1,4 +1,4 @@
-﻿Test,Result,Source
+Test,Result,Source
 Two-dimensional stratification by cited-side reference count and citing-side resolution density,All 8 cells negative over 2018-20 (-0.08 to -0.25); 15-68% of the unstratified gap,Analysis output
 Stable comparison group of mixed venues,Divergence survives (2019: field -0.248 vs stable comparison +0.161),Analysis output
 Fixed journal set (single-anchor convention),"Outward rate 0.830 (2021) to 0.503 (2025); denominator +78%, numerator +8%",Analysis output
@@ -16,3 +16,4 @@ Cross-database comparison,Not year-level comparable (Spearman rho 0.086); extern
 Labelling quality,97% against a hand-checked gold standard of 200 papers,Analysis output
 Composition correction for first-direction choice,"Corrected ratio 0.930 to 0.663; no trend 2013-22, decline concentrated in 2023-25 (about 55% compositional)",Analysis output
 Subfield decomposition (entry heterogeneity),7 of 9 eligible families fall 48-77%; particle swarm rises 31.5%,Analysis output
+"C2 composition sensitivity (composition fixed at 2021, corrected 2026-10-17)","E1 edges per paper: source-standardized 0.830 to 0.642 (-22.7%), topic-standardized 0.830 to 0.520 (-37.4%); E2 participation share: source-standardized 0.291 to 0.232 (-20.2%), topic-standardized 0.291 to 0.203 (-30.3%). Erratum: the -20.2%/-30.3% pair was labelled as the per-paper rate (E1) in the NHB-submitted SI; it is the participation share (E2). See ERRATA.md",c2_composition_sensitivity.py

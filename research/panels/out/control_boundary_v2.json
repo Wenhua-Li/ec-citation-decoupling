@@ -1,0 +1,568 @@
+{
+ "script": "research/panels/control_boundary_v2.py",
+ "run_utc": "2026-10-15T07:28:48Z",
+ "status": "PASS",
+ "stage": "done",
+ "spec_frozen": {
+  "candidates": "每刊 primary_location.source.id 过滤 + group_by=primary_topic.id 前十（全库年份，不设窗）",
+  "selection_rule": "前3交集唯一 -> common_top3_unique；交集不唯一且两刊 argmax 一致 -> common_top3+consistent_argmax；交集空且 argmax 一致 -> consistent_argmax；其余 INDETERMINATE（不事后择优）",
+  "topic_filter": "primary_topic.id（两阶段一致）",
+  "year_window_main": [
+   1990,
+   2024
+  ],
+  "year_window_sensitivity": {
+   "edge_drop_last_year": [
+    1990,
+    2023
+   ],
+   "post_2000": [
+    2000,
+    2024
+   ]
+  },
+  "min_anchor_per_year": 50,
+  "min_years": 20,
+  "min_diff_pairs": 10,
+  "min_topic_total": 200,
+  "anchor_definition": "该单位所有 works 的 publication_year 年度量（无类型过滤，含日期窗；与 w1_panels.json total 同定义）",
+  "anchor_source": "OpenAlex 当次快照（同日抓取；本地 w1_panels.json 仅作交叉核验）",
+  "main_unit": "pooled = 两刊锚点逐年和 / 两刊主题曲线逐年和",
+  "rho": "并列平均秩 Spearman；水平 / 一阶差分（相邻合格年）/ 线性去趋势",
+  "pass_threshold": 0.8
+ },
+ "api": {
+  "base": "https://api.openalex.org",
+  "mailto": "ecmap.project@outlook.com",
+  "keys_enabled": true,
+  "calls": [
+   {
+    "purpose": "candidates:Automatica",
+    "url": "https://api.openalex.org/works?filter=primary_location.source.id:S51360982&group_by=primary_topic.id&per-page=10&mailto=ecmap.project@outlook.com",
+    "t": "2026-10-15T07:28:48Z",
+    "status": "OK",
+    "n_groups_or_results": 10
+   },
+   {
+    "purpose": "candidates:IEEE Transactions on Automatic Control",
+    "url": "https://api.openalex.org/works?filter=primary_location.source.id:S184954342&group_by=primary_topic.id&per-page=10&mailto=ecmap.project@outlook.com",
+    "t": "2026-10-15T07:28:50Z",
+    "status": "OK",
+    "n_groups_or_results": 10
+   },
+   {
+    "purpose": "topic_names",
+    "url": "https://api.openalex.org/topics?filter=openalex:T10046|T11236|T10791|T10249|T10040|T11081|T12772|T11110|T10711|T10876|T11125&per-page=50&select=id,display_name&mailto=ecmap.project@outlook.com",
+    "t": "2026-10-15T07:28:55Z",
+    "status": "OK",
+    "n_groups_or_results": 0
+   },
+   {
+    "purpose": "anchor:Automatica",
+    "url": "https://api.openalex.org/works?filter=primary_location.source.id:S51360982,from_publication_date:1990-01-01,to_publication_date:2024-12-31&group_by=publication_year&per-page=200&mailto=ecmap.project@outlook.com",
+    "t": "2026-10-15T07:28:56Z",
+    "status": "OK",
+    "n_groups_or_results": 35
+   },
+   {
+    "purpose": "topic_curve:Automatica",
+    "url": "https://api.openalex.org/works?filter=primary_location.source.id:S51360982,primary_topic.id:T10046,from_publication_date:1990-01-01,to_publication_date:2024-12-31&group_by=publication_year&per-page=200&mailto=ecmap.project@outlook.com",
+    "t": "2026-10-15T07:28:58Z",
+    "status": "OK",
+    "n_groups_or_results": 35
+   },
+   {
+    "purpose": "anchor:IEEE Transactions on Automatic Control",
+    "url": "https://api.openalex.org/works?filter=primary_location.source.id:S184954342,from_publication_date:1990-01-01,to_publication_date:2024-12-31&group_by=publication_year&per-page=200&mailto=ecmap.project@outlook.com",
+    "t": "2026-10-15T07:29:01Z",
+    "status": "OK",
+    "n_groups_or_results": 35
+   },
+   {
+    "purpose": "topic_curve:IEEE Transactions on Automatic Control",
+    "url": "https://api.openalex.org/works?filter=primary_location.source.id:S184954342,primary_topic.id:T10046,from_publication_date:1990-01-01,to_publication_date:2024-12-31&group_by=publication_year&per-page=200&mailto=ecmap.project@outlook.com",
+    "t": "2026-10-15T07:29:05Z",
+    "status": "OK",
+    "n_groups_or_results": 35
+   }
+  ],
+  "blocked": null
+ },
+ "selection": {
+  "top3": {
+   "Automatica": [
+    "T10046",
+    "T11236",
+    "T10791"
+   ],
+   "IEEE Transactions on Automatic Control": [
+    "T10046",
+    "T11236",
+    "T11081"
+   ]
+  },
+  "argmax": {
+   "Automatica": "T10046",
+   "IEEE Transactions on Automatic Control": "T10046"
+  },
+  "common_top3": [
+   "T10046",
+   "T11236"
+  ],
+  "argmax_agreement": true,
+  "certain": true,
+  "rule": "common_top3+consistent_argmax",
+  "topic_id": "T10046",
+  "flags": [
+   "前3交集含 2 项，由一致 argmax 收敛"
+  ],
+  "reasons": [],
+  "legacy_audit": {
+   "T10820": {
+    "desc": "control_boundary_fix.py 语义规则选中（Fuzzy Logic and Control Systems）",
+    "Automatica": null,
+    "IEEE Transactions on Automatic Control": null
+   },
+   "T11542": {
+    "desc": "W1 原版盲选首命中（Behavioral Health and Interventions）",
+    "Automatica": null,
+    "IEEE Transactions on Automatic Control": null
+   }
+  },
+  "topic_display_name": "Stability and Control of Uncertain Systems"
+ },
+ "curves": {
+  "anchor": {
+   "Automatica": {
+    "2022": 606,
+    "2021": 592,
+    "2023": 577,
+    "2019": 572,
+    "2018": 563,
+    "2017": 543,
+    "2020": 543,
+    "2024": 507,
+    "2015": 465,
+    "2016": 452,
+    "2012": 446,
+    "2013": 436,
+    "2014": 434,
+    "2009": 411,
+    "2011": 390,
+    "2008": 387,
+    "2007": 318,
+    "2003": 295,
+    "2002": 290,
+    "2010": 285,
+    "2004": 278,
+    "1997": 276,
+    "2006": 268,
+    "2001": 263,
+    "2005": 251,
+    "1994": 236,
+    "1996": 236,
+    "2000": 231,
+    "1998": 222,
+    "1995": 221,
+    "1999": 211,
+    "1993": 190,
+    "1992": 170,
+    "1991": 151,
+    "1990": 134
+   },
+   "IEEE Transactions on Automatic Control": {
+    "2024": 781,
+    "2023": 739,
+    "2020": 717,
+    "2017": 685,
+    "2021": 675,
+    "2022": 674,
+    "2019": 658,
+    "2016": 639,
+    "2015": 594,
+    "2014": 593,
+    "2018": 577,
+    "2010": 551,
+    "2009": 510,
+    "2011": 509,
+    "1994": 445,
+    "2008": 418,
+    "2007": 410,
+    "2012": 402,
+    "2004": 396,
+    "2005": 382,
+    "1999": 377,
+    "2006": 375,
+    "2003": 374,
+    "2000": 365,
+    "2013": 358,
+    "1992": 351,
+    "1995": 327,
+    "2002": 321,
+    "2001": 320,
+    "1993": 308,
+    "1996": 285,
+    "1990": 284,
+    "1998": 259,
+    "1997": 242,
+    "1991": 220
+   },
+   "pooled": {
+    "1990": 418,
+    "1991": 371,
+    "1992": 521,
+    "1993": 498,
+    "1994": 681,
+    "1995": 548,
+    "1996": 521,
+    "1997": 518,
+    "1998": 481,
+    "1999": 588,
+    "2000": 596,
+    "2001": 583,
+    "2002": 611,
+    "2003": 669,
+    "2004": 674,
+    "2005": 633,
+    "2006": 643,
+    "2007": 728,
+    "2008": 805,
+    "2009": 921,
+    "2010": 836,
+    "2011": 899,
+    "2012": 848,
+    "2013": 794,
+    "2014": 1027,
+    "2015": 1059,
+    "2016": 1091,
+    "2017": 1228,
+    "2018": 1140,
+    "2019": 1230,
+    "2020": 1260,
+    "2021": 1267,
+    "2022": 1280,
+    "2023": 1316,
+    "2024": 1288
+   }
+  },
+  "topic": {
+   "Automatica": {
+    "2018": 123,
+    "2019": 122,
+    "2017": 118,
+    "2009": 114,
+    "2012": 110,
+    "2015": 107,
+    "2022": 107,
+    "2016": 106,
+    "2020": 106,
+    "2008": 103,
+    "2013": 103,
+    "2014": 99,
+    "2023": 93,
+    "2021": 92,
+    "2011": 79,
+    "2024": 79,
+    "2007": 69,
+    "2004": 66,
+    "2010": 64,
+    "2006": 61,
+    "2002": 58,
+    "2003": 55,
+    "1996": 54,
+    "2005": 52,
+    "1999": 50,
+    "2000": 47,
+    "1997": 46,
+    "1998": 46,
+    "2001": 45,
+    "1993": 42,
+    "1995": 38,
+    "1994": 33,
+    "1991": 23,
+    "1992": 16,
+    "1990": 12
+   },
+   "IEEE Transactions on Automatic Control": {
+    "2017": 134,
+    "2024": 129,
+    "2015": 128,
+    "2019": 127,
+    "2023": 125,
+    "2009": 124,
+    "2010": 124,
+    "2016": 123,
+    "2021": 119,
+    "2014": 116,
+    "2018": 114,
+    "2020": 114,
+    "2022": 111,
+    "1999": 100,
+    "2011": 100,
+    "1994": 97,
+    "2001": 92,
+    "2003": 92,
+    "2004": 85,
+    "2012": 84,
+    "2000": 83,
+    "2006": 81,
+    "2008": 81,
+    "2002": 77,
+    "1995": 74,
+    "2007": 73,
+    "1992": 72,
+    "1993": 72,
+    "1998": 70,
+    "1997": 69,
+    "2013": 69,
+    "2005": 66,
+    "1996": 63,
+    "1990": 52,
+    "1991": 38
+   },
+   "pooled": {
+    "1990": 64,
+    "1991": 61,
+    "1992": 88,
+    "1993": 114,
+    "1994": 130,
+    "1995": 112,
+    "1996": 117,
+    "1997": 115,
+    "1998": 116,
+    "1999": 150,
+    "2000": 130,
+    "2001": 137,
+    "2002": 135,
+    "2003": 147,
+    "2004": 151,
+    "2005": 118,
+    "2006": 142,
+    "2007": 142,
+    "2008": 184,
+    "2009": 238,
+    "2010": 188,
+    "2011": 179,
+    "2012": 194,
+    "2013": 172,
+    "2014": 215,
+    "2015": 235,
+    "2016": 229,
+    "2017": 252,
+    "2018": 237,
+    "2019": 249,
+    "2020": 220,
+    "2021": 211,
+    "2022": 218,
+    "2023": 218,
+    "2024": 208
+   }
+  },
+  "off_window_years": {},
+  "note": "锚点=source 全部 works 年度量；主题=同 source + primary_topic.id 过滤；pooled=两刊逐年和"
+ },
+ "results": {
+  "main_window": {
+   "pooled": {
+    "window": [
+     1990,
+     2024
+    ],
+    "status": "OK",
+    "reason": null,
+    "anchor_total": 28571,
+    "topic_total": 5816,
+    "n_years_level": 35,
+    "n_pairs_diff": 34,
+    "rho_level": 0.9124404684665586,
+    "rho_first_diff": 0.6358911944975074,
+    "rho_detrended": 0.32633053221288516,
+    "notes": []
+   },
+   "Automatica": {
+    "window": [
+     1990,
+     2024
+    ],
+    "status": "OK",
+    "reason": null,
+    "anchor_total": 12450,
+    "topic_total": 2538,
+    "n_years_level": 35,
+    "n_pairs_diff": 34,
+    "rho_level": 0.8974287313768564,
+    "rho_first_diff": 0.4945655013777915,
+    "rho_detrended": 0.44397759103641454,
+    "notes": []
+   },
+   "IEEE Transactions on Automatic Control": {
+    "window": [
+     1990,
+     2024
+    ],
+    "status": "OK",
+    "reason": null,
+    "anchor_total": 16121,
+    "topic_total": 3278,
+    "n_years_level": 35,
+    "n_pairs_diff": 34,
+    "rho_level": 0.8801234155928201,
+    "rho_first_diff": 0.7122324242281376,
+    "rho_detrended": 0.6218487394957983,
+    "notes": []
+   }
+  },
+  "sensitivity": {
+   "edge_drop_last_year": {
+    "pooled": {
+     "window": [
+      1990,
+      2023
+     ],
+     "status": "OK",
+     "reason": null,
+     "anchor_total": 27283,
+     "topic_total": 5608,
+     "n_years_level": 34,
+     "n_pairs_diff": 33,
+     "rho_level": 0.923582465318341,
+     "rho_first_diff": 0.6218024089493241,
+     "rho_detrended": 0.34545454545454546,
+     "notes": []
+    },
+    "Automatica": {
+     "window": [
+      1990,
+      2023
+     ],
+     "status": "OK",
+     "reason": null,
+     "anchor_total": 11943,
+     "topic_total": 2459,
+     "n_years_level": 34,
+     "n_pairs_diff": 33,
+     "rho_level": 0.9040813312592842,
+     "rho_first_diff": 0.45329772464470813,
+     "rho_detrended": 0.36103896103896105,
+     "notes": []
+    },
+    "IEEE Transactions on Automatic Control": {
+     "window": [
+      1990,
+      2023
+     ],
+     "status": "OK",
+     "reason": null,
+     "anchor_total": 15340,
+     "topic_total": 3149,
+     "n_years_level": 34,
+     "n_pairs_diff": 33,
+     "rho_level": 0.8701369433211074,
+     "rho_first_diff": 0.7181803077535649,
+     "rho_detrended": 0.6198624904507257,
+     "notes": []
+    }
+   },
+   "post_2000": {
+    "pooled": {
+     "window": [
+      2000,
+      2024
+     ],
+     "status": "OK",
+     "reason": null,
+     "anchor_total": 23426,
+     "topic_total": 4749,
+     "n_years_level": 25,
+     "n_pairs_diff": 24,
+     "rho_level": 0.8222393836798014,
+     "rho_first_diff": 0.634167708608614,
+     "rho_detrended": 0.563076923076923,
+     "notes": []
+    },
+    "Automatica": {
+     "window": [
+      2000,
+      2024
+     ],
+     "status": "OK",
+     "reason": null,
+     "anchor_total": 10403,
+     "topic_total": 2178,
+     "n_years_level": 25,
+     "n_pairs_diff": 24,
+     "rho_level": 0.774783574808693,
+     "rho_first_diff": 0.7256299614267744,
+     "rho_detrended": 0.6361538461538462,
+     "notes": []
+    },
+    "IEEE Transactions on Automatic Control": {
+     "window": [
+      2000,
+      2024
+     ],
+     "status": "OK",
+     "reason": null,
+     "anchor_total": 13023,
+     "topic_total": 2571,
+     "n_years_level": 25,
+     "n_pairs_diff": 24,
+     "rho_level": 0.7975368029107844,
+     "rho_first_diff": 0.6356909834977224,
+     "rho_detrended": 0.7538461538461538,
+     "notes": []
+    }
+   }
+  }
+ },
+ "verdict": {
+  "status": "PASS",
+  "rule": "主口径（合并两刊）水平 rho >= 0.8",
+  "pass_threshold": 0.8,
+  "detail": "合并口径 1990–2024 水平 rho=0.9124（阈 0.8）；逐刊 Automatica=0.8974、IEEE Transactions on Automatic Control=0.8801；注意：动态口径低于阈值（一阶差分=0.6359、去趋势=0.3263）——水平共趋势不得外推为动态一致",
+  "modes": {
+   "rho_level": 0.9124404684665586,
+   "rho_first_diff": 0.6358911944975074,
+   "rho_detrended": 0.32633053221288516
+  },
+  "flags": [
+   "level_pass_dynamic_below_threshold"
+  ]
+ },
+ "local_w1_crosscheck": {
+  "available": true,
+  "path": "research/nature/out/w1_panels.json",
+  "note": null,
+  "per_journal": {
+   "Automatica": {
+    "n_years": 35,
+    "local_total_window": 12489,
+    "fresh_total_window": 12450,
+    "drift_pct": -0.312,
+    "rho_local_vs_fresh": 0.9981085838851153
+   },
+   "IEEE Transactions on Automatic Control": {
+    "n_years": 35,
+    "local_total_window": 16142,
+    "fresh_total_window": 16121,
+    "drift_pct": -0.13,
+    "rho_local_vs_fresh": 0.9996498378740946
+   }
+  }
+ },
+ "warnings": [],
+ "outputs": {
+  "main": "research/panels/out/control_boundary_v2.json",
+  "candidates": "research/panels/out/control_boundary_v2_candidates.json"
+ },
+ "limitations": [
+  "primary_topic 为 OpenAlex 每篇 work 的单一主主题分配：多主题论文被折叠，主题曲线是“主题归属代理”，本相关只度量代理与锚点曲线的单调同向性，不构成主题边界有效性的充分条件。",
+  "锚点与主题曲线均取自同一次 API 快照（同日），但本地 w1_panels.json 为历史快照；两者漂移（索引追加）已在 local_w1_crosscheck 中量化，不用于主结果。",
+  "年份窗 1990–2024 为脚本冻结常量（2025 右删失排除；1980 年代早期年份过薄）；两个敏感性窗（1990–2023、2000–2024）为附列。",
+  "Spearman 未给 p 值/置信区间：年份序列自相关使常规 p 值不可靠，且本任务只要求秩相关口径。",
+  "选择规则是人为冻结的规程（前3交集 / 一致 argmax），对候选表的小扰动敏感；全部 top10 原表与选择记录已随候选表保存，便于复算与审计。",
+  "本次为重跑（primary_topic 规范化口径），不覆盖、不改写 research/panels/out/control_theory_boundary_fix.json 与 research/nature/out/boundary_consistency.json 两份旧输出；与旧口径（topics.id / 语义规则 T10820）不直接数值可比。",
+  "本脚本不改数据库、不打印 API key；key 预算耗尽或网络阻塞时状态为 BLOCKED，只留错误详情。"
+ ],
+ "elapsed_s": 22.6
+}

@@ -1,0 +1,21 @@
+{
+ "defect": "original check took first search hit (T11542 Behavioral Health and Interventions) and marked pass:true; selection rule now requires semantic match",
+ "topic": {
+  "id": "T10820",
+  "display_name": "Fuzzy Logic and Control Systems"
+ },
+ "rho_pass": 0.8,
+ "curves": {
+  "Automatica": {
+   "rho_topic_vs_anchor": -0.119,
+   "n_years": 30,
+   "pass": false
+  },
+  "IEEE Transactions on Automatic Control": {
+   "rho_topic_vs_anchor": -0.1426,
+   "n_years": 30,
+   "pass": false
+  }
+ },
+ "verdict": "FAIL"
+}

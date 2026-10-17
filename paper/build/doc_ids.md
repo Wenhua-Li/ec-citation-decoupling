@@ -87,6 +87,8 @@
 | **Q55** | 库内解析参考文献中位数 EC 2010 / 2020 / 2025 | 3 / 9 / 13 | R3-P1 三项欠登记读数重跑与对账 | r3p1_rereg.py | r3p1_recon.json | t3_median_resolved_refs.series.EC |
 | **Q55b** | 库内解析参考文献中位数 非 EC 2010 / 2020 / 2025 | 3 / 5 / 4 | R3-P1 三项欠登记读数重跑与对账 | r3p1_rereg.py | r3p1_recon.json | t3_median_resolved_refs.series.NON_EC |
 | **Q56** | 解析参考文献中位数分段均值 EC / 非 EC | EC 1.56→7.93（2002–2010→2011–2025）；非 EC 0.67→4.00 | R3-P1 三项欠登记读数重跑与对账 | r3p1_rereg.py | r3p1_recon.json | t3_median_resolved_refs.summary.seg_means |
+| **Q57** | C2 期刊构成重加权（2021 构成固定，2021→2025）：E1 篇均跨域边数 / E2 参与率 | E1 0.830→0.642（−22.7%）；E2 0.291→0.232（−20.2%） | C2 构成敏感性更正（2026-10-17，v2.0.0；勘误见根目录 ERRATA.md） | c2_composition_sensitivity.py | c2_composition_sensitivity.json | source_standardized.endpoints |
+| **Q58** | C2 主题构成重加权（同上） | E1 0.830→0.520（−37.4%）；E2 0.291→0.203（−30.3%） | 同上 | c2_composition_sensitivity.py | c2_composition_sensitivity.json | topic_standardized.endpoints |
 
 ---
 

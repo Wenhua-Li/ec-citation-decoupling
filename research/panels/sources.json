@@ -1,0 +1,22 @@
+{
+  "frozen": "2026-10-15",
+  "window": "from_publication_date:2005-01-01,to_publication_date:2023-12-31",
+  "select": "id,doi,publication_year,type,cited_by_count,referenced_works",
+  "purpose": "第二多源语料（用户授权 (b) 方案）：与 EC 形成'离散度梯度'（经济学预期高离散、心理学中、数学低），检验宽度定律与符号一致判据的多源复制",
+  "verification": "全部 13 源经 OpenAlex sources 检索逐一人核 display_name+ISSN（吸取 control_theory 盲选首命中教训）",
+  "sources": [
+    {"field": "economics",  "sid": "S23254222",  "journal": "American Economic Review"},
+    {"field": "economics",  "sid": "S203860005", "journal": "The Quarterly Journal of Economics"},
+    {"field": "economics",  "sid": "S95323914",  "journal": "Journal of Political Economy"},
+    {"field": "economics",  "sid": "S95464858",  "journal": "Econometrica"},
+    {"field": "economics",  "sid": "S88935262",  "journal": "The Review of Economic Studies"},
+    {"field": "psychology", "sid": "S58854535",  "journal": "Psychological Science"},
+    {"field": "psychology", "sid": "S62013203",  "journal": "Journal of Experimental Psychology: General"},
+    {"field": "psychology", "sid": "S88198767",  "journal": "Cognition"},
+    {"field": "psychology", "sid": "S35223124",  "journal": "Psychological Review"},
+    {"field": "mathematics","sid": "S45918994",  "journal": "Annals of Mathematics"},
+    {"field": "mathematics","sid": "S98347115",  "journal": "Inventiones Mathematicae"},
+    {"field": "mathematics","sid": "S130224168", "journal": "Journal of the American Mathematical Society"},
+    {"field": "mathematics","sid": "S171170845", "journal": "Duke Mathematical Journal"}
+  ]
+}

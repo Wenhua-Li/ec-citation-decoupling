@@ -1,0 +1,4886 @@
+{
+ "meta": {
+  "title": "U3 independent performance validation of the three-state comparability criteria",
+  "date": "2026-10-15",
+  "instrument": "verbatim port of research/panels/defect_injection.py (frozen thresholds; the archived file is read-only here and this script writes a NEW output)",
+  "truth_source": "synthetic w x K x pi generative worlds (U1_formalization.md section 7); truth labels come from the generator, never from the instrument",
+  "seeds": {
+   "base": 20261015,
+   "reps": 200,
+   "reps_invariance_raw_path": 25,
+   "scheme": "cell seed = base + 7919*rep + 104729*hash_stable(profile|seed_key); base worlds = base + 100003*rep (healthy) / +1000003 (tight); paired common random numbers across scenarios"
+  },
+  "scoring_protocol": "see scoring.protocol",
+  "output": "research/panels/out/defect_injection_validation.json",
+  "runtime_sec": 10.8
+ },
+ "dgp": {
+  "profiles": {
+   "healthy": {
+    "note": "well-powered regime; 5 sources incl. one small source (n=20, exercises n>=15 clause)",
+    "calibrated_to": "design target (not real data)",
+    "sources": [
+     {
+      "name": "big",
+      "n": [
+       420,
+       430
+      ],
+      "e1": [
+       0.055,
+       0.185
+      ],
+      "p": [
+       0.045,
+       0.095
+      ],
+      "k": [
+       41.0,
+       54.0
+      ]
+     },
+     {
+      "name": "s2",
+      "n": [
+       380,
+       360
+      ],
+      "e1": [
+       0.035,
+       0.132
+      ],
+      "p": [
+       0.032,
+       0.07
+      ],
+      "k": [
+       41.0,
+       54.0
+      ]
+     },
+     {
+      "name": "s3",
+      "n": [
+       300,
+       320
+      ],
+      "e1": [
+       0.028,
+       0.105
+      ],
+      "p": [
+       0.026,
+       0.058
+      ],
+      "k": [
+       41.0,
+       54.0
+      ]
+     },
+     {
+      "name": "s4",
+      "n": [
+       230,
+       220
+      ],
+      "e1": [
+       0.022,
+       0.085
+      ],
+      "p": [
+       0.021,
+       0.046
+      ],
+      "k": [
+       41.0,
+       54.0
+      ]
+     },
+     {
+      "name": "small",
+      "n": [
+       20,
+       20
+      ],
+      "e1": [
+       0.016,
+       0.062
+      ],
+      "p": [
+       0.015,
+       0.035
+      ],
+      "k": [
+       41.0,
+       54.0
+      ]
+     }
+    ],
+    "p_empty": [
+     0.12,
+     0.08
+    ]
+   },
+   "tight": {
+    "note": "population mirror of the real econ->psych panel (per-source n, E1, E2 from the 2026-10-15 read-only probe); E2 1.435%/4.480%, ref_avail 0.872/0.916, avg_edges_yr(end) 31.3",
+    "calibrated_to": "real econ->psych panel, 2026-10-15 probe",
+    "sources": [
+     {
+      "name": "qje",
+      "n": [
+       152,
+       137
+      ],
+      "e1": [
+       0.0461,
+       0.219
+      ],
+      "p": [
+       0.0395,
+       0.0949
+      ],
+      "k": [
+       41.2,
+       54.2
+      ]
+     },
+     {
+      "name": "aer",
+      "n": [
+       819,
+       320
+      ],
+      "e1": [
+       0.0147,
+       0.0781
+      ],
+      "p": [
+       0.0147,
+       0.0437
+      ],
+      "k": [
+       41.2,
+       54.2
+      ]
+     },
+     {
+      "name": "restud",
+      "n": [
+       191,
+       282
+      ],
+      "e1": [
+       0.0105,
+       0.0496
+      ],
+      "p": [
+       0.0105,
+       0.039
+      ],
+      "k": [
+       41.2,
+       54.2
+      ]
+     },
+     {
+      "name": "jpe",
+      "n": [
+       128,
+       306
+      ],
+      "e1": [
+       0.0156,
+       0.0392
+      ],
+      "p": [
+       0.0156,
+       0.0392
+      ],
+      "k": [
+       41.2,
+       54.2
+      ]
+     },
+     {
+      "name": "ecma",
+      "n": [
+       243,
+       272
+      ],
+      "e1": [
+       0.0,
+       0.0478
+      ],
+      "p": [
+       0.0,
+       0.0331
+      ],
+      "k": [
+       41.2,
+       54.2
+      ]
+     }
+    ],
+    "p_empty": [
+     0.1279,
+     0.0843
+    ]
+   }
+  },
+  "population_baseline": {
+   "healthy": {
+    "rates": {
+     "start": {
+      "n": 1350.0,
+      "edges": 50.18000000000001,
+      "E1": 0.037170370370370374
+     },
+     "end": {
+      "n": 1350.0,
+      "edges": 180.61,
+      "E1": 0.1337851851851852
+     },
+     "growth_clean_or_injected_pct": 259.9242726185731
+    },
+    "oracle_verdict": "COMPARABLE",
+    "oracle_fired": [],
+    "oracle_stats": {
+     "E2": [
+      0.03259,
+      0.07069
+     ],
+     "ref_avail": [
+      0.88,
+      0.92
+     ],
+     "avg_edges_yr": 60.2,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "tight": {
+    "rates": {
+     "start": {
+      "n": 1533.0,
+      "edges": 23.0488,
+      "E1": 0.015035094585779517
+     },
+     "end": {
+      "n": 1317.0,
+      "edges": 93.979,
+      "E1": 0.07135839028094153
+     },
+     "growth_clean_or_injected_pct": 374.61218068048385
+    },
+    "oracle_verdict": "COMPARABLE",
+    "oracle_fired": [],
+    "oracle_stats": {
+     "E2": [
+      0.01438,
+      0.04478
+     ],
+     "ref_avail": [
+      0.8721,
+      0.9157
+     ],
+     "avg_edges_yr": 31.3,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   }
+  }
+ },
+ "cells": {
+  "healthy|clean_baseline": {
+   "profile": "healthy",
+   "family": "clean",
+   "truth": "clean",
+   "dose": null,
+   "dose_unit": null,
+   "injection": "none",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 200,
+    "PARTIAL": 0,
+    "REFUSE": 0
+   },
+   "flag_rate": 0.0,
+   "triggers": {},
+   "sample_median": {
+    "E2_start": 0.0326,
+    "E2_end": 0.0704,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.92,
+    "avg_edges_yr": 60.0,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "COMPARABLE",
+    "fired": [],
+    "stats": {
+     "E2": [
+      0.03259,
+      0.07069
+     ],
+     "ref_avail": [
+      0.88,
+      0.92
+     ],
+     "avg_edges_yr": 60.2,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 259.924,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": 0.0,
+    "edges_end": 180.6,
+    "ref_avail_end": 0.92,
+    "E2_end": 0.07069
+   }
+  },
+  "tight|clean_baseline": {
+   "profile": "tight",
+   "family": "clean",
+   "truth": "clean",
+   "dose": null,
+   "dose_unit": null,
+   "injection": "none",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 182,
+    "PARTIAL": 0,
+    "REFUSE": 18
+   },
+   "flag_rate": 0.09,
+   "triggers": {
+    "refuse:E2_start<1%": 18
+   },
+   "sample_median": {
+    "E2_start": 0.0143,
+    "E2_end": 0.0448,
+    "ref_avail_start": 0.8721,
+    "ref_avail_end": 0.9157,
+    "avg_edges_yr": 31.3,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "COMPARABLE",
+    "fired": [],
+    "stats": {
+     "E2": [
+      0.01438,
+      0.04478
+     ],
+     "ref_avail": [
+      0.8721,
+      0.9157
+     ],
+     "avg_edges_yr": 31.3,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 374.612,
+    "clean_growth_pct": 374.612,
+    "induced_bias_pp": 0.0,
+    "edges_end": 94.0,
+    "ref_avail_end": 0.9157,
+    "E2_end": 0.04478
+   }
+  },
+  "healthy|source_absent_both_windows": {
+   "profile": "healthy",
+   "family": "clean",
+   "truth": "clean",
+   "dose": null,
+   "dose_unit": null,
+   "injection": "drop_source(src=0,window=start,frac=1.00); drop_source(src=0,window=end,frac=1.00)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 200,
+    "PARTIAL": 0,
+    "REFUSE": 0
+   },
+   "flag_rate": 0.0,
+   "triggers": {},
+   "sample_median": {
+    "E2_start": 0.0269,
+    "E2_end": 0.0598,
+    "ref_avail_start": 0.8806,
+    "ref_avail_end": 0.9196,
+    "avg_edges_yr": 33.7,
+    "n_sources_ok": 4
+   },
+   "oracle": {
+    "verdict": "COMPARABLE",
+    "fired": [],
+    "stats": {
+     "E2": [
+      0.02698,
+      0.05933
+     ],
+     "ref_avail": [
+      0.88,
+      0.92
+     ],
+     "avg_edges_yr": 33.7,
+     "n_sources_ok": 4,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 277.247,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": 17.323,
+    "edges_end": 101.1,
+    "ref_avail_end": 0.92,
+    "E2_end": 0.05933
+   }
+  },
+  "tight|source_absent_both_windows": {
+   "profile": "tight",
+   "family": "clean",
+   "truth": "clean",
+   "dose": null,
+   "dose_unit": null,
+   "injection": "drop_source(src=0,window=start,frac=1.00); drop_source(src=0,window=end,frac=1.00)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 150,
+    "PARTIAL": 0,
+    "REFUSE": 50
+   },
+   "flag_rate": 0.25,
+   "triggers": {
+    "refuse:E2_start<1%": 50
+   },
+   "sample_median": {
+    "E2_start": 0.0116,
+    "E2_end": 0.0381,
+    "ref_avail_start": 0.8726,
+    "ref_avail_end": 0.9161,
+    "avg_edges_yr": 21.0,
+    "n_sources_ok": 4
+   },
+   "oracle": {
+    "verdict": "COMPARABLE",
+    "fired": [],
+    "stats": {
+     "E2": [
+      0.01162,
+      0.03897
+     ],
+     "ref_avail": [
+      0.8721,
+      0.9157
+     ],
+     "avg_edges_yr": 21.3,
+     "n_sources_ok": 4,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 366.747,
+    "clean_growth_pct": 374.612,
+    "induced_bias_pp": -7.866,
+    "edges_end": 64.0,
+    "ref_avail_end": 0.9157,
+    "E2_end": 0.03897
+   }
+  },
+  "healthy|source_partial_symmetric_30p_both": {
+   "profile": "healthy",
+   "family": "clean",
+   "truth": "clean",
+   "dose": null,
+   "dose_unit": null,
+   "injection": "drop_source(src=0,window=start,frac=0.30); drop_source(src=0,window=end,frac=0.30)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 200,
+    "PARTIAL": 0,
+    "REFUSE": 0
+   },
+   "flag_rate": 0.0,
+   "triggers": {},
+   "sample_median": {
+    "E2_start": 0.0311,
+    "E2_end": 0.0672,
+    "ref_avail_start": 0.8799,
+    "ref_avail_end": 0.9196,
+    "avg_edges_yr": 52.3,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "COMPARABLE",
+    "fired": [],
+    "stats": {
+     "E2": [
+      0.03131,
+      0.06812
+     ],
+     "ref_avail": [
+      0.88,
+      0.92
+     ],
+     "avg_edges_yr": 52.2,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 263.307,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": 3.382,
+    "edges_end": 156.7,
+    "ref_avail_end": 0.92,
+    "E2_end": 0.06812
+   }
+  },
+  "healthy|single_source_panel": {
+   "profile": "healthy",
+   "family": "source_loss",
+   "truth": "defect",
+   "dose": null,
+   "dose_unit": "leaves 1 of 5 sources in both windows",
+   "injection": "drop_source(src=1,window=start,frac=1.00); drop_source(src=2,window=start,frac=1.00); drop_source(src=3,window=start,frac=1.00); drop_source(src=4,window=start,frac=1.00); drop_source(src=1,window=end,frac=1.00); drop_source(src=2,window=end,frac=1.00); drop_source(src=3,window=end,frac=1.00); drop_source(src=4,window=end,frac=1.00)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 0,
+    "PARTIAL": 0,
+    "REFUSE": 200
+   },
+   "flag_rate": 1.0,
+   "triggers": {
+    "refuse:qualified_sources<2": 200
+   },
+   "sample_median": {
+    "E2_start": 0.0452,
+    "E2_end": 0.093,
+    "ref_avail_start": 0.8786,
+    "ref_avail_end": 0.9186,
+    "avg_edges_yr": 26.3,
+    "n_sources_ok": 1
+   },
+   "oracle": {
+    "verdict": "REFUSE",
+    "fired": [
+     "refuse:qualified_sources<2"
+    ],
+    "stats": {
+     "E2": [
+      0.045,
+      0.095
+     ],
+     "ref_avail": [
+      0.88,
+      0.92
+     ],
+     "avg_edges_yr": 26.5,
+     "n_sources_ok": 1,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 236.364,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": -23.561,
+    "edges_end": 79.5,
+    "ref_avail_end": 0.92,
+    "E2_end": 0.095
+   }
+  },
+  "healthy|void_no_cross_signal": {
+   "profile": "healthy",
+   "family": "void",
+   "truth": "void",
+   "dose": null,
+   "dose_unit": null,
+   "injection": "pi_zero(all sources)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 0,
+    "PARTIAL": 0,
+    "REFUSE": 200
+   },
+   "flag_rate": 1.0,
+   "triggers": {
+    "refuse:E2_start<1%": 200,
+    "refuse:E2_end<1%": 200,
+    "refuse:avg_edges_yr<5": 200
+   },
+   "sample_median": {
+    "E2_start": 0.0,
+    "E2_end": 0.0,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.92,
+    "avg_edges_yr": 0.0,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "REFUSE",
+    "fired": [
+     "refuse:E2_start<1%",
+     "refuse:E2_end<1%",
+     "refuse:avg_edges_yr<5"
+    ],
+    "stats": {
+     "E2": [
+      0.0,
+      0.0
+     ],
+     "ref_avail": [
+      0.88,
+      0.92
+     ],
+     "avg_edges_yr": 0.0,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": null,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": null,
+    "edges_end": 0.0,
+    "ref_avail_end": 0.92,
+    "E2_end": 0.0
+   }
+  },
+  "healthy|refs_missing_field_5p_end": {
+   "profile": "healthy",
+   "family": "ref_loss",
+   "truth": "defect",
+   "dose": 5,
+   "dose_unit": "% of end-window citing papers",
+   "injection": "blank_refs(start=0.00,end=0.05,mode=null)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 200,
+    "PARTIAL": 0,
+    "REFUSE": 0
+   },
+   "flag_rate": 0.0,
+   "triggers": {},
+   "sample_median": {
+    "E2_start": 0.0326,
+    "E2_end": 0.0674,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.8726,
+    "avg_edges_yr": 57.0,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "COMPARABLE",
+    "fired": [],
+    "stats": {
+     "E2": [
+      0.03259,
+      0.06715
+     ],
+     "ref_avail": [
+      0.88,
+      0.874
+     ],
+     "avg_edges_yr": 57.2,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 241.928,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": -17.996,
+    "edges_end": 171.6,
+    "ref_avail_end": 0.874,
+    "E2_end": 0.06715
+   }
+  },
+  "healthy|refs_empty_list_5p_end": {
+   "profile": "healthy",
+   "family": "ref_loss",
+   "truth": "defect",
+   "dose": 5,
+   "dose_unit": "% of end-window citing papers",
+   "injection": "blank_refs(start=0.00,end=0.05,mode=empty)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 200,
+    "PARTIAL": 0,
+    "REFUSE": 0
+   },
+   "flag_rate": 0.0,
+   "triggers": {},
+   "sample_median": {
+    "E2_start": 0.0326,
+    "E2_end": 0.0674,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.8726,
+    "avg_edges_yr": 57.0,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "COMPARABLE",
+    "fired": [],
+    "stats": {
+     "E2": [
+      0.03259,
+      0.06715
+     ],
+     "ref_avail": [
+      0.88,
+      0.874
+     ],
+     "avg_edges_yr": 57.2,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 241.928,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": -17.996,
+    "edges_end": 171.6,
+    "ref_avail_end": 0.874,
+    "E2_end": 0.06715
+   }
+  },
+  "tight|refs_missing_field_5p_end": {
+   "profile": "tight",
+   "family": "ref_loss",
+   "truth": "defect",
+   "dose": 5,
+   "dose_unit": "% of end-window citing papers",
+   "injection": "blank_refs(start=0.00,end=0.05,mode=null)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 182,
+    "PARTIAL": 0,
+    "REFUSE": 18
+   },
+   "flag_rate": 0.09,
+   "triggers": {
+    "refuse:E2_start<1%": 18
+   },
+   "sample_median": {
+    "E2_start": 0.0143,
+    "E2_end": 0.0425,
+    "ref_avail_start": 0.8721,
+    "ref_avail_end": 0.8694,
+    "avg_edges_yr": 30.0,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "COMPARABLE",
+    "fired": [],
+    "stats": {
+     "E2": [
+      0.01438,
+      0.04255
+     ],
+     "ref_avail": [
+      0.8721,
+      0.8699
+     ],
+     "avg_edges_yr": 29.8,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 350.882,
+    "clean_growth_pct": 374.612,
+    "induced_bias_pp": -23.731,
+    "edges_end": 89.3,
+    "ref_avail_end": 0.8699,
+    "E2_end": 0.04255
+   }
+  },
+  "healthy|refs_missing_field_10p_end": {
+   "profile": "healthy",
+   "family": "ref_loss",
+   "truth": "defect",
+   "dose": 10,
+   "dose_unit": "% of end-window citing papers",
+   "injection": "blank_refs(start=0.00,end=0.10,mode=null)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 200,
+    "PARTIAL": 0,
+    "REFUSE": 0
+   },
+   "flag_rate": 0.0,
+   "triggers": {},
+   "sample_median": {
+    "E2_start": 0.0326,
+    "E2_end": 0.0637,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.8274,
+    "avg_edges_yr": 54.0,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "COMPARABLE",
+    "fired": [],
+    "stats": {
+     "E2": [
+      0.03259,
+      0.06362
+     ],
+     "ref_avail": [
+      0.88,
+      0.828
+     ],
+     "avg_edges_yr": 54.2,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 223.932,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": -35.992,
+    "edges_end": 162.5,
+    "ref_avail_end": 0.828,
+    "E2_end": 0.06362
+   }
+  },
+  "healthy|refs_empty_list_10p_end": {
+   "profile": "healthy",
+   "family": "ref_loss",
+   "truth": "defect",
+   "dose": 10,
+   "dose_unit": "% of end-window citing papers",
+   "injection": "blank_refs(start=0.00,end=0.10,mode=empty)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 200,
+    "PARTIAL": 0,
+    "REFUSE": 0
+   },
+   "flag_rate": 0.0,
+   "triggers": {},
+   "sample_median": {
+    "E2_start": 0.0326,
+    "E2_end": 0.0637,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.8274,
+    "avg_edges_yr": 54.0,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "COMPARABLE",
+    "fired": [],
+    "stats": {
+     "E2": [
+      0.03259,
+      0.06362
+     ],
+     "ref_avail": [
+      0.88,
+      0.828
+     ],
+     "avg_edges_yr": 54.2,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 223.932,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": -35.992,
+    "edges_end": 162.5,
+    "ref_avail_end": 0.828,
+    "E2_end": 0.06362
+   }
+  },
+  "tight|refs_missing_field_10p_end": {
+   "profile": "tight",
+   "family": "ref_loss",
+   "truth": "defect",
+   "dose": 10,
+   "dose_unit": "% of end-window citing papers",
+   "injection": "blank_refs(start=0.00,end=0.10,mode=null)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 181,
+    "PARTIAL": 1,
+    "REFUSE": 18
+   },
+   "flag_rate": 0.095,
+   "triggers": {
+    "refuse:E2_start<1%": 18,
+    "partial:ref_avail<0.8": 1
+   },
+   "sample_median": {
+    "E2_start": 0.0143,
+    "E2_end": 0.0402,
+    "ref_avail_start": 0.8721,
+    "ref_avail_end": 0.8238,
+    "avg_edges_yr": 28.0,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "COMPARABLE",
+    "fired": [],
+    "stats": {
+     "E2": [
+      0.01438,
+      0.04031
+     ],
+     "ref_avail": [
+      0.8721,
+      0.8241
+     ],
+     "avg_edges_yr": 28.2,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 327.151,
+    "clean_growth_pct": 374.612,
+    "induced_bias_pp": -47.461,
+    "edges_end": 84.6,
+    "ref_avail_end": 0.8241,
+    "E2_end": 0.04031
+   }
+  },
+  "healthy|refs_missing_field_20p_end": {
+   "profile": "healthy",
+   "family": "ref_loss",
+   "truth": "defect",
+   "dose": 20,
+   "dose_unit": "% of end-window citing papers",
+   "injection": "blank_refs(start=0.00,end=0.20,mode=null)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 0,
+    "PARTIAL": 200,
+    "REFUSE": 0
+   },
+   "flag_rate": 1.0,
+   "triggers": {
+    "partial:ref_avail<0.8": 200
+   },
+   "sample_median": {
+    "E2_start": 0.0326,
+    "E2_end": 0.0563,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.7356,
+    "avg_edges_yr": 48.0,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "PARTIAL",
+    "fired": [
+     "partial:ref_avail<0.8"
+    ],
+    "stats": {
+     "E2": [
+      0.03259,
+      0.05655
+     ],
+     "ref_avail": [
+      0.88,
+      0.736
+     ],
+     "avg_edges_yr": 48.2,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 187.939,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": -71.985,
+    "edges_end": 144.5,
+    "ref_avail_end": 0.736,
+    "E2_end": 0.05655
+   }
+  },
+  "healthy|refs_empty_list_20p_end": {
+   "profile": "healthy",
+   "family": "ref_loss",
+   "truth": "defect",
+   "dose": 20,
+   "dose_unit": "% of end-window citing papers",
+   "injection": "blank_refs(start=0.00,end=0.20,mode=empty)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 0,
+    "PARTIAL": 200,
+    "REFUSE": 0
+   },
+   "flag_rate": 1.0,
+   "triggers": {
+    "partial:ref_avail<0.8": 200
+   },
+   "sample_median": {
+    "E2_start": 0.0326,
+    "E2_end": 0.0563,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.7356,
+    "avg_edges_yr": 48.0,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "PARTIAL",
+    "fired": [
+     "partial:ref_avail<0.8"
+    ],
+    "stats": {
+     "E2": [
+      0.03259,
+      0.05655
+     ],
+     "ref_avail": [
+      0.88,
+      0.736
+     ],
+     "avg_edges_yr": 48.2,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 187.939,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": -71.985,
+    "edges_end": 144.5,
+    "ref_avail_end": 0.736,
+    "E2_end": 0.05655
+   }
+  },
+  "tight|refs_missing_field_20p_end": {
+   "profile": "tight",
+   "family": "ref_loss",
+   "truth": "defect",
+   "dose": 20,
+   "dose_unit": "% of end-window citing papers",
+   "injection": "blank_refs(start=0.00,end=0.20,mode=null)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 0,
+    "PARTIAL": 182,
+    "REFUSE": 18
+   },
+   "flag_rate": 1.0,
+   "triggers": {
+    "partial:ref_avail<0.8": 182,
+    "refuse:E2_start<1%": 18
+   },
+   "sample_median": {
+    "E2_start": 0.0143,
+    "E2_end": 0.0357,
+    "ref_avail_start": 0.8721,
+    "ref_avail_end": 0.732,
+    "avg_edges_yr": 25.7,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "PARTIAL",
+    "fired": [
+     "partial:ref_avail<0.8"
+    ],
+    "stats": {
+     "E2": [
+      0.01438,
+      0.03583
+     ],
+     "ref_avail": [
+      0.8721,
+      0.7326
+     ],
+     "avg_edges_yr": 25.1,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 279.69,
+    "clean_growth_pct": 374.612,
+    "induced_bias_pp": -94.922,
+    "edges_end": 75.2,
+    "ref_avail_end": 0.7326,
+    "E2_end": 0.03583
+   }
+  },
+  "healthy|refs_missing_field_30p_end": {
+   "profile": "healthy",
+   "family": "ref_loss",
+   "truth": "defect",
+   "dose": 30,
+   "dose_unit": "% of end-window citing papers",
+   "injection": "blank_refs(start=0.00,end=0.30,mode=null)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 0,
+    "PARTIAL": 200,
+    "REFUSE": 0
+   },
+   "flag_rate": 1.0,
+   "triggers": {
+    "partial:ref_avail<0.8": 200
+   },
+   "sample_median": {
+    "E2_start": 0.0326,
+    "E2_end": 0.0496,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.6437,
+    "avg_edges_yr": 42.3,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "PARTIAL",
+    "fired": [
+     "partial:ref_avail<0.8"
+    ],
+    "stats": {
+     "E2": [
+      0.03259,
+      0.04948
+     ],
+     "ref_avail": [
+      0.88,
+      0.644
+     ],
+     "avg_edges_yr": 42.1,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 151.947,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": -107.977,
+    "edges_end": 126.4,
+    "ref_avail_end": 0.644,
+    "E2_end": 0.04948
+   }
+  },
+  "healthy|refs_empty_list_30p_end": {
+   "profile": "healthy",
+   "family": "ref_loss",
+   "truth": "defect",
+   "dose": 30,
+   "dose_unit": "% of end-window citing papers",
+   "injection": "blank_refs(start=0.00,end=0.30,mode=empty)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 0,
+    "PARTIAL": 200,
+    "REFUSE": 0
+   },
+   "flag_rate": 1.0,
+   "triggers": {
+    "partial:ref_avail<0.8": 200
+   },
+   "sample_median": {
+    "E2_start": 0.0326,
+    "E2_end": 0.0496,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.6437,
+    "avg_edges_yr": 42.3,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "PARTIAL",
+    "fired": [
+     "partial:ref_avail<0.8"
+    ],
+    "stats": {
+     "E2": [
+      0.03259,
+      0.04948
+     ],
+     "ref_avail": [
+      0.88,
+      0.644
+     ],
+     "avg_edges_yr": 42.1,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 151.947,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": -107.977,
+    "edges_end": 126.4,
+    "ref_avail_end": 0.644,
+    "E2_end": 0.04948
+   }
+  },
+  "tight|refs_missing_field_30p_end": {
+   "profile": "tight",
+   "family": "ref_loss",
+   "truth": "defect",
+   "dose": 30,
+   "dose_unit": "% of end-window citing papers",
+   "injection": "blank_refs(start=0.00,end=0.30,mode=null)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 0,
+    "PARTIAL": 182,
+    "REFUSE": 18
+   },
+   "flag_rate": 1.0,
+   "triggers": {
+    "partial:ref_avail<0.8": 182,
+    "refuse:E2_start<1%": 18
+   },
+   "sample_median": {
+    "E2_start": 0.0143,
+    "E2_end": 0.0311,
+    "ref_avail_start": 0.8721,
+    "ref_avail_end": 0.6409,
+    "avg_edges_yr": 22.3,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "PARTIAL",
+    "fired": [
+     "partial:ref_avail<0.8"
+    ],
+    "stats": {
+     "E2": [
+      0.01438,
+      0.03135
+     ],
+     "ref_avail": [
+      0.8721,
+      0.641
+     ],
+     "avg_edges_yr": 21.9,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 232.229,
+    "clean_growth_pct": 374.612,
+    "induced_bias_pp": -142.384,
+    "edges_end": 65.8,
+    "ref_avail_end": 0.641,
+    "E2_end": 0.03135
+   }
+  },
+  "healthy|refs_missing_field_50p_end": {
+   "profile": "healthy",
+   "family": "ref_loss",
+   "truth": "defect",
+   "dose": 50,
+   "dose_unit": "% of end-window citing papers",
+   "injection": "blank_refs(start=0.00,end=0.50,mode=null)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 0,
+    "PARTIAL": 0,
+    "REFUSE": 200
+   },
+   "flag_rate": 1.0,
+   "triggers": {
+    "refuse:ref_avail<0.6": 200
+   },
+   "sample_median": {
+    "E2_start": 0.0326,
+    "E2_end": 0.0356,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.4578,
+    "avg_edges_yr": 29.7,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "REFUSE",
+    "fired": [
+     "refuse:ref_avail<0.6"
+    ],
+    "stats": {
+     "E2": [
+      0.03259,
+      0.03534
+     ],
+     "ref_avail": [
+      0.88,
+      0.46
+     ],
+     "avg_edges_yr": 30.1,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 79.962,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": -179.962,
+    "edges_end": 90.3,
+    "ref_avail_end": 0.46,
+    "E2_end": 0.03534
+   }
+  },
+  "healthy|refs_empty_list_50p_end": {
+   "profile": "healthy",
+   "family": "ref_loss",
+   "truth": "defect",
+   "dose": 50,
+   "dose_unit": "% of end-window citing papers",
+   "injection": "blank_refs(start=0.00,end=0.50,mode=empty)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 0,
+    "PARTIAL": 0,
+    "REFUSE": 200
+   },
+   "flag_rate": 1.0,
+   "triggers": {
+    "refuse:ref_avail<0.6": 200
+   },
+   "sample_median": {
+    "E2_start": 0.0326,
+    "E2_end": 0.0356,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.4578,
+    "avg_edges_yr": 29.7,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "REFUSE",
+    "fired": [
+     "refuse:ref_avail<0.6"
+    ],
+    "stats": {
+     "E2": [
+      0.03259,
+      0.03534
+     ],
+     "ref_avail": [
+      0.88,
+      0.46
+     ],
+     "avg_edges_yr": 30.1,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 79.962,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": -179.962,
+    "edges_end": 90.3,
+    "ref_avail_end": 0.46,
+    "E2_end": 0.03534
+   }
+  },
+  "tight|refs_missing_field_50p_end": {
+   "profile": "tight",
+   "family": "ref_loss",
+   "truth": "defect",
+   "dose": 50,
+   "dose_unit": "% of end-window citing papers",
+   "injection": "blank_refs(start=0.00,end=0.50,mode=null)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 0,
+    "PARTIAL": 0,
+    "REFUSE": 200
+   },
+   "flag_rate": 1.0,
+   "triggers": {
+    "refuse:ref_avail<0.6": 200,
+    "refuse:E2_start<1%": 18
+   },
+   "sample_median": {
+    "E2_start": 0.0143,
+    "E2_end": 0.0228,
+    "ref_avail_start": 0.8721,
+    "ref_avail_end": 0.4586,
+    "avg_edges_yr": 16.0,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "REFUSE",
+    "fired": [
+     "refuse:ref_avail<0.6"
+    ],
+    "stats": {
+     "E2": [
+      0.01438,
+      0.02239
+     ],
+     "ref_avail": [
+      0.8721,
+      0.4578
+     ],
+     "avg_edges_yr": 15.7,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 137.306,
+    "clean_growth_pct": 374.612,
+    "induced_bias_pp": -237.306,
+    "edges_end": 47.0,
+    "ref_avail_end": 0.4578,
+    "E2_end": 0.02239
+   }
+  },
+  "healthy|refs_missing_field_30p_start_only": {
+   "profile": "healthy",
+   "family": "ref_loss",
+   "truth": "defect",
+   "dose": 30,
+   "dose_unit": "% of start-window citing papers",
+   "injection": "blank_refs(start=0.30,end=0.00,mode=null)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 0,
+    "PARTIAL": 181,
+    "REFUSE": 19
+   },
+   "flag_rate": 1.0,
+   "triggers": {
+    "refuse:ref_avail<0.6": 19,
+    "partial:ref_avail<0.8": 181
+   },
+   "sample_median": {
+    "E2_start": 0.023,
+    "E2_end": 0.0704,
+    "ref_avail_start": 0.6148,
+    "ref_avail_end": 0.92,
+    "avg_edges_yr": 60.0,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "PARTIAL",
+    "fired": [
+     "partial:ref_avail<0.8"
+    ],
+    "stats": {
+     "E2": [
+      0.02281,
+      0.07069
+     ],
+     "ref_avail": [
+      0.616,
+      0.92
+     ],
+     "avg_edges_yr": 60.2,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 414.178,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": 154.253,
+    "edges_end": 180.6,
+    "ref_avail_end": 0.92,
+    "E2_end": 0.07069
+   }
+  },
+  "healthy|refs_missing_field_30p_both": {
+   "profile": "healthy",
+   "family": "ref_loss",
+   "truth": "defect",
+   "dose": 30,
+   "dose_unit": "% of citing papers, both windows",
+   "injection": "blank_refs(start=0.30,end=0.30,mode=null)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 0,
+    "PARTIAL": 181,
+    "REFUSE": 19
+   },
+   "flag_rate": 1.0,
+   "triggers": {
+    "refuse:ref_avail<0.6": 19,
+    "partial:ref_avail<0.8": 181
+   },
+   "sample_median": {
+    "E2_start": 0.0222,
+    "E2_end": 0.0496,
+    "ref_avail_start": 0.617,
+    "ref_avail_end": 0.6452,
+    "avg_edges_yr": 41.7,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "PARTIAL",
+    "fired": [
+     "partial:ref_avail<0.8"
+    ],
+    "stats": {
+     "E2": [
+      0.02281,
+      0.04948
+     ],
+     "ref_avail": [
+      0.616,
+      0.644
+     ],
+     "avg_edges_yr": 42.1,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 259.924,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": 0.0,
+    "edges_end": 126.4,
+    "ref_avail_end": 0.644,
+    "E2_end": 0.04948
+   }
+  },
+  "healthy|source_partial_big_5p_end": {
+   "profile": "healthy",
+   "family": "source_loss",
+   "truth": "defect",
+   "dose": 5,
+   "dose_unit": "% of large source's end-window papers",
+   "injection": "drop_source(src=0,window=end,frac=0.05)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 200,
+    "PARTIAL": 0,
+    "REFUSE": 0
+   },
+   "flag_rate": 0.0,
+   "triggers": {},
+   "sample_median": {
+    "E2_start": 0.0326,
+    "E2_end": 0.0699,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.9202,
+    "avg_edges_yr": 59.0,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "COMPARABLE",
+    "fired": [],
+    "stats": {
+     "E2": [
+      0.03259,
+      0.0703
+     ],
+     "ref_avail": [
+      0.88,
+      0.92
+     ],
+     "avg_edges_yr": 58.9,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 257.694,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": -2.23,
+    "edges_end": 176.6,
+    "ref_avail_end": 0.92,
+    "E2_end": 0.0703
+   }
+  },
+  "healthy|source_partial_small_5p_end": {
+   "profile": "healthy",
+   "family": "source_loss",
+   "truth": "defect",
+   "dose": 5,
+   "dose_unit": "% of small source's end-window papers",
+   "injection": "drop_source(src=4,window=end,frac=0.05)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 200,
+    "PARTIAL": 0,
+    "REFUSE": 0
+   },
+   "flag_rate": 0.0,
+   "triggers": {},
+   "sample_median": {
+    "E2_start": 0.0326,
+    "E2_end": 0.0705,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.9199,
+    "avg_edges_yr": 60.0,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "COMPARABLE",
+    "fired": [],
+    "stats": {
+     "E2": [
+      0.03259,
+      0.07072
+     ],
+     "ref_avail": [
+      0.88,
+      0.92
+     ],
+     "avg_edges_yr": 60.2,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 260.067,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": 0.143,
+    "edges_end": 180.5,
+    "ref_avail_end": 0.92,
+    "E2_end": 0.07072
+   }
+  },
+  "healthy|source_partial_big_10p_end": {
+   "profile": "healthy",
+   "family": "source_loss",
+   "truth": "defect",
+   "dose": 10,
+   "dose_unit": "% of large source's end-window papers",
+   "injection": "drop_source(src=0,window=end,frac=0.10)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 200,
+    "PARTIAL": 0,
+    "REFUSE": 0
+   },
+   "flag_rate": 0.0,
+   "triggers": {},
+   "sample_median": {
+    "E2_start": 0.0326,
+    "E2_end": 0.0696,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.9199,
+    "avg_edges_yr": 57.7,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "COMPARABLE",
+    "fired": [],
+    "stats": {
+     "E2": [
+      0.03259,
+      0.06989
+     ],
+     "ref_avail": [
+      0.88,
+      0.92
+     ],
+     "avg_edges_yr": 57.6,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 255.391,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": -4.533,
+    "edges_end": 172.7,
+    "ref_avail_end": 0.92,
+    "E2_end": 0.06989
+   }
+  },
+  "healthy|source_partial_small_10p_end": {
+   "profile": "healthy",
+   "family": "source_loss",
+   "truth": "defect",
+   "dose": 10,
+   "dose_unit": "% of small source's end-window papers",
+   "injection": "drop_source(src=4,window=end,frac=0.10)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 200,
+    "PARTIAL": 0,
+    "REFUSE": 0
+   },
+   "flag_rate": 0.0,
+   "triggers": {},
+   "sample_median": {
+    "E2_start": 0.0326,
+    "E2_end": 0.0705,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.9199,
+    "avg_edges_yr": 60.0,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "COMPARABLE",
+    "fired": [],
+    "stats": {
+     "E2": [
+      0.03259,
+      0.07074
+     ],
+     "ref_avail": [
+      0.88,
+      0.92
+     ],
+     "avg_edges_yr": 60.2,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 260.211,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": 0.287,
+    "edges_end": 180.5,
+    "ref_avail_end": 0.92,
+    "E2_end": 0.07074
+   }
+  },
+  "healthy|source_partial_big_20p_end": {
+   "profile": "healthy",
+   "family": "source_loss",
+   "truth": "defect",
+   "dose": 20,
+   "dose_unit": "% of large source's end-window papers",
+   "injection": "drop_source(src=0,window=end,frac=0.20)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 200,
+    "PARTIAL": 0,
+    "REFUSE": 0
+   },
+   "flag_rate": 0.0,
+   "triggers": {},
+   "sample_median": {
+    "E2_start": 0.0326,
+    "E2_end": 0.0686,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.9197,
+    "avg_edges_yr": 54.7,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "COMPARABLE",
+    "fired": [],
+    "stats": {
+     "E2": [
+      0.03259,
+      0.06903
+     ],
+     "ref_avail": [
+      0.88,
+      0.92
+     ],
+     "avg_edges_yr": 54.9,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 250.55,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": -9.375,
+    "edges_end": 164.7,
+    "ref_avail_end": 0.92,
+    "E2_end": 0.06903
+   }
+  },
+  "healthy|source_partial_small_20p_end": {
+   "profile": "healthy",
+   "family": "source_loss",
+   "truth": "defect",
+   "dose": 20,
+   "dose_unit": "% of small source's end-window papers",
+   "injection": "drop_source(src=4,window=end,frac=0.20)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 167,
+    "PARTIAL": 33,
+    "REFUSE": 0
+   },
+   "flag_rate": 0.165,
+   "triggers": {
+    "partial:source_unqualified(n<15)": 33
+   },
+   "sample_median": {
+    "E2_start": 0.0326,
+    "E2_end": 0.0705,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.9199,
+    "avg_edges_yr": 60.0,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "COMPARABLE",
+    "fired": [],
+    "stats": {
+     "E2": [
+      0.03259,
+      0.07079
+     ],
+     "ref_avail": [
+      0.88,
+      0.92
+     ],
+     "avg_edges_yr": 60.1,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 260.498,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": 0.574,
+    "edges_end": 180.4,
+    "ref_avail_end": 0.92,
+    "E2_end": 0.07079
+   }
+  },
+  "healthy|source_partial_big_30p_end": {
+   "profile": "healthy",
+   "family": "source_loss",
+   "truth": "defect",
+   "dose": 30,
+   "dose_unit": "% of large source's end-window papers",
+   "injection": "drop_source(src=0,window=end,frac=0.30)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 200,
+    "PARTIAL": 0,
+    "REFUSE": 0
+   },
+   "flag_rate": 0.0,
+   "triggers": {},
+   "sample_median": {
+    "E2_start": 0.0326,
+    "E2_end": 0.0681,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.9193,
+    "avg_edges_yr": 51.7,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "COMPARABLE",
+    "fired": [],
+    "stats": {
+     "E2": [
+      0.03259,
+      0.06812
+     ],
+     "ref_avail": [
+      0.88,
+      0.92
+     ],
+     "avg_edges_yr": 52.2,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 245.367,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": -14.557,
+    "edges_end": 156.7,
+    "ref_avail_end": 0.92,
+    "E2_end": 0.06812
+   }
+  },
+  "healthy|source_partial_small_30p_end": {
+   "profile": "healthy",
+   "family": "source_loss",
+   "truth": "defect",
+   "dose": 30,
+   "dose_unit": "% of small source's end-window papers",
+   "injection": "drop_source(src=4,window=end,frac=0.30)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 90,
+    "PARTIAL": 110,
+    "REFUSE": 0
+   },
+   "flag_rate": 0.55,
+   "triggers": {
+    "partial:source_unqualified(n<15)": 110
+   },
+   "sample_median": {
+    "E2_start": 0.0326,
+    "E2_end": 0.0707,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.9198,
+    "avg_edges_yr": 60.0,
+    "n_sources_ok": 4
+   },
+   "oracle": {
+    "verdict": "PARTIAL",
+    "fired": [
+     "partial:source_unqualified(n<15)"
+    ],
+    "stats": {
+     "E2": [
+      0.03259,
+      0.07085
+     ],
+     "ref_avail": [
+      0.88,
+      0.92
+     ],
+     "avg_edges_yr": 60.1,
+     "n_sources_ok": 4,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 260.786,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": 0.862,
+    "edges_end": 180.2,
+    "ref_avail_end": 0.92,
+    "E2_end": 0.07085
+   }
+  },
+  "healthy|source_partial_big_50p_end": {
+   "profile": "healthy",
+   "family": "source_loss",
+   "truth": "defect",
+   "dose": 50,
+   "dose_unit": "% of large source's end-window papers",
+   "injection": "drop_source(src=0,window=end,frac=0.50)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 200,
+    "PARTIAL": 0,
+    "REFUSE": 0
+   },
+   "flag_rate": 0.0,
+   "triggers": {},
+   "sample_median": {
+    "E2_start": 0.0326,
+    "E2_end": 0.0657,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.9194,
+    "avg_edges_yr": 47.3,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "COMPARABLE",
+    "fired": [],
+    "stats": {
+     "E2": [
+      0.03259,
+      0.06608
+     ],
+     "ref_avail": [
+      0.88,
+      0.92
+     ],
+     "avg_edges_yr": 46.9,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 233.824,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": -26.1,
+    "edges_end": 140.8,
+    "ref_avail_end": 0.92,
+    "E2_end": 0.06608
+   }
+  },
+  "healthy|source_partial_small_50p_end": {
+   "profile": "healthy",
+   "family": "source_loss",
+   "truth": "defect",
+   "dose": 50,
+   "dose_unit": "% of small source's end-window papers",
+   "injection": "drop_source(src=4,window=end,frac=0.50)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 7,
+    "PARTIAL": 193,
+    "REFUSE": 0
+   },
+   "flag_rate": 0.965,
+   "triggers": {
+    "partial:source_unqualified(n<15)": 193
+   },
+   "sample_median": {
+    "E2_start": 0.0326,
+    "E2_end": 0.0708,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.92,
+    "avg_edges_yr": 60.0,
+    "n_sources_ok": 4
+   },
+   "oracle": {
+    "verdict": "PARTIAL",
+    "fired": [
+     "partial:source_unqualified(n<15)"
+    ],
+    "stats": {
+     "E2": [
+      0.03259,
+      0.07096
+     ],
+     "ref_avail": [
+      0.88,
+      0.92
+     ],
+     "avg_edges_yr": 60.0,
+     "n_sources_ok": 4,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 261.366,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": 1.441,
+    "edges_end": 180.0,
+    "ref_avail_end": 0.92,
+    "E2_end": 0.07096
+   }
+  },
+  "healthy|source_partial_big_100p_end": {
+   "profile": "healthy",
+   "family": "source_loss",
+   "truth": "defect",
+   "dose": 100,
+   "dose_unit": "% of large source's end-window papers",
+   "injection": "drop_source(src=0,window=end,frac=1.00)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 0,
+    "PARTIAL": 200,
+    "REFUSE": 0
+   },
+   "flag_rate": 1.0,
+   "triggers": {
+    "partial:source_unqualified(n<15)": 200,
+    "partial:support_gap>10%": 200
+   },
+   "sample_median": {
+    "E2_start": 0.0326,
+    "E2_end": 0.0598,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.9196,
+    "avg_edges_yr": 33.7,
+    "n_sources_ok": 4
+   },
+   "oracle": {
+    "verdict": "PARTIAL",
+    "fired": [
+     "partial:source_unqualified(n<15)",
+     "partial:support_gap>10%"
+    ],
+    "stats": {
+     "E2": [
+      0.03259,
+      0.05933
+     ],
+     "ref_avail": [
+      0.88,
+      0.92
+     ],
+     "avg_edges_yr": 33.7,
+     "n_sources_ok": 4,
+     "support_gap": 0.3111
+    }
+   },
+   "population": {
+    "growth_pct": 195.525,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": -64.399,
+    "edges_end": 101.1,
+    "ref_avail_end": 0.92,
+    "E2_end": 0.05933
+   }
+  },
+  "healthy|source_partial_small_100p_end": {
+   "profile": "healthy",
+   "family": "source_loss",
+   "truth": "defect",
+   "dose": 100,
+   "dose_unit": "% of small source's end-window papers",
+   "injection": "drop_source(src=4,window=end,frac=1.00)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 0,
+    "PARTIAL": 200,
+    "REFUSE": 0
+   },
+   "flag_rate": 1.0,
+   "triggers": {
+    "partial:source_unqualified(n<15)": 200
+   },
+   "sample_median": {
+    "E2_start": 0.0326,
+    "E2_end": 0.0714,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.9195,
+    "avg_edges_yr": 59.7,
+    "n_sources_ok": 4
+   },
+   "oracle": {
+    "verdict": "PARTIAL",
+    "fired": [
+     "partial:source_unqualified(n<15)"
+    ],
+    "stats": {
+     "E2": [
+      0.03259,
+      0.07123
+     ],
+     "ref_avail": [
+      0.88,
+      0.92
+     ],
+     "avg_edges_yr": 59.8,
+     "n_sources_ok": 4,
+     "support_gap": 0.0148
+    }
+   },
+   "population": {
+    "growth_pct": 262.828,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": 2.904,
+    "edges_end": 179.4,
+    "ref_avail_end": 0.92,
+    "E2_end": 0.07123
+   }
+  },
+  "tight|source_missing_end_big": {
+   "profile": "tight",
+   "family": "source_loss",
+   "truth": "defect",
+   "dose": 100,
+   "dose_unit": "% of large source's end-window papers",
+   "injection": "drop_source(src=0,window=end,frac=1.00)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 0,
+    "PARTIAL": 182,
+    "REFUSE": 18
+   },
+   "flag_rate": 1.0,
+   "triggers": {
+    "partial:source_unqualified(n<15)": 182,
+    "refuse:E2_start<1%": 18
+   },
+   "sample_median": {
+    "E2_start": 0.0143,
+    "E2_end": 0.0381,
+    "ref_avail_start": 0.8721,
+    "ref_avail_end": 0.9161,
+    "avg_edges_yr": 21.0,
+    "n_sources_ok": 4
+   },
+   "oracle": {
+    "verdict": "PARTIAL",
+    "fired": [
+     "partial:source_unqualified(n<15)"
+    ],
+    "stats": {
+     "E2": [
+      0.01438,
+      0.03897
+     ],
+     "ref_avail": [
+      0.8721,
+      0.9157
+     ],
+     "avg_edges_yr": 21.3,
+     "n_sources_ok": 4,
+     "support_gap": 0.0992
+    }
+   },
+   "population": {
+    "growth_pct": 260.603,
+    "clean_growth_pct": 374.612,
+    "induced_bias_pp": -114.01,
+    "edges_end": 64.0,
+    "ref_avail_end": 0.9157,
+    "E2_end": 0.03897
+   }
+  },
+  "healthy|edge_thinning_loss_10p": {
+   "profile": "healthy",
+   "family": "edge_loss",
+   "truth": "defect",
+   "dose": 10,
+   "dose_unit": "% of target edges removed",
+   "injection": "thin_target_edges(q_start=0.90,q_end=0.90)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 200,
+    "PARTIAL": 0,
+    "REFUSE": 0
+   },
+   "flag_rate": 0.0,
+   "triggers": {},
+   "sample_median": {
+    "E2_start": 0.0296,
+    "E2_end": 0.0674,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.92,
+    "avg_edges_yr": 53.7,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "COMPARABLE",
+    "fired": [],
+    "stats": {
+     "E2": [
+      0.02971,
+      0.06752
+     ],
+     "ref_avail": [
+      0.88,
+      0.92
+     ],
+     "avg_edges_yr": 54.2,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 259.924,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": 0.0,
+    "edges_end": 162.5,
+    "ref_avail_end": 0.92,
+    "E2_end": 0.06752
+   }
+  },
+  "tight|edge_thinning_loss_10p": {
+   "profile": "tight",
+   "family": "edge_loss",
+   "truth": "defect",
+   "dose": 10,
+   "dose_unit": "% of target edges removed",
+   "injection": "thin_target_edges(q_start=0.90,q_end=0.90)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 171,
+    "PARTIAL": 0,
+    "REFUSE": 29
+   },
+   "flag_rate": 0.145,
+   "triggers": {
+    "refuse:E2_start<1%": 29
+   },
+   "sample_median": {
+    "E2_start": 0.0131,
+    "E2_end": 0.0418,
+    "ref_avail_start": 0.8721,
+    "ref_avail_end": 0.9157,
+    "avg_edges_yr": 28.3,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "COMPARABLE",
+    "fired": [],
+    "stats": {
+     "E2": [
+      0.013,
+      0.04193
+     ],
+     "ref_avail": [
+      0.8721,
+      0.9157
+     ],
+     "avg_edges_yr": 28.2,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 374.612,
+    "clean_growth_pct": 374.612,
+    "induced_bias_pp": 0.0,
+    "edges_end": 84.6,
+    "ref_avail_end": 0.9157,
+    "E2_end": 0.04193
+   }
+  },
+  "healthy|edge_thinning_loss_30p": {
+   "profile": "healthy",
+   "family": "edge_loss",
+   "truth": "defect",
+   "dose": 30,
+   "dose_unit": "% of target edges removed",
+   "injection": "thin_target_edges(q_start=0.70,q_end=0.70)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 200,
+    "PARTIAL": 0,
+    "REFUSE": 0
+   },
+   "flag_rate": 0.0,
+   "triggers": {},
+   "sample_median": {
+    "E2_start": 0.0237,
+    "E2_end": 0.0593,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.92,
+    "avg_edges_yr": 42.0,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "COMPARABLE",
+    "fired": [],
+    "stats": {
+     "E2": [
+      0.02372,
+      0.05933
+     ],
+     "ref_avail": [
+      0.88,
+      0.92
+     ],
+     "avg_edges_yr": 42.1,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 259.924,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": 0.0,
+    "edges_end": 126.4,
+    "ref_avail_end": 0.92,
+    "E2_end": 0.05933
+   }
+  },
+  "tight|edge_thinning_loss_30p": {
+   "profile": "tight",
+   "family": "edge_loss",
+   "truth": "defect",
+   "dose": 30,
+   "dose_unit": "% of target edges removed",
+   "injection": "thin_target_edges(q_start=0.70,q_end=0.70)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 105,
+    "PARTIAL": 0,
+    "REFUSE": 95
+   },
+   "flag_rate": 0.475,
+   "triggers": {
+    "refuse:E2_start<1%": 95
+   },
+   "sample_median": {
+    "E2_start": 0.0104,
+    "E2_end": 0.0357,
+    "ref_avail_start": 0.8721,
+    "ref_avail_end": 0.9157,
+    "avg_edges_yr": 22.3,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "COMPARABLE",
+    "fired": [],
+    "stats": {
+     "E2": [
+      0.0102,
+      0.03546
+     ],
+     "ref_avail": [
+      0.8721,
+      0.9157
+     ],
+     "avg_edges_yr": 21.9,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 374.612,
+    "clean_growth_pct": 374.612,
+    "induced_bias_pp": 0.0,
+    "edges_end": 65.8,
+    "ref_avail_end": 0.9157,
+    "E2_end": 0.03546
+   }
+  },
+  "healthy|edge_thinning_loss_50p": {
+   "profile": "healthy",
+   "family": "edge_loss",
+   "truth": "defect",
+   "dose": 50,
+   "dose_unit": "% of target edges removed",
+   "injection": "thin_target_edges(q_start=0.50,q_end=0.50)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 200,
+    "PARTIAL": 0,
+    "REFUSE": 0
+   },
+   "flag_rate": 0.0,
+   "triggers": {},
+   "sample_median": {
+    "E2_start": 0.0178,
+    "E2_end": 0.0481,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.92,
+    "avg_edges_yr": 30.3,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "COMPARABLE",
+    "fired": [],
+    "stats": {
+     "E2": [
+      0.01739,
+      0.04806
+     ],
+     "ref_avail": [
+      0.88,
+      0.92
+     ],
+     "avg_edges_yr": 30.1,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 259.924,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": 0.0,
+    "edges_end": 90.3,
+    "ref_avail_end": 0.92,
+    "E2_end": 0.04806
+   }
+  },
+  "tight|edge_thinning_loss_50p": {
+   "profile": "tight",
+   "family": "edge_loss",
+   "truth": "defect",
+   "dose": 50,
+   "dose_unit": "% of target edges removed",
+   "injection": "thin_target_edges(q_start=0.50,q_end=0.50)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 28,
+    "PARTIAL": 0,
+    "REFUSE": 172
+   },
+   "flag_rate": 0.86,
+   "triggers": {
+    "refuse:E2_start<1%": 172
+   },
+   "sample_median": {
+    "E2_start": 0.0072,
+    "E2_end": 0.0281,
+    "ref_avail_start": 0.8721,
+    "ref_avail_end": 0.9157,
+    "avg_edges_yr": 16.0,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "REFUSE",
+    "fired": [
+     "refuse:E2_start<1%"
+    ],
+    "stats": {
+     "E2": [
+      0.00735,
+      0.0277
+     ],
+     "ref_avail": [
+      0.8721,
+      0.9157
+     ],
+     "avg_edges_yr": 15.7,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 374.612,
+    "clean_growth_pct": 374.612,
+    "induced_bias_pp": 0.0,
+    "edges_end": 47.0,
+    "ref_avail_end": 0.9157,
+    "E2_end": 0.0277
+   }
+  },
+  "healthy|edge_thinning_loss_70p": {
+   "profile": "healthy",
+   "family": "edge_loss",
+   "truth": "defect",
+   "dose": 70,
+   "dose_unit": "% of target edges removed",
+   "injection": "thin_target_edges(q_start=0.30,q_end=0.30)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 118,
+    "PARTIAL": 0,
+    "REFUSE": 82
+   },
+   "flag_rate": 0.41,
+   "triggers": {
+    "refuse:E2_start<1%": 82
+   },
+   "sample_median": {
+    "E2_start": 0.0104,
+    "E2_end": 0.0326,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.92,
+    "avg_edges_yr": 17.7,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "COMPARABLE",
+    "fired": [],
+    "stats": {
+     "E2": [
+      0.01071,
+      0.03283
+     ],
+     "ref_avail": [
+      0.88,
+      0.92
+     ],
+     "avg_edges_yr": 18.1,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 259.924,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": 0.0,
+    "edges_end": 54.2,
+    "ref_avail_end": 0.92,
+    "E2_end": 0.03283
+   }
+  },
+  "tight|edge_thinning_loss_70p": {
+   "profile": "tight",
+   "family": "edge_loss",
+   "truth": "defect",
+   "dose": 70,
+   "dose_unit": "% of target edges removed",
+   "injection": "thin_target_edges(q_start=0.30,q_end=0.30)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 0,
+    "PARTIAL": 0,
+    "REFUSE": 200
+   },
+   "flag_rate": 1.0,
+   "triggers": {
+    "refuse:E2_start<1%": 200
+   },
+   "sample_median": {
+    "E2_start": 0.0046,
+    "E2_end": 0.019,
+    "ref_avail_start": 0.8721,
+    "ref_avail_end": 0.9157,
+    "avg_edges_yr": 9.7,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "REFUSE",
+    "fired": [
+     "refuse:E2_start<1%"
+    ],
+    "stats": {
+     "E2": [
+      0.00445,
+      0.0183
+     ],
+     "ref_avail": [
+      0.8721,
+      0.9157
+     ],
+     "avg_edges_yr": 9.4,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 374.612,
+    "clean_growth_pct": 374.612,
+    "induced_bias_pp": 0.0,
+    "edges_end": 28.2,
+    "ref_avail_end": 0.9157,
+    "E2_end": 0.0183
+   }
+  },
+  "healthy|edge_thinning_loss_90p": {
+   "profile": "healthy",
+   "family": "edge_loss",
+   "truth": "defect",
+   "dose": 90,
+   "dose_unit": "% of target edges removed",
+   "injection": "thin_target_edges(q_start=0.10,q_end=0.10)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 0,
+    "PARTIAL": 0,
+    "REFUSE": 200
+   },
+   "flag_rate": 1.0,
+   "triggers": {
+    "refuse:E2_start<1%": 200,
+    "refuse:E2_end<1%": 42,
+    "refuse:avg_edges_yr<5": 46
+   },
+   "sample_median": {
+    "E2_start": 0.0037,
+    "E2_end": 0.0126,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.92,
+    "avg_edges_yr": 6.0,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "REFUSE",
+    "fired": [
+     "refuse:E2_start<1%"
+    ],
+    "stats": {
+     "E2": [
+      0.00367,
+      0.0125
+     ],
+     "ref_avail": [
+      0.88,
+      0.92
+     ],
+     "avg_edges_yr": 6.0,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 259.924,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": -0.0,
+    "edges_end": 18.1,
+    "ref_avail_end": 0.92,
+    "E2_end": 0.0125
+   }
+  },
+  "tight|edge_thinning_loss_90p": {
+   "profile": "tight",
+   "family": "edge_loss",
+   "truth": "defect",
+   "dose": 90,
+   "dose_unit": "% of target edges removed",
+   "injection": "thin_target_edges(q_start=0.10,q_end=0.10)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 0,
+    "PARTIAL": 0,
+    "REFUSE": 200
+   },
+   "flag_rate": 1.0,
+   "triggers": {
+    "refuse:E2_start<1%": 200,
+    "refuse:E2_end<1%": 184,
+    "refuse:avg_edges_yr<5": 183
+   },
+   "sample_median": {
+    "E2_start": 0.0013,
+    "E2_end": 0.0068,
+    "ref_avail_start": 0.8721,
+    "ref_avail_end": 0.9157,
+    "avg_edges_yr": 3.0,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "REFUSE",
+    "fired": [
+     "refuse:E2_start<1%",
+     "refuse:E2_end<1%",
+     "refuse:avg_edges_yr<5"
+    ],
+    "stats": {
+     "E2": [
+      0.0015,
+      0.00676
+     ],
+     "ref_avail": [
+      0.8721,
+      0.9157
+     ],
+     "avg_edges_yr": 3.1,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 374.612,
+    "clean_growth_pct": 374.612,
+    "induced_bias_pp": 0.0,
+    "edges_end": 9.4,
+    "ref_avail_end": 0.9157,
+    "E2_end": 0.00676
+   }
+  },
+  "healthy|edge_thinning_loss_95p": {
+   "profile": "healthy",
+   "family": "edge_loss",
+   "truth": "defect",
+   "dose": 95,
+   "dose_unit": "% of target edges removed",
+   "injection": "thin_target_edges(q_start=0.05,q_end=0.05)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 0,
+    "PARTIAL": 0,
+    "REFUSE": 200
+   },
+   "flag_rate": 1.0,
+   "triggers": {
+    "refuse:E2_start<1%": 200,
+    "refuse:E2_end<1%": 192,
+    "refuse:avg_edges_yr<5": 195
+   },
+   "sample_median": {
+    "E2_start": 0.0015,
+    "E2_end": 0.0067,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.92,
+    "avg_edges_yr": 3.0,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "REFUSE",
+    "fired": [
+     "refuse:E2_start<1%",
+     "refuse:E2_end<1%",
+     "refuse:avg_edges_yr<5"
+    ],
+    "stats": {
+     "E2": [
+      0.00185,
+      0.00647
+     ],
+     "ref_avail": [
+      0.88,
+      0.92
+     ],
+     "avg_edges_yr": 3.0,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 259.924,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": 0.0,
+    "edges_end": 9.0,
+    "ref_avail_end": 0.92,
+    "E2_end": 0.00647
+   }
+  },
+  "tight|edge_thinning_loss_95p": {
+   "profile": "tight",
+   "family": "edge_loss",
+   "truth": "defect",
+   "dose": 95,
+   "dose_unit": "% of target edges removed",
+   "injection": "thin_target_edges(q_start=0.05,q_end=0.05)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 0,
+    "PARTIAL": 0,
+    "REFUSE": 200
+   },
+   "flag_rate": 1.0,
+   "triggers": {
+    "refuse:E2_start<1%": 200,
+    "refuse:E2_end<1%": 200,
+    "refuse:avg_edges_yr<5": 200
+   },
+   "sample_median": {
+    "E2_start": 0.0006,
+    "E2_end": 0.0038,
+    "ref_avail_start": 0.8721,
+    "ref_avail_end": 0.9157,
+    "avg_edges_yr": 1.7,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "REFUSE",
+    "fired": [
+     "refuse:E2_start<1%",
+     "refuse:E2_end<1%",
+     "refuse:avg_edges_yr<5"
+    ],
+    "stats": {
+     "E2": [
+      0.00075,
+      0.00347
+     ],
+     "ref_avail": [
+      0.8721,
+      0.9157
+     ],
+     "avg_edges_yr": 1.6,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 374.612,
+    "clean_growth_pct": 374.612,
+    "induced_bias_pp": 0.0,
+    "edges_end": 4.7,
+    "ref_avail_end": 0.9157,
+    "E2_end": 0.00347
+   }
+  },
+  "healthy|edge_thinning_loss_99p": {
+   "profile": "healthy",
+   "family": "edge_loss",
+   "truth": "defect",
+   "dose": 99,
+   "dose_unit": "% of target edges removed",
+   "injection": "thin_target_edges(q_start=0.01,q_end=0.01)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 0,
+    "PARTIAL": 0,
+    "REFUSE": 200
+   },
+   "flag_rate": 1.0,
+   "triggers": {
+    "refuse:E2_start<1%": 200,
+    "refuse:E2_end<1%": 200,
+    "refuse:avg_edges_yr<5": 200
+   },
+   "sample_median": {
+    "E2_start": 0.0,
+    "E2_end": 0.0007,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.92,
+    "avg_edges_yr": 0.7,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "REFUSE",
+    "fired": [
+     "refuse:E2_start<1%",
+     "refuse:E2_end<1%",
+     "refuse:avg_edges_yr<5"
+    ],
+    "stats": {
+     "E2": [
+      0.00037,
+      0.00133
+     ],
+     "ref_avail": [
+      0.88,
+      0.92
+     ],
+     "avg_edges_yr": 0.6,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 259.924,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": 0.0,
+    "edges_end": 1.8,
+    "ref_avail_end": 0.92,
+    "E2_end": 0.00133
+   }
+  },
+  "tight|edge_thinning_loss_99p": {
+   "profile": "tight",
+   "family": "edge_loss",
+   "truth": "defect",
+   "dose": 99,
+   "dose_unit": "% of target edges removed",
+   "injection": "thin_target_edges(q_start=0.01,q_end=0.01)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 0,
+    "PARTIAL": 0,
+    "REFUSE": 200
+   },
+   "flag_rate": 1.0,
+   "triggers": {
+    "refuse:E2_start<1%": 200,
+    "refuse:E2_end<1%": 200,
+    "refuse:avg_edges_yr<5": 200
+   },
+   "sample_median": {
+    "E2_start": 0.0,
+    "E2_end": 0.0008,
+    "ref_avail_start": 0.8721,
+    "ref_avail_end": 0.9157,
+    "avg_edges_yr": 0.3,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "REFUSE",
+    "fired": [
+     "refuse:E2_start<1%",
+     "refuse:E2_end<1%",
+     "refuse:avg_edges_yr<5"
+    ],
+    "stats": {
+     "E2": [
+      0.00015,
+      0.00071
+     ],
+     "ref_avail": [
+      0.8721,
+      0.9157
+     ],
+     "avg_edges_yr": 0.3,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 374.612,
+    "clean_growth_pct": 374.612,
+    "induced_bias_pp": 0.0,
+    "edges_end": 0.9,
+    "ref_avail_end": 0.9157,
+    "E2_end": 0.00071
+   }
+  },
+  "healthy|edge_thinning_end_only_loss_50p": {
+   "profile": "healthy",
+   "family": "edge_loss",
+   "truth": "defect",
+   "dose": 50,
+   "dose_unit": "% of end-window target edges removed",
+   "injection": "thin_target_edges(q_start=1.00,q_end=0.50)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 200,
+    "PARTIAL": 0,
+    "REFUSE": 0
+   },
+   "flag_rate": 0.0,
+   "triggers": {},
+   "sample_median": {
+    "E2_start": 0.0326,
+    "E2_end": 0.0474,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.92,
+    "avg_edges_yr": 29.7,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "COMPARABLE",
+    "fired": [],
+    "stats": {
+     "E2": [
+      0.03259,
+      0.04806
+     ],
+     "ref_avail": [
+      0.88,
+      0.92
+     ],
+     "avg_edges_yr": 30.1,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": 79.962,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": -179.962,
+    "edges_end": 90.3,
+    "ref_avail_end": 0.92,
+    "E2_end": 0.04806
+   }
+  },
+  "healthy|edge_thinning_end_only_loss_90p": {
+   "profile": "healthy",
+   "family": "edge_loss",
+   "truth": "defect",
+   "dose": 90,
+   "dose_unit": "% of end-window target edges removed",
+   "injection": "thin_target_edges(q_start=1.00,q_end=0.10)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 154,
+    "PARTIAL": 0,
+    "REFUSE": 46
+   },
+   "flag_rate": 0.23,
+   "triggers": {
+    "refuse:avg_edges_yr<5": 44,
+    "refuse:E2_end<1%": 39
+   },
+   "sample_median": {
+    "E2_start": 0.0326,
+    "E2_end": 0.0126,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.92,
+    "avg_edges_yr": 6.0,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "COMPARABLE",
+    "fired": [],
+    "stats": {
+     "E2": [
+      0.03259,
+      0.0125
+     ],
+     "ref_avail": [
+      0.88,
+      0.92
+     ],
+     "avg_edges_yr": 6.0,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": -64.008,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": -323.932,
+    "edges_end": 18.1,
+    "ref_avail_end": 0.92,
+    "E2_end": 0.0125
+   }
+  },
+  "healthy|edge_thinning_end_only_loss_99p": {
+   "profile": "healthy",
+   "family": "edge_loss",
+   "truth": "defect",
+   "dose": 99,
+   "dose_unit": "% of end-window target edges removed",
+   "injection": "thin_target_edges(q_start=1.00,q_end=0.01)",
+   "reps": 200,
+   "verdicts": {
+    "COMPARABLE": 0,
+    "PARTIAL": 0,
+    "REFUSE": 200
+   },
+   "flag_rate": 1.0,
+   "triggers": {
+    "refuse:E2_end<1%": 200,
+    "refuse:avg_edges_yr<5": 200
+   },
+   "sample_median": {
+    "E2_start": 0.0326,
+    "E2_end": 0.0015,
+    "ref_avail_start": 0.88,
+    "ref_avail_end": 0.92,
+    "avg_edges_yr": 0.7,
+    "n_sources_ok": 5
+   },
+   "oracle": {
+    "verdict": "REFUSE",
+    "fired": [
+     "refuse:E2_end<1%",
+     "refuse:avg_edges_yr<5"
+    ],
+    "stats": {
+     "E2": [
+      0.03259,
+      0.00133
+     ],
+     "ref_avail": [
+      0.88,
+      0.92
+     ],
+     "avg_edges_yr": 0.6,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "population": {
+    "growth_pct": -96.401,
+    "clean_growth_pct": 259.924,
+    "induced_bias_pp": -356.325,
+    "edges_end": 1.8,
+    "ref_avail_end": 0.92,
+    "E2_end": 0.00133
+   }
+  }
+ },
+ "scoring": {
+  "protocol": "positive truth = defect injected (dose>0); predicted positive = instrument withholds COMPARABLE (PARTIAL or REFUSE); FN = false acceptance, FP = false refusal; truth 'void' worlds are UNKNOWN and excluded from FP/FN. 'bias' classes condition on the population-level level distortion induced by the injection (see cells.*.population): the criteria are a coverage/power gate, so cells whose induced bias is material but whose coverage margins survive are the informative misses.",
+  "confusion_all": {
+   "TP": 5397,
+   "TN": 932,
+   "FP": 68,
+   "FN": 4203,
+   "UNKNOWN_truth_void": 200,
+   "void_correct_decline": 200,
+   "void_false_claim": 0
+  },
+  "rates_all": {
+   "detection_rate(TPR)": 0.5622,
+   "false_acceptance_rate(FNR)": 0.4378,
+   "specificity(TNR)": 0.932,
+   "false_refusal_rate(FPR)": 0.068,
+   "n_defect_runs": 9600,
+   "n_clean_runs": 1000
+  },
+  "truth_x_verdict": {
+   "clean": {
+    "COMPARABLE": 932,
+    "PARTIAL": 0,
+    "REFUSE": 68
+   },
+   "defect": {
+    "COMPARABLE": 4203,
+    "PARTIAL": 2445,
+    "REFUSE": 2952
+   },
+   "void": {
+    "COMPARABLE": 0,
+    "PARTIAL": 0,
+    "REFUSE": 200
+   }
+  },
+  "by_family": {
+   "clean": {
+    "TP": 0,
+    "TN": 932,
+    "FP": 68,
+    "FN": 0,
+    "UNKNOWN_truth_void": 0,
+    "void_correct_decline": 0,
+    "void_false_claim": 0
+   },
+   "source_loss": {
+    "TP": 1136,
+    "TN": 0,
+    "FP": 0,
+    "FN": 1664,
+    "UNKNOWN_truth_void": 0,
+    "void_correct_decline": 0,
+    "void_false_claim": 0
+   },
+   "void": {
+    "TP": 0,
+    "TN": 0,
+    "FP": 0,
+    "FN": 0,
+    "UNKNOWN_truth_void": 200,
+    "void_correct_decline": 200,
+    "void_false_claim": 0
+   },
+   "ref_loss": {
+    "TP": 2237,
+    "TN": 0,
+    "FP": 0,
+    "FN": 1163,
+    "UNKNOWN_truth_void": 0,
+    "void_correct_decline": 0,
+    "void_false_claim": 0
+   },
+   "edge_loss": {
+    "TP": 2024,
+    "TN": 0,
+    "FP": 0,
+    "FN": 1376,
+    "UNKNOWN_truth_void": 0,
+    "void_correct_decline": 0,
+    "void_false_claim": 0
+   }
+  },
+  "rates_by_family": {
+   "clean": {
+    "detection_rate(TPR)": null,
+    "false_acceptance_rate(FNR)": null,
+    "specificity(TNR)": 0.932,
+    "false_refusal_rate(FPR)": 0.068,
+    "n_defect_runs": 0,
+    "n_clean_runs": 1000
+   },
+   "source_loss": {
+    "detection_rate(TPR)": 0.4057,
+    "false_acceptance_rate(FNR)": 0.5943,
+    "specificity(TNR)": null,
+    "false_refusal_rate(FPR)": null,
+    "n_defect_runs": 2800,
+    "n_clean_runs": 0
+   },
+   "void": {
+    "detection_rate(TPR)": null,
+    "false_acceptance_rate(FNR)": null,
+    "specificity(TNR)": null,
+    "false_refusal_rate(FPR)": null,
+    "n_defect_runs": 0,
+    "n_clean_runs": 0
+   },
+   "ref_loss": {
+    "detection_rate(TPR)": 0.6579,
+    "false_acceptance_rate(FNR)": 0.3421,
+    "specificity(TNR)": null,
+    "false_refusal_rate(FPR)": null,
+    "n_defect_runs": 3400,
+    "n_clean_runs": 0
+   },
+   "edge_loss": {
+    "detection_rate(TPR)": 0.5953,
+    "false_acceptance_rate(FNR)": 0.4047,
+    "specificity(TNR)": null,
+    "false_refusal_rate(FPR)": null,
+    "n_defect_runs": 3400,
+    "n_clean_runs": 0
+   }
+  },
+  "by_profile": {
+   "healthy": {
+    "TP": 3464,
+    "TN": 600,
+    "FP": 0,
+    "FN": 3536,
+    "UNKNOWN_truth_void": 200,
+    "void_correct_decline": 200,
+    "void_false_claim": 0
+   },
+   "tight": {
+    "TP": 1933,
+    "TN": 332,
+    "FP": 68,
+    "FN": 667,
+    "UNKNOWN_truth_void": 0,
+    "void_correct_decline": 0,
+    "void_false_claim": 0
+   }
+  },
+  "rates_by_profile": {
+   "healthy": {
+    "detection_rate(TPR)": 0.4949,
+    "false_acceptance_rate(FNR)": 0.5051,
+    "specificity(TNR)": 1.0,
+    "false_refusal_rate(FPR)": 0.0,
+    "n_defect_runs": 7000,
+    "n_clean_runs": 600
+   },
+   "tight": {
+    "detection_rate(TPR)": 0.7435,
+    "false_acceptance_rate(FNR)": 0.2565,
+    "specificity(TNR)": 0.83,
+    "false_refusal_rate(FPR)": 0.17,
+    "n_defect_runs": 2600,
+    "n_clean_runs": 400
+   }
+  },
+  "by_bias_class": {
+   "bias:material(|pp|>=5)": {
+    "detection_rate(TPR)": 0.5766,
+    "false_acceptance_rate(FNR)": 0.4234,
+    "specificity(TNR)": null,
+    "false_refusal_rate(FPR)": null,
+    "n_defect_runs": 5000,
+    "n_clean_runs": 0
+   },
+   "bias:minor(|pp|<5)": {
+    "detection_rate(TPR)": 0.5465,
+    "false_acceptance_rate(FNR)": 0.4535,
+    "specificity(TNR)": null,
+    "false_refusal_rate(FPR)": null,
+    "n_defect_runs": 4600,
+    "n_clean_runs": 0
+   }
+  },
+  "material_bias_missed_cells": [
+   {
+    "cell": "healthy|edge_thinning_end_only_loss_90p",
+    "induced_bias_pp": -323.932,
+    "flag_rate": 0.23,
+    "verdicts": {
+     "COMPARABLE": 154,
+     "PARTIAL": 0,
+     "REFUSE": 46
+    },
+    "oracle_verdict": "COMPARABLE",
+    "oracle_fired": [],
+    "population_edges_end": 18.1
+   },
+   {
+    "cell": "healthy|edge_thinning_end_only_loss_50p",
+    "induced_bias_pp": -179.962,
+    "flag_rate": 0.0,
+    "verdicts": {
+     "COMPARABLE": 200,
+     "PARTIAL": 0,
+     "REFUSE": 0
+    },
+    "oracle_verdict": "COMPARABLE",
+    "oracle_fired": [],
+    "population_edges_end": 90.3
+   },
+   {
+    "cell": "tight|refs_missing_field_10p_end",
+    "induced_bias_pp": -47.461,
+    "flag_rate": 0.095,
+    "verdicts": {
+     "COMPARABLE": 181,
+     "PARTIAL": 1,
+     "REFUSE": 18
+    },
+    "oracle_verdict": "COMPARABLE",
+    "oracle_fired": [],
+    "population_edges_end": 84.6
+   },
+   {
+    "cell": "healthy|refs_missing_field_10p_end",
+    "induced_bias_pp": -35.992,
+    "flag_rate": 0.0,
+    "verdicts": {
+     "COMPARABLE": 200,
+     "PARTIAL": 0,
+     "REFUSE": 0
+    },
+    "oracle_verdict": "COMPARABLE",
+    "oracle_fired": [],
+    "population_edges_end": 162.5
+   },
+   {
+    "cell": "healthy|refs_empty_list_10p_end",
+    "induced_bias_pp": -35.992,
+    "flag_rate": 0.0,
+    "verdicts": {
+     "COMPARABLE": 200,
+     "PARTIAL": 0,
+     "REFUSE": 0
+    },
+    "oracle_verdict": "COMPARABLE",
+    "oracle_fired": [],
+    "population_edges_end": 162.5
+   },
+   {
+    "cell": "healthy|source_partial_big_50p_end",
+    "induced_bias_pp": -26.1,
+    "flag_rate": 0.0,
+    "verdicts": {
+     "COMPARABLE": 200,
+     "PARTIAL": 0,
+     "REFUSE": 0
+    },
+    "oracle_verdict": "COMPARABLE",
+    "oracle_fired": [],
+    "population_edges_end": 140.8
+   },
+   {
+    "cell": "tight|refs_missing_field_5p_end",
+    "induced_bias_pp": -23.731,
+    "flag_rate": 0.09,
+    "verdicts": {
+     "COMPARABLE": 182,
+     "PARTIAL": 0,
+     "REFUSE": 18
+    },
+    "oracle_verdict": "COMPARABLE",
+    "oracle_fired": [],
+    "population_edges_end": 89.3
+   },
+   {
+    "cell": "healthy|refs_missing_field_5p_end",
+    "induced_bias_pp": -17.996,
+    "flag_rate": 0.0,
+    "verdicts": {
+     "COMPARABLE": 200,
+     "PARTIAL": 0,
+     "REFUSE": 0
+    },
+    "oracle_verdict": "COMPARABLE",
+    "oracle_fired": [],
+    "population_edges_end": 171.6
+   },
+   {
+    "cell": "healthy|refs_empty_list_5p_end",
+    "induced_bias_pp": -17.996,
+    "flag_rate": 0.0,
+    "verdicts": {
+     "COMPARABLE": 200,
+     "PARTIAL": 0,
+     "REFUSE": 0
+    },
+    "oracle_verdict": "COMPARABLE",
+    "oracle_fired": [],
+    "population_edges_end": 171.6
+   },
+   {
+    "cell": "healthy|source_partial_big_30p_end",
+    "induced_bias_pp": -14.557,
+    "flag_rate": 0.0,
+    "verdicts": {
+     "COMPARABLE": 200,
+     "PARTIAL": 0,
+     "REFUSE": 0
+    },
+    "oracle_verdict": "COMPARABLE",
+    "oracle_fired": [],
+    "population_edges_end": 156.7
+   },
+   {
+    "cell": "healthy|source_partial_big_20p_end",
+    "induced_bias_pp": -9.375,
+    "flag_rate": 0.0,
+    "verdicts": {
+     "COMPARABLE": 200,
+     "PARTIAL": 0,
+     "REFUSE": 0
+    },
+    "oracle_verdict": "COMPARABLE",
+    "oracle_fired": [],
+    "population_edges_end": 164.7
+   }
+  ]
+ },
+ "dose_response": {
+  "healthy/ref_loss/refs_missing_field": {
+   "unit": "% of end-window citing papers",
+   "clean_baseline_flag_rate": 0.0,
+   "clean_baseline_verdicts": {
+    "COMPARABLE": 200,
+    "PARTIAL": 0,
+    "REFUSE": 0
+   },
+   "dose": [
+    5,
+    10,
+    20,
+    30,
+    50
+   ],
+   "flag_rate": [
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "verdict_dist": [
+    {
+     "COMPARABLE": 200,
+     "PARTIAL": 0,
+     "REFUSE": 0
+    },
+    {
+     "COMPARABLE": 200,
+     "PARTIAL": 0,
+     "REFUSE": 0
+    },
+    {
+     "COMPARABLE": 0,
+     "PARTIAL": 200,
+     "REFUSE": 0
+    },
+    {
+     "COMPARABLE": 0,
+     "PARTIAL": 200,
+     "REFUSE": 0
+    },
+    {
+     "COMPARABLE": 0,
+     "PARTIAL": 0,
+     "REFUSE": 200
+    }
+   ],
+   "oracle_verdict": [
+    "COMPARABLE",
+    "COMPARABLE",
+    "PARTIAL",
+    "PARTIAL",
+    "REFUSE"
+   ],
+   "oracle_fired": [
+    [],
+    [],
+    [
+     "partial:ref_avail<0.8"
+    ],
+    [
+     "partial:ref_avail<0.8"
+    ],
+    [
+     "refuse:ref_avail<0.6"
+    ]
+   ],
+   "sample_oracle_agreement": 1.0,
+   "median_E2_end": [
+    0.0674,
+    0.0637,
+    0.0563,
+    0.0496,
+    0.0356
+   ],
+   "median_ref_avail_end": [
+    0.8726,
+    0.8274,
+    0.7356,
+    0.6437,
+    0.4578
+   ],
+   "median_avg_edges_yr": [
+    57.0,
+    54.0,
+    48.0,
+    42.3,
+    29.7
+   ],
+   "induced_bias_pp": [
+    -17.996,
+    -35.992,
+    -71.985,
+    -107.977,
+    -179.962
+   ],
+   "population_edges_end": [
+    171.6,
+    162.5,
+    144.5,
+    126.4,
+    90.3
+   ],
+   "first_flagged_dose": 20,
+   "blind_zone_upto_dose": 10
+  },
+  "healthy/ref_loss/refs_empty_list": {
+   "unit": "% of end-window citing papers",
+   "clean_baseline_flag_rate": 0.0,
+   "clean_baseline_verdicts": {
+    "COMPARABLE": 200,
+    "PARTIAL": 0,
+    "REFUSE": 0
+   },
+   "dose": [
+    5,
+    10,
+    20,
+    30,
+    50
+   ],
+   "flag_rate": [
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "verdict_dist": [
+    {
+     "COMPARABLE": 200,
+     "PARTIAL": 0,
+     "REFUSE": 0
+    },
+    {
+     "COMPARABLE": 200,
+     "PARTIAL": 0,
+     "REFUSE": 0
+    },
+    {
+     "COMPARABLE": 0,
+     "PARTIAL": 200,
+     "REFUSE": 0
+    },
+    {
+     "COMPARABLE": 0,
+     "PARTIAL": 200,
+     "REFUSE": 0
+    },
+    {
+     "COMPARABLE": 0,
+     "PARTIAL": 0,
+     "REFUSE": 200
+    }
+   ],
+   "oracle_verdict": [
+    "COMPARABLE",
+    "COMPARABLE",
+    "PARTIAL",
+    "PARTIAL",
+    "REFUSE"
+   ],
+   "oracle_fired": [
+    [],
+    [],
+    [
+     "partial:ref_avail<0.8"
+    ],
+    [
+     "partial:ref_avail<0.8"
+    ],
+    [
+     "refuse:ref_avail<0.6"
+    ]
+   ],
+   "sample_oracle_agreement": 1.0,
+   "median_E2_end": [
+    0.0674,
+    0.0637,
+    0.0563,
+    0.0496,
+    0.0356
+   ],
+   "median_ref_avail_end": [
+    0.8726,
+    0.8274,
+    0.7356,
+    0.6437,
+    0.4578
+   ],
+   "median_avg_edges_yr": [
+    57.0,
+    54.0,
+    48.0,
+    42.3,
+    29.7
+   ],
+   "induced_bias_pp": [
+    -17.996,
+    -35.992,
+    -71.985,
+    -107.977,
+    -179.962
+   ],
+   "population_edges_end": [
+    171.6,
+    162.5,
+    144.5,
+    126.4,
+    90.3
+   ],
+   "first_flagged_dose": 20,
+   "blind_zone_upto_dose": 10
+  },
+  "tight/ref_loss/refs_missing_field": {
+   "unit": "% of end-window citing papers",
+   "clean_baseline_flag_rate": 0.09,
+   "clean_baseline_verdicts": {
+    "COMPARABLE": 182,
+    "PARTIAL": 0,
+    "REFUSE": 18
+   },
+   "dose": [
+    5,
+    10,
+    20,
+    30,
+    50
+   ],
+   "flag_rate": [
+    0.09,
+    0.095,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "verdict_dist": [
+    {
+     "COMPARABLE": 182,
+     "PARTIAL": 0,
+     "REFUSE": 18
+    },
+    {
+     "COMPARABLE": 181,
+     "PARTIAL": 1,
+     "REFUSE": 18
+    },
+    {
+     "COMPARABLE": 0,
+     "PARTIAL": 182,
+     "REFUSE": 18
+    },
+    {
+     "COMPARABLE": 0,
+     "PARTIAL": 182,
+     "REFUSE": 18
+    },
+    {
+     "COMPARABLE": 0,
+     "PARTIAL": 0,
+     "REFUSE": 200
+    }
+   ],
+   "oracle_verdict": [
+    "COMPARABLE",
+    "COMPARABLE",
+    "PARTIAL",
+    "PARTIAL",
+    "REFUSE"
+   ],
+   "oracle_fired": [
+    [],
+    [],
+    [
+     "partial:ref_avail<0.8"
+    ],
+    [
+     "partial:ref_avail<0.8"
+    ],
+    [
+     "refuse:ref_avail<0.6"
+    ]
+   ],
+   "sample_oracle_agreement": 1.0,
+   "median_E2_end": [
+    0.0425,
+    0.0402,
+    0.0357,
+    0.0311,
+    0.0228
+   ],
+   "median_ref_avail_end": [
+    0.8694,
+    0.8238,
+    0.732,
+    0.6409,
+    0.4586
+   ],
+   "median_avg_edges_yr": [
+    30.0,
+    28.0,
+    25.7,
+    22.3,
+    16.0
+   ],
+   "induced_bias_pp": [
+    -23.731,
+    -47.461,
+    -94.922,
+    -142.384,
+    -237.306
+   ],
+   "population_edges_end": [
+    89.3,
+    84.6,
+    75.2,
+    65.8,
+    47.0
+   ],
+   "first_flagged_dose": 20,
+   "blind_zone_upto_dose": null
+  },
+  "healthy/ref_loss/refs_missing_field_start_only": {
+   "unit": "% of start-window citing papers",
+   "clean_baseline_flag_rate": 0.0,
+   "clean_baseline_verdicts": {
+    "COMPARABLE": 200,
+    "PARTIAL": 0,
+    "REFUSE": 0
+   },
+   "dose": [
+    30
+   ],
+   "flag_rate": [
+    1.0
+   ],
+   "verdict_dist": [
+    {
+     "COMPARABLE": 0,
+     "PARTIAL": 181,
+     "REFUSE": 19
+    }
+   ],
+   "oracle_verdict": [
+    "PARTIAL"
+   ],
+   "oracle_fired": [
+    [
+     "partial:ref_avail<0.8"
+    ]
+   ],
+   "sample_oracle_agreement": 1.0,
+   "median_E2_end": [
+    0.0704
+   ],
+   "median_ref_avail_end": [
+    0.92
+   ],
+   "median_avg_edges_yr": [
+    60.0
+   ],
+   "induced_bias_pp": [
+    154.253
+   ],
+   "population_edges_end": [
+    180.6
+   ],
+   "first_flagged_dose": 30,
+   "blind_zone_upto_dose": null
+  },
+  "healthy/ref_loss/refs_missing_field_both_windows": {
+   "unit": "% of citing papers, both windows",
+   "clean_baseline_flag_rate": 0.0,
+   "clean_baseline_verdicts": {
+    "COMPARABLE": 200,
+    "PARTIAL": 0,
+    "REFUSE": 0
+   },
+   "dose": [
+    30
+   ],
+   "flag_rate": [
+    1.0
+   ],
+   "verdict_dist": [
+    {
+     "COMPARABLE": 0,
+     "PARTIAL": 181,
+     "REFUSE": 19
+    }
+   ],
+   "oracle_verdict": [
+    "PARTIAL"
+   ],
+   "oracle_fired": [
+    [
+     "partial:ref_avail<0.8"
+    ]
+   ],
+   "sample_oracle_agreement": 1.0,
+   "median_E2_end": [
+    0.0496
+   ],
+   "median_ref_avail_end": [
+    0.6452
+   ],
+   "median_avg_edges_yr": [
+    41.7
+   ],
+   "induced_bias_pp": [
+    0.0
+   ],
+   "population_edges_end": [
+    126.4
+   ],
+   "first_flagged_dose": 30,
+   "blind_zone_upto_dose": null
+  },
+  "healthy/source_loss/source_partial_big": {
+   "unit": "% of large source's end-window papers",
+   "clean_baseline_flag_rate": 0.0,
+   "clean_baseline_verdicts": {
+    "COMPARABLE": 200,
+    "PARTIAL": 0,
+    "REFUSE": 0
+   },
+   "dose": [
+    5,
+    10,
+    20,
+    30,
+    50,
+    100
+   ],
+   "flag_rate": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "verdict_dist": [
+    {
+     "COMPARABLE": 200,
+     "PARTIAL": 0,
+     "REFUSE": 0
+    },
+    {
+     "COMPARABLE": 200,
+     "PARTIAL": 0,
+     "REFUSE": 0
+    },
+    {
+     "COMPARABLE": 200,
+     "PARTIAL": 0,
+     "REFUSE": 0
+    },
+    {
+     "COMPARABLE": 200,
+     "PARTIAL": 0,
+     "REFUSE": 0
+    },
+    {
+     "COMPARABLE": 200,
+     "PARTIAL": 0,
+     "REFUSE": 0
+    },
+    {
+     "COMPARABLE": 0,
+     "PARTIAL": 200,
+     "REFUSE": 0
+    }
+   ],
+   "oracle_verdict": [
+    "COMPARABLE",
+    "COMPARABLE",
+    "COMPARABLE",
+    "COMPARABLE",
+    "COMPARABLE",
+    "PARTIAL"
+   ],
+   "oracle_fired": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+     "partial:source_unqualified(n<15)",
+     "partial:support_gap>10%"
+    ]
+   ],
+   "sample_oracle_agreement": 1.0,
+   "median_E2_end": [
+    0.0699,
+    0.0696,
+    0.0686,
+    0.0681,
+    0.0657,
+    0.0598
+   ],
+   "median_ref_avail_end": [
+    0.9202,
+    0.9199,
+    0.9197,
+    0.9193,
+    0.9194,
+    0.9196
+   ],
+   "median_avg_edges_yr": [
+    59.0,
+    57.7,
+    54.7,
+    51.7,
+    47.3,
+    33.7
+   ],
+   "induced_bias_pp": [
+    -2.23,
+    -4.533,
+    -9.375,
+    -14.557,
+    -26.1,
+    -64.399
+   ],
+   "population_edges_end": [
+    176.6,
+    172.7,
+    164.7,
+    156.7,
+    140.8,
+    101.1
+   ],
+   "first_flagged_dose": 100,
+   "blind_zone_upto_dose": 50
+  },
+  "healthy/source_loss/source_partial_small": {
+   "unit": "% of small source's end-window papers",
+   "clean_baseline_flag_rate": 0.0,
+   "clean_baseline_verdicts": {
+    "COMPARABLE": 200,
+    "PARTIAL": 0,
+    "REFUSE": 0
+   },
+   "dose": [
+    5,
+    10,
+    20,
+    30,
+    50,
+    100
+   ],
+   "flag_rate": [
+    0.0,
+    0.0,
+    0.165,
+    0.55,
+    0.965,
+    1.0
+   ],
+   "verdict_dist": [
+    {
+     "COMPARABLE": 200,
+     "PARTIAL": 0,
+     "REFUSE": 0
+    },
+    {
+     "COMPARABLE": 200,
+     "PARTIAL": 0,
+     "REFUSE": 0
+    },
+    {
+     "COMPARABLE": 167,
+     "PARTIAL": 33,
+     "REFUSE": 0
+    },
+    {
+     "COMPARABLE": 90,
+     "PARTIAL": 110,
+     "REFUSE": 0
+    },
+    {
+     "COMPARABLE": 7,
+     "PARTIAL": 193,
+     "REFUSE": 0
+    },
+    {
+     "COMPARABLE": 0,
+     "PARTIAL": 200,
+     "REFUSE": 0
+    }
+   ],
+   "oracle_verdict": [
+    "COMPARABLE",
+    "COMPARABLE",
+    "COMPARABLE",
+    "PARTIAL",
+    "PARTIAL",
+    "PARTIAL"
+   ],
+   "oracle_fired": [
+    [],
+    [],
+    [],
+    [
+     "partial:source_unqualified(n<15)"
+    ],
+    [
+     "partial:source_unqualified(n<15)"
+    ],
+    [
+     "partial:source_unqualified(n<15)"
+    ]
+   ],
+   "sample_oracle_agreement": 1.0,
+   "median_E2_end": [
+    0.0705,
+    0.0705,
+    0.0705,
+    0.0707,
+    0.0708,
+    0.0714
+   ],
+   "median_ref_avail_end": [
+    0.9199,
+    0.9199,
+    0.9199,
+    0.9198,
+    0.92,
+    0.9195
+   ],
+   "median_avg_edges_yr": [
+    60.0,
+    60.0,
+    60.0,
+    60.0,
+    60.0,
+    59.7
+   ],
+   "induced_bias_pp": [
+    0.143,
+    0.287,
+    0.574,
+    0.862,
+    1.441,
+    2.904
+   ],
+   "population_edges_end": [
+    180.5,
+    180.5,
+    180.4,
+    180.2,
+    180.0,
+    179.4
+   ],
+   "first_flagged_dose": 30,
+   "blind_zone_upto_dose": 10
+  },
+  "tight/source_loss/source_partial_big": {
+   "unit": "% of large source's end-window papers",
+   "clean_baseline_flag_rate": 0.09,
+   "clean_baseline_verdicts": {
+    "COMPARABLE": 182,
+    "PARTIAL": 0,
+    "REFUSE": 18
+   },
+   "dose": [
+    100
+   ],
+   "flag_rate": [
+    1.0
+   ],
+   "verdict_dist": [
+    {
+     "COMPARABLE": 0,
+     "PARTIAL": 182,
+     "REFUSE": 18
+    }
+   ],
+   "oracle_verdict": [
+    "PARTIAL"
+   ],
+   "oracle_fired": [
+    [
+     "partial:source_unqualified(n<15)"
+    ]
+   ],
+   "sample_oracle_agreement": 1.0,
+   "median_E2_end": [
+    0.0381
+   ],
+   "median_ref_avail_end": [
+    0.9161
+   ],
+   "median_avg_edges_yr": [
+    21.0
+   ],
+   "induced_bias_pp": [
+    -114.01
+   ],
+   "population_edges_end": [
+    64.0
+   ],
+   "first_flagged_dose": 100,
+   "blind_zone_upto_dose": null
+  },
+  "healthy/edge_loss/edge_thinning": {
+   "unit": "% of target edges removed",
+   "clean_baseline_flag_rate": 0.0,
+   "clean_baseline_verdicts": {
+    "COMPARABLE": 200,
+    "PARTIAL": 0,
+    "REFUSE": 0
+   },
+   "dose": [
+    10,
+    30,
+    50,
+    70,
+    90,
+    95,
+    99
+   ],
+   "flag_rate": [
+    0.0,
+    0.0,
+    0.0,
+    0.41,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "verdict_dist": [
+    {
+     "COMPARABLE": 200,
+     "PARTIAL": 0,
+     "REFUSE": 0
+    },
+    {
+     "COMPARABLE": 200,
+     "PARTIAL": 0,
+     "REFUSE": 0
+    },
+    {
+     "COMPARABLE": 200,
+     "PARTIAL": 0,
+     "REFUSE": 0
+    },
+    {
+     "COMPARABLE": 118,
+     "PARTIAL": 0,
+     "REFUSE": 82
+    },
+    {
+     "COMPARABLE": 0,
+     "PARTIAL": 0,
+     "REFUSE": 200
+    },
+    {
+     "COMPARABLE": 0,
+     "PARTIAL": 0,
+     "REFUSE": 200
+    },
+    {
+     "COMPARABLE": 0,
+     "PARTIAL": 0,
+     "REFUSE": 200
+    }
+   ],
+   "oracle_verdict": [
+    "COMPARABLE",
+    "COMPARABLE",
+    "COMPARABLE",
+    "COMPARABLE",
+    "REFUSE",
+    "REFUSE",
+    "REFUSE"
+   ],
+   "oracle_fired": [
+    [],
+    [],
+    [],
+    [],
+    [
+     "refuse:E2_start<1%"
+    ],
+    [
+     "refuse:E2_start<1%",
+     "refuse:E2_end<1%",
+     "refuse:avg_edges_yr<5"
+    ],
+    [
+     "refuse:E2_start<1%",
+     "refuse:E2_end<1%",
+     "refuse:avg_edges_yr<5"
+    ]
+   ],
+   "sample_oracle_agreement": 1.0,
+   "median_E2_end": [
+    0.0674,
+    0.0593,
+    0.0481,
+    0.0326,
+    0.0126,
+    0.0067,
+    0.0007
+   ],
+   "median_ref_avail_end": [
+    0.92,
+    0.92,
+    0.92,
+    0.92,
+    0.92,
+    0.92,
+    0.92
+   ],
+   "median_avg_edges_yr": [
+    53.7,
+    42.0,
+    30.3,
+    17.7,
+    6.0,
+    3.0,
+    0.7
+   ],
+   "induced_bias_pp": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -0.0,
+    0.0,
+    0.0
+   ],
+   "population_edges_end": [
+    162.5,
+    126.4,
+    90.3,
+    54.2,
+    18.1,
+    9.0,
+    1.8
+   ],
+   "first_flagged_dose": 90,
+   "blind_zone_upto_dose": 50
+  },
+  "tight/edge_loss/edge_thinning": {
+   "unit": "% of target edges removed",
+   "clean_baseline_flag_rate": 0.09,
+   "clean_baseline_verdicts": {
+    "COMPARABLE": 182,
+    "PARTIAL": 0,
+    "REFUSE": 18
+   },
+   "dose": [
+    10,
+    30,
+    50,
+    70,
+    90,
+    95,
+    99
+   ],
+   "flag_rate": [
+    0.145,
+    0.475,
+    0.86,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "verdict_dist": [
+    {
+     "COMPARABLE": 171,
+     "PARTIAL": 0,
+     "REFUSE": 29
+    },
+    {
+     "COMPARABLE": 105,
+     "PARTIAL": 0,
+     "REFUSE": 95
+    },
+    {
+     "COMPARABLE": 28,
+     "PARTIAL": 0,
+     "REFUSE": 172
+    },
+    {
+     "COMPARABLE": 0,
+     "PARTIAL": 0,
+     "REFUSE": 200
+    },
+    {
+     "COMPARABLE": 0,
+     "PARTIAL": 0,
+     "REFUSE": 200
+    },
+    {
+     "COMPARABLE": 0,
+     "PARTIAL": 0,
+     "REFUSE": 200
+    },
+    {
+     "COMPARABLE": 0,
+     "PARTIAL": 0,
+     "REFUSE": 200
+    }
+   ],
+   "oracle_verdict": [
+    "COMPARABLE",
+    "COMPARABLE",
+    "REFUSE",
+    "REFUSE",
+    "REFUSE",
+    "REFUSE",
+    "REFUSE"
+   ],
+   "oracle_fired": [
+    [],
+    [],
+    [
+     "refuse:E2_start<1%"
+    ],
+    [
+     "refuse:E2_start<1%"
+    ],
+    [
+     "refuse:E2_start<1%",
+     "refuse:E2_end<1%",
+     "refuse:avg_edges_yr<5"
+    ],
+    [
+     "refuse:E2_start<1%",
+     "refuse:E2_end<1%",
+     "refuse:avg_edges_yr<5"
+    ],
+    [
+     "refuse:E2_start<1%",
+     "refuse:E2_end<1%",
+     "refuse:avg_edges_yr<5"
+    ]
+   ],
+   "sample_oracle_agreement": 1.0,
+   "median_E2_end": [
+    0.0418,
+    0.0357,
+    0.0281,
+    0.019,
+    0.0068,
+    0.0038,
+    0.0008
+   ],
+   "median_ref_avail_end": [
+    0.9157,
+    0.9157,
+    0.9157,
+    0.9157,
+    0.9157,
+    0.9157,
+    0.9157
+   ],
+   "median_avg_edges_yr": [
+    28.3,
+    22.3,
+    16.0,
+    9.7,
+    3.0,
+    1.7,
+    0.3
+   ],
+   "induced_bias_pp": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "population_edges_end": [
+    84.6,
+    65.8,
+    47.0,
+    28.2,
+    9.4,
+    4.7,
+    0.9
+   ],
+   "first_flagged_dose": 50,
+   "blind_zone_upto_dose": null
+  },
+  "healthy/edge_loss/edge_thinning_end_only": {
+   "unit": "% of end-window target edges removed",
+   "clean_baseline_flag_rate": 0.0,
+   "clean_baseline_verdicts": {
+    "COMPARABLE": 200,
+    "PARTIAL": 0,
+    "REFUSE": 0
+   },
+   "dose": [
+    50,
+    90,
+    99
+   ],
+   "flag_rate": [
+    0.0,
+    0.23,
+    1.0
+   ],
+   "verdict_dist": [
+    {
+     "COMPARABLE": 200,
+     "PARTIAL": 0,
+     "REFUSE": 0
+    },
+    {
+     "COMPARABLE": 154,
+     "PARTIAL": 0,
+     "REFUSE": 46
+    },
+    {
+     "COMPARABLE": 0,
+     "PARTIAL": 0,
+     "REFUSE": 200
+    }
+   ],
+   "oracle_verdict": [
+    "COMPARABLE",
+    "COMPARABLE",
+    "REFUSE"
+   ],
+   "oracle_fired": [
+    [],
+    [],
+    [
+     "refuse:E2_end<1%",
+     "refuse:avg_edges_yr<5"
+    ]
+   ],
+   "sample_oracle_agreement": 1.0,
+   "median_E2_end": [
+    0.0474,
+    0.0126,
+    0.0015
+   ],
+   "median_ref_avail_end": [
+    0.92,
+    0.92,
+    0.92
+   ],
+   "median_avg_edges_yr": [
+    29.7,
+    6.0,
+    0.7
+   ],
+   "induced_bias_pp": [
+    -179.962,
+    -323.932,
+    -356.325
+   ],
+   "population_edges_end": [
+    90.3,
+    18.1,
+    1.8
+   ],
+   "first_flagged_dose": 99,
+   "blind_zone_upto_dose": 50
+  }
+ },
+ "missing_field_vs_empty_list": {
+  "5p": {
+   "identical_verdicts": true,
+   "identical_medians": true,
+   "note": "paired mirror (same seed): the frozen statistics have no channel separating a missing field from an empty list"
+  },
+  "10p": {
+   "identical_verdicts": true,
+   "identical_medians": true,
+   "note": "paired mirror (same seed): the frozen statistics have no channel separating a missing field from an empty list"
+  },
+  "20p": {
+   "identical_verdicts": true,
+   "identical_medians": true,
+   "note": "paired mirror (same seed): the frozen statistics have no channel separating a missing field from an empty list"
+  },
+  "30p": {
+   "identical_verdicts": true,
+   "identical_medians": true,
+   "note": "paired mirror (same seed): the frozen statistics have no channel separating a missing field from an empty list"
+  },
+  "50p": {
+   "identical_verdicts": true,
+   "identical_medians": true,
+   "note": "paired mirror (same seed): the frozen statistics have no channel separating a missing field from an empty list"
+  }
+ },
+ "invariance": {
+  "raw_pipeline": {
+   "identity": {
+    "desc": "none (baseline)",
+    "runs": 25,
+    "exact_matches": 25,
+    "mismatch_sources": [],
+    "verdict_identical": true
+   },
+   "refs_shuffled": {
+    "desc": "reference order shuffled within every paper",
+    "runs": 25,
+    "exact_matches": 25,
+    "mismatch_sources": [],
+    "verdict_identical": true
+   },
+   "ids_shifted": {
+    "desc": "all work IDs shifted by a constant (consistent bijection)",
+    "runs": 25,
+    "exact_matches": 25,
+    "mismatch_sources": [],
+    "verdict_identical": true
+   },
+   "nontarget_refs_appended": {
+    "desc": "3 distinct non-target references appended to every paper with refs",
+    "runs": 25,
+    "exact_matches": 25,
+    "mismatch_sources": [],
+    "verdict_identical": true
+   },
+   "target_pool_extended": {
+    "desc": "500 never-cited works added to the cited-side pool",
+    "runs": 25,
+    "exact_matches": 25,
+    "mismatch_sources": [],
+    "verdict_identical": true
+   },
+   "year_relabel_within_window": {
+    "desc": "publication years permuted within each window",
+    "runs": 25,
+    "exact_matches": 25,
+    "mismatch_sources": [],
+    "verdict_identical": true
+   }
+  },
+  "all_exact": true,
+  "all_verdicts_identical": true,
+  "null_vs_empty_raw_path": {
+   "frac": 0.3,
+   "runs": 25,
+   "cells_identical": 25,
+   "null_counts": [
+    429,
+    388,
+    414,
+    402,
+    429,
+    417,
+    398,
+    410,
+    384,
+    405,
+    400,
+    383,
+    442,
+    404,
+    450,
+    417,
+    414,
+    412,
+    407,
+    408,
+    383,
+    405,
+    395,
+    422,
+    403
+   ],
+   "empty_counts": [
+    676,
+    659,
+    663,
+    643,
+    644,
+    658,
+    612,
+    647,
+    631,
+    648,
+    635,
+    630,
+    711,
+    638,
+    674,
+    675,
+    635,
+    649,
+    634,
+    650,
+    614,
+    624,
+    633,
+    672,
+    639
+   ],
+   "verdicts": {
+    "empty": "PARTIAL",
+    "null": "PARTIAL"
+   },
+   "note": "missing field (referenced_works -> None) vs explicit empty list, paired on the same seed; raw provenance is separable at the record layer, the frozen statistics are not"
+  }
+ },
+ "real_anchor": {
+  "truth": "clean (no injection; real corpus)",
+  "verdict": "COMPARABLE",
+  "fired": [],
+  "stats": {
+   "E2": [
+    0.01435,
+    0.0448
+   ],
+   "ref_avail": [
+    0.8721,
+    0.9157
+   ],
+   "avg_edges_yr": 31.3,
+   "n_sources_ok": 5,
+   "support_gap": 0
+  },
+  "per_source": {
+   "start": {
+    "S203860005": {
+     "n": 152,
+     "edges": 7,
+     "particip": 6,
+     "ref_avail": 0.9145
+    },
+    "S23254222": {
+     "n": 819,
+     "edges": 12,
+     "particip": 12,
+     "ref_avail": 0.8877
+    },
+    "S88935262": {
+     "n": 191,
+     "edges": 2,
+     "particip": 2,
+     "ref_avail": 1.0
+    },
+    "S95323914": {
+     "n": 128,
+     "edges": 2,
+     "particip": 2,
+     "ref_avail": 0.7188
+    },
+    "S95464858": {
+     "n": 243,
+     "edges": 0,
+     "particip": 0,
+     "ref_avail": 0.7737
+    }
+   },
+   "end": {
+    "S203860005": {
+     "n": 137,
+     "edges": 30,
+     "particip": 13,
+     "ref_avail": 0.9927
+    },
+    "S23254222": {
+     "n": 320,
+     "edges": 25,
+     "particip": 14,
+     "ref_avail": 0.9812
+    },
+    "S88935262": {
+     "n": 282,
+     "edges": 14,
+     "particip": 11,
+     "ref_avail": 0.9894
+    },
+    "S95323914": {
+     "n": 306,
+     "edges": 12,
+     "particip": 12,
+     "ref_avail": 0.7614
+    },
+    "S95464858": {
+     "n": 272,
+     "edges": 13,
+     "particip": 9,
+     "ref_avail": 0.8971
+    }
+   }
+  },
+  "note": "anchor only -- this is the corpus the criteria were built on; it is not evidence"
+ },
+ "archived_fidelity": {
+  "available": true,
+  "source": "research/panels/out/defect_injection.json (read-only)",
+  "reproduced": {
+   "clean": {
+    "verdict": "COMPARABLE",
+    "stats": {
+     "E2": [
+      0.01435,
+      0.0448
+     ],
+     "ref_avail": [
+      0.8721,
+      0.9157
+     ],
+     "avg_edges_yr": 31.3,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "source_masked": {
+    "verdict": "PARTIAL",
+    "stats": {
+     "E2": [
+      0.01435,
+      0.03898
+     ],
+     "ref_avail": [
+      0.8721,
+      0.9068
+     ],
+     "avg_edges_yr": 21.3,
+     "n_sources_ok": 4,
+     "support_gap": 0.0992
+    }
+   },
+   "refs_missing_30p": {
+    "verdict": "PARTIAL",
+    "stats": {
+     "E2": [
+      0.01435,
+      0.02809
+     ],
+     "ref_avail": [
+      0.8721,
+      0.6295
+     ],
+     "avg_edges_yr": 19.3,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   },
+   "edges_decimated": {
+    "verdict": "REFUSE",
+    "stats": {
+     "E2": [
+      0.00196,
+      0.00532
+     ],
+     "ref_avail": [
+      0.8721,
+      0.9157
+     ],
+     "avg_edges_yr": 2.3,
+     "n_sources_ok": 5,
+     "support_gap": 0
+    }
+   }
+  },
+  "diff": {
+   "clean": {
+    "archived_verdict": "COMPARABLE",
+    "reproduced_verdict": "COMPARABLE",
+    "verdict_match": true,
+    "stats_match": true
+   },
+   "source_masked": {
+    "archived_verdict": "PARTIAL",
+    "reproduced_verdict": "PARTIAL",
+    "verdict_match": true,
+    "stats_match": true
+   },
+   "refs_missing_30p": {
+    "archived_verdict": "PARTIAL",
+    "reproduced_verdict": "PARTIAL",
+    "verdict_match": true,
+    "stats_match": true
+   },
+   "edges_decimated": {
+    "archived_verdict": "REFUSE",
+    "reproduced_verdict": "REFUSE",
+    "verdict_match": true,
+    "stats_match": true
+   }
+  },
+  "all_match": true
+ },
+ "calibration_check": {
+  "note": "population (infinite-sample) margins of the tight synthetic profile vs the measured real econ->psych panel under the same windows",
+  "E2_real_vs_tight": {
+   "real": [
+    0.01435,
+    0.0448
+   ],
+   "tight_population": [
+    0.01438,
+    0.04478
+   ]
+  },
+  "ref_avail_real_vs_tight": {
+   "real": [
+    0.8721,
+    0.9157
+   ],
+   "tight_population": [
+    0.8721,
+    0.9157
+   ]
+  },
+  "avg_edges_yr_real_vs_tight": {
+   "real": 31.3,
+   "tight_population": 31.3
+  },
+  "max_abs_gap": 3.0000000000000512e-05
+ },
+ "probes": {
+  "single_source_panel": {
+   "cell": "healthy|single_source_panel",
+   "verdicts": {
+    "COMPARABLE": 0,
+    "PARTIAL": 0,
+    "REFUSE": 200
+   },
+   "trigger": {
+    "refuse:qualified_sources<2": 200
+   },
+   "note": "U1_formalization.md section 4 documents 'single-source citing side -> PARTIAL'; in the frozen order the REFUSE clause qualified_sources<2 is evaluated first, so the PARTIAL single-source branch is shadowed. Recorded as measured (audit finding 2 confirmed); no threshold was modified."
+  },
+  "source_absent_both_windows": {
+   "cell": "healthy|source_absent_both_windows",
+   "verdicts": {
+    "COMPARABLE": 200,
+    "PARTIAL": 0,
+    "REFUSE": 0
+   },
+   "note": "a source silently absent from BOTH windows leaves a consistently smaller panel; cross-window comparability is unaffected (no support gap), so a COMPARABLE verdict here is correct and panel-completeness is outside the criteria's contract."
+  }
+ },
+ "limits": [
+  "Synthetic DGP calibrated to / mirrored on one direction (econ->psych); cross-direction performance is not measured.",
+  "Per-source DGP is a hurdle (0 with prob 1-p, else 1+Poisson(e1/p-1)) matched to two observable margins (e1, p); it does not reproduce the full edge-count tail or any correlation between reference-list length and target propensity.",
+  "Defects are injected at the table level; real acquisition failure modes (ID resolution errors, deduplication, per-source coverage windows) are not simulated.",
+  "Truth labels are generative (an injection was applied); they are not an external adjudication of which doses *scientifically* matter.",
+  "Real-data anchor is the corpus the criteria were built on and is reported as an anchor, not as evidence.",
+  "UNKNOWN exists only on the truth side (void worlds); the frozen criteria themselves have no UNKNOWN output state."
+ ]
+}

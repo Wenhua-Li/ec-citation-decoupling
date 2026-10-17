@@ -1,0 +1,80 @@
+[
+ {
+  "field": "economics",
+  "sid": "S23254222",
+  "journal": "American Economic Review",
+  "downloaded": 4868
+ },
+ {
+  "field": "economics",
+  "sid": "S203860005",
+  "journal": "The Quarterly Journal of Economics",
+  "downloaded": 989
+ },
+ {
+  "field": "economics",
+  "sid": "S95323914",
+  "journal": "Journal of Political Economy",
+  "downloaded": 1489
+ },
+ {
+  "field": "economics",
+  "sid": "S95464858",
+  "journal": "Econometrica",
+  "downloaded": 1835
+ },
+ {
+  "field": "economics",
+  "sid": "S88935262",
+  "journal": "The Review of Economic Studies",
+  "downloaded": 1282
+ },
+ {
+  "field": "psychology",
+  "sid": "S58854535",
+  "journal": "Psychological Science",
+  "downloaded": 4324
+ },
+ {
+  "field": "psychology",
+  "sid": "S62013203",
+  "journal": "Journal of Experimental Psychology: General",
+  "downloaded": 2907
+ },
+ {
+  "field": "psychology",
+  "sid": "S88198767",
+  "journal": "Cognition",
+  "downloaded": 4135
+ },
+ {
+  "field": "psychology",
+  "sid": "S35223124",
+  "journal": "Psychological Review",
+  "downloaded": 1192
+ },
+ {
+  "field": "mathematics",
+  "sid": "S45918994",
+  "journal": "Annals of Mathematics",
+  "downloaded": 1097
+ },
+ {
+  "field": "mathematics",
+  "sid": "S98347115",
+  "journal": "Inventiones Mathematicae",
+  "downloaded": 1317
+ },
+ {
+  "field": "mathematics",
+  "sid": "S130224168",
+  "journal": "Journal of the American Mathematical Society",
+  "downloaded": 638
+ },
+ {
+  "field": "mathematics",
+  "sid": "S171170845",
+  "journal": "Duke Mathematical Journal",
+  "downloaded": 1330
+ }
+]
