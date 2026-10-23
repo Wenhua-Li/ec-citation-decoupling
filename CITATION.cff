@@ -1,8 +1,10 @@
 cff-version: 1.2.0
 message: >-
-  If you use this repository, please cite it together with the paper once it
-  is published.
-title: "One-way decoupling of a field's citation exchange at its output peak — analysis code and derived data"
+  If you use this repository, please cite the associated paper and record the
+  repository version or commit you used. Code is released under MIT and the
+  derived data and documentation under CC BY 4.0; see LICENSE and
+  LICENSE-DATA.md.
+title: "The outward turn behind an apparent collapse in cross-field citations — analysis code and derived data"
 authors:
   - family-names: Li
     given-names: Wenhua
@@ -16,18 +18,16 @@ authors:
   - family-names: Lu
     given-names: Xin
     orcid: "https://orcid.org/0000-0002-3547-6493"
-version: 2.0.0
-date-released: "2026-10-17"
-# RELEASE-TIME: 建仓后填 identifier 与 repository-url（推送前必改）
-# identifier:
-#   type: url
-#   value: "https://doi.org/10.5281/zenodo.XXXXXXX"
+version: 3.0.0
+date-released: "2026-10-23"
 repository-code: "https://github.com/Wenhua-Li/ec-citation-decoupling"
 type: dataset
 keywords:
   - science of science
   - citation analysis
-  - disruption index
+  - cross-field citation
+  - research evaluation
+  - bibliometrics
   - evolutionary computation
-  - field vitality
+  - measurement error
 license: MIT

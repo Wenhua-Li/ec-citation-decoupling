@@ -1,0 +1,387 @@
+{
+ "support": [
+  "Applied Soft Computing",
+  "Computers and Operations Research",
+  "Engineering Applications of Artificial Intelligence",
+  "European Journal of Operational Research",
+  "Expert Systems with Applications",
+  "IEEE Transactions on Fuzzy Systems",
+  "Information Sciences"
+ ],
+ "weights": {
+  "forward": {
+   "Applied Soft Computing": 0.15070040668775417,
+   "Computers and Operations Research": 0.04609127880704925,
+   "Engineering Applications of Artificial Intelligence": 0.06416629010393131,
+   "European Journal of Operational Research": 0.13239945774966108,
+   "Expert Systems with Applications": 0.27315860822413013,
+   "IEEE Transactions on Fuzzy Systems": 0.07117035698147312,
+   "Information Sciences": 0.2623136014460009
+  },
+  "reverse": {
+   "Applied Soft Computing": 0.36608863198458574,
+   "Computers and Operations Research": 0.0838150289017341,
+   "Engineering Applications of Artificial Intelligence": 0.07321772639691715,
+   "European Journal of Operational Research": 0.05491329479768786,
+   "Expert Systems with Applications": 0.279383429672447,
+   "IEEE Transactions on Fuzzy Systems": 0.010597302504816955,
+   "Information Sciences": 0.13198458574181118
+  }
+ },
+ "series": {
+  "forward": {
+   "obs": {
+    "2021": 0.019846,
+    "2024": 0.018373,
+    "2025": 0.016044
+   },
+   "lo": {
+    "2021": 0.013707,
+    "2024": 0.012687,
+    "2025": 0.011316
+   },
+   "hi": {
+    "2021": 0.358887,
+    "2024": 0.352939,
+    "2025": 0.366761
+   }
+  },
+  "reverse": {
+   "obs": {
+    "2021": 0.065399,
+    "2024": 0.073245,
+    "2025": 0.06873
+   },
+   "lo": {
+    "2021": 0.047429,
+    "2024": 0.055132,
+    "2025": 0.051492
+   },
+   "hi": {
+    "2021": 0.345158,
+    "2024": 0.309376,
+    "2025": 0.308557
+   }
+  }
+ },
+ "gap": {
+  "2021->2024": {
+   "right_censored": false,
+   "gap_observed_pp": 19.421702,
+   "gap_scenario_all_nontarget_pp": 23.683566,
+   "gap_scenario_all_target_pp": -8.70956,
+   "gap_worstcase_min_pp": -2558.926771,
+   "gap_worstcase_max_pp": 648.753323,
+   "forward_rel_obs": -0.074237,
+   "reverse_rel_obs": 0.11998,
+   "forward_rel_range": [
+    -0.96465,
+    24.748997
+   ],
+   "reverse_rel_range": [
+    -0.840271,
+    5.522883
+   ]
+  },
+  "2021->2025": {
+   "right_censored": true,
+   "gap_observed_pp": 24.254815,
+   "gap_scenario_all_nontarget_pp": 26.011051,
+   "gap_scenario_all_target_pp": -12.798256,
+   "gap_worstcase_min_pp": -2660.819752,
+   "gap_worstcase_max_pp": 647.407781,
+   "forward_rel_obs": -0.191615,
+   "reverse_rel_obs": 0.050933,
+   "forward_rel_range": [
+    -0.96847,
+    25.757381
+   ],
+   "reverse_rel_range": [
+    -0.850816,
+    5.505608
+   ]
+  }
+ },
+ "consistency_checks": {
+  "doi_row_rate": {
+   "forward|2019": {
+    "mine": 0.633505,
+    "frozen": 0.633505,
+    "abs_diff": 0.0
+   },
+   "forward|2021": {
+    "mine": 0.667892,
+    "frozen": 0.667892,
+    "abs_diff": 0.0
+   },
+   "forward|2024": {
+    "mine": 0.648924,
+    "frozen": 0.648924,
+    "abs_diff": 0.0
+   },
+   "forward|2025": {
+    "mine": 0.609198,
+    "frozen": 0.609198,
+    "abs_diff": 0.0
+   },
+   "reverse|2019": {
+    "mine": 0.699613,
+    "frozen": 0.699613,
+    "abs_diff": 0.0
+   },
+   "reverse|2021": {
+    "mine": 0.718675,
+    "frozen": 0.718675,
+    "abs_diff": 0.0
+   },
+   "reverse|2024": {
+    "mine": 0.745818,
+    "frozen": 0.745818,
+    "abs_diff": 0.0
+   },
+   "reverse|2025": {
+    "mine": 0.74427,
+    "frozen": 0.74427,
+    "abs_diff": 0.0
+   }
+  },
+  "e3_obs_rel_change": {
+   "forward": {
+    "mine": -0.074237,
+    "frozen": -0.0742,
+    "abs_diff": 3.7e-05
+   },
+   "reverse": {
+    "mine": 0.11998,
+    "frozen": 0.12,
+    "abs_diff": 2e-05
+   }
+  }
+ },
+ "e1_e2_outer_bound_diagnostics": {
+  "2021->2024": {
+   "forward": {
+    "e1_rel_obs": -0.018252,
+    "e1_rel_hi": -0.003721,
+    "e2_rel_obs": -0.057903,
+    "e2_rel_hi": -0.013863
+   },
+   "reverse": {
+    "e1_rel_obs": 0.147068,
+    "e1_rel_hi": -0.081687,
+    "e2_rel_obs": 0.034118,
+    "e2_rel_hi": -0.000963
+   }
+  },
+  "2021->2025": {
+   "forward": {
+    "e1_rel_obs": -0.160957,
+    "e1_rel_hi": 0.018087,
+    "e2_rel_obs": -0.164048,
+    "e2_rel_hi": -0.005699
+   },
+   "reverse": {
+    "e1_rel_obs": 0.091502,
+    "e1_rel_hi": -0.100416,
+    "e2_rel_obs": 0.082128,
+    "e2_rel_hi": -0.000452
+   }
+  }
+ },
+ "tipping_point": {
+  "2021->2024": {
+   "diagonal_flip_lambda": 0.239484,
+   "diagonal_gap_at_lambda_0_pp": 23.683566,
+   "diagonal_gap_at_lambda_1_pp": -8.70956,
+   "frontier": [
+    {
+     "lambda_forward": 0.0,
+     "lambda_reverse_breakeven": 0.526854
+    },
+    {
+     "lambda_forward": 0.05,
+     "lambda_reverse_breakeven": 0.308048
+    },
+    {
+     "lambda_forward": 0.1,
+     "lambda_reverse_breakeven": 0.269194
+    },
+    {
+     "lambda_forward": 0.15,
+     "lambda_reverse_breakeven": 0.253024
+    },
+    {
+     "lambda_forward": 0.2,
+     "lambda_reverse_breakeven": 0.244143
+    },
+    {
+     "lambda_forward": 0.25,
+     "lambda_reverse_breakeven": 0.238499
+    },
+    {
+     "lambda_forward": 0.3,
+     "lambda_reverse_breakeven": 0.234659
+    },
+    {
+     "lambda_forward": 0.35,
+     "lambda_reverse_breakeven": 0.231805
+    },
+    {
+     "lambda_forward": 0.4,
+     "lambda_reverse_breakeven": 0.22962
+    },
+    {
+     "lambda_forward": 0.45,
+     "lambda_reverse_breakeven": 0.227953
+    },
+    {
+     "lambda_forward": 0.5,
+     "lambda_reverse_breakeven": 0.226594
+    },
+    {
+     "lambda_forward": 0.55,
+     "lambda_reverse_breakeven": 0.225467
+    },
+    {
+     "lambda_forward": 0.6,
+     "lambda_reverse_breakeven": 0.224515
+    },
+    {
+     "lambda_forward": 0.65,
+     "lambda_reverse_breakeven": 0.223701
+    },
+    {
+     "lambda_forward": 0.7,
+     "lambda_reverse_breakeven": 0.222998
+    },
+    {
+     "lambda_forward": 0.75,
+     "lambda_reverse_breakeven": 0.222383
+    },
+    {
+     "lambda_forward": 0.8,
+     "lambda_reverse_breakeven": 0.221842
+    },
+    {
+     "lambda_forward": 0.85,
+     "lambda_reverse_breakeven": 0.221362
+    },
+    {
+     "lambda_forward": 0.9,
+     "lambda_reverse_breakeven": 0.220932
+    },
+    {
+     "lambda_forward": 0.95,
+     "lambda_reverse_breakeven": 0.220546
+    },
+    {
+     "lambda_forward": 1.0,
+     "lambda_reverse_breakeven": 0.220197
+    }
+   ],
+   "diagonal_flip_lambda_e1": 0.205882,
+   "diagonal_flip_lambda_e2": 0.029187
+  },
+  "2021->2025": {
+   "diagonal_flip_lambda": 0.135679,
+   "diagonal_gap_at_lambda_0_pp": 26.011051,
+   "diagonal_gap_at_lambda_1_pp": -12.798256,
+   "frontier": [
+    {
+     "lambda_forward": 0.0,
+     "lambda_reverse_breakeven": null
+    },
+    {
+     "lambda_forward": 0.05,
+     "lambda_reverse_breakeven": 0.306977
+    },
+    {
+     "lambda_forward": 0.1,
+     "lambda_reverse_breakeven": 0.167705
+    },
+    {
+     "lambda_forward": 0.15,
+     "lambda_reverse_breakeven": 0.12725
+    },
+    {
+     "lambda_forward": 0.2,
+     "lambda_reverse_breakeven": 0.107964
+    },
+    {
+     "lambda_forward": 0.25,
+     "lambda_reverse_breakeven": 0.096713
+    },
+    {
+     "lambda_forward": 0.3,
+     "lambda_reverse_breakeven": 0.089253
+    },
+    {
+     "lambda_forward": 0.35,
+     "lambda_reverse_breakeven": 0.084092
+    },
+    {
+     "lambda_forward": 0.4,
+     "lambda_reverse_breakeven": 0.080106
+    },
+    {
+     "lambda_forward": 0.45,
+     "lambda_reverse_breakeven": 0.077179
+    },
+    {
+     "lambda_forward": 0.5,
+     "lambda_reverse_breakeven": 0.074801
+    },
+    {
+     "lambda_forward": 0.55,
+     "lambda_reverse_breakeven": 0.072827
+    },
+    {
+     "lambda_forward": 0.6,
+     "lambda_reverse_breakeven": 0.071161
+    },
+    {
+     "lambda_forward": 0.65,
+     "lambda_reverse_breakeven": 0.069759
+    },
+    {
+     "lambda_forward": 0.7,
+     "lambda_reverse_breakeven": 0.06863
+    },
+    {
+     "lambda_forward": 0.75,
+     "lambda_reverse_breakeven": 0.067644
+    },
+    {
+     "lambda_forward": 0.8,
+     "lambda_reverse_breakeven": 0.066776
+    },
+    {
+     "lambda_forward": 0.85,
+     "lambda_reverse_breakeven": 0.066005
+    },
+    {
+     "lambda_forward": 0.9,
+     "lambda_reverse_breakeven": 0.065316
+    },
+    {
+     "lambda_forward": 0.95,
+     "lambda_reverse_breakeven": 0.064697
+    },
+    {
+     "lambda_forward": 1.0,
+     "lambda_reverse_breakeven": 0.064137
+    }
+   ],
+   "diagonal_flip_lambda_e1": 0.13734,
+   "diagonal_flip_lambda_e2": 0.071398
+  }
+ },
+ "spec": {
+  "support_rule": "non-empty paper pool in 2021/2024/2025 in both directions (registered 7-source common support)",
+  "weights": "fixed 2021 composition weights per direction (main spec)",
+  "bracket_level": "reference ROW level (unresolved rows = n_rows_all - n_rows_doi); conservative/outer",
+  "queries": "exactly two SELECTs via ecdb.raw_sql (read-only URI); no writes",
+  "interpretation": "worst-case bracket on the observables under extreme assignments of unresolved references; NOT a correction, imputation or re-weighting of the headline estimates",
+  "tipping_point_semantics": "lambda = share of unresolved reference rows assigned to the target domain; E1/E3 use lambda*u continuously; E2 uses a per-paper threshold (a paper gains a target edge iff lambda*u >= 1), so the E2 flip point is stated in threshold semantics and is not directly comparable to E1/E3"
+ }
+}

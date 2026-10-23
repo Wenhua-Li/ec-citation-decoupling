@@ -1,0 +1,395 @@
+{
+ "method_source": "archive/packages/r3a/r3a_execute.py:57-118 replicated verbatim (read-only); frozen patterns imported from the byte-identical surviving registry copy",
+ "periods": {
+  "G1": "2003-2007",
+  "G2": "2019-2022"
+ },
+ "units": "authors aggregated by name_display; debut year = earliest corpus publication year; EC-direction debut = majority of debut-year papers EC; family = modal family of debut-year EC papers, ties to OTHER",
+ "denominators": {
+  "N1_allfield_debuts": 18031,
+  "N2_allfield_debuts": 53184,
+  "M1_ec_debuts": 7365,
+  "M2_ec_debuts": 12946
+ },
+ "validity_other_rate_papers": 0.026,
+ "subfamilies": [
+  {
+   "family": "ga",
+   "classified": true,
+   "n_G1": 1725,
+   "n_G2": 1185,
+   "share_corpus_G1": 0.095669,
+   "share_corpus_G2": 0.022281,
+   "share_ec_debut_G1": 0.234216,
+   "share_ec_debut_G2": 0.091534,
+   "rel_change_corpus": 0.7671,
+   "rel_change_ec_debut": -0.6092,
+   "eligible": true,
+   "corpus_test": {
+    "z": 43.017,
+    "p_raw_one_sided": 0.0,
+    "p_BH": 0.0
+   },
+   "ec_debut_test": {
+    "z": 27.903,
+    "p_two_sided": 0.0,
+    "p_BH": 0.0
+   }
+  },
+  {
+   "family": "general_ec",
+   "classified": true,
+   "n_G1": 1309,
+   "n_G2": 1479,
+   "share_corpus_G1": 0.072597,
+   "share_corpus_G2": 0.027809,
+   "share_ec_debut_G1": 0.177733,
+   "share_ec_debut_G2": 0.114244,
+   "rel_change_corpus": 0.6169,
+   "rel_change_ec_debut": -0.3572,
+   "eligible": true,
+   "corpus_test": {
+    "z": 26.797,
+    "p_raw_one_sided": 0.0,
+    "p_BH": 0.0
+   },
+   "ec_debut_test": {
+    "z": 12.641,
+    "p_two_sided": 0.0,
+    "p_BH": 0.0
+   }
+  },
+  {
+   "family": "emo",
+   "classified": true,
+   "n_G1": 839,
+   "n_G2": 1948,
+   "share_corpus_G1": 0.046531,
+   "share_corpus_G2": 0.036628,
+   "share_ec_debut_G1": 0.113917,
+   "share_ec_debut_G2": 0.150471,
+   "rel_change_corpus": 0.2128,
+   "rel_change_ec_debut": 0.3209,
+   "eligible": true,
+   "corpus_test": {
+    "z": 5.926,
+    "p_raw_one_sided": 0.0,
+    "p_BH": 0.0
+   },
+   "ec_debut_test": {
+    "z": -7.279,
+    "p_two_sided": 0.0,
+    "p_BH": 0.0
+   }
+  },
+  {
+   "family": "particle_swarm",
+   "classified": true,
+   "n_G1": 457,
+   "n_G2": 1773,
+   "share_corpus_G1": 0.025345,
+   "share_corpus_G2": 0.033337,
+   "share_ec_debut_G1": 0.06205,
+   "share_ec_debut_G2": 0.136953,
+   "rel_change_corpus": -0.3153,
+   "rel_change_ec_debut": 1.2071,
+   "eligible": true,
+   "corpus_test": {
+    "z": -5.325,
+    "p_raw_one_sided": 1.0,
+    "p_BH": 1.0
+   },
+   "ec_debut_test": {
+    "z": -16.416,
+    "p_two_sided": 0.0,
+    "p_BH": 0.0
+   }
+  },
+  {
+   "family": "other_swarm_bio",
+   "classified": true,
+   "n_G1": 119,
+   "n_G2": 1697,
+   "share_corpus_G1": 0.0066,
+   "share_corpus_G2": 0.031908,
+   "share_ec_debut_G1": 0.016158,
+   "share_ec_debut_G2": 0.131083,
+   "rel_change_corpus": -3.8347,
+   "rel_change_ec_debut": 7.1128,
+   "eligible": false
+  },
+  {
+   "family": "other_metaheuristic",
+   "classified": true,
+   "n_G1": 509,
+   "n_G2": 714,
+   "share_corpus_G1": 0.028229,
+   "share_corpus_G2": 0.013425,
+   "share_ec_debut_G1": 0.069111,
+   "share_ec_debut_G2": 0.055152,
+   "rel_change_corpus": 0.5244,
+   "rel_change_ec_debut": -0.202,
+   "eligible": true,
+   "corpus_test": {
+    "z": 13.223,
+    "p_raw_one_sided": 0.0,
+    "p_BH": 0.0
+   },
+   "ec_debut_test": {
+    "z": 4.02,
+    "p_two_sided": 5.8e-05,
+    "p_BH": 8.7e-05
+   }
+  },
+  {
+   "family": "OTHER",
+   "classified": false,
+   "n_G1": 472,
+   "n_G2": 720,
+   "share_corpus_G1": 0.026177,
+   "share_corpus_G2": 0.013538,
+   "share_ec_debut_G1": 0.064087,
+   "share_ec_debut_G2": 0.055616,
+   "rel_change_corpus": 0.4828,
+   "rel_change_ec_debut": -0.1322,
+   "eligible": true,
+   "corpus_test": {
+    "z": 11.433,
+    "p_raw_one_sided": 0.0,
+    "p_BH": 0.0
+   },
+   "ec_debut_test": {
+    "z": 2.469,
+    "p_two_sided": 0.013533,
+    "p_BH": 0.013533
+   }
+  },
+  {
+   "family": "genetic_programming",
+   "classified": true,
+   "n_G1": 596,
+   "n_G2": 526,
+   "share_corpus_G1": 0.033054,
+   "share_corpus_G2": 0.00989,
+   "share_ec_debut_G1": 0.080923,
+   "share_ec_debut_G2": 0.04063,
+   "rel_change_corpus": 0.7008,
+   "rel_change_ec_debut": -0.4979,
+   "eligible": true,
+   "corpus_test": {
+    "z": 21.586,
+    "p_raw_one_sided": 0.0,
+    "p_BH": 0.0
+   },
+   "ec_debut_test": {
+    "z": 12.084,
+    "p_two_sided": 0.0,
+    "p_BH": 0.0
+   }
+  },
+  {
+   "family": "differential_evolution",
+   "classified": true,
+   "n_G1": 143,
+   "n_G2": 868,
+   "share_corpus_G1": 0.007931,
+   "share_corpus_G2": 0.016321,
+   "share_ec_debut_G1": 0.019416,
+   "share_ec_debut_G2": 0.067048,
+   "rel_change_corpus": -1.0579,
+   "rel_change_ec_debut": 2.4532,
+   "eligible": false
+  },
+  {
+   "family": "generic_heuristic",
+   "classified": true,
+   "n_G1": 162,
+   "n_G2": 540,
+   "share_corpus_G1": 0.008985,
+   "share_corpus_G2": 0.010153,
+   "share_ec_debut_G1": 0.021996,
+   "share_ec_debut_G2": 0.041712,
+   "rel_change_corpus": -0.1301,
+   "rel_change_ec_debut": 0.8963,
+   "eligible": false
+  },
+  {
+   "family": "memetic_hybrid",
+   "classified": true,
+   "n_G1": 253,
+   "n_G2": 347,
+   "share_corpus_G1": 0.014031,
+   "share_corpus_G2": 0.006525,
+   "share_ec_debut_G1": 0.034352,
+   "share_ec_debut_G2": 0.026804,
+   "rel_change_corpus": 0.535,
+   "rel_change_ec_debut": -0.2197,
+   "eligible": true,
+   "corpus_test": {
+    "z": 9.531,
+    "p_raw_one_sided": 0.0,
+    "p_BH": 0.0
+   },
+   "ec_debut_test": {
+    "z": 3.054,
+    "p_two_sided": 0.002255,
+    "p_BH": 0.002537
+   }
+  },
+  {
+   "family": "ant_colony",
+   "classified": true,
+   "n_G1": 195,
+   "n_G2": 379,
+   "share_corpus_G1": 0.010815,
+   "share_corpus_G2": 0.007126,
+   "share_ec_debut_G1": 0.026477,
+   "share_ec_debut_G2": 0.029275,
+   "rel_change_corpus": 0.3411,
+   "rel_change_ec_debut": 0.1057,
+   "eligible": false
+  },
+  {
+   "family": "evolution_strategies",
+   "classified": true,
+   "n_G1": 235,
+   "n_G2": 311,
+   "share_corpus_G1": 0.013033,
+   "share_corpus_G2": 0.005848,
+   "share_ec_debut_G1": 0.031908,
+   "share_ec_debut_G2": 0.024023,
+   "rel_change_corpus": 0.5513,
+   "rel_change_ec_debut": -0.2471,
+   "eligible": true,
+   "corpus_test": {
+    "z": 9.559,
+    "p_raw_one_sided": 0.0,
+    "p_BH": 0.0
+   },
+   "ec_debut_test": {
+    "z": 3.34,
+    "p_two_sided": 0.000837,
+    "p_BH": 0.001076
+   }
+  },
+  {
+   "family": "neuroevolution",
+   "classified": true,
+   "n_G1": 56,
+   "n_G2": 229,
+   "share_corpus_G1": 0.003106,
+   "share_corpus_G2": 0.004306,
+   "share_ec_debut_G1": 0.007604,
+   "share_ec_debut_G2": 0.017689,
+   "rel_change_corpus": -0.3864,
+   "rel_change_ec_debut": 1.3264,
+   "eligible": false
+  },
+  {
+   "family": "eda",
+   "classified": true,
+   "n_G1": 103,
+   "n_G2": 105,
+   "share_corpus_G1": 0.005712,
+   "share_corpus_G2": 0.001974,
+   "share_ec_debut_G1": 0.013985,
+   "share_ec_debut_G2": 0.008111,
+   "rel_change_corpus": 0.6544,
+   "rel_change_ec_debut": -0.4201,
+   "eligible": false
+  },
+  {
+   "family": "lcs",
+   "classified": true,
+   "n_G1": 139,
+   "n_G2": 39,
+   "share_corpus_G1": 0.007709,
+   "share_corpus_G2": 0.000733,
+   "share_ec_debut_G1": 0.018873,
+   "share_ec_debut_G2": 0.003013,
+   "rel_change_corpus": 0.9049,
+   "rel_change_ec_debut": -0.8404,
+   "eligible": false
+  },
+  {
+   "family": "hyper_heuristic",
+   "classified": true,
+   "n_G1": 22,
+   "n_G2": 65,
+   "share_corpus_G1": 0.00122,
+   "share_corpus_G2": 0.001222,
+   "share_ec_debut_G1": 0.002987,
+   "share_ec_debut_G2": 0.005021,
+   "rel_change_corpus": -0.0017,
+   "rel_change_ec_debut": 0.6808,
+   "eligible": false
+  },
+  {
+   "family": "genetic_fuzzy",
+   "classified": true,
+   "n_G1": 31,
+   "n_G2": 21,
+   "share_corpus_G1": 0.001719,
+   "share_corpus_G2": 0.000395,
+   "share_ec_debut_G1": 0.004209,
+   "share_ec_debut_G2": 0.001622,
+   "rel_change_corpus": 0.7703,
+   "rel_change_ec_debut": -0.6146,
+   "eligible": false
+  }
+ ],
+ "trigger_recheck": {
+  "rule": ">=3 classified eligible families with |rel_change_ec_debut|>=25% and two-sided p<0.05 (raw and BH)",
+  "classified_eligible": [
+   "ga",
+   "general_ec",
+   "emo",
+   "particle_swarm",
+   "other_metaheuristic",
+   "genetic_programming",
+   "memetic_hybrid",
+   "evolution_strategies"
+  ],
+  "n_pass": 5,
+  "pass_families": [
+   {
+    "family": "ga",
+    "rel_change_ec_debut": -0.6092,
+    "p_two_sided": 0.0
+   },
+   {
+    "family": "general_ec",
+    "rel_change_ec_debut": -0.3572,
+    "p_two_sided": 0.0
+   },
+   {
+    "family": "emo",
+    "rel_change_ec_debut": 0.3209,
+    "p_two_sided": 0.0
+   },
+   {
+    "family": "particle_swarm",
+    "rel_change_ec_debut": 1.2071,
+    "p_two_sided": 0.0
+   },
+   {
+    "family": "genetic_programming",
+    "rel_change_ec_debut": -0.4979,
+    "p_two_sided": 0.0
+   }
+  ],
+  "threshold_met": true,
+  "verdict_flip": false
+ },
+ "trigger_input_A_replication": {
+  "cond1_ge3_subfamilies": true,
+  "cond1_all_eligible_decline_ge25_signif_rawBH": false,
+  "cond3_validity_le10pct": true
+ },
+ "consistency": {
+  "counts_vs_archive_r3a": "PASS exact",
+  "denominators_vs_archive": "PASS exact",
+  "other_rate_vs_archive": "PASS exact",
+  "first_choice_yearly_vs_PKG_A": "PASS"
+ }
+}

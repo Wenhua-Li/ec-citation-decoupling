@@ -15,10 +15,10 @@ import urllib.request
 
 MAILTO = "ecmap.project@outlook.com"
 BASE = "https://api.openalex.org"
-# OpenAlex 高级池密钥（用户提供，2026-09-30）：带 api_key 的请求走独立队列。
-# 多 key 轮换：当前 key 预算耗尽（429 含 "Insufficient budget"）自动切换下一个；
-# 全部耗尽后回退礼貌池。环境变量 ECOA_API_KEYS（逗号分隔）可覆盖；置空禁用 key。
-_DEFAULT_KEYS = "vWOKzDo03hTLC4yxo7YP7D,ojFZsZGw70cx69Rstdxi3m,ErXH6fko8sHgUQRV2De8HJ"
+# 默认不使用密钥；可通过环境变量 ECOA_API_KEYS（逗号分隔）提供。
+# 提供多个 key 时轮换使用：当前 key 预算耗尽（429 含 "Insufficient budget"）自动切换下一个；
+# 全部耗尽后回退礼貌池；未提供密钥时走礼貌池（不带 api_key）。
+_DEFAULT_KEYS = ""
 API_KEYS = [k.strip() for k in os.environ.get("ECOA_API_KEYS", _DEFAULT_KEYS).split(",") if k.strip()]
 # 高级池上限 100 req/s，保守取 ~8 req/s；礼貌池模式（无密钥）建议 >=0.22
 MIN_INTERVAL = float(os.environ.get("ECOA_MIN_INTERVAL", "0.12" if API_KEYS else "0.22"))  # 兼容保留；_get 用动态间隔
@@ -28,6 +28,17 @@ CACHE_PATH = os.path.join(HERE, "out", "year_cache.json")
 
 _last = [0.0]
 _year_cache = {}
+
+# 显式代理 opener（2026-10-18）：环境代理在此解析一次，绕开 urlopen 的代理解析歧义
+_PROXY_URL = (os.environ.get("HTTPS_PROXY") or os.environ.get("https_proxy")
+              or os.environ.get("HTTP_PROXY") or os.environ.get("http_proxy") or "").strip()
+if _PROXY_URL:
+    _OPENER = urllib.request.build_opener(
+        urllib.request.ProxyHandler({"http": _PROXY_URL, "https": _PROXY_URL}))
+    print(f"  [oa_client] 显式代理: {_PROXY_URL}", flush=True)
+else:
+    _OPENER = urllib.request.build_opener(urllib.request.ProxyHandler({}))
+    print("  [oa_client] 无代理环境变量，直连", flush=True)
 
 
 def _strip_api_key(url):
@@ -93,6 +104,25 @@ def _get(url):
                 _key_dead_until[ki] = time.time() + _KEY_COOLDOWN
                 print(f"  [oa_client] key#{ki} 429（{'预算' if 'Insufficient budget' in body else '限速'}），冷却 {_KEY_COOLDOWN:.0f}s", flush=True)
                 continue
+            if e.code in (401, 403) and ki is not None:
+                # key 失效/未授权（2026-10-19 实测：预算耗尽期偶发 401）——同 429 处理：冷却换 key，不中断长跑
+                _key_dead_until[ki] = time.time() + _KEY_COOLDOWN
+                print(f"  [oa_client] key#{ki} HTTP {e.code}（key 未授权/失效），冷却 {_KEY_COOLDOWN:.0f}s", flush=True)
+                continue
+            if e.code in (401, 403) and ki is None:
+                # 礼貌池 401/403：2026-10-19 实测 = 免费 IP 池分钟级滚动预算耗尽的信号（单发可过、
+                # 持续流被掐、下一分钟恢复）。策略：耐心等 75s 重试，最多 20 次（约 25 分钟），
+                # 仍失败才放弃——调用方 manifest 会登记 error 供 sweep 补漏。
+                _POLITE_401_TRIES = getattr(_get, "_polite401", 0) + 1
+                _get._polite401 = _POLITE_401_TRIES
+                if _POLITE_401_TRIES <= 20:
+                    print(f"  [oa_client] 礼貌池 HTTP {e.code}（分钟预算/边缘拦截，第 {_POLITE_401_TRIES} 次），等 75s", flush=True)
+                    time.sleep(75)
+                    if _POLITE_401_TRIES == 20:
+                        _get._polite401 = 0
+                    continue
+                _get._polite401 = 0
+                raise
             if e.code in (429,):
                 # 礼貌池 429：睡到最早 key 复活（有界 ≤90s），避免 300s 长退避
                 wake = min(_key_dead_until.values()) if _key_dead_until else time.time() + 30
@@ -114,14 +144,19 @@ def _get(url):
 
 
 def _fetch(url, polite=False):
-    """实际发起请求（含限速间隔），只做一次尝试，异常原样抛给 _get 处理。"""
+    """实际发起请求（含限速间隔），只做一次尝试，异常原样抛给 _get 处理。
+
+    2026-10-18 补丁：代理显式化——用导入时从环境解析的 _PROXY_URL 构造专用 opener，
+    不再依赖 urlopen 的环境代理解析（实测部分进程环境下默认解析不生效，
+    请求直连外网被 OpenAlex 401/掐断，同机显式代理路径正常）。
+    """
     iv = _POLITE_IV if polite else _KEYED_IV
     wait = _last[0] + iv - time.time()
     if wait > 0:
         time.sleep(wait)
     _last[0] = time.time()
     req = urllib.request.Request(url, headers={"User-Agent": f"ecmap-w1w2 ({MAILTO})"})
-    with urllib.request.urlopen(req, timeout=60) as resp:
+    with _OPENER.open(req, timeout=60) as resp:
         return json.loads(resp.read().decode("utf-8"))
 
 

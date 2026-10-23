@@ -1,0 +1,243 @@
+{
+ "task": "U1 exact pairwise width versus horizontal interaction audit",
+ "window": "2021->2024",
+ "support": [
+  "Applied Soft Computing",
+  "Computers and Operations Research",
+  "Engineering Applications of Artificial Intelligence",
+  "European Journal of Operational Research",
+  "Expert Systems with Applications",
+  "IEEE Transactions on Fuzzy Systems",
+  "Information Sciences"
+ ],
+ "conditions": {
+  "common_support": true,
+  "nonnegative_weights": true,
+  "positive_base_aggregates": true,
+  "finite_nonzero_source_bases": true
+ },
+ "aggregates": {
+  "B0": 0.7867148660189787,
+  "B1": 0.750571424856507,
+  "laspeyres_change": -0.01825168209498984,
+  "paasche_change": -0.1460181549102707,
+  "exact_width": -0.12776647281528086,
+  "exact_width_percentage_points": -12.776647281528087
+ },
+ "horizontal_interaction": [
+  {
+   "source": "Applied Soft Computing",
+   "delta_weight": -0.04187997796572067,
+   "delta_level": -0.10941299999999998,
+   "interaction": 0.004582214029163395
+  },
+  {
+   "source": "Computers and Operations Research",
+   "delta_weight": -0.021375336438535723,
+   "delta_level": 0.2672850000000002,
+   "interaction": -0.005713306799974026
+  },
+  {
+   "source": "Engineering Applications of Artificial Intelligence",
+   "delta_weight": 0.153591704507759,
+   "delta_level": -0.298241,
+   "interaction": -0.045807343544098544
+  },
+  {
+   "source": "European Journal of Operational Research",
+   "delta_weight": -0.06949679873595603,
+   "delta_level": 0.64957,
+   "interaction": -0.04514303555491496
+  },
+  {
+   "source": "Expert Systems with Applications",
+   "delta_weight": 0.11128557591549737,
+   "delta_level": -0.136332,
+   "interaction": -0.015171785135711588
+  },
+  {
+   "source": "IEEE Transactions on Fuzzy Systems",
+   "delta_weight": -0.003933622765706454,
+   "delta_level": -0.24126999999999998,
+   "interaction": 0.0009490651646819961
+  },
+  {
+   "source": "Information Sciences",
+   "delta_weight": -0.12819154451733744,
+   "delta_level": -0.08632400000000007,
+   "interaction": 0.011066006888914647
+  }
+ ],
+ "horizontal_interaction_sum": -0.09523818495193906,
+ "pairwise_terms": [
+  {
+   "sources": [
+    "European Journal of Operational Research",
+    "Expert Systems with Applications"
+   ],
+   "numerator": -0.01934946192209596,
+   "width_contribution": -0.03276872240848435
+  },
+  {
+   "sources": [
+    "Engineering Applications of Artificial Intelligence",
+    "European Journal of Operational Research"
+   ],
+   "numerator": -0.01844636638036718,
+   "width_contribution": -0.031239311035992576
+  },
+  {
+   "sources": [
+    "Computers and Operations Research",
+    "Engineering Applications of Artificial Intelligence"
+   ],
+   "numerator": -0.00797642040830617,
+   "width_contribution": -0.013508236416366537
+  },
+  {
+   "sources": [
+    "Computers and Operations Research",
+    "Expert Systems with Applications"
+   ],
+   "numerator": -0.005787426359308435,
+   "width_contribution": -0.009801128764782754
+  },
+  {
+   "sources": [
+    "Applied Soft Computing",
+    "Engineering Applications of Artificial Intelligence"
+   ],
+   "numerator": -0.005261667420611038,
+   "width_contribution": -0.00891074489853785
+  },
+  {
+   "sources": [
+    "Engineering Applications of Artificial Intelligence",
+    "Information Sciences"
+   ],
+   "numerator": -0.004340096840179032,
+   "width_contribution": -0.0073500456578257855
+  },
+  {
+   "sources": [
+    "Engineering Applications of Artificial Intelligence",
+    "Expert Systems with Applications"
+   ],
+   "numerator": -0.0037369224562829916,
+   "width_contribution": -0.0063285571001916755
+  },
+  {
+   "sources": [
+    "Applied Soft Computing",
+    "European Journal of Operational Research"
+   ],
+   "numerator": -0.0035313092469014934,
+   "width_contribution": -0.005980346787736121
+  },
+  {
+   "sources": [
+    "European Journal of Operational Research",
+    "IEEE Transactions on Fuzzy Systems"
+   ],
+   "numerator": -0.0024914314542661023,
+   "width_contribution": -0.004219291784614594
+  },
+  {
+   "sources": [
+    "Applied Soft Computing",
+    "Expert Systems with Applications"
+   ],
+   "numerator": -0.0015156307395426693,
+   "width_contribution": -0.002566752666187824
+  },
+  {
+   "sources": [
+    "Computers and Operations Research",
+    "IEEE Transactions on Fuzzy Systems"
+   ],
+   "numerator": -0.0010017430702123481,
+   "width_contribution": -0.0016964730453267068
+  },
+  {
+   "sources": [
+    "Expert Systems with Applications",
+    "IEEE Transactions on Fuzzy Systems"
+   ],
+   "numerator": 0.000854399625433323,
+   "width_contribution": 0.0014469438098310091
+  },
+  {
+   "sources": [
+    "Applied Soft Computing",
+    "Computers and Operations Research"
+   ],
+   "numerator": -0.0006826671791749712,
+   "width_contribution": -0.0011561112852560666
+  },
+  {
+   "sources": [
+    "Expert Systems with Applications",
+    "Information Sciences"
+   ],
+   "numerator": -0.0006308445803572791,
+   "width_contribution": -0.00106834861971114
+  },
+  {
+   "sources": [
+    "IEEE Transactions on Fuzzy Systems",
+    "Information Sciences"
+   ],
+   "numerator": -0.000627368991095739,
+   "width_contribution": -0.00106246263589537
+  },
+  {
+   "sources": [
+    "Computers and Operations Research",
+    "European Journal of Operational Research"
+   ],
+   "numerator": -0.0005182538788523389,
+   "width_contribution": -0.0008776738888971132
+  },
+  {
+   "sources": [
+    "European Journal of Operational Research",
+    "Information Sciences"
+   ],
+   "numerator": -0.0005157836562866096,
+   "width_contribution": -0.0008734905148131486
+  },
+  {
+   "sources": [
+    "Applied Soft Computing",
+    "IEEE Transactions on Fuzzy Systems"
+   ],
+   "numerator": -0.0004090621287703975,
+   "width_contribution": -0.000692755354100764
+  },
+  {
+   "sources": [
+    "Applied Soft Computing",
+    "Information Sciences"
+   ],
+   "numerator": 0.00021776516679840695,
+   "width_contribution": 0.00036878990897961473
+  },
+  {
+   "sources": [
+    "Engineering Applications of Artificial Intelligence",
+    "IEEE Transactions on Fuzzy Systems"
+   ],
+   "numerator": 0.00019948650158364942,
+   "width_contribution": 0.0003378346034092815
+  },
+  {
+   "sources": [
+    "Computers and Operations Research",
+    "Information Sciences"
+   ],
+   "numerator": 0.00010653054466450211,
+   "width_contribution": 0.00018041172721962583
+  }
+ ],
+ "pairwise_width_sum": -0.1277664728152808
+}

@@ -3,3 +3,12 @@ __pycache__/
 .DS_Store
 *.log
 *.alignment.json
+*.collision-audit.json
+*.collision-audit.pdf
+paper/build/verify_report.txt
+research/nature/out/p4_validation_samples.txt
+
+# Paths generated when the corpus is rebuilt locally (Layer 2)
+db/
+cache_citations/
+cache_domain/

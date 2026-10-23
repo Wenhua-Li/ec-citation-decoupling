@@ -1,0 +1,40 @@
+{
+ "spec": {
+  "question": "flip share lambda* under the two readings of the S4.2 frontier sentence: whether the E3 denominator absorbs the unparsed rows (Version A, frozen pipeline, (e+lu)/(d+u)) or absorbs nothing (Version B, numerator-only, (e+lu)/d)",
+  "e1_note": "E1 = e_i + lambda*u_i carries no denominator and is identical across versions",
+  "grid": "symmetric diagonal, 0.001 steps, linear interpolation (frozen solver method)",
+  "consistency": "Version A and E1 asserted against frozen doi_bracket.json tipping points"
+ },
+ "windows": {
+  "2021->2024": {
+   "right_censored": false,
+   "lambda_star_e1_both_versions": 0.205813,
+   "lambda_star_e3_versionA_denominator_absorbs": 0.239471,
+   "lambda_star_e3_versionB_numerator_only": 0.040487,
+   "gap_at_lambda0_pp": 23.683566,
+   "frozen": {
+    "e1": 0.205882,
+    "e3": 0.239484
+   },
+   "consistency": {
+    "e1_abs_diff": 6.9e-05,
+    "e3_versionA_abs_diff": 1.3e-05
+   }
+  },
+  "2021->2025": {
+   "right_censored": true,
+   "lambda_star_e1_both_versions": 0.137255,
+   "lambda_star_e3_versionA_denominator_absorbs": 0.135574,
+   "lambda_star_e3_versionB_numerator_only": 0.022531,
+   "gap_at_lambda0_pp": 26.011051,
+   "frozen": {
+    "e1": 0.13734,
+    "e3": 0.135679
+   },
+   "consistency": {
+    "e1_abs_diff": 8.5e-05,
+    "e3_versionA_abs_diff": 0.000105
+   }
+  }
+ }
+}

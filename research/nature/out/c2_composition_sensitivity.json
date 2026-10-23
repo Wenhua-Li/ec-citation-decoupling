@@ -20,17 +20,11 @@
  "source_standardized": {
   "series": {
    "2005": {
-    "rate": 0.03176605983860411,
+    "e1_rate": 0.040925536219510526,
+    "e2_rate": 0.03176605983860411,
     "n_non": 1051,
-    "target_shares": {
-     "Computers and Industrial Engineering": 0.12945808244557666,
-     "Computers and Operations Research": 0.047244094488188976,
-     "Engineering Applications of Artificial Intelligence": 0.06577119036591014,
-     "European Journal of Operational Research": 0.13571097730430756,
-     "Expert Systems with Applications": 0.27999073645206113,
-     "IEEE Transactions on Fuzzy Systems": 0.0729504400185271,
-     "Information Sciences": 0.26887447892542843
-    },
+    "coverage_share": 1.0,
+    "excluded_groups": {},
     "available_groups": [
      "Computers and Industrial Engineering",
      "Computers and Operations Research",
@@ -40,28 +34,22 @@
      "IEEE Transactions on Fuzzy Systems",
      "Information Sciences"
     ],
-    "group_rates": {
-     "Computers and Industrial Engineering": 0.030303030303030304,
-     "Computers and Operations Research": 0.11347517730496454,
-     "Engineering Applications of Artificial Intelligence": 0.047619047619047616,
-     "European Journal of Operational Research": 0.04116222760290557,
+    "group_rates_e1": {
+     "Computers and Industrial Engineering": 0.045454545454545456,
+     "Computers and Operations Research": 0.12056737588652482,
+     "Engineering Applications of Artificial Intelligence": 0.12698412698412698,
+     "European Journal of Operational Research": 0.053268765133171914,
      "Expert Systems with Applications": 0.025806451612903226,
      "IEEE Transactions on Fuzzy Systems": 0.06060606060606061,
      "Information Sciences": 0.007874015748031496
     }
    },
    "2006": {
-    "rate": 0.05681486908544518,
+    "e1_rate": 0.09367730940575333,
+    "e2_rate": 0.05681486908544518,
     "n_non": 1260,
-    "target_shares": {
-     "Computers and Industrial Engineering": 0.12945808244557666,
-     "Computers and Operations Research": 0.047244094488188976,
-     "Engineering Applications of Artificial Intelligence": 0.06577119036591014,
-     "European Journal of Operational Research": 0.13571097730430756,
-     "Expert Systems with Applications": 0.27999073645206113,
-     "IEEE Transactions on Fuzzy Systems": 0.0729504400185271,
-     "Information Sciences": 0.26887447892542843
-    },
+    "coverage_share": 1.0,
+    "excluded_groups": {},
     "available_groups": [
      "Computers and Industrial Engineering",
      "Computers and Operations Research",
@@ -71,28 +59,22 @@
      "IEEE Transactions on Fuzzy Systems",
      "Information Sciences"
     ],
-    "group_rates": {
-     "Computers and Industrial Engineering": 0.22666666666666666,
-     "Computers and Operations Research": 0.15328467153284672,
-     "Engineering Applications of Artificial Intelligence": 0.015625,
-     "European Journal of Operational Research": 0.07768595041322314,
-     "Expert Systems with Applications": 0.0072992700729927005,
+    "group_rates_e1": {
+     "Computers and Industrial Engineering": 0.41333333333333333,
+     "Computers and Operations Research": 0.23357664233576642,
+     "Engineering Applications of Artificial Intelligence": 0.03125,
+     "European Journal of Operational Research": 0.1206611570247934,
+     "Expert Systems with Applications": 0.014598540145985401,
      "IEEE Transactions on Fuzzy Systems": 0.045454545454545456,
      "Information Sciences": 0.012269938650306749
     }
    },
    "2007": {
-    "rate": 0.09018008473456773,
+    "e1_rate": 0.13706645814452273,
+    "e2_rate": 0.09018008473456773,
     "n_non": 1695,
-    "target_shares": {
-     "Computers and Industrial Engineering": 0.12945808244557666,
-     "Computers and Operations Research": 0.047244094488188976,
-     "Engineering Applications of Artificial Intelligence": 0.06577119036591014,
-     "European Journal of Operational Research": 0.13571097730430756,
-     "Expert Systems with Applications": 0.27999073645206113,
-     "IEEE Transactions on Fuzzy Systems": 0.0729504400185271,
-     "Information Sciences": 0.26887447892542843
-    },
+    "coverage_share": 1.0,
+    "excluded_groups": {},
     "available_groups": [
      "Computers and Industrial Engineering",
      "Computers and Operations Research",
@@ -102,28 +84,22 @@
      "IEEE Transactions on Fuzzy Systems",
      "Information Sciences"
     ],
-    "group_rates": {
-     "Computers and Industrial Engineering": 0.1267605633802817,
-     "Computers and Operations Research": 0.1834319526627219,
-     "Engineering Applications of Artificial Intelligence": 0.028985507246376812,
-     "European Journal of Operational Research": 0.08,
-     "Expert Systems with Applications": 0.04918032786885246,
-     "IEEE Transactions on Fuzzy Systems": 0.0989010989010989,
-     "Information Sciences": 0.11661807580174927
+    "group_rates_e1": {
+     "Computers and Industrial Engineering": 0.15492957746478872,
+     "Computers and Operations Research": 0.25443786982248523,
+     "Engineering Applications of Artificial Intelligence": 0.043478260869565216,
+     "European Journal of Operational Research": 0.15857142857142856,
+     "Expert Systems with Applications": 0.060109289617486336,
+     "IEEE Transactions on Fuzzy Systems": 0.17582417582417584,
+     "Information Sciences": 0.18950437317784258
     }
    },
    "2008": {
-    "rate": 0.1131317828009715,
+    "e1_rate": 0.19560661983519462,
+    "e2_rate": 0.1131317828009715,
     "n_non": 1902,
-    "target_shares": {
-     "Computers and Industrial Engineering": 0.12945808244557666,
-     "Computers and Operations Research": 0.047244094488188976,
-     "Engineering Applications of Artificial Intelligence": 0.06577119036591014,
-     "European Journal of Operational Research": 0.13571097730430756,
-     "Expert Systems with Applications": 0.27999073645206113,
-     "IEEE Transactions on Fuzzy Systems": 0.0729504400185271,
-     "Information Sciences": 0.26887447892542843
-    },
+    "coverage_share": 1.0,
+    "excluded_groups": {},
     "available_groups": [
      "Computers and Industrial Engineering",
      "Computers and Operations Research",
@@ -133,28 +109,22 @@
      "IEEE Transactions on Fuzzy Systems",
      "Information Sciences"
     ],
-    "group_rates": {
-     "Computers and Industrial Engineering": 0.15625,
-     "Computers and Operations Research": 0.17277486910994763,
-     "Engineering Applications of Artificial Intelligence": 0.08888888888888889,
-     "European Journal of Operational Research": 0.10085470085470086,
-     "Expert Systems with Applications": 0.052995391705069124,
-     "IEEE Transactions on Fuzzy Systems": 0.16393442622950818,
-     "Information Sciences": 0.14285714285714285
+    "group_rates_e1": {
+     "Computers and Industrial Engineering": 0.23958333333333334,
+     "Computers and Operations Research": 0.31413612565445026,
+     "Engineering Applications of Artificial Intelligence": 0.1,
+     "European Journal of Operational Research": 0.19829059829059828,
+     "Expert Systems with Applications": 0.08986175115207373,
+     "IEEE Transactions on Fuzzy Systems": 0.2459016393442623,
+     "Information Sciences": 0.272108843537415
     }
    },
    "2009": {
-    "rate": 0.11712064733156421,
+    "e1_rate": 0.20208974217452114,
+    "e2_rate": 0.11712064733156421,
     "n_non": 2804,
-    "target_shares": {
-     "Computers and Industrial Engineering": 0.12945808244557666,
-     "Computers and Operations Research": 0.047244094488188976,
-     "Engineering Applications of Artificial Intelligence": 0.06577119036591014,
-     "European Journal of Operational Research": 0.13571097730430756,
-     "Expert Systems with Applications": 0.27999073645206113,
-     "IEEE Transactions on Fuzzy Systems": 0.0729504400185271,
-     "Information Sciences": 0.26887447892542843
-    },
+    "coverage_share": 1.0,
+    "excluded_groups": {},
     "available_groups": [
      "Computers and Industrial Engineering",
      "Computers and Operations Research",
@@ -164,28 +134,22 @@
      "IEEE Transactions on Fuzzy Systems",
      "Information Sciences"
     ],
-    "group_rates": {
-     "Computers and Industrial Engineering": 0.19262295081967212,
-     "Computers and Operations Research": 0.2962962962962963,
-     "Engineering Applications of Artificial Intelligence": 0.08139534883720931,
-     "European Journal of Operational Research": 0.12272727272727273,
-     "Expert Systems with Applications": 0.11335676625659051,
-     "IEEE Transactions on Fuzzy Systems": 0.1,
-     "Information Sciences": 0.06375838926174497
+    "group_rates_e1": {
+     "Computers and Industrial Engineering": 0.3319672131147541,
+     "Computers and Operations Research": 0.6243386243386243,
+     "Engineering Applications of Artificial Intelligence": 0.10465116279069768,
+     "European Journal of Operational Research": 0.2833333333333333,
+     "Expert Systems with Applications": 0.1625659050966608,
+     "IEEE Transactions on Fuzzy Systems": 0.17272727272727273,
+     "Information Sciences": 0.09731543624161074
     }
    },
    "2010": {
-    "rate": 0.1409490310010033,
+    "e1_rate": 0.2884029048854337,
+    "e2_rate": 0.1409490310010033,
     "n_non": 2308,
-    "target_shares": {
-     "Computers and Industrial Engineering": 0.12945808244557666,
-     "Computers and Operations Research": 0.047244094488188976,
-     "Engineering Applications of Artificial Intelligence": 0.06577119036591014,
-     "European Journal of Operational Research": 0.13571097730430756,
-     "Expert Systems with Applications": 0.27999073645206113,
-     "IEEE Transactions on Fuzzy Systems": 0.0729504400185271,
-     "Information Sciences": 0.26887447892542843
-    },
+    "coverage_share": 1.0,
+    "excluded_groups": {},
     "available_groups": [
      "Computers and Industrial Engineering",
      "Computers and Operations Research",
@@ -195,28 +159,22 @@
      "IEEE Transactions on Fuzzy Systems",
      "Information Sciences"
     ],
-    "group_rates": {
-     "Computers and Industrial Engineering": 0.152317880794702,
-     "Computers and Operations Research": 0.3805970149253731,
-     "Engineering Applications of Artificial Intelligence": 0.12658227848101267,
-     "European Journal of Operational Research": 0.13602391629297458,
-     "Expert Systems with Applications": 0.05904059040590406,
-     "IEEE Transactions on Fuzzy Systems": 0.17045454545454544,
-     "Information Sciences": 0.17665615141955837
+    "group_rates_e1": {
+     "Computers and Industrial Engineering": 0.26490066225165565,
+     "Computers and Operations Research": 1.0149253731343284,
+     "Engineering Applications of Artificial Intelligence": 0.13924050632911392,
+     "European Journal of Operational Research": 0.336322869955157,
+     "Expert Systems with Applications": 0.11193111931119311,
+     "IEEE Transactions on Fuzzy Systems": 0.25,
+     "Information Sciences": 0.3785488958990536
     }
    },
    "2011": {
-    "rate": 0.2051434657486225,
+    "e1_rate": 0.39187397199628743,
+    "e2_rate": 0.2051434657486225,
     "n_non": 2856,
-    "target_shares": {
-     "Computers and Industrial Engineering": 0.12945808244557666,
-     "Computers and Operations Research": 0.047244094488188976,
-     "Engineering Applications of Artificial Intelligence": 0.06577119036591014,
-     "European Journal of Operational Research": 0.13571097730430756,
-     "Expert Systems with Applications": 0.27999073645206113,
-     "IEEE Transactions on Fuzzy Systems": 0.0729504400185271,
-     "Information Sciences": 0.26887447892542843
-    },
+    "coverage_share": 1.0,
+    "excluded_groups": {},
     "available_groups": [
      "Computers and Industrial Engineering",
      "Computers and Operations Research",
@@ -226,28 +184,22 @@
      "IEEE Transactions on Fuzzy Systems",
      "Information Sciences"
     ],
-    "group_rates": {
-     "Computers and Industrial Engineering": 0.22459893048128343,
-     "Computers and Operations Research": 0.3728813559322034,
-     "Engineering Applications of Artificial Intelligence": 0.1717171717171717,
-     "European Journal of Operational Research": 0.18990384615384615,
-     "Expert Systems with Applications": 0.18469462840323767,
-     "IEEE Transactions on Fuzzy Systems": 0.2,
-     "Information Sciences": 0.2048611111111111
+    "group_rates_e1": {
+     "Computers and Industrial Engineering": 0.45454545454545453,
+     "Computers and Operations Research": 0.8050847457627118,
+     "Engineering Applications of Artificial Intelligence": 0.1919191919191919,
+     "European Journal of Operational Research": 0.4495192307692308,
+     "Expert Systems with Applications": 0.3333333333333333,
+     "IEEE Transactions on Fuzzy Systems": 0.27058823529411763,
+     "Information Sciences": 0.4027777777777778
     }
    },
    "2012": {
-    "rate": 0.2447689347799618,
+    "e1_rate": 0.4705862097620923,
+    "e2_rate": 0.2447689347799618,
     "n_non": 2712,
-    "target_shares": {
-     "Computers and Industrial Engineering": 0.12945808244557666,
-     "Computers and Operations Research": 0.047244094488188976,
-     "Engineering Applications of Artificial Intelligence": 0.06577119036591014,
-     "European Journal of Operational Research": 0.13571097730430756,
-     "Expert Systems with Applications": 0.27999073645206113,
-     "IEEE Transactions on Fuzzy Systems": 0.0729504400185271,
-     "Information Sciences": 0.26887447892542843
-    },
+    "coverage_share": 1.0,
+    "excluded_groups": {},
     "available_groups": [
      "Computers and Industrial Engineering",
      "Computers and Operations Research",
@@ -257,28 +209,22 @@
      "IEEE Transactions on Fuzzy Systems",
      "Information Sciences"
     ],
-    "group_rates": {
-     "Computers and Industrial Engineering": 0.2849462365591398,
-     "Computers and Operations Research": 0.38461538461538464,
-     "Engineering Applications of Artificial Intelligence": 0.26262626262626265,
-     "European Journal of Operational Research": 0.17857142857142858,
-     "Expert Systems with Applications": 0.19588550983899822,
-     "IEEE Transactions on Fuzzy Systems": 0.19767441860465115,
-     "Information Sciences": 0.29357798165137616
+    "group_rates_e1": {
+     "Computers and Industrial Engineering": 0.6129032258064516,
+     "Computers and Operations Research": 0.8461538461538461,
+     "Engineering Applications of Artificial Intelligence": 0.6161616161616161,
+     "European Journal of Operational Research": 0.38533834586466165,
+     "Expert Systems with Applications": 0.3470483005366726,
+     "IEEE Transactions on Fuzzy Systems": 0.4186046511627907,
+     "Information Sciences": 0.48623853211009177
     }
    },
    "2013": {
-    "rate": 0.250716497266679,
+    "e1_rate": 0.5704044694978688,
+    "e2_rate": 0.250716497266679,
     "n_non": 2398,
-    "target_shares": {
-     "Computers and Industrial Engineering": 0.12945808244557666,
-     "Computers and Operations Research": 0.047244094488188976,
-     "Engineering Applications of Artificial Intelligence": 0.06577119036591014,
-     "European Journal of Operational Research": 0.13571097730430756,
-     "Expert Systems with Applications": 0.27999073645206113,
-     "IEEE Transactions on Fuzzy Systems": 0.0729504400185271,
-     "Information Sciences": 0.26887447892542843
-    },
+    "coverage_share": 1.0,
+    "excluded_groups": {},
     "available_groups": [
      "Computers and Industrial Engineering",
      "Computers and Operations Research",
@@ -288,28 +234,22 @@
      "IEEE Transactions on Fuzzy Systems",
      "Information Sciences"
     ],
-    "group_rates": {
-     "Computers and Industrial Engineering": 0.26576576576576577,
-     "Computers and Operations Research": 0.3620689655172414,
-     "Engineering Applications of Artificial Intelligence": 0.2654320987654321,
-     "European Journal of Operational Research": 0.21266968325791855,
-     "Expert Systems with Applications": 0.233278955954323,
-     "IEEE Transactions on Fuzzy Systems": 0.3023255813953488,
-     "Information Sciences": 0.24366471734892786
+    "group_rates_e1": {
+     "Computers and Industrial Engineering": 0.5585585585585585,
+     "Computers and Operations Research": 0.9540229885057471,
+     "Engineering Applications of Artificial Intelligence": 0.47530864197530864,
+     "European Journal of Operational Research": 0.6832579185520362,
+     "Expert Systems with Applications": 0.44045676998368677,
+     "IEEE Transactions on Fuzzy Systems": 0.686046511627907,
+     "Information Sciences": 0.5789473684210527
     }
    },
    "2014": {
-    "rate": 0.243330109704952,
+    "e1_rate": 0.6069561845847817,
+    "e2_rate": 0.243330109704952,
     "n_non": 2769,
-    "target_shares": {
-     "Computers and Industrial Engineering": 0.12945808244557666,
-     "Computers and Operations Research": 0.047244094488188976,
-     "Engineering Applications of Artificial Intelligence": 0.06577119036591014,
-     "European Journal of Operational Research": 0.13571097730430756,
-     "Expert Systems with Applications": 0.27999073645206113,
-     "IEEE Transactions on Fuzzy Systems": 0.0729504400185271,
-     "Information Sciences": 0.26887447892542843
-    },
+    "coverage_share": 1.0,
+    "excluded_groups": {},
     "available_groups": [
      "Computers and Industrial Engineering",
      "Computers and Operations Research",
@@ -319,28 +259,22 @@
      "IEEE Transactions on Fuzzy Systems",
      "Information Sciences"
     ],
-    "group_rates": {
-     "Computers and Industrial Engineering": 0.31016042780748665,
-     "Computers and Operations Research": 0.38562091503267976,
-     "Engineering Applications of Artificial Intelligence": 0.23622047244094488,
-     "European Journal of Operational Research": 0.22202797202797203,
-     "Expert Systems with Applications": 0.23580034423407917,
-     "IEEE Transactions on Fuzzy Systems": 0.15151515151515152,
-     "Information Sciences": 0.2313937753721245
+    "group_rates_e1": {
+     "Computers and Industrial Engineering": 0.7433155080213903,
+     "Computers and Operations Research": 0.7908496732026143,
+     "Engineering Applications of Artificial Intelligence": 0.6456692913385826,
+     "European Journal of Operational Research": 0.583916083916084,
+     "Expert Systems with Applications": 0.6265060240963856,
+     "IEEE Transactions on Fuzzy Systems": 0.3560606060606061,
+     "Information Sciences": 0.5588633288227334
     }
    },
    "2015": {
-    "rate": 0.2946672431125389,
+    "e1_rate": 0.7334769420390892,
+    "e2_rate": 0.2946672431125389,
     "n_non": 2804,
-    "target_shares": {
-     "Computers and Industrial Engineering": 0.12945808244557666,
-     "Computers and Operations Research": 0.047244094488188976,
-     "Engineering Applications of Artificial Intelligence": 0.06577119036591014,
-     "European Journal of Operational Research": 0.13571097730430756,
-     "Expert Systems with Applications": 0.27999073645206113,
-     "IEEE Transactions on Fuzzy Systems": 0.0729504400185271,
-     "Information Sciences": 0.26887447892542843
-    },
+    "coverage_share": 1.0,
+    "excluded_groups": {},
     "available_groups": [
      "Computers and Industrial Engineering",
      "Computers and Operations Research",
@@ -350,28 +284,22 @@
      "IEEE Transactions on Fuzzy Systems",
      "Information Sciences"
     ],
-    "group_rates": {
-     "Computers and Industrial Engineering": 0.3724696356275304,
-     "Computers and Operations Research": 0.45925925925925926,
-     "Engineering Applications of Artificial Intelligence": 0.23668639053254437,
-     "European Journal of Operational Research": 0.2521150592216582,
-     "Expert Systems with Applications": 0.3416149068322981,
-     "IEEE Transactions on Fuzzy Systems": 0.2222222222222222,
-     "Information Sciences": 0.23471400394477318
+    "group_rates_e1": {
+     "Computers and Industrial Engineering": 0.9352226720647774,
+     "Computers and Operations Research": 1.1481481481481481,
+     "Engineering Applications of Artificial Intelligence": 0.5739644970414202,
+     "European Journal of Operational Research": 0.868020304568528,
+     "Expert Systems with Applications": 0.6894409937888198,
+     "IEEE Transactions on Fuzzy Systems": 0.5029239766081871,
+     "Information Sciences": 0.6429980276134122
     }
    },
    "2016": {
-    "rate": 0.27889817711095793,
+    "e1_rate": 0.7173920809131891,
+    "e2_rate": 0.27889817711095793,
     "n_non": 2757,
-    "target_shares": {
-     "Computers and Industrial Engineering": 0.12945808244557666,
-     "Computers and Operations Research": 0.047244094488188976,
-     "Engineering Applications of Artificial Intelligence": 0.06577119036591014,
-     "European Journal of Operational Research": 0.13571097730430756,
-     "Expert Systems with Applications": 0.27999073645206113,
-     "IEEE Transactions on Fuzzy Systems": 0.0729504400185271,
-     "Information Sciences": 0.26887447892542843
-    },
+    "coverage_share": 1.0,
+    "excluded_groups": {},
     "available_groups": [
      "Computers and Industrial Engineering",
      "Computers and Operations Research",
@@ -381,28 +309,22 @@
      "IEEE Transactions on Fuzzy Systems",
      "Information Sciences"
     ],
-    "group_rates": {
-     "Computers and Industrial Engineering": 0.4076923076923077,
-     "Computers and Operations Research": 0.4264705882352941,
-     "Engineering Applications of Artificial Intelligence": 0.25735294117647056,
-     "European Journal of Operational Research": 0.24919093851132687,
-     "Expert Systems with Applications": 0.2871900826446281,
-     "IEEE Transactions on Fuzzy Systems": 0.21428571428571427,
-     "Information Sciences": 0.22011661807580174
+    "group_rates_e1": {
+     "Computers and Industrial Engineering": 1.6884615384615385,
+     "Computers and Operations Research": 1.2352941176470589,
+     "Engineering Applications of Artificial Intelligence": 0.4632352941176471,
+     "European Journal of Operational Research": 0.6844660194174758,
+     "Expert Systems with Applications": 0.6115702479338843,
+     "IEEE Transactions on Fuzzy Systems": 0.30158730158730157,
+     "Information Sciences": 0.4606413994169096
     }
    },
    "2017": {
-    "rate": 0.2565241657656123,
+    "e1_rate": 0.6445644929411052,
+    "e2_rate": 0.2565241657656123,
     "n_non": 2747,
-    "target_shares": {
-     "Computers and Industrial Engineering": 0.12945808244557666,
-     "Computers and Operations Research": 0.047244094488188976,
-     "Engineering Applications of Artificial Intelligence": 0.06577119036591014,
-     "European Journal of Operational Research": 0.13571097730430756,
-     "Expert Systems with Applications": 0.27999073645206113,
-     "IEEE Transactions on Fuzzy Systems": 0.0729504400185271,
-     "Information Sciences": 0.26887447892542843
-    },
+    "coverage_share": 1.0,
+    "excluded_groups": {},
     "available_groups": [
      "Computers and Industrial Engineering",
      "Computers and Operations Research",
@@ -412,28 +334,22 @@
      "IEEE Transactions on Fuzzy Systems",
      "Information Sciences"
     ],
-    "group_rates": {
-     "Computers and Industrial Engineering": 0.3834355828220859,
-     "Computers and Operations Research": 0.5120481927710844,
-     "Engineering Applications of Artificial Intelligence": 0.3181818181818182,
-     "European Journal of Operational Research": 0.2711864406779661,
-     "Expert Systems with Applications": 0.2224334600760456,
-     "IEEE Transactions on Fuzzy Systems": 0.2366412213740458,
-     "Information Sciences": 0.16893203883495145
+    "group_rates_e1": {
+     "Computers and Industrial Engineering": 1.0950920245398772,
+     "Computers and Operations Research": 1.7469879518072289,
+     "Engineering Applications of Artificial Intelligence": 0.8246753246753247,
+     "European Journal of Operational Research": 0.6486902927580893,
+     "Expert Systems with Applications": 0.4847908745247148,
+     "IEEE Transactions on Fuzzy Systems": 0.5114503816793893,
+     "Information Sciences": 0.39029126213592236
     }
    },
    "2018": {
-    "rate": 0.26943928783253046,
+    "e1_rate": 0.6581167230941021,
+    "e2_rate": 0.26943928783253046,
     "n_non": 3117,
-    "target_shares": {
-     "Computers and Industrial Engineering": 0.12945808244557666,
-     "Computers and Operations Research": 0.047244094488188976,
-     "Engineering Applications of Artificial Intelligence": 0.06577119036591014,
-     "European Journal of Operational Research": 0.13571097730430756,
-     "Expert Systems with Applications": 0.27999073645206113,
-     "IEEE Transactions on Fuzzy Systems": 0.0729504400185271,
-     "Information Sciences": 0.26887447892542843
-    },
+    "coverage_share": 1.0,
+    "excluded_groups": {},
     "available_groups": [
      "Computers and Industrial Engineering",
      "Computers and Operations Research",
@@ -443,28 +359,22 @@
      "IEEE Transactions on Fuzzy Systems",
      "Information Sciences"
     ],
-    "group_rates": {
-     "Computers and Industrial Engineering": 0.3654970760233918,
-     "Computers and Operations Research": 0.5086705202312138,
-     "Engineering Applications of Artificial Intelligence": 0.30303030303030304,
-     "European Journal of Operational Research": 0.2711323763955343,
-     "Expert Systems with Applications": 0.28087649402390436,
-     "IEEE Transactions on Fuzzy Systems": 0.2,
-     "Information Sciences": 0.17901234567901234
+    "group_rates_e1": {
+     "Computers and Industrial Engineering": 0.9532163742690059,
+     "Computers and Operations Research": 1.323699421965318,
+     "Engineering Applications of Artificial Intelligence": 0.9454545454545454,
+     "European Journal of Operational Research": 0.6602870813397129,
+     "Expert Systems with Applications": 0.6832669322709163,
+     "IEEE Transactions on Fuzzy Systems": 0.41,
+     "Information Sciences": 0.36882716049382713
     }
    },
    "2019": {
-    "rate": 0.2731598007206324,
+    "e1_rate": 0.7432869098861166,
+    "e2_rate": 0.2731598007206324,
     "n_non": 3264,
-    "target_shares": {
-     "Computers and Industrial Engineering": 0.12945808244557666,
-     "Computers and Operations Research": 0.047244094488188976,
-     "Engineering Applications of Artificial Intelligence": 0.06577119036591014,
-     "European Journal of Operational Research": 0.13571097730430756,
-     "Expert Systems with Applications": 0.27999073645206113,
-     "IEEE Transactions on Fuzzy Systems": 0.0729504400185271,
-     "Information Sciences": 0.26887447892542843
-    },
+    "coverage_share": 1.0,
+    "excluded_groups": {},
     "available_groups": [
      "Computers and Industrial Engineering",
      "Computers and Operations Research",
@@ -474,28 +384,22 @@
      "IEEE Transactions on Fuzzy Systems",
      "Information Sciences"
     ],
-    "group_rates": {
-     "Computers and Industrial Engineering": 0.37103174603174605,
-     "Computers and Operations Research": 0.6395348837209303,
-     "Engineering Applications of Artificial Intelligence": 0.24242424242424243,
-     "European Journal of Operational Research": 0.24750830564784054,
-     "Expert Systems with Applications": 0.2869269949066214,
-     "IEEE Transactions on Fuzzy Systems": 0.18181818181818182,
-     "Information Sciences": 0.19257221458046767
+    "group_rates_e1": {
+     "Computers and Industrial Engineering": 1.0476190476190477,
+     "Computers and Operations Research": 2.1686046511627906,
+     "Engineering Applications of Artificial Intelligence": 0.896969696969697,
+     "European Journal of Operational Research": 0.6411960132890365,
+     "Expert Systems with Applications": 0.8098471986417657,
+     "IEEE Transactions on Fuzzy Systems": 0.3352272727272727,
+     "Information Sciences": 0.4016506189821183
     }
    },
    "2020": {
-    "rate": 0.27179574722451233,
+    "e1_rate": 0.7165377909480561,
+    "e2_rate": 0.27179574722451233,
     "n_non": 3666,
-    "target_shares": {
-     "Computers and Industrial Engineering": 0.12945808244557666,
-     "Computers and Operations Research": 0.047244094488188976,
-     "Engineering Applications of Artificial Intelligence": 0.06577119036591014,
-     "European Journal of Operational Research": 0.13571097730430756,
-     "Expert Systems with Applications": 0.27999073645206113,
-     "IEEE Transactions on Fuzzy Systems": 0.0729504400185271,
-     "Information Sciences": 0.26887447892542843
-    },
+    "coverage_share": 1.0,
+    "excluded_groups": {},
     "available_groups": [
      "Computers and Industrial Engineering",
      "Computers and Operations Research",
@@ -505,28 +409,22 @@
      "IEEE Transactions on Fuzzy Systems",
      "Information Sciences"
     ],
-    "group_rates": {
-     "Computers and Industrial Engineering": 0.3840155945419103,
-     "Computers and Operations Research": 0.5862068965517241,
-     "Engineering Applications of Artificial Intelligence": 0.2767527675276753,
-     "European Journal of Operational Research": 0.27318718381112983,
-     "Expert Systems with Applications": 0.27411167512690354,
-     "IEEE Transactions on Fuzzy Systems": 0.26459143968871596,
-     "Information Sciences": 0.16014669926650366
+    "group_rates_e1": {
+     "Computers and Industrial Engineering": 1.0974658869395713,
+     "Computers and Operations Research": 2.075862068965517,
+     "Engineering Applications of Artificial Intelligence": 0.8044280442804428,
+     "European Journal of Operational Research": 0.927487352445194,
+     "Expert Systems with Applications": 0.6362098138747885,
+     "IEEE Transactions on Fuzzy Systems": 0.556420233463035,
+     "Information Sciences": 0.293398533007335
     }
    },
    "2021": {
-    "rate": 0.2908754052802223,
+    "e1_rate": 0.8304770727188513,
+    "e2_rate": 0.2908754052802223,
     "n_non": 4318,
-    "target_shares": {
-     "Computers and Industrial Engineering": 0.12945808244557666,
-     "Computers and Operations Research": 0.047244094488188976,
-     "Engineering Applications of Artificial Intelligence": 0.06577119036591014,
-     "European Journal of Operational Research": 0.13571097730430756,
-     "Expert Systems with Applications": 0.27999073645206113,
-     "IEEE Transactions on Fuzzy Systems": 0.0729504400185271,
-     "Information Sciences": 0.26887447892542843
-    },
+    "coverage_share": 1.0,
+    "excluded_groups": {},
     "available_groups": [
      "Computers and Industrial Engineering",
      "Computers and Operations Research",
@@ -536,27 +434,23 @@
      "IEEE Transactions on Fuzzy Systems",
      "Information Sciences"
     ],
-    "group_rates": {
-     "Computers and Industrial Engineering": 0.4203935599284436,
-     "Computers and Operations Research": 0.6421568627450981,
-     "Engineering Applications of Artificial Intelligence": 0.22887323943661972,
-     "European Journal of Operational Research": 0.26621160409556316,
-     "Expert Systems with Applications": 0.26468155500413565,
-     "IEEE Transactions on Fuzzy Systems": 0.2571428571428571,
-     "Information Sciences": 0.23083548664944015
+    "group_rates_e1": {
+     "Computers and Industrial Engineering": 1.3184257602862255,
+     "Computers and Operations Research": 2.514705882352941,
+     "Engineering Applications of Artificial Intelligence": 0.7253521126760564,
+     "European Journal of Operational Research": 0.9146757679180887,
+     "Expert Systems with Applications": 0.6914805624483044,
+     "IEEE Transactions on Fuzzy Systems": 0.526984126984127,
+     "Information Sciences": 0.5099052540913006
     }
    },
    "2022": {
-    "rate": 0.27939863735229714,
+    "e1_rate": 0.7757079077233875,
+    "e2_rate": 0.27939863735229714,
     "n_non": 4445,
-    "target_shares": {
-     "Computers and Industrial Engineering": 0.12945808244557666,
-     "Computers and Operations Research": 0.047244094488188976,
-     "Engineering Applications of Artificial Intelligence": 0.06577119036591014,
-     "European Journal of Operational Research": 0.13571097730430756,
-     "Expert Systems with Applications": 0.27999073645206113,
-     "IEEE Transactions on Fuzzy Systems": 0.0729504400185271,
-     "Information Sciences": 0.26887447892542843
+    "coverage_share": 0.870542,
+    "excluded_groups": {
+     "Computers and Industrial Engineering": 0.129458
     },
     "available_groups": [
      "Computers and Operations Research",
@@ -566,27 +460,23 @@
      "IEEE Transactions on Fuzzy Systems",
      "Information Sciences"
     ],
-    "group_rates": {
+    "group_rates_e1": {
      "Computers and Industrial Engineering": null,
-     "Computers and Operations Research": 0.6170212765957447,
-     "Engineering Applications of Artificial Intelligence": 0.25121951219512195,
-     "European Journal of Operational Research": 0.30204778156996587,
-     "Expert Systems with Applications": 0.26121696373693915,
-     "IEEE Transactions on Fuzzy Systems": 0.20137299771167047,
-     "Information Sciences": 0.2556390977443609
+     "Computers and Operations Research": 3.3882978723404253,
+     "Engineering Applications of Artificial Intelligence": 0.6,
+     "European Journal of Operational Research": 1.1228668941979523,
+     "Expert Systems with Applications": 0.5556238475722188,
+     "IEEE Transactions on Fuzzy Systems": 0.33867276887871856,
+     "Information Sciences": 0.5321637426900585
     }
    },
    "2023": {
-    "rate": 0.2598979073320506,
+    "e1_rate": 0.674806967561347,
+    "e2_rate": 0.2598979073320506,
     "n_non": 5705,
-    "target_shares": {
-     "Computers and Industrial Engineering": 0.12945808244557666,
-     "Computers and Operations Research": 0.047244094488188976,
-     "Engineering Applications of Artificial Intelligence": 0.06577119036591014,
-     "European Journal of Operational Research": 0.13571097730430756,
-     "Expert Systems with Applications": 0.27999073645206113,
-     "IEEE Transactions on Fuzzy Systems": 0.0729504400185271,
-     "Information Sciences": 0.26887447892542843
+    "coverage_share": 0.870542,
+    "excluded_groups": {
+     "Computers and Industrial Engineering": 0.129458
     },
     "available_groups": [
      "Computers and Operations Research",
@@ -596,27 +486,23 @@
      "IEEE Transactions on Fuzzy Systems",
      "Information Sciences"
     ],
-    "group_rates": {
+    "group_rates_e1": {
      "Computers and Industrial Engineering": null,
-     "Computers and Operations Research": 0.6382978723404256,
-     "Engineering Applications of Artificial Intelligence": 0.21258134490238612,
-     "European Journal of Operational Research": 0.30877742946708464,
-     "Expert Systems with Applications": 0.2375776397515528,
-     "IEEE Transactions on Fuzzy Systems": 0.20797720797720798,
-     "Information Sciences": 0.21764220939818632
+     "Computers and Operations Research": 2.5372340425531914,
+     "Engineering Applications of Artificial Intelligence": 0.4750542299349241,
+     "European Journal of Operational Research": 1.0689655172413792,
+     "Expert Systems with Applications": 0.5512422360248447,
+     "IEEE Transactions on Fuzzy Systems": 0.3333333333333333,
+     "Information Sciences": 0.41879637262984337
     }
    },
    "2024": {
-    "rate": 0.26068221366331057,
+    "e1_rate": 0.7604220616694779,
+    "e2_rate": 0.26068221366331057,
     "n_non": 7608,
-    "target_shares": {
-     "Computers and Industrial Engineering": 0.12945808244557666,
-     "Computers and Operations Research": 0.047244094488188976,
-     "Engineering Applications of Artificial Intelligence": 0.06577119036591014,
-     "European Journal of Operational Research": 0.13571097730430756,
-     "Expert Systems with Applications": 0.27999073645206113,
-     "IEEE Transactions on Fuzzy Systems": 0.0729504400185271,
-     "Information Sciences": 0.26887447892542843
+    "coverage_share": 0.870542,
+    "excluded_groups": {
+     "Computers and Industrial Engineering": 0.129458
     },
     "available_groups": [
      "Computers and Operations Research",
@@ -626,27 +512,23 @@
      "IEEE Transactions on Fuzzy Systems",
      "Information Sciences"
     ],
-    "group_rates": {
+    "group_rates_e1": {
      "Computers and Industrial Engineering": null,
-     "Computers and Operations Research": 0.7156398104265402,
-     "Engineering Applications of Artificial Intelligence": 0.18773534158149544,
-     "European Journal of Operational Research": 0.34823091247672255,
-     "Expert Systems with Applications": 0.22212065813528337,
-     "IEEE Transactions on Fuzzy Systems": 0.1794425087108014,
-     "Information Sciences": 0.2165938864628821
+     "Computers and Operations Research": 2.7819905213270144,
+     "Engineering Applications of Artificial Intelligence": 0.4271113501882733,
+     "European Journal of Operational Research": 1.5642458100558658,
+     "Expert Systems with Applications": 0.5551492992078001,
+     "IEEE Transactions on Fuzzy Systems": 0.2857142857142857,
+     "Information Sciences": 0.42358078602620086
     }
    },
    "2025": {
-    "rate": 0.23217272009349862,
+    "e1_rate": 0.641609796250093,
+    "e2_rate": 0.23217272009349862,
     "n_non": 7681,
-    "target_shares": {
-     "Computers and Industrial Engineering": 0.12945808244557666,
-     "Computers and Operations Research": 0.047244094488188976,
-     "Engineering Applications of Artificial Intelligence": 0.06577119036591014,
-     "European Journal of Operational Research": 0.13571097730430756,
-     "Expert Systems with Applications": 0.27999073645206113,
-     "IEEE Transactions on Fuzzy Systems": 0.0729504400185271,
-     "Information Sciences": 0.26887447892542843
+    "coverage_share": 0.870542,
+    "excluded_groups": {
+     "Computers and Industrial Engineering": 0.129458
     },
     "available_groups": [
      "Computers and Operations Research",
@@ -656,337 +538,237 @@
      "IEEE Transactions on Fuzzy Systems",
      "Information Sciences"
     ],
-    "group_rates": {
+    "group_rates_e1": {
      "Computers and Industrial Engineering": null,
-     "Computers and Operations Research": 0.6902654867256637,
-     "Engineering Applications of Artificial Intelligence": 0.154318756776292,
-     "European Journal of Operational Research": 0.342042755344418,
-     "Expert Systems with Applications": 0.18752085418752085,
-     "IEEE Transactions on Fuzzy Systems": 0.24853801169590642,
-     "Information Sciences": 0.15732758620689655
+     "Computers and Operations Research": 2.898230088495575,
+     "Engineering Applications of Artificial Intelligence": 0.332128659197687,
+     "European Journal of Operational Research": 1.149643705463183,
+     "Expert Systems with Applications": 0.4557891224557891,
+     "IEEE Transactions on Fuzzy Systems": 0.40058479532163743,
+     "Information Sciences": 0.3232758620689655
     }
    }
   },
   "endpoints": {
-   "rate_2021": 0.290875,
-   "rate_2025": 0.232173,
-   "relative_change": -0.201814
+   "rate_2021": 0.830477,
+   "rate_2025": 0.64161,
+   "relative_change": -0.22742,
+   "e2_rate_2021": 0.290875,
+   "e2_rate_2025": 0.232173,
+   "e2_relative_change": -0.201814,
+   "coverage_share_2025": 0.870542,
+   "excluded_groups_2025": {
+    "Computers and Industrial Engineering": 0.129458
+   }
   }
  },
  "topic_standardized": {
   "series": {
    "2005": {
-    "rate": 0.04593205091304101,
+    "e1_rate": 0.05695574313217086,
+    "e2_rate": 0.04593205091304101,
     "n_non": 1051,
-    "target_shares": {
-     "deep_learning": 0.07827698008337193,
-     "explainable_AI": 0.022464103751736915,
-     "other": 0.8832792959703566,
-     "reinforcement_learning": 0.014358499305233904,
-     "transformer": 0.001621120889300602
+    "coverage_share": 0.920102,
+    "excluded_groups": {
+     "deep_learning": 0.078277,
+     "transformer": 0.001621
     },
     "available_groups": [
      "explainable_AI",
      "other",
      "reinforcement_learning"
     ],
-    "group_rates": {
+    "group_rates_e1": {
      "deep_learning": null,
      "explainable_AI": 0.0,
-     "other": 0.04784688995215311,
+     "other": 0.05933014354066986,
      "reinforcement_learning": 0.0,
      "transformer": null
     }
    },
    "2006": {
-    "rate": 0.0749766729470786,
+    "e1_rate": 0.11561479818380027,
+    "e2_rate": 0.0749766729470786,
     "n_non": 1260,
-    "target_shares": {
-     "deep_learning": 0.07827698008337193,
-     "explainable_AI": 0.022464103751736915,
-     "other": 0.8832792959703566,
-     "reinforcement_learning": 0.014358499305233904,
-     "transformer": 0.001621120889300602
+    "coverage_share": 0.920102,
+    "excluded_groups": {
+     "deep_learning": 0.078277,
+     "transformer": 0.001621
     },
     "available_groups": [
      "explainable_AI",
      "other",
      "reinforcement_learning"
     ],
-    "group_rates": {
+    "group_rates_e1": {
      "deep_learning": null,
      "explainable_AI": 0.0,
-     "other": 0.07268370607028754,
+     "other": 0.11501597444089456,
      "reinforcement_learning": 0.3333333333333333,
      "transformer": null
     }
    },
    "2007": {
-    "rate": 0.1039742701650129,
+    "e1_rate": 0.1727156573113048,
+    "e2_rate": 0.1039742701650129,
     "n_non": 1695,
-    "target_shares": {
-     "deep_learning": 0.07827698008337193,
-     "explainable_AI": 0.022464103751736915,
-     "other": 0.8832792959703566,
-     "reinforcement_learning": 0.014358499305233904,
-     "transformer": 0.001621120889300602
+    "coverage_share": 0.920102,
+    "excluded_groups": {
+     "deep_learning": 0.078277,
+     "transformer": 0.001621
     },
     "available_groups": [
      "explainable_AI",
      "other",
      "reinforcement_learning"
     ],
-    "group_rates": {
+    "group_rates_e1": {
      "deep_learning": null,
-     "explainable_AI": 0.2222222222222222,
-     "other": 0.09970149253731343,
-     "reinforcement_learning": 0.18181818181818182,
+     "explainable_AI": 0.4444444444444444,
+     "other": 0.16417910447761194,
+     "reinforcement_learning": 0.2727272727272727,
      "transformer": null
     }
    },
    "2008": {
-    "rate": 0.11481780433039182,
+    "e1_rate": 0.2090664622857134,
+    "e2_rate": 0.11481780433039182,
     "n_non": 1902,
-    "target_shares": {
-     "deep_learning": 0.07827698008337193,
-     "explainable_AI": 0.022464103751736915,
-     "other": 0.8832792959703566,
-     "reinforcement_learning": 0.014358499305233904,
-     "transformer": 0.001621120889300602
+    "coverage_share": 0.920102,
+    "excluded_groups": {
+     "deep_learning": 0.078277,
+     "transformer": 0.001621
     },
     "available_groups": [
      "explainable_AI",
      "other",
      "reinforcement_learning"
     ],
-    "group_rates": {
+    "group_rates_e1": {
      "deep_learning": null,
-     "explainable_AI": 0.36363636363636365,
-     "other": 0.1071049840933192,
+     "explainable_AI": 0.9090909090909091,
+     "other": 0.1914103923647932,
      "reinforcement_learning": 0.2,
      "transformer": null
     }
    },
    "2009": {
-    "rate": 0.13586206518884222,
+    "e1_rate": 0.23816159967013534,
+    "e2_rate": 0.13586206518884222,
     "n_non": 2804,
-    "target_shares": {
-     "deep_learning": 0.07827698008337193,
-     "explainable_AI": 0.022464103751736915,
-     "other": 0.8832792959703566,
-     "reinforcement_learning": 0.014358499305233904,
-     "transformer": 0.001621120889300602
+    "coverage_share": 0.920102,
+    "excluded_groups": {
+     "deep_learning": 0.078277,
+     "transformer": 0.001621
     },
     "available_groups": [
      "explainable_AI",
      "other",
      "reinforcement_learning"
     ],
-    "group_rates": {
+    "group_rates_e1": {
      "deep_learning": null,
-     "explainable_AI": 0.2727272727272727,
-     "other": 0.12917115177610333,
-     "reinforcement_learning": 0.3333333333333333,
-     "transformer": null
-    }
-   },
-   "2010": {
-    "rate": 0.13970357590770144,
-    "n_non": 2308,
-    "target_shares": {
-     "deep_learning": 0.07827698008337193,
-     "explainable_AI": 0.022464103751736915,
-     "other": 0.8832792959703566,
-     "reinforcement_learning": 0.014358499305233904,
-     "transformer": 0.001621120889300602
-    },
-    "available_groups": [
-     "explainable_AI",
-     "other",
-     "reinforcement_learning"
-    ],
-    "group_rates": {
-     "deep_learning": null,
-     "explainable_AI": 0.45454545454545453,
-     "other": 0.13193534294451725,
-     "reinforcement_learning": 0.125,
-     "transformer": null
-    }
-   },
-   "2011": {
-    "rate": 0.21126026423568456,
-    "n_non": 2856,
-    "target_shares": {
-     "deep_learning": 0.07827698008337193,
-     "explainable_AI": 0.022464103751736915,
-     "other": 0.8832792959703566,
-     "reinforcement_learning": 0.014358499305233904,
-     "transformer": 0.001621120889300602
-    },
-    "available_groups": [
-     "explainable_AI",
-     "other",
-     "reinforcement_learning"
-    ],
-    "group_rates": {
-     "deep_learning": null,
-     "explainable_AI": 0.5,
-     "other": 0.20227111426543648,
-     "reinforcement_learning": 0.3125,
-     "transformer": null
-    }
-   },
-   "2012": {
-    "rate": 0.24938720550800306,
-    "n_non": 2712,
-    "target_shares": {
-     "deep_learning": 0.07827698008337193,
-     "explainable_AI": 0.022464103751736915,
-     "other": 0.8832792959703566,
-     "reinforcement_learning": 0.014358499305233904,
-     "transformer": 0.001621120889300602
-    },
-    "available_groups": [
-     "explainable_AI",
-     "other",
-     "reinforcement_learning"
-    ],
-    "group_rates": {
-     "deep_learning": null,
-     "explainable_AI": 0.7,
-     "other": 0.23385300668151449,
+     "explainable_AI": 0.36363636363636365,
+     "other": 0.23071402942231792,
      "reinforcement_learning": 0.5,
      "transformer": null
     }
    },
-   "2013": {
-    "rate": 0.2633698755830012,
-    "n_non": 2398,
-    "target_shares": {
-     "deep_learning": 0.07827698008337193,
-     "explainable_AI": 0.022464103751736915,
-     "other": 0.8832792959703566,
-     "reinforcement_learning": 0.014358499305233904,
-     "transformer": 0.001621120889300602
+   "2010": {
+    "e1_rate": 0.335011581361369,
+    "e2_rate": 0.13970357590770144,
+    "n_non": 2308,
+    "coverage_share": 0.920102,
+    "excluded_groups": {
+     "deep_learning": 0.078277,
+     "transformer": 0.001621
     },
     "available_groups": [
      "explainable_AI",
      "other",
      "reinforcement_learning"
     ],
-    "group_rates": {
+    "group_rates_e1": {
      "deep_learning": null,
-     "explainable_AI": 0.56,
-     "other": 0.2536047497879559,
-     "reinforcement_learning": 0.4,
+     "explainable_AI": 1.0909090909090908,
+     "other": 0.31716906946264745,
+     "reinforcement_learning": 0.25,
      "transformer": null
     }
    },
-   "2014": {
-    "rate": 0.2783592447550996,
-    "n_non": 2769,
-    "target_shares": {
-     "deep_learning": 0.07827698008337193,
-     "explainable_AI": 0.022464103751736915,
-     "other": 0.8832792959703566,
-     "reinforcement_learning": 0.014358499305233904,
-     "transformer": 0.001621120889300602
+   "2011": {
+    "e1_rate": 0.4146571686777873,
+    "e2_rate": 0.21126026423568456,
+    "n_non": 2856,
+    "coverage_share": 0.920102,
+    "excluded_groups": {
+     "deep_learning": 0.078277,
+     "transformer": 0.001621
     },
     "available_groups": [
-     "deep_learning",
      "explainable_AI",
      "other",
      "reinforcement_learning"
     ],
-    "group_rates": {
-     "deep_learning": 0.5,
-     "explainable_AI": 0.5384615384615384,
-     "other": 0.2508214676889376,
-     "reinforcement_learning": 0.35714285714285715,
-     "transformer": null
-    }
-   },
-   "2015": {
-    "rate": 0.29779331498422873,
-    "n_non": 2804,
-    "target_shares": {
-     "deep_learning": 0.07827698008337193,
-     "explainable_AI": 0.022464103751736915,
-     "other": 0.8832792959703566,
-     "reinforcement_learning": 0.014358499305233904,
-     "transformer": 0.001621120889300602
-    },
-    "available_groups": [
-     "deep_learning",
-     "explainable_AI",
-     "other",
-     "reinforcement_learning"
-    ],
-    "group_rates": {
-     "deep_learning": 0.2,
-     "explainable_AI": 0.5625,
-     "other": 0.2976017441860465,
-     "reinforcement_learning": 0.42857142857142855,
-     "transformer": null
-    }
-   },
-   "2016": {
-    "rate": 0.28286383624348155,
-    "n_non": 2757,
-    "target_shares": {
-     "deep_learning": 0.07827698008337193,
-     "explainable_AI": 0.022464103751736915,
-     "other": 0.8832792959703566,
-     "reinforcement_learning": 0.014358499305233904,
-     "transformer": 0.001621120889300602
-    },
-    "available_groups": [
-     "deep_learning",
-     "explainable_AI",
-     "other",
-     "reinforcement_learning"
-    ],
-    "group_rates": {
-     "deep_learning": 0.2,
-     "explainable_AI": 0.42105263157894735,
-     "other": 0.28587237181851716,
-     "reinforcement_learning": 0.3333333333333333,
-     "transformer": null
-    }
-   },
-   "2017": {
-    "rate": 0.2905690177288958,
-    "n_non": 2747,
-    "target_shares": {
-     "deep_learning": 0.07827698008337193,
-     "explainable_AI": 0.022464103751736915,
-     "other": 0.8832792959703566,
-     "reinforcement_learning": 0.014358499305233904,
-     "transformer": 0.001621120889300602
-    },
-    "available_groups": [
-     "deep_learning",
-     "explainable_AI",
-     "other",
-     "reinforcement_learning"
-    ],
-    "group_rates": {
-     "deep_learning": 0.2727272727272727,
-     "explainable_AI": 0.35714285714285715,
-     "other": 0.2850205453866268,
+    "group_rates_e1": {
+     "deep_learning": null,
+     "explainable_AI": 1.25,
+     "other": 0.38999290276792054,
      "reinforcement_learning": 0.625,
      "transformer": null
     }
    },
-   "2018": {
-    "rate": 0.2837212274698551,
-    "n_non": 3117,
-    "target_shares": {
-     "deep_learning": 0.07827698008337193,
-     "explainable_AI": 0.022464103751736915,
-     "other": 0.8832792959703566,
-     "reinforcement_learning": 0.014358499305233904,
-     "transformer": 0.001621120889300602
+   "2012": {
+    "e1_rate": 0.49523736782300576,
+    "e2_rate": 0.24938720550800306,
+    "n_non": 2712,
+    "coverage_share": 0.920102,
+    "excluded_groups": {
+     "deep_learning": 0.078277,
+     "transformer": 0.001621
+    },
+    "available_groups": [
+     "explainable_AI",
+     "other",
+     "reinforcement_learning"
+    ],
+    "group_rates_e1": {
+     "deep_learning": null,
+     "explainable_AI": 1.6,
+     "other": 0.4487750556792873,
+     "reinforcement_learning": 1.625,
+     "transformer": null
+    }
+   },
+   "2013": {
+    "e1_rate": 0.6189643879050426,
+    "e2_rate": 0.2633698755830012,
+    "n_non": 2398,
+    "coverage_share": 0.920102,
+    "excluded_groups": {
+     "deep_learning": 0.078277,
+     "transformer": 0.001621
+    },
+    "available_groups": [
+     "explainable_AI",
+     "other",
+     "reinforcement_learning"
+    ],
+    "group_rates_e1": {
+     "deep_learning": null,
+     "explainable_AI": 1.92,
+     "other": 0.5818490245971162,
+     "reinforcement_learning": 0.8666666666666667,
+     "transformer": null
+    }
+   },
+   "2014": {
+    "e1_rate": 0.6403553956437724,
+    "e2_rate": 0.2783592447550996,
+    "n_non": 2769,
+    "coverage_share": 0.998379,
+    "excluded_groups": {
+     "transformer": 0.001621
     },
     "available_groups": [
      "deep_learning",
@@ -994,24 +776,108 @@
      "other",
      "reinforcement_learning"
     ],
-    "group_rates": {
-     "deep_learning": 0.19230769230769232,
-     "explainable_AI": 0.35714285714285715,
-     "other": 0.28914858096828044,
-     "reinforcement_learning": 0.3333333333333333,
+    "group_rates_e1": {
+     "deep_learning": 0.5,
+     "explainable_AI": 2.076923076923077,
+     "other": 0.6173786053304126,
+     "reinforcement_learning": 0.5714285714285714,
+     "transformer": null
+    }
+   },
+   "2015": {
+    "e1_rate": 0.72369931647466,
+    "e2_rate": 0.29779331498422873,
+    "n_non": 2804,
+    "coverage_share": 0.998379,
+    "excluded_groups": {
+     "transformer": 0.001621
+    },
+    "available_groups": [
+     "deep_learning",
+     "explainable_AI",
+     "other",
+     "reinforcement_learning"
+    ],
+    "group_rates_e1": {
+     "deep_learning": 0.2,
+     "explainable_AI": 1.4375,
+     "other": 0.7532703488372093,
+     "reinforcement_learning": 0.6428571428571429,
+     "transformer": null
+    }
+   },
+   "2016": {
+    "e1_rate": 0.7130455113945888,
+    "e2_rate": 0.28286383624348155,
+    "n_non": 2757,
+    "coverage_share": 0.998379,
+    "excluded_groups": {
+     "transformer": 0.001621
+    },
+    "available_groups": [
+     "deep_learning",
+     "explainable_AI",
+     "other",
+     "reinforcement_learning"
+    ],
+    "group_rates_e1": {
+     "deep_learning": 0.2,
+     "explainable_AI": 1.105263157894737,
+     "other": 0.750645518258945,
+     "reinforcement_learning": 0.5833333333333334,
+     "transformer": null
+    }
+   },
+   "2017": {
+    "e1_rate": 0.7750565384962393,
+    "e2_rate": 0.2905690177288958,
+    "n_non": 2747,
+    "coverage_share": 0.998379,
+    "excluded_groups": {
+     "transformer": 0.001621
+    },
+    "available_groups": [
+     "deep_learning",
+     "explainable_AI",
+     "other",
+     "reinforcement_learning"
+    ],
+    "group_rates_e1": {
+     "deep_learning": 0.696969696969697,
+     "explainable_AI": 1.4642857142857142,
+     "other": 0.7485991781845349,
+     "reinforcement_learning": 1.75,
+     "transformer": null
+    }
+   },
+   "2018": {
+    "e1_rate": 0.7254268444959339,
+    "e2_rate": 0.2837212274698551,
+    "n_non": 3117,
+    "coverage_share": 0.998379,
+    "excluded_groups": {
+     "transformer": 0.001621
+    },
+    "available_groups": [
+     "deep_learning",
+     "explainable_AI",
+     "other",
+     "reinforcement_learning"
+    ],
+    "group_rates_e1": {
+     "deep_learning": 0.5384615384615384,
+     "explainable_AI": 0.9523809523809523,
+     "other": 0.7275459098497495,
+     "reinforcement_learning": 1.2592592592592593,
      "transformer": null
     }
    },
    "2019": {
-    "rate": 0.2905748142495987,
+    "e1_rate": 0.7923919897824901,
+    "e2_rate": 0.2905748142495987,
     "n_non": 3264,
-    "target_shares": {
-     "deep_learning": 0.07827698008337193,
-     "explainable_AI": 0.022464103751736915,
-     "other": 0.8832792959703566,
-     "reinforcement_learning": 0.014358499305233904,
-     "transformer": 0.001621120889300602
-    },
+    "coverage_share": 1.0,
+    "excluded_groups": {},
     "available_groups": [
      "deep_learning",
      "explainable_AI",
@@ -1019,23 +885,21 @@
      "reinforcement_learning",
      "transformer"
     ],
-    "group_rates": {
-     "deep_learning": 0.1440677966101695,
-     "explainable_AI": 0.4444444444444444,
-     "other": 0.30240103828682674,
-     "reinforcement_learning": 0.15384615384615385,
+    "group_rates_e1": {
+     "deep_learning": 0.23728813559322035,
+     "explainable_AI": 1.1666666666666667,
+     "other": 0.8345230369889682,
+     "reinforcement_learning": 0.7307692307692307,
      "transformer": 0.0
     }
    },
    "2020": {
-    "rate": 0.2915888191733839,
+    "e1_rate": 0.8025065629932026,
+    "e2_rate": 0.2915888191733839,
     "n_non": 3666,
-    "target_shares": {
-     "deep_learning": 0.07827698008337193,
-     "explainable_AI": 0.022464103751736915,
-     "other": 0.8832792959703566,
-     "reinforcement_learning": 0.014358499305233904,
-     "transformer": 0.001621120889300602
+    "coverage_share": 0.998379,
+    "excluded_groups": {
+     "transformer": 0.001621
     },
     "available_groups": [
      "deep_learning",
@@ -1043,24 +907,20 @@
      "other",
      "reinforcement_learning"
     ],
-    "group_rates": {
-     "deep_learning": 0.20155038759689922,
-     "explainable_AI": 0.5,
-     "other": 0.29335347432024167,
-     "reinforcement_learning": 0.34782608695652173,
+    "group_rates_e1": {
+     "deep_learning": 0.43023255813953487,
+     "explainable_AI": 1.0961538461538463,
+     "other": 0.8265861027190332,
+     "reinforcement_learning": 0.8913043478260869,
      "transformer": null
     }
    },
    "2021": {
-    "rate": 0.2908754052802224,
+    "e1_rate": 0.8304770727188513,
+    "e2_rate": 0.2908754052802224,
     "n_non": 4318,
-    "target_shares": {
-     "deep_learning": 0.07827698008337193,
-     "explainable_AI": 0.022464103751736915,
-     "other": 0.8832792959703566,
-     "reinforcement_learning": 0.014358499305233904,
-     "transformer": 0.001621120889300602
-    },
+    "coverage_share": 1.0,
+    "excluded_groups": {},
     "available_groups": [
      "deep_learning",
      "explainable_AI",
@@ -1068,24 +928,20 @@
      "reinforcement_learning",
      "transformer"
     ],
-    "group_rates": {
-     "deep_learning": 0.22485207100591717,
-     "explainable_AI": 0.4020618556701031,
-     "other": 0.29050865233350814,
-     "reinforcement_learning": 0.5161290322580645,
+    "group_rates_e1": {
+     "deep_learning": 0.46745562130177515,
+     "explainable_AI": 0.8762886597938144,
+     "other": 0.8542212899842685,
+     "reinforcement_learning": 1.3548387096774193,
      "transformer": 0.14285714285714285
     }
    },
    "2022": {
-    "rate": 0.2746240303557238,
+    "e1_rate": 0.7406687299520898,
+    "e2_rate": 0.2746240303557238,
     "n_non": 4445,
-    "target_shares": {
-     "deep_learning": 0.07827698008337193,
-     "explainable_AI": 0.022464103751736915,
-     "other": 0.8832792959703566,
-     "reinforcement_learning": 0.014358499305233904,
-     "transformer": 0.001621120889300602
-    },
+    "coverage_share": 1.0,
+    "excluded_groups": {},
     "available_groups": [
      "deep_learning",
      "explainable_AI",
@@ -1093,24 +949,20 @@
      "reinforcement_learning",
      "transformer"
     ],
-    "group_rates": {
-     "deep_learning": 0.2,
-     "explainable_AI": 0.35036496350364965,
-     "other": 0.2784090909090909,
-     "reinforcement_learning": 0.3611111111111111,
+    "group_rates_e1": {
+     "deep_learning": 0.31717171717171716,
+     "explainable_AI": 0.6496350364963503,
+     "other": 0.7770562770562771,
+     "reinforcement_learning": 1.037037037037037,
      "transformer": 0.0
     }
    },
    "2023": {
-    "rate": 0.24986269204715736,
+    "e1_rate": 0.6309961631733239,
+    "e2_rate": 0.24986269204715736,
     "n_non": 5705,
-    "target_shares": {
-     "deep_learning": 0.07827698008337193,
-     "explainable_AI": 0.022464103751736915,
-     "other": 0.8832792959703566,
-     "reinforcement_learning": 0.014358499305233904,
-     "transformer": 0.001621120889300602
-    },
+    "coverage_share": 1.0,
+    "excluded_groups": {},
     "available_groups": [
      "deep_learning",
      "explainable_AI",
@@ -1118,24 +970,20 @@
      "reinforcement_learning",
      "transformer"
     ],
-    "group_rates": {
-     "deep_learning": 0.1811320754716981,
-     "explainable_AI": 0.2953020134228188,
-     "other": 0.2533010563380282,
-     "reinforcement_learning": 0.35795454545454547,
+    "group_rates_e1": {
+     "deep_learning": 0.29056603773584905,
+     "explainable_AI": 0.7516778523489933,
+     "other": 0.6507482394366197,
+     "reinforcement_learning": 1.1420454545454546,
      "transformer": 0.10810810810810811
     }
    },
    "2024": {
-    "rate": 0.2343077480886898,
+    "e1_rate": 0.6377017272302477,
+    "e2_rate": 0.2343077480886898,
     "n_non": 7608,
-    "target_shares": {
-     "deep_learning": 0.07827698008337193,
-     "explainable_AI": 0.022464103751736915,
-     "other": 0.8832792959703566,
-     "reinforcement_learning": 0.014358499305233904,
-     "transformer": 0.001621120889300602
-    },
+    "coverage_share": 1.0,
+    "excluded_groups": {},
     "available_groups": [
      "deep_learning",
      "explainable_AI",
@@ -1143,24 +991,20 @@
      "reinforcement_learning",
      "transformer"
     ],
-    "group_rates": {
-     "deep_learning": 0.17383348581884722,
-     "explainable_AI": 0.3569023569023569,
-     "other": 0.23517276946879834,
-     "reinforcement_learning": 0.3333333333333333,
-     "transformer": 0.10714285714285714
+    "group_rates_e1": {
+     "deep_learning": 0.2817932296431839,
+     "explainable_AI": 0.7811447811447811,
+     "other": 0.6585869004641568,
+     "reinforcement_learning": 1.1273408239700375,
+     "transformer": 0.11904761904761904
     }
    },
    "2025": {
-    "rate": 0.20270984677322215,
+    "e1_rate": 0.5199884777236632,
+    "e2_rate": 0.20270984677322215,
     "n_non": 7681,
-    "target_shares": {
-     "deep_learning": 0.07827698008337193,
-     "explainable_AI": 0.022464103751736915,
-     "other": 0.8832792959703566,
-     "reinforcement_learning": 0.014358499305233904,
-     "transformer": 0.001621120889300602
-    },
+    "coverage_share": 1.0,
+    "excluded_groups": {},
     "available_groups": [
      "deep_learning",
      "explainable_AI",
@@ -1168,25 +1012,33 @@
      "reinforcement_learning",
      "transformer"
     ],
-    "group_rates": {
-     "deep_learning": 0.13793103448275862,
-     "explainable_AI": 0.22163588390501318,
-     "other": 0.2060320452403393,
-     "reinforcement_learning": 0.3333333333333333,
-     "transformer": 0.10126582278481013
+    "group_rates_e1": {
+     "deep_learning": 0.24057738572574178,
+     "explainable_AI": 0.41424802110817943,
+     "other": 0.5362865221489161,
+     "reinforcement_learning": 1.2469135802469136,
+     "transformer": 0.15822784810126583
     }
    }
   },
   "endpoints": {
-   "rate_2021": 0.290875,
-   "rate_2025": 0.20271,
-   "relative_change": -0.303104
+   "rate_2021": 0.830477,
+   "rate_2025": 0.519988,
+   "relative_change": -0.373868,
+   "e2_rate_2021": 0.290875,
+   "e2_rate_2025": 0.20271,
+   "e2_relative_change": -0.303104,
+   "coverage_share_2025": 1.0,
+   "excluded_groups_2025": {}
   }
  },
  "meta": {
-  "unit": "citations from stable-source NON_EC papers to in-corpus EC papers per NON_EC paper",
+  "unit_e1": "E1: distinct in-corpus EC citation edges per stable-source NON_EC paper (mean edges per paper)",
+  "unit_e2": "E2: share of stable-source NON_EC papers with >=1 in-corpus EC citation edge (binary participation rate)",
+  "unit_fix_note": "2026-10-14: original run counted DISTINCT citing papers (E2 mislabelled as E1); this run counts DISTINCT (acc, cited) edges aligned with checks.py and reports both estimators",
   "topic_text": "mutually exclusive title/abstract flag, priority ordered; sensitivity only",
   "edge_definition": "distinct paper_refs_out source-to-target pairs after DOI resolution",
+  "missing_group_policy": "years lacking a 2021-active group are reweighted over available groups; coverage_share and excluded_groups (with their 2021 target shares) are reported explicitly",
   "registered_headline_unchanged": true
  }
 }

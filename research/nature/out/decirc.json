@@ -1,0 +1,79 @@
+{
+ "test": "lagged dispersion (2019->2021) vs later width (2021->2024), E1, EC 7 sources",
+ "full_set": {
+  "subset": [
+   "Applied Soft Computing",
+   "Computers and Operations Research",
+   "Engineering Applications of Artificial Intelligence",
+   "European Journal of Operational Research",
+   "Expert Systems with Applications",
+   "IEEE Transactions on Fuzzy Systems",
+   "Information Sciences"
+  ],
+  "disp_sd": 0.317,
+  "mixed_signs_lagged": true,
+  "laspeyres": -0.0183,
+  "paasche": -0.146,
+  "width_pp": 12.78
+ },
+ "loo": [
+  {
+   "dropped": "Applied Soft Computing",
+   "disp_sd": 0.3057,
+   "mixed_signs_lagged": true,
+   "laspeyres": 0.0033,
+   "paasche": -0.1509,
+   "width_pp": 15.42
+  },
+  {
+   "dropped": "Computers and Operations Research",
+   "disp_sd": 0.3469,
+   "mixed_signs_lagged": true,
+   "laspeyres": -0.0398,
+   "paasche": -0.1688,
+   "width_pp": 12.9
+  },
+  {
+   "dropped": "Engineering Applications of Artificial Intelligence",
+   "disp_sd": 0.3119,
+   "mixed_signs_lagged": true,
+   "laspeyres": 0.0065,
+   "paasche": -0.0753,
+   "width_pp": 8.18
+  },
+  {
+   "dropped": "European Journal of Operational Research",
+   "disp_sd": 0.3152,
+   "mixed_signs_lagged": true,
+   "laspeyres": -0.1508,
+   "paasche": -0.2171,
+   "width_pp": 6.63
+  },
+  {
+   "dropped": "Expert Systems with Applications",
+   "disp_sd": 0.3217,
+   "mixed_signs_lagged": true,
+   "laspeyres": 0.0383,
+   "paasche": -0.118,
+   "width_pp": 15.62
+  },
+  {
+   "dropped": "IEEE Transactions on Fuzzy Systems",
+   "disp_sd": 0.2719,
+   "mixed_signs_lagged": true,
+   "laspeyres": 0.0038,
+   "paasche": -0.1306,
+   "width_pp": 13.43
+  },
+  {
+   "dropped": "Information Sciences",
+   "disp_sd": 0.3402,
+   "mixed_signs_lagged": true,
+   "laspeyres": 0.0127,
+   "paasche": -0.1437,
+   "width_pp": 15.64
+  }
+ ],
+ "spearman_loo": 0.1786,
+ "soft_wording_rule": "until positive, write 'consistent with', not 'predicts'"
+}

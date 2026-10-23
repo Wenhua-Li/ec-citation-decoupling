@@ -1,0 +1,1436 @@
+{
+ "physics": {
+  "Physical Review Letters": [
+   {
+    "sid": "S24807848",
+    "display_name": "Physical Review Letters",
+    "issn": [
+     "0031-9007",
+     "1079-7114",
+     "1092-0145"
+    ],
+    "works_count": 146447,
+    "type": "journal"
+   }
+  ],
+  "Physical Review B": [
+   {
+    "sid": "S4210174675",
+    "display_name": "Physical review. B, Condensed matter",
+    "issn": [
+     "0163-1829",
+     "1095-3795"
+    ],
+    "works_count": 92661,
+    "type": "journal"
+   },
+   {
+    "sid": "S6791298",
+    "display_name": "Physical Review B",
+    "issn": [
+     "1098-0121",
+     "1538-4489",
+     "1550-235X"
+    ],
+    "works_count": 70229,
+    "type": "journal"
+   },
+   {
+    "sid": "S4210237713",
+    "display_name": "Physical review. B./Physical review. B",
+    "issn": [
+     "2469-9950",
+     "2469-9969",
+     "2469-9977"
+    ],
+    "works_count": 57322,
+    "type": "journal"
+   }
+  ],
+  "Applied Physics Letters": [
+   {
+    "sid": "S105243760",
+    "display_name": "Applied Physics Letters",
+    "issn": [
+     "0003-6951",
+     "1077-3118",
+     "1520-8842"
+    ],
+    "works_count": 142432,
+    "type": "journal"
+   },
+   {
+    "sid": "S143744711",
+    "display_name": "Japanese Journal of Applied Physics",
+    "issn": [
+     "0021-4922",
+     "1347-4065"
+    ],
+    "works_count": 85893,
+    "type": "journal"
+   },
+   {
+    "sid": "S4210235904",
+    "display_name": "Indonesian Applied Physics Letters",
+    "issn": [
+     "2745-3502"
+    ],
+    "works_count": 60,
+    "type": "journal"
+   }
+  ],
+  "Physical Review A": [
+   {
+    "sid": "S164566984",
+    "display_name": "Physical Review A",
+    "issn": [
+     "0556-2791",
+     "1050-2947",
+     "1094-1622",
+     "1538-4446",
+     "2469-9926",
+     "2469-9934",
+     "2469-9942"
+    ],
+    "works_count": 101246,
+    "type": "journal"
+   }
+  ]
+ },
+ "materials": {
+  "Advanced Materials": [
+   {
+    "sid": "S99352657",
+    "display_name": "Advanced Materials",
+    "issn": [
+     "0935-9648",
+     "1521-4095"
+    ],
+    "works_count": 45866,
+    "type": "journal"
+   },
+   {
+    "sid": "S135204980",
+    "display_name": "Advanced Functional Materials",
+    "issn": [
+     "1616-301X",
+     "1616-3028"
+    ],
+    "works_count": 44684,
+    "type": "journal"
+   },
+   {
+    "sid": "S67425620",
+    "display_name": "Advanced materials research",
+    "issn": [
+     "1022-6680",
+     "1662-8985"
+    ],
+    "works_count": 147360,
+    "type": "journal"
+   }
+  ],
+  "Acta Materialia": [
+   {
+    "sid": "S64016596",
+    "display_name": "Acta Materialia",
+    "issn": [
+     "1359-6454",
+     "1873-2453"
+    ],
+    "works_count": 21784,
+    "type": "journal"
+   },
+   {
+    "sid": "S512685",
+    "display_name": "Acta Metallurgica et Materialia",
+    "issn": [
+     "0956-7151",
+     "1873-2879"
+    ],
+    "works_count": 2254,
+    "type": "journal"
+   },
+   {
+    "sid": "S4210225863",
+    "display_name": "Acta Materialia Transylvanica",
+    "issn": [
+     "2601-8799"
+    ],
+    "works_count": 178,
+    "type": "journal"
+   }
+  ],
+  "Nano Letters": [
+   {
+    "sid": "S143846845",
+    "display_name": "Nano Letters",
+    "issn": [
+     "1530-6984",
+     "1530-6992"
+    ],
+    "works_count": 27981,
+    "type": "journal"
+   },
+   {
+    "sid": "S95685352",
+    "display_name": "Micro & Nano Letters",
+    "issn": [
+     "1750-0443"
+    ],
+    "works_count": 3170,
+    "type": "journal"
+   },
+   {
+    "sid": "S9070373",
+    "display_name": "Nano-Micro Letters",
+    "issn": [
+     "2150-5551",
+     "2311-6706"
+    ],
+    "works_count": 2660,
+    "type": "journal"
+   }
+  ],
+  "Advanced Functional Materials": [
+   {
+    "sid": "S135204980",
+    "display_name": "Advanced Functional Materials",
+    "issn": [
+     "1616-301X",
+     "1616-3028"
+    ],
+    "works_count": 44684,
+    "type": "journal"
+   },
+   {
+    "sid": "S4210190818",
+    "display_name": "Materials Science and Engineering B",
+    "issn": [
+     "0921-5107",
+     "1873-4944"
+    ],
+    "works_count": 16111,
+    "type": "journal"
+   },
+   {
+    "sid": "S4210239353",
+    "display_name": "Advanced functional materials and sensors",
+    "issn": [
+     "2662-558X",
+     "2662-5598"
+    ],
+    "works_count": 31,
+    "type": "book series"
+   }
+  ]
+ },
+ "chemistry": {
+  "Journal of the American Chemical Society": [
+   {
+    "sid": "S111155417",
+    "display_name": "Journal of the American Chemical Society",
+    "issn": [
+     "0002-7863",
+     "1520-5126",
+     "1943-2984"
+    ],
+    "works_count": 222437,
+    "type": "journal"
+   },
+   {
+    "sid": "S4210207119",
+    "display_name": "JACS Au",
+    "issn": [
+     "2691-3704"
+    ],
+    "works_count": 2497,
+    "type": "journal"
+   }
+  ],
+  "Angewandte Chemie International Edition": [
+   {
+    "sid": "S67393510",
+    "display_name": "Angewandte Chemie International Edition",
+    "issn": [
+     "1433-7851",
+     "1521-3773"
+    ],
+    "works_count": 82475,
+    "type": "journal"
+   },
+   {
+    "sid": "S4394735490",
+    "display_name": "Angewandte Chemie International Edition in English",
+    "issn": [
+     "0570-0833"
+    ],
+    "works_count": 18488,
+    "type": "journal"
+   }
+  ],
+  "Chemical Science": [
+   {
+    "sid": "S184645833",
+    "display_name": "Chemical Science",
+    "issn": [
+     "2041-6520",
+     "2041-6539"
+    ],
+    "works_count": 21535,
+    "type": "journal"
+   },
+   {
+    "sid": "S33892871",
+    "display_name": "Chemical Engineering Science",
+    "issn": [
+     "0009-2509",
+     "1873-4405"
+    ],
+    "works_count": 34796,
+    "type": "journal"
+   },
+   {
+    "sid": "S4210176808",
+    "display_name": "Frontiers of Chemical Science and Engineering",
+    "issn": [
+     "1673-7369",
+     "1673-7474",
+     "2095-0179",
+     "2095-0187"
+    ],
+    "works_count": 1698,
+    "type": "journal"
+   }
+  ],
+  "Analytical Chemistry": [
+   {
+    "sid": "S191963794",
+    "display_name": "Analytical Chemistry",
+    "issn": [
+     "0003-2700",
+     "1520-6882"
+    ],
+    "works_count": 140854,
+    "type": "journal"
+   },
+   {
+    "sid": "S64920681",
+    "display_name": "TrAC Trends in Analytical Chemistry",
+    "issn": [
+     "0165-9936",
+     "0167-2940",
+     "1879-3142"
+    ],
+    "works_count": 9358,
+    "type": "journal"
+   },
+   {
+    "sid": "S18188872",
+    "display_name": "Analytical and Bioanalytical Chemistry",
+    "issn": [
+     "1618-2642",
+     "1618-2650"
+    ],
+    "works_count": 47512,
+    "type": "journal"
+   }
+  ]
+ },
+ "chemical_engineering": {
+  "AIChE Journal": [
+   {
+    "sid": "S147177414",
+    "display_name": "AIChE Journal",
+    "issn": [
+     "0001-1541",
+     "1547-5905"
+    ],
+    "works_count": 21034,
+    "type": "journal"
+   }
+  ],
+  "Chemical Engineering Science": [
+   {
+    "sid": "S33892871",
+    "display_name": "Chemical Engineering Science",
+    "issn": [
+     "0009-2509",
+     "1873-4405"
+    ],
+    "works_count": 34796,
+    "type": "journal"
+   },
+   {
+    "sid": "S4210176808",
+    "display_name": "Frontiers of Chemical Science and Engineering",
+    "issn": [
+     "1673-7369",
+     "1673-7474",
+     "2095-0179",
+     "2095-0187"
+    ],
+    "works_count": 1698,
+    "type": "journal"
+   },
+   {
+    "sid": "S4210216656",
+    "display_name": "Chemical Engineering Science X",
+    "issn": [
+     "2590-1400"
+    ],
+    "works_count": 110,
+    "type": "journal"
+   }
+  ],
+  "Industrial & Engineering Chemistry Research": [
+   {
+    "sid": "S202680183",
+    "display_name": "Industrial & Engineering Chemistry Research",
+    "issn": [
+     "0888-5885",
+     "1520-5045"
+    ],
+    "works_count": 47138,
+    "type": "journal"
+   },
+   {
+    "sid": "S192703835",
+    "display_name": "Industrial & Engineering Chemistry Product Research and Development",
+    "issn": [
+     "0196-4321",
+     "1541-4841"
+    ],
+    "works_count": 1125,
+    "type": "journal"
+   },
+   {
+    "sid": "S4210208326",
+    "display_name": "Product R&D",
+    "issn": [
+     "0091-1968",
+     "1943-3026"
+    ],
+    "works_count": 706,
+    "type": "journal"
+   }
+  ]
+ },
+ "biology": {
+  "Cell": [
+   {
+    "sid": "S110447773",
+    "display_name": "Cell",
+    "issn": [
+     "0092-8674",
+     "1097-4172"
+    ],
+    "works_count": 26965,
+    "type": "journal"
+   },
+   {
+    "sid": "S96410829",
+    "display_name": "The Journal of Cell Biology",
+    "issn": [
+     "0021-9525",
+     "1540-8140"
+    ],
+    "works_count": 28850,
+    "type": "journal"
+   },
+   {
+    "sid": "S156208185",
+    "display_name": "Molecular Cell",
+    "issn": [
+     "1097-2765",
+     "1097-4164"
+    ],
+    "works_count": 10661,
+    "type": "journal"
+   }
+  ],
+  "PLOS Biology": [
+   {
+    "sid": "S154343897",
+    "display_name": "PLoS Biology",
+    "issn": [
+     "1544-9173",
+     "1545-7885"
+    ],
+    "works_count": 8792,
+    "type": "journal"
+   },
+   {
+    "sid": "S86033158",
+    "display_name": "PLoS Computational Biology",
+    "issn": [
+     "1553-734X",
+     "1553-7358"
+    ],
+    "works_count": 13122,
+    "type": "journal"
+   }
+  ],
+  "The EMBO Journal": [
+   {
+    "sid": "S127916151",
+    "display_name": "The EMBO Journal",
+    "issn": [
+     "0261-4189",
+     "1460-2075"
+    ],
+    "works_count": 22113,
+    "type": "journal"
+   }
+  ],
+  "Nucleic Acids Research": [
+   {
+    "sid": "S134668137",
+    "display_name": "Nucleic Acids Research",
+    "issn": [
+     "0305-1048",
+     "1362-4954",
+     "1362-4962"
+    ],
+    "works_count": 56112,
+    "type": "journal"
+   },
+   {
+    "sid": "S4210241000",
+    "display_name": "NAR Genomics and Bioinformatics",
+    "issn": [
+     "2631-9268"
+    ],
+    "works_count": 1007,
+    "type": "journal"
+   },
+   {
+    "sid": "S4210177631",
+    "display_name": "NAR Cancer",
+    "issn": [
+     "2632-8674"
+    ],
+    "works_count": 339,
+    "type": "journal"
+   }
+  ]
+ },
+ "medicine": {
+  "The Lancet": [
+   {
+    "sid": "S49861241",
+    "display_name": "The Lancet",
+    "issn": [
+     "0099-5355",
+     "0140-6736",
+     "1474-547X"
+    ],
+    "works_count": 475725,
+    "type": "journal"
+   },
+   {
+    "sid": "S116900674",
+    "display_name": "The Lancet Oncology",
+    "issn": [
+     "1470-2045",
+     "1474-5488"
+    ],
+    "works_count": 12142,
+    "type": "journal"
+   },
+   {
+    "sid": "S70053155",
+    "display_name": "The Lancet Neurology",
+    "issn": [
+     "1474-4422",
+     "1474-4465"
+    ],
+    "works_count": 7357,
+    "type": "journal"
+   }
+  ],
+  "JAMA": [
+   {
+    "sid": "S172573765",
+    "display_name": "JAMA",
+    "issn": [
+     "0002-9955",
+     "0098-7484",
+     "1538-3598",
+     "2376-8118"
+    ],
+    "works_count": 340985,
+    "type": "journal"
+   },
+   {
+    "sid": "S4210217848",
+    "display_name": "JAMA Network Open",
+    "issn": [
+     "2574-3805"
+    ],
+    "works_count": 17178,
+    "type": "journal"
+   },
+   {
+    "sid": "S2756165422",
+    "display_name": "JAMA Oncology",
+    "issn": [
+     "2374-2437",
+     "2374-2445"
+    ],
+    "works_count": 4895,
+    "type": "journal"
+   }
+  ],
+  "BMJ": [
+   {
+    "sid": "S4393911389",
+    "display_name": "BMJ",
+    "issn": [
+     "0007-1447",
+     "0267-0623",
+     "1468-5833"
+    ],
+    "works_count": 389407,
+    "type": "journal"
+   },
+   {
+    "sid": "S4393917726",
+    "display_name": "BMJ",
+    "issn": [
+     "1756-1833"
+    ],
+    "works_count": 64499,
+    "type": "journal"
+   },
+   {
+    "sid": "S79054089",
+    "display_name": "BMJ Open",
+    "issn": [
+     "2044-6055"
+    ],
+    "works_count": 45954,
+    "type": "journal"
+   }
+  ],
+  "The New England Journal of Medicine": [
+   {
+    "sid": "S4210202533",
+    "display_name": "The New England Journal of Medicine and Surgery and the Collateral Branches of Science",
+    "issn": [
+     "2163-3061",
+     "2163-307X"
+    ],
+    "works_count": 27,
+    "type": "journal"
+   },
+   {
+    "sid": "S2764587522",
+    "display_name": "The New England Journal of Medicine, Surgery and Collateral Branches of Science",
+    "issn": null,
+    "works_count": 0,
+    "type": "journal"
+   }
+  ]
+ },
+ "computer_science": {
+  "Journal of the ACM": [
+   {
+    "sid": "S118992489",
+    "display_name": "Journal of the ACM",
+    "issn": [
+     "0004-5411",
+     "1557-735X"
+    ],
+    "works_count": 3305,
+    "type": "journal"
+   }
+  ],
+  "IEEE Transactions on Pattern Analysis and Machine Intelligence": [
+   {
+    "sid": "S199944782",
+    "display_name": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+    "issn": [
+     "0162-8828",
+     "1939-3539",
+     "2160-9292"
+    ],
+    "works_count": 12612,
+    "type": "journal"
+   }
+  ],
+  "Communications of the ACM": [
+   {
+    "sid": "S103482838",
+    "display_name": "Communications of the ACM",
+    "issn": [
+     "0001-0782",
+     "1557-7317"
+    ],
+    "works_count": 16154,
+    "type": "journal"
+   },
+   {
+    "sid": "S4393917527",
+    "display_name": "Proceedings of the ACM Conference on Computer and Communications Security",
+    "issn": [
+     "1543-7221"
+    ],
+    "works_count": 1017,
+    "type": "conference"
+   },
+   {
+    "sid": "S4363608815",
+    "display_name": "ACM SIGSAC Conference on Computer and Communications Security (CCS)",
+    "issn": null,
+    "works_count": 2603,
+    "type": "conference"
+   }
+  ]
+ },
+ "electrical_engineering": {
+  "Proceedings of the IEEE": [
+   {
+    "sid": "S68686220",
+    "display_name": "Proceedings of the IEEE",
+    "issn": [
+     "0018-9219",
+     "1558-2256"
+    ],
+    "works_count": 20157,
+    "type": "journal"
+   },
+   {
+    "sid": "S4210221977",
+    "display_name": "Proceedings of the IEEE Conference on Decision & Control, including the Symposium on Adaptive Processes",
+    "issn": [
+     "0191-2216"
+    ],
+    "works_count": 36716,
+    "type": "conference"
+   },
+   {
+    "sid": "S4210233669",
+    "display_name": "Proceedings - IEEE Symposium on Security and Privacy/Proceedings of the ... IEEE Symposium on Security and Privacy",
+    "issn": [
+     "1081-6011",
+     "2375-1207"
+    ],
+    "works_count": 2602,
+    "type": "conference"
+   }
+  ],
+  "IEEE Transactions on Information Theory": [
+   {
+    "sid": "S4502562",
+    "display_name": "IEEE Transactions on Information Theory",
+    "issn": [
+     "0018-9448",
+     "1557-9654"
+    ],
+    "works_count": 20515,
+    "type": "journal"
+   }
+  ],
+  "IEEE Transactions on Signal Processing": [
+   {
+    "sid": "S168680287",
+    "display_name": "IEEE Transactions on Signal Processing",
+    "issn": [
+     "1053-587X",
+     "1941-0476"
+    ],
+    "works_count": 18008,
+    "type": "journal"
+   },
+   {
+    "sid": "S98930721",
+    "display_name": "IEEE Transactions on Acoustics Speech and Signal Processing",
+    "issn": [
+     "0096-3518"
+    ],
+    "works_count": 3300,
+    "type": "journal"
+   },
+   {
+    "sid": "S81140365",
+    "display_name": "IEEE Transactions on Circuits and Systems II Analog and Digital Signal Processing",
+    "issn": [
+     "1057-7130",
+     "1558-125X"
+    ],
+    "works_count": 2517,
+    "type": "journal"
+   }
+  ]
+ },
+ "neuroscience": {
+  "Neuron": [
+   {
+    "sid": "S45757444",
+    "display_name": "Neuron",
+    "issn": [
+     "0896-6273",
+     "1097-4199"
+    ],
+    "works_count": 14449,
+    "type": "journal"
+   },
+   {
+    "sid": "S194259625",
+    "display_name": "Neuron Glia Biology",
+    "issn": [
+     "1740-925X",
+     "1741-0533"
+    ],
+    "works_count": 241,
+    "type": "journal"
+   },
+   {
+    "sid": "S4210235782",
+    "display_name": "Amyotrophic Lateral Sclerosis and Other Motor Neuron Disorders",
+    "issn": [
+     "1466-0822"
+    ],
+    "works_count": 371,
+    "type": "journal"
+   }
+  ],
+  "Nature Neuroscience": [
+   {
+    "sid": "S2298632",
+    "display_name": "Nature Neuroscience",
+    "issn": [
+     "1097-6256",
+     "1546-1726"
+    ],
+    "works_count": 8221,
+    "type": "journal"
+   },
+   {
+    "sid": "S26843219",
+    "display_name": "Nature reviews. Neuroscience",
+    "issn": [
+     "1471-003X",
+     "1471-0048"
+    ],
+    "works_count": 5229,
+    "type": "journal"
+   },
+   {
+    "sid": "S4210194119",
+    "display_name": "Neuroscience Gateway",
+    "issn": [
+     "1750-9475"
+    ],
+    "works_count": 164,
+    "type": "journal"
+   }
+  ],
+  "Journal of Neuroscience": [
+   {
+    "sid": "S5555990",
+    "display_name": "Journal of Neuroscience",
+    "issn": [
+     "0270-6474",
+     "1529-2401"
+    ],
+    "works_count": 42507,
+    "type": "journal"
+   },
+   {
+    "sid": "S171130801",
+    "display_name": "European Journal of Neuroscience",
+    "issn": [
+     "0953-816X",
+     "1460-9568"
+    ],
+    "works_count": 16209,
+    "type": "journal"
+   },
+   {
+    "sid": "S76417895",
+    "display_name": "Journal of Neuroscience Research",
+    "issn": [
+     "0360-4012",
+     "1097-4547"
+    ],
+    "works_count": 12052,
+    "type": "journal"
+   }
+  ]
+ },
+ "business": {
+  "Academy of Management Journal": [
+   {
+    "sid": "S117778295",
+    "display_name": "Academy of Management Journal",
+    "issn": [
+     "0001-4273",
+     "1948-0989"
+    ],
+    "works_count": 4944,
+    "type": "journal"
+   },
+   {
+    "sid": "S2736787908",
+    "display_name": "Asian Academy of Management Journal",
+    "issn": [
+     "1394-2603",
+     "2180-4184"
+    ],
+    "works_count": 279,
+    "type": "journal"
+   },
+   {
+    "sid": "S2764575530",
+    "display_name": "Academy of strategic management journal/Academy of Strategic Management journal",
+    "issn": [
+     "1544-1458",
+     "1939-6104"
+    ],
+    "works_count": 1294,
+    "type": "journal"
+   }
+  ],
+  "Administrative Science Quarterly": [
+   {
+    "sid": "S143668711",
+    "display_name": "Administrative Science Quarterly",
+    "issn": [
+     "0001-8392",
+     "1930-3815"
+    ],
+    "works_count": 4370,
+    "type": "journal"
+   }
+  ],
+  "Organization Science": [
+   {
+    "sid": "S206124708",
+    "display_name": "Organization Science",
+    "issn": [
+     "1047-7039",
+     "1526-5455"
+    ],
+    "works_count": 2802,
+    "type": "journal"
+   },
+   {
+    "sid": "S4210221068",
+    "display_name": "NATO science series. Series II, Mathematics, physics and chemistry",
+    "issn": [
+     "1568-2609"
+    ],
+    "works_count": 908,
+    "type": "book series"
+   },
+   {
+    "sid": "S4210169715",
+    "display_name": "NATO science series. Series IV, Earth and environmental sciences",
+    "issn": [
+     "1568-1238"
+    ],
+    "works_count": 263,
+    "type": "book series"
+   }
+  ]
+ },
+ "sociology": {
+  "American Sociological Review": [
+   {
+    "sid": "S157620343",
+    "display_name": "American Sociological Review",
+    "issn": [
+     "0003-1224",
+     "1939-8271"
+    ],
+    "works_count": 13115,
+    "type": "journal"
+   },
+   {
+    "sid": "S4210198337",
+    "display_name": "The American Catholic Sociological Review",
+    "issn": [
+     "0362-515X",
+     "2325-7881"
+    ],
+    "works_count": 2948,
+    "type": "journal"
+   }
+  ],
+  "American Journal of Sociology": [
+   {
+    "sid": "S122471516",
+    "display_name": "American Journal of Sociology",
+    "issn": [
+     "0002-9602",
+     "1537-5390"
+    ],
+    "works_count": 28013,
+    "type": "journal"
+   },
+   {
+    "sid": "S97548893",
+    "display_name": "American Journal of Economics and Sociology",
+    "issn": [
+     "0002-9246",
+     "1536-7150"
+    ],
+    "works_count": 5477,
+    "type": "journal"
+   },
+   {
+    "sid": "S2764360065",
+    "display_name": "American Journal of Cultural Sociology",
+    "issn": [
+     "2049-7113",
+     "2049-7121"
+    ],
+    "works_count": 337,
+    "type": "journal"
+   }
+  ],
+  "Social Forces": [
+   {
+    "sid": "S130611943",
+    "display_name": "Social Forces",
+    "issn": [
+     "0037-7732",
+     "1534-7605"
+    ],
+    "works_count": 21422,
+    "type": "journal"
+   },
+   {
+    "sid": "S4387277835",
+    "display_name": "Journal of Social Forces",
+    "issn": [
+     "1532-1282"
+    ],
+    "works_count": 0,
+    "type": "journal"
+   }
+  ]
+ },
+ "political_science": {
+  "American Political Science Review": [
+   {
+    "sid": "S176007004",
+    "display_name": "American Political Science Review",
+    "issn": [
+     "0003-0554",
+     "1537-5943"
+    ],
+    "works_count": 33555,
+    "type": "journal"
+   }
+  ],
+  "American Journal of Political Science": [
+   {
+    "sid": "S90314269",
+    "display_name": "American Journal of Political Science",
+    "issn": [
+     "0092-5853",
+     "1540-5907"
+    ],
+    "works_count": 3332,
+    "type": "journal"
+   },
+   {
+    "sid": "S4210209250",
+    "display_name": "The American Journal of Political Science Law and Criminology",
+    "issn": [
+     "2693-0803"
+    ],
+    "works_count": 761,
+    "type": "journal"
+   },
+   {
+    "sid": "S4210194836",
+    "display_name": "Revista Ibero-Americana de Estudos Legislativos",
+    "issn": [
+     "2179-8419"
+    ],
+    "works_count": 27,
+    "type": "journal"
+   }
+  ],
+  "The Journal of Politics": [
+   {
+    "sid": "S95650557",
+    "display_name": "The Journal of Politics",
+    "issn": [
+     "0022-3816",
+     "1468-2508"
+    ],
+    "works_count": 12555,
+    "type": "journal"
+   },
+   {
+    "sid": "S161861253",
+    "display_name": "The International Journal of Press/Politics",
+    "issn": [
+     "1040-1620",
+     "1940-1612",
+     "1940-1620"
+    ],
+    "works_count": 857,
+    "type": "journal"
+   },
+   {
+    "sid": "S161552967",
+    "display_name": "The British Journal of Politics and International Relations",
+    "issn": [
+     "1369-1481",
+     "1467-856X"
+    ],
+    "works_count": 1273,
+    "type": "journal"
+   }
+  ]
+ },
+ "ecology": {
+  "Ecology Letters": [
+   {
+    "sid": "S80967739",
+    "display_name": "Ecology Letters",
+    "issn": [
+     "1461-023X",
+     "1461-0248"
+    ],
+    "works_count": 5160,
+    "type": "journal"
+   },
+   {
+    "sid": "S4210176820",
+    "display_name": "Soil Ecology Letters",
+    "issn": [
+     "2662-2289",
+     "2662-2297"
+    ],
+    "works_count": 487,
+    "type": "journal"
+   },
+   {
+    "sid": "S4210200053",
+    "display_name": "Global Ecology and Biogeography Letters",
+    "issn": [
+     "0960-7447"
+    ],
+    "works_count": 398,
+    "type": "journal"
+   }
+  ],
+  "Ecology": [
+   {
+    "sid": "S35917800",
+    "display_name": "Ecology",
+    "issn": [
+     "0012-9658",
+     "1939-9170"
+    ],
+    "works_count": 24529,
+    "type": "journal"
+   },
+   {
+    "sid": "S96743589",
+    "display_name": "Marine Ecology Progress Series",
+    "issn": [
+     "0171-8630",
+     "1616-1599"
+    ],
+    "works_count": 18357,
+    "type": "journal"
+   },
+   {
+    "sid": "S79131028",
+    "display_name": "Trends in Ecology & Evolution",
+    "issn": [
+     "0169-5347",
+     "1872-8383"
+    ],
+    "works_count": 8256,
+    "type": "journal"
+   }
+  ],
+  "Global Change Biology": [
+   {
+    "sid": "S74970393",
+    "display_name": "Global Change Biology",
+    "issn": [
+     "1354-1013",
+     "1365-2486"
+    ],
+    "works_count": 9945,
+    "type": "journal"
+   },
+   {
+    "sid": "S5407051857",
+    "display_name": "Global Change Biology Communications",
+    "issn": [
+     "3066-9200"
+    ],
+    "works_count": 63,
+    "type": "journal"
+   }
+  ]
+ },
+ "earth_science": {
+  "Earth and Planetary Science Letters": [
+   {
+    "sid": "S119230507",
+    "display_name": "Earth and Planetary Science Letters",
+    "issn": [
+     "0012-821X",
+     "1385-013X"
+    ],
+    "works_count": 21947,
+    "type": "journal"
+   }
+  ],
+  "Geology": [
+   {
+    "sid": "S56162041",
+    "display_name": "Geology",
+    "issn": [
+     "0091-7613",
+     "1943-2682"
+    ],
+    "works_count": 15201,
+    "type": "journal"
+   },
+   {
+    "sid": "S141585851",
+    "display_name": "Chemical Geology",
+    "issn": [
+     "0009-2541",
+     "1872-6836"
+    ],
+    "works_count": 14462,
+    "type": "journal"
+   },
+   {
+    "sid": "S4210182989",
+    "display_name": "Economic Geology",
+    "issn": [
+     "0361-0128",
+     "1554-0774"
+    ],
+    "works_count": 11133,
+    "type": "journal"
+   }
+  ],
+  "Global Biogeochemical Cycles": [
+   {
+    "sid": "S32973720",
+    "display_name": "Global Biogeochemical Cycles",
+    "issn": [
+     "0886-6236",
+     "1944-9224"
+    ],
+    "works_count": 4052,
+    "type": "journal"
+   }
+  ]
+ },
+ "statistics": {
+  "The Annals of Statistics": [
+   {
+    "sid": "S119757635",
+    "display_name": "The Annals of Statistics",
+    "issn": [
+     "0090-5364",
+     "2168-8966"
+    ],
+    "works_count": 6432,
+    "type": "journal"
+   },
+   {
+    "sid": "S5762857",
+    "display_name": "The Annals of Mathematical Statistics",
+    "issn": [
+     "0003-4851",
+     "2168-8990"
+    ],
+    "works_count": 4756,
+    "type": "journal"
+   },
+   {
+    "sid": "S112778392",
+    "display_name": "The Annals of Applied Statistics",
+    "issn": [
+     "1932-6157",
+     "1941-7330"
+    ],
+    "works_count": 2174,
+    "type": "journal"
+   }
+  ],
+  "Journal of the American Statistical Association": [
+   {
+    "sid": "S4394736638",
+    "display_name": "Journal of the American Statistical Association",
+    "issn": [
+     "0162-1459",
+     "1537-274X"
+    ],
+    "works_count": 22135,
+    "type": "journal"
+   },
+   {
+    "sid": "S3207474444",
+    "display_name": "Journal of Statistics and Data Science Education",
+    "issn": [
+     "2693-9169"
+    ],
+    "works_count": 287,
+    "type": "journal"
+   }
+  ],
+  "Biometrika": [
+   {
+    "sid": "S172180718",
+    "display_name": "Biometrika",
+    "issn": [
+     "0006-3444",
+     "1464-3510"
+    ],
+    "works_count": 9806,
+    "type": "journal"
+   },
+   {
+    "sid": "S4210202589",
+    "display_name": "Jurnal Biometrika dan Kependudukan",
+    "issn": [
+     "2302-707X",
+     "2540-8828"
+    ],
+    "works_count": 247,
+    "type": "journal"
+   }
+  ]
+ },
+ "biomedical_engineering": {
+  "Biomaterials": [
+   {
+    "sid": "S163807576",
+    "display_name": "Biomaterials",
+    "issn": [
+     "0142-9612",
+     "1878-5905"
+    ],
+    "works_count": 22791,
+    "type": "journal"
+   },
+   {
+    "sid": "S2494179437",
+    "display_name": "Biomaterials Science",
+    "issn": [
+     "2047-4830",
+     "2047-4849"
+    ],
+    "works_count": 6356,
+    "type": "journal"
+   },
+   {
+    "sid": "S2764739176",
+    "display_name": "ACS Biomaterials Science & Engineering",
+    "issn": [
+     "2373-9878"
+    ],
+    "works_count": 5594,
+    "type": "journal"
+   }
+  ],
+  "IEEE Transactions on Biomedical Engineering": [
+   {
+    "sid": "S5240358",
+    "display_name": "IEEE Transactions on Biomedical Engineering",
+    "issn": [
+     "0018-9294",
+     "1558-2531"
+    ],
+    "works_count": 15643,
+    "type": "journal"
+   }
+  ],
+  "Acta Biomaterialia": [
+   {
+    "sid": "S173145877",
+    "display_name": "Acta Biomaterialia",
+    "issn": [
+     "1742-7061",
+     "1878-7568"
+    ],
+    "works_count": 11323,
+    "type": "journal"
+   },
+   {
+    "sid": "S4210214324",
+    "display_name": "Acta Biomaterialia Odontologica Scandinavica",
+    "issn": [
+     "2333-7931"
+    ],
+    "works_count": 63,
+    "type": "journal"
+   }
+  ]
+ },
+ "mechanical_engineering": {
+  "Mechanical Systems and Signal Processing": [
+   {
+    "sid": "S128368299",
+    "display_name": "Mechanical Systems and Signal Processing",
+    "issn": [
+     "0888-3270",
+     "1096-1216"
+    ],
+    "works_count": 13628,
+    "type": "journal"
+   },
+   {
+    "sid": "S2898545359",
+    "display_name": "Case Studies in Mechanical Systems and Signal Processing",
+    "issn": [
+     "2351-9886"
+    ],
+    "works_count": 21,
+    "type": "journal"
+   }
+  ],
+  "International Journal of Mechanical Sciences": [
+   {
+    "sid": "S72716621",
+    "display_name": "International Journal of Mechanical Sciences",
+    "issn": [
+     "0020-7403",
+     "1879-2162"
+    ],
+    "works_count": 14227,
+    "type": "journal"
+   },
+   {
+    "sid": "S4210209549",
+    "display_name": "The International Journal of Mechanical Engineering and Sciences",
+    "issn": [
+     "2580-7471"
+    ],
+    "works_count": 116,
+    "type": "journal"
+   }
+  ],
+  "International Journal of Machine Tools and Manufacture": [
+   {
+    "sid": "S154368109",
+    "display_name": "International Journal of Machine Tools and Manufacture",
+    "issn": [
+     "0890-6955",
+     "1879-2170"
+    ],
+    "works_count": 4786,
+    "type": "journal"
+   }
+  ]
+ }
+}

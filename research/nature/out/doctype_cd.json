@@ -1,0 +1,1054 @@
+{
+ "task": "0-2 doc_type standardised CD5",
+ "production_path": "identical to disruption.py (DISTINCT (acc,cited) edges, [t,t+5] window, |Q|>=3, no-reflist citers excluded)",
+ "s1_raw_cells_and_type_gaps": {
+  "2000": {
+   "EC_JA": {
+    "n": 2,
+    "mean": null
+   },
+   "EC_CA": {
+    "n": 1,
+    "mean": null
+   },
+   "NON_EC_JA": {
+    "n": 10,
+    "mean": null
+   },
+   "NON_EC_CA": {
+    "n": 0,
+    "mean": null
+   },
+   "gap_raw": 0.5952
+  },
+  "2001": {
+   "EC_JA": {
+    "n": 5,
+    "mean": null
+   },
+   "EC_CA": {
+    "n": 9,
+    "mean": null
+   },
+   "NON_EC_JA": {
+    "n": 17,
+    "mean": null
+   },
+   "NON_EC_CA": {
+    "n": 0,
+    "mean": null
+   },
+   "gap_raw": 0.2491
+  },
+  "2002": {
+   "EC_JA": {
+    "n": 27,
+    "mean": null
+   },
+   "EC_CA": {
+    "n": 16,
+    "mean": null
+   },
+   "NON_EC_JA": {
+    "n": 38,
+    "mean": 0.2541
+   },
+   "NON_EC_CA": {
+    "n": 2,
+    "mean": null
+   },
+   "gap_raw": 0.2328
+  },
+  "2003": {
+   "EC_JA": {
+    "n": 44,
+    "mean": 0.356
+   },
+   "EC_CA": {
+    "n": 20,
+    "mean": null
+   },
+   "NON_EC_JA": {
+    "n": 56,
+    "mean": 0.3587
+   },
+   "NON_EC_CA": {
+    "n": 3,
+    "mean": null
+   },
+   "gap_JA": -0.0027,
+   "gap_raw": -0.0109
+  },
+  "2004": {
+   "EC_JA": {
+    "n": 61,
+    "mean": 0.3488
+   },
+   "EC_CA": {
+    "n": 28,
+    "mean": null
+   },
+   "NON_EC_JA": {
+    "n": 104,
+    "mean": 0.2438
+   },
+   "NON_EC_CA": {
+    "n": 15,
+    "mean": null
+   },
+   "gap_JA": 0.105,
+   "gap_raw": 0.0366
+  },
+  "2005": {
+   "EC_JA": {
+    "n": 89,
+    "mean": 0.3179
+   },
+   "EC_CA": {
+    "n": 190,
+    "mean": 0.1634
+   },
+   "NON_EC_JA": {
+    "n": 135,
+    "mean": 0.2828
+   },
+   "NON_EC_CA": {
+    "n": 27,
+    "mean": null
+   },
+   "gap_JA": 0.0351,
+   "gap_raw": -0.0474
+  },
+  "2006": {
+   "EC_JA": {
+    "n": 162,
+    "mean": 0.2057
+   },
+   "EC_CA": {
+    "n": 192,
+    "mean": 0.0752
+   },
+   "NON_EC_JA": {
+    "n": 230,
+    "mean": 0.1346
+   },
+   "NON_EC_CA": {
+    "n": 12,
+    "mean": null
+   },
+   "gap_JA": 0.0711,
+   "gap_raw": 0.0213
+  },
+  "2007": {
+   "EC_JA": {
+    "n": 206,
+    "mean": 0.2242
+   },
+   "EC_CA": {
+    "n": 243,
+    "mean": -0.0535
+   },
+   "NON_EC_JA": {
+    "n": 561,
+    "mean": 0.1543
+   },
+   "NON_EC_CA": {
+    "n": 5,
+    "mean": null
+   },
+   "gap_JA": 0.0699,
+   "gap_raw": -0.0787
+  },
+  "2008": {
+   "EC_JA": {
+    "n": 245,
+    "mean": 0.1085
+   },
+   "EC_CA": {
+    "n": 151,
+    "mean": -0.0541
+   },
+   "NON_EC_JA": {
+    "n": 591,
+    "mean": 0.1573
+   },
+   "NON_EC_CA": {
+    "n": 4,
+    "mean": null
+   },
+   "gap_JA": -0.0488,
+   "gap_raw": -0.1097
+  },
+  "2009": {
+   "EC_JA": {
+    "n": 416,
+    "mean": 0.1004
+   },
+   "EC_CA": {
+    "n": 226,
+    "mean": -0.048
+   },
+   "NON_EC_JA": {
+    "n": 927,
+    "mean": 0.1388
+   },
+   "NON_EC_CA": {
+    "n": 6,
+    "mean": null
+   },
+   "gap_JA": -0.0384,
+   "gap_raw": -0.0948
+  },
+  "2010": {
+   "EC_JA": {
+    "n": 384,
+    "mean": -0.0161
+   },
+   "EC_CA": {
+    "n": 245,
+    "mean": -0.2714
+   },
+   "NON_EC_JA": {
+    "n": 754,
+    "mean": 0.0447
+   },
+   "NON_EC_CA": {
+    "n": 6,
+    "mean": null
+   },
+   "gap_JA": -0.0608,
+   "gap_raw": -0.159
+  },
+  "2011": {
+   "EC_JA": {
+    "n": 508,
+    "mean": 0.0435
+   },
+   "EC_CA": {
+    "n": 205,
+    "mean": -0.0877
+   },
+   "NON_EC_JA": {
+    "n": 905,
+    "mean": 0.0923
+   },
+   "NON_EC_CA": {
+    "n": 51,
+    "mean": 0.1746
+   },
+   "gap_JA": -0.0488,
+   "gap_CA": -0.2623,
+   "gap_raw": -0.0909
+  },
+  "2012": {
+   "EC_JA": {
+    "n": 605,
+    "mean": -0.0142
+   },
+   "EC_CA": {
+    "n": 188,
+    "mean": -0.2326
+   },
+   "NON_EC_JA": {
+    "n": 1094,
+    "mean": 0.0825
+   },
+   "NON_EC_CA": {
+    "n": 21,
+    "mean": null
+   },
+   "gap_JA": -0.0967,
+   "gap_raw": -0.15
+  },
+  "2013": {
+   "EC_JA": {
+    "n": 635,
+    "mean": -0.0807
+   },
+   "EC_CA": {
+    "n": 307,
+    "mean": -0.3046
+   },
+   "NON_EC_JA": {
+    "n": 1058,
+    "mean": 0.1191
+   },
+   "NON_EC_CA": {
+    "n": 52,
+    "mean": 0.0828
+   },
+   "gap_JA": -0.1998,
+   "gap_CA": -0.3874,
+   "gap_raw": -0.271
+  },
+  "2014": {
+   "EC_JA": {
+    "n": 705,
+    "mean": -0.0825
+   },
+   "EC_CA": {
+    "n": 261,
+    "mean": -0.3544
+   },
+   "NON_EC_JA": {
+    "n": 1390,
+    "mean": 0.1304
+   },
+   "NON_EC_CA": {
+    "n": 20,
+    "mean": null
+   },
+   "gap_JA": -0.2129,
+   "gap_raw": -0.2805
+  },
+  "2015": {
+   "EC_JA": {
+    "n": 806,
+    "mean": -0.1105
+   },
+   "EC_CA": {
+    "n": 303,
+    "mean": -0.4007
+   },
+   "NON_EC_JA": {
+    "n": 1530,
+    "mean": 0.0996
+   },
+   "NON_EC_CA": {
+    "n": 34,
+    "mean": 0.1042
+   },
+   "gap_JA": -0.2101,
+   "gap_CA": -0.5049,
+   "gap_raw": -0.2895
+  },
+  "2016": {
+   "EC_JA": {
+    "n": 768,
+    "mean": -0.1455
+   },
+   "EC_CA": {
+    "n": 295,
+    "mean": -0.4544
+   },
+   "NON_EC_JA": {
+    "n": 1658,
+    "mean": 0.1148
+   },
+   "NON_EC_CA": {
+    "n": 36,
+    "mean": -0.0045
+   },
+   "gap_JA": -0.2603,
+   "gap_CA": -0.4499,
+   "gap_raw": -0.3435
+  },
+  "2017": {
+   "EC_JA": {
+    "n": 847,
+    "mean": -0.1583
+   },
+   "EC_CA": {
+    "n": 271,
+    "mean": -0.3651
+   },
+   "NON_EC_JA": {
+    "n": 1905,
+    "mean": 0.1306
+   },
+   "NON_EC_CA": {
+    "n": 19,
+    "mean": null
+   },
+   "gap_JA": -0.2889,
+   "gap_raw": -0.3356
+  },
+  "2018": {
+   "EC_JA": {
+    "n": 847,
+    "mean": -0.1385
+   },
+   "EC_CA": {
+    "n": 315,
+    "mean": -0.4095
+   },
+   "NON_EC_JA": {
+    "n": 2129,
+    "mean": 0.1486
+   },
+   "NON_EC_CA": {
+    "n": 24,
+    "mean": null
+   },
+   "gap_JA": -0.2871,
+   "gap_raw": -0.3577
+  },
+  "2019": {
+   "EC_JA": {
+    "n": 1033,
+    "mean": -0.1718
+   },
+   "EC_CA": {
+    "n": 369,
+    "mean": -0.4621
+   },
+   "NON_EC_JA": {
+    "n": 2308,
+    "mean": 0.2049
+   },
+   "NON_EC_CA": {
+    "n": 27,
+    "mean": null
+   },
+   "gap_JA": -0.3767,
+   "gap_raw": -0.4494
+  },
+  "2020": {
+   "EC_JA": {
+    "n": 992,
+    "mean": -0.1585
+   },
+   "EC_CA": {
+    "n": 335,
+    "mean": -0.4915
+   },
+   "NON_EC_JA": {
+    "n": 2733,
+    "mean": 0.2817
+   },
+   "NON_EC_CA": {
+    "n": 22,
+    "mean": null
+   },
+   "gap_JA": -0.4402,
+   "gap_raw": -0.5209
+  }
+ },
+ "s2_standardised_gaps": {
+  "2000": {},
+  "2001": {},
+  "2002": {},
+  "2003": {
+   "pooled": {
+    "gap": -0.0027,
+    "coverage": 0.8663,
+    "used_types": [
+     "JA"
+    ]
+   },
+   "EC": {
+    "gap": -0.0027,
+    "coverage": 0.6924,
+    "used_types": [
+     "JA"
+    ]
+   },
+   "NON_EC": {
+    "gap": -0.0027,
+    "coverage": 0.9812,
+    "used_types": [
+     "JA"
+    ]
+   }
+  },
+  "2004": {
+   "pooled": {
+    "gap": 0.105,
+    "coverage": 0.8663,
+    "used_types": [
+     "JA"
+    ]
+   },
+   "EC": {
+    "gap": 0.105,
+    "coverage": 0.6924,
+    "used_types": [
+     "JA"
+    ]
+   },
+   "NON_EC": {
+    "gap": 0.105,
+    "coverage": 0.9812,
+    "used_types": [
+     "JA"
+    ]
+   }
+  },
+  "2005": {
+   "pooled": {
+    "gap": 0.035,
+    "coverage": 0.8663,
+    "used_types": [
+     "JA"
+    ]
+   },
+   "EC": {
+    "gap": 0.035,
+    "coverage": 0.6924,
+    "used_types": [
+     "JA"
+    ]
+   },
+   "NON_EC": {
+    "gap": 0.035,
+    "coverage": 0.9812,
+    "used_types": [
+     "JA"
+    ]
+   }
+  },
+  "2006": {
+   "pooled": {
+    "gap": 0.071,
+    "coverage": 0.8663,
+    "used_types": [
+     "JA"
+    ]
+   },
+   "EC": {
+    "gap": 0.071,
+    "coverage": 0.6924,
+    "used_types": [
+     "JA"
+    ]
+   },
+   "NON_EC": {
+    "gap": 0.071,
+    "coverage": 0.9812,
+    "used_types": [
+     "JA"
+    ]
+   }
+  },
+  "2007": {
+   "pooled": {
+    "gap": 0.0699,
+    "coverage": 0.8663,
+    "used_types": [
+     "JA"
+    ]
+   },
+   "EC": {
+    "gap": 0.0699,
+    "coverage": 0.6924,
+    "used_types": [
+     "JA"
+    ]
+   },
+   "NON_EC": {
+    "gap": 0.0699,
+    "coverage": 0.9812,
+    "used_types": [
+     "JA"
+    ]
+   }
+  },
+  "2008": {
+   "pooled": {
+    "gap": -0.0488,
+    "coverage": 0.8663,
+    "used_types": [
+     "JA"
+    ]
+   },
+   "EC": {
+    "gap": -0.0488,
+    "coverage": 0.6924,
+    "used_types": [
+     "JA"
+    ]
+   },
+   "NON_EC": {
+    "gap": -0.0488,
+    "coverage": 0.9812,
+    "used_types": [
+     "JA"
+    ]
+   }
+  },
+  "2009": {
+   "pooled": {
+    "gap": -0.0384,
+    "coverage": 0.8663,
+    "used_types": [
+     "JA"
+    ]
+   },
+   "EC": {
+    "gap": -0.0384,
+    "coverage": 0.6924,
+    "used_types": [
+     "JA"
+    ]
+   },
+   "NON_EC": {
+    "gap": -0.0384,
+    "coverage": 0.9812,
+    "used_types": [
+     "JA"
+    ]
+   }
+  },
+  "2010": {
+   "pooled": {
+    "gap": -0.0607,
+    "coverage": 0.8663,
+    "used_types": [
+     "JA"
+    ]
+   },
+   "EC": {
+    "gap": -0.0607,
+    "coverage": 0.6924,
+    "used_types": [
+     "JA"
+    ]
+   },
+   "NON_EC": {
+    "gap": -0.0607,
+    "coverage": 0.9812,
+    "used_types": [
+     "JA"
+    ]
+   }
+  },
+  "2011": {
+   "pooled": {
+    "gap": -0.0773,
+    "coverage": 1.0,
+    "used_types": [
+     "JA",
+     "CA"
+    ]
+   },
+   "EC": {
+    "gap": -0.1145,
+    "coverage": 1.0,
+    "used_types": [
+     "JA",
+     "CA"
+    ]
+   },
+   "NON_EC": {
+    "gap": -0.0528,
+    "coverage": 1.0,
+    "used_types": [
+     "JA",
+     "CA"
+    ]
+   }
+  },
+  "2012": {
+   "pooled": {
+    "gap": -0.0967,
+    "coverage": 0.8663,
+    "used_types": [
+     "JA"
+    ]
+   },
+   "EC": {
+    "gap": -0.0967,
+    "coverage": 0.6924,
+    "used_types": [
+     "JA"
+    ]
+   },
+   "NON_EC": {
+    "gap": -0.0967,
+    "coverage": 0.9812,
+    "used_types": [
+     "JA"
+    ]
+   }
+  },
+  "2013": {
+   "pooled": {
+    "gap": -0.2248,
+    "coverage": 1.0,
+    "used_types": [
+     "JA",
+     "CA"
+    ]
+   },
+   "EC": {
+    "gap": -0.2575,
+    "coverage": 1.0,
+    "used_types": [
+     "JA",
+     "CA"
+    ]
+   },
+   "NON_EC": {
+    "gap": -0.2033,
+    "coverage": 1.0,
+    "used_types": [
+     "JA",
+     "CA"
+    ]
+   }
+  },
+  "2014": {
+   "pooled": {
+    "gap": -0.2129,
+    "coverage": 0.8663,
+    "used_types": [
+     "JA"
+    ]
+   },
+   "EC": {
+    "gap": -0.2129,
+    "coverage": 0.6924,
+    "used_types": [
+     "JA"
+    ]
+   },
+   "NON_EC": {
+    "gap": -0.2129,
+    "coverage": 0.9812,
+    "used_types": [
+     "JA"
+    ]
+   }
+  },
+  "2015": {
+   "pooled": {
+    "gap": -0.2495,
+    "coverage": 1.0,
+    "used_types": [
+     "JA",
+     "CA"
+    ]
+   },
+   "EC": {
+    "gap": -0.3008,
+    "coverage": 1.0,
+    "used_types": [
+     "JA",
+     "CA"
+    ]
+   },
+   "NON_EC": {
+    "gap": -0.2157,
+    "coverage": 1.0,
+    "used_types": [
+     "JA",
+     "CA"
+    ]
+   }
+  },
+  "2016": {
+   "pooled": {
+    "gap": -0.2857,
+    "coverage": 1.0,
+    "used_types": [
+     "JA",
+     "CA"
+    ]
+   },
+   "EC": {
+    "gap": -0.3186,
+    "coverage": 1.0,
+    "used_types": [
+     "JA",
+     "CA"
+    ]
+   },
+   "NON_EC": {
+    "gap": -0.2639,
+    "coverage": 1.0,
+    "used_types": [
+     "JA",
+     "CA"
+    ]
+   }
+  },
+  "2017": {
+   "pooled": {
+    "gap": -0.2888,
+    "coverage": 0.8663,
+    "used_types": [
+     "JA"
+    ]
+   },
+   "EC": {
+    "gap": -0.2888,
+    "coverage": 0.6924,
+    "used_types": [
+     "JA"
+    ]
+   },
+   "NON_EC": {
+    "gap": -0.2888,
+    "coverage": 0.9812,
+    "used_types": [
+     "JA"
+    ]
+   }
+  },
+  "2018": {
+   "pooled": {
+    "gap": -0.2871,
+    "coverage": 0.8663,
+    "used_types": [
+     "JA"
+    ]
+   },
+   "EC": {
+    "gap": -0.2871,
+    "coverage": 0.6924,
+    "used_types": [
+     "JA"
+    ]
+   },
+   "NON_EC": {
+    "gap": -0.2871,
+    "coverage": 0.9812,
+    "used_types": [
+     "JA"
+    ]
+   }
+  },
+  "2019": {
+   "pooled": {
+    "gap": -0.3767,
+    "coverage": 0.8663,
+    "used_types": [
+     "JA"
+    ]
+   },
+   "EC": {
+    "gap": -0.3767,
+    "coverage": 0.6924,
+    "used_types": [
+     "JA"
+    ]
+   },
+   "NON_EC": {
+    "gap": -0.3767,
+    "coverage": 0.9812,
+    "used_types": [
+     "JA"
+    ]
+   }
+  },
+  "2020": {
+   "pooled": {
+    "gap": -0.4402,
+    "coverage": 0.8663,
+    "used_types": [
+     "JA"
+    ]
+   },
+   "EC": {
+    "gap": -0.4402,
+    "coverage": 0.6924,
+    "used_types": [
+     "JA"
+    ]
+   },
+   "NON_EC": {
+    "gap": -0.4402,
+    "coverage": 0.9812,
+    "used_types": [
+     "JA"
+    ]
+   }
+  }
+ },
+ "s2_fixed_weights": {
+  "pooled": {
+   "JA": 0.866299,
+   "CA": 0.133701
+  },
+  "EC": {
+   "JA": 0.69241,
+   "CA": 0.30759
+  },
+  "NON_EC": {
+   "JA": 0.981188,
+   "CA": 0.018812
+  }
+ },
+ "s3_reflist_and_parse": {
+  "EC_JA": {
+   "n_papers_with_refs": 22207,
+   "mean_total_refs": 38.06,
+   "median_total_refs": 35,
+   "mean_parse_rate": 0.3373
+  },
+  "EC_CA": {
+   "n_papers_with_refs": 18313,
+   "mean_total_refs": 17.0,
+   "median_total_refs": 15,
+   "mean_parse_rate": 0.3494
+  },
+  "NON_EC_JA": {
+   "n_papers_with_refs": 73166,
+   "mean_total_refs": 36.6,
+   "median_total_refs": 34.0,
+   "mean_parse_rate": 0.1967
+  },
+  "NON_EC_CA": {
+   "n_papers_with_refs": 2860,
+   "mean_total_refs": 19.63,
+   "median_total_refs": 18.0,
+   "mean_parse_rate": 0.1975
+  }
+ },
+ "s4_common_support_violations": {
+  "2000": [
+   {
+    "cell": "EC_JA",
+    "n": 2
+   },
+   {
+    "cell": "EC_CA",
+    "n": 1
+   },
+   {
+    "cell": "NON_EC_JA",
+    "n": 10
+   },
+   {
+    "cell": "NON_EC_CA",
+    "n": 0
+   }
+  ],
+  "2001": [
+   {
+    "cell": "EC_JA",
+    "n": 5
+   },
+   {
+    "cell": "EC_CA",
+    "n": 9
+   },
+   {
+    "cell": "NON_EC_JA",
+    "n": 17
+   },
+   {
+    "cell": "NON_EC_CA",
+    "n": 0
+   }
+  ],
+  "2002": [
+   {
+    "cell": "EC_JA",
+    "n": 27
+   },
+   {
+    "cell": "EC_CA",
+    "n": 16
+   },
+   {
+    "cell": "NON_EC_CA",
+    "n": 2
+   }
+  ],
+  "2003": [
+   {
+    "cell": "EC_CA",
+    "n": 20
+   },
+   {
+    "cell": "NON_EC_CA",
+    "n": 3
+   }
+  ],
+  "2004": [
+   {
+    "cell": "EC_CA",
+    "n": 28
+   },
+   {
+    "cell": "NON_EC_CA",
+    "n": 15
+   }
+  ],
+  "2005": [
+   {
+    "cell": "NON_EC_CA",
+    "n": 27
+   }
+  ],
+  "2006": [
+   {
+    "cell": "NON_EC_CA",
+    "n": 12
+   }
+  ],
+  "2007": [
+   {
+    "cell": "NON_EC_CA",
+    "n": 5
+   }
+  ],
+  "2008": [
+   {
+    "cell": "NON_EC_CA",
+    "n": 4
+   }
+  ],
+  "2009": [
+   {
+    "cell": "NON_EC_CA",
+    "n": 6
+   }
+  ],
+  "2010": [
+   {
+    "cell": "NON_EC_CA",
+    "n": 6
+   }
+  ],
+  "2012": [
+   {
+    "cell": "NON_EC_CA",
+    "n": 21
+   }
+  ],
+  "2014": [
+   {
+    "cell": "NON_EC_CA",
+    "n": 20
+   }
+  ],
+  "2017": [
+   {
+    "cell": "NON_EC_CA",
+    "n": 19
+   }
+  ],
+  "2018": [
+   {
+    "cell": "NON_EC_CA",
+    "n": 24
+   }
+  ],
+  "2019": [
+   {
+    "cell": "NON_EC_CA",
+    "n": 27
+   }
+  ],
+  "2020": [
+   {
+    "cell": "NON_EC_CA",
+    "n": 22
+   }
+  ]
+ },
+ "window_summary": {
+  "raw_gap_2018_20": -0.4427,
+  "raw_gap_2005_07": -0.0349,
+  "JA_gap_2018_20": -0.368,
+  "JA_gap_2005_07": 0.0587,
+  "CA_gap_2018_20": null,
+  "CA_gap_2005_07": null,
+  "std_pooled_2018_20": -0.368,
+  "std_pooled_2005_07": 0.0586,
+  "std_ECcomp_2018_20": -0.368,
+  "std_NONcomp_2018_20": -0.368
+ }
+}

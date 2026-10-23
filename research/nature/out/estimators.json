@@ -1,0 +1,910 @@
+{
+ "task": "0-3 three-estimator decomposition + 0-4 endpoint censoring",
+ "estimator_definitions": {
+  "E1": "mean cross-field in-corpus edges per citing-side paper",
+  "E2": "share of citing-side papers with >=1 cross-field in-corpus edge",
+  "E3": "cross-field edges / total distinct non-null refs (per-paper mean; aggregate alongside)"
+ },
+ "series": {
+  "stable8_NON_EC_to_EC": {
+   "2005": {
+    "n": 1051,
+    "E1_mean_edges": 0.058991,
+    "E2_participation": 0.047574,
+    "E3_mean_share_of_refs": 0.003141,
+    "E3_aggregate_share": 0.004186,
+    "edges": 62
+   },
+   "2006": {
+    "n": 1260,
+    "E1_mean_edges": 0.115079,
+    "E2_participation": 0.073016,
+    "E3_mean_share_of_refs": 0.006732,
+    "E3_aggregate_share": 0.007624,
+    "edges": 145
+   },
+   "2007": {
+    "n": 1695,
+    "E1_mean_edges": 0.166372,
+    "E2_participation": 0.100885,
+    "E3_mean_share_of_refs": 0.007771,
+    "E3_aggregate_share": 0.009243,
+    "edges": 282
+   },
+   "2008": {
+    "n": 1902,
+    "E1_mean_edges": 0.195584,
+    "E2_participation": 0.108833,
+    "E3_mean_share_of_refs": 0.009089,
+    "E3_aggregate_share": 0.011433,
+    "edges": 372
+   },
+   "2009": {
+    "n": 2804,
+    "E1_mean_edges": 0.231812,
+    "E2_participation": 0.130171,
+    "E3_mean_share_of_refs": 0.010598,
+    "E3_aggregate_share": 0.012271,
+    "edges": 650
+   },
+   "2010": {
+    "n": 2308,
+    "E1_mean_edges": 0.320624,
+    "E2_participation": 0.133449,
+    "E3_mean_share_of_refs": 0.010994,
+    "E3_aggregate_share": 0.017285,
+    "edges": 740
+   },
+   "2011": {
+    "n": 2856,
+    "E1_mean_edges": 0.397409,
+    "E2_participation": 0.205182,
+    "E3_mean_share_of_refs": 0.015543,
+    "E3_aggregate_share": 0.017334,
+    "edges": 1135
+   },
+   "2012": {
+    "n": 2712,
+    "E1_mean_edges": 0.45649,
+    "E2_participation": 0.236357,
+    "E3_mean_share_of_refs": 0.018048,
+    "E3_aggregate_share": 0.017734,
+    "edges": 1238
+   },
+   "2013": {
+    "n": 2398,
+    "E1_mean_edges": 0.597581,
+    "E2_participation": 0.257715,
+    "E3_mean_share_of_refs": 0.020253,
+    "E3_aggregate_share": 0.021386,
+    "edges": 1433
+   },
+   "2014": {
+    "n": 2769,
+    "E1_mean_edges": 0.623691,
+    "E2_participation": 0.252799,
+    "E3_mean_share_of_refs": 0.019417,
+    "E3_aggregate_share": 0.020938,
+    "edges": 1727
+   },
+   "2015": {
+    "n": 2804,
+    "E1_mean_edges": 0.759272,
+    "E2_participation": 0.300999,
+    "E3_mean_share_of_refs": 0.0232,
+    "E3_aggregate_share": 0.023987,
+    "edges": 2129
+   },
+   "2016": {
+    "n": 2757,
+    "E1_mean_edges": 0.749365,
+    "E2_participation": 0.286543,
+    "E3_mean_share_of_refs": 0.021404,
+    "E3_aggregate_share": 0.022954,
+    "edges": 2066
+   },
+   "2017": {
+    "n": 2747,
+    "E1_mean_edges": 0.758646,
+    "E2_participation": 0.286858,
+    "E3_mean_share_of_refs": 0.023819,
+    "E3_aggregate_share": 0.023625,
+    "edges": 2084
+   },
+   "2018": {
+    "n": 3117,
+    "E1_mean_edges": 0.732435,
+    "E2_participation": 0.28906,
+    "E3_mean_share_of_refs": 0.021558,
+    "E3_aggregate_share": 0.021725,
+    "edges": 2283
+   },
+   "2019": {
+    "n": 3264,
+    "E1_mean_edges": 0.815257,
+    "E2_participation": 0.296875,
+    "E3_mean_share_of_refs": 0.022758,
+    "E3_aggregate_share": 0.023093,
+    "edges": 2661
+   },
+   "2020": {
+    "n": 3666,
+    "E1_mean_edges": 0.803328,
+    "E2_participation": 0.290507,
+    "E3_mean_share_of_refs": 0.02112,
+    "E3_aggregate_share": 0.022254,
+    "edges": 2945
+   },
+   "2021": {
+    "n": 4318,
+    "E1_mean_edges": 0.830477,
+    "E2_participation": 0.290875,
+    "E3_mean_share_of_refs": 0.0208,
+    "E3_aggregate_share": 0.021978,
+    "edges": 3586
+   },
+   "2022": {
+    "n": 4445,
+    "E1_mean_edges": 0.726659,
+    "E2_participation": 0.273341,
+    "E3_mean_share_of_refs": 0.017635,
+    "E3_aggregate_share": 0.019089,
+    "edges": 3230
+   },
+   "2023": {
+    "n": 5705,
+    "E1_mean_edges": 0.614549,
+    "E2_participation": 0.246626,
+    "E3_mean_share_of_refs": 0.015082,
+    "E3_aggregate_share": 0.015831,
+    "edges": 3506
+   },
+   "2024": {
+    "n": 7608,
+    "E1_mean_edges": 0.616719,
+    "E2_participation": 0.232256,
+    "E3_mean_share_of_refs": 0.014294,
+    "E3_aggregate_share": 0.015648,
+    "edges": 4692
+   },
+   "2025": {
+    "n": 7681,
+    "E1_mean_edges": 0.502669,
+    "E2_participation": 0.197891,
+    "E3_mean_share_of_refs": 0.012131,
+    "E3_aggregate_share": 0.013261,
+    "edges": 3861
+   }
+  },
+  "stable8_EC_to_NON_EC": {
+   "2005": {
+    "n": 150,
+    "E1_mean_edges": 0.48,
+    "E2_participation": 0.293333,
+    "E3_mean_share_of_refs": 0.024496,
+    "E3_aggregate_share": 0.027692,
+    "edges": 72
+   },
+   "2006": {
+    "n": 251,
+    "E1_mean_edges": 0.533865,
+    "E2_participation": 0.314741,
+    "E3_mean_share_of_refs": 0.029604,
+    "E3_aggregate_share": 0.031574,
+    "edges": 134
+   },
+   "2007": {
+    "n": 330,
+    "E1_mean_edges": 0.818182,
+    "E2_participation": 0.372727,
+    "E3_mean_share_of_refs": 0.037285,
+    "E3_aggregate_share": 0.044865,
+    "edges": 270
+   },
+   "2008": {
+    "n": 410,
+    "E1_mean_edges": 0.858537,
+    "E2_participation": 0.387805,
+    "E3_mean_share_of_refs": 0.0404,
+    "E3_aggregate_share": 0.047781,
+    "edges": 352
+   },
+   "2009": {
+    "n": 604,
+    "E1_mean_edges": 1.182119,
+    "E2_participation": 0.483444,
+    "E3_mean_share_of_refs": 0.054945,
+    "E3_aggregate_share": 0.062217,
+    "edges": 714
+   },
+   "2010": {
+    "n": 557,
+    "E1_mean_edges": 1.24237,
+    "E2_participation": 0.43447,
+    "E3_mean_share_of_refs": 0.049945,
+    "E3_aggregate_share": 0.067054,
+    "edges": 692
+   },
+   "2011": {
+    "n": 832,
+    "E1_mean_edges": 1.530048,
+    "E2_participation": 0.508413,
+    "E3_mean_share_of_refs": 0.059801,
+    "E3_aggregate_share": 0.067319,
+    "edges": 1273
+   },
+   "2012": {
+    "n": 779,
+    "E1_mean_edges": 1.875481,
+    "E2_participation": 0.593068,
+    "E3_mean_share_of_refs": 0.071342,
+    "E3_aggregate_share": 0.074381,
+    "edges": 1461
+   },
+   "2013": {
+    "n": 724,
+    "E1_mean_edges": 2.008287,
+    "E2_participation": 0.596685,
+    "E3_mean_share_of_refs": 0.070176,
+    "E3_aggregate_share": 0.070494,
+    "edges": 1454
+   },
+   "2014": {
+    "n": 735,
+    "E1_mean_edges": 2.219048,
+    "E2_participation": 0.638095,
+    "E3_mean_share_of_refs": 0.071375,
+    "E3_aggregate_share": 0.072319,
+    "edges": 1631
+   },
+   "2015": {
+    "n": 856,
+    "E1_mean_edges": 2.390187,
+    "E2_participation": 0.663551,
+    "E3_mean_share_of_refs": 0.0717,
+    "E3_aggregate_share": 0.07187,
+    "edges": 2046
+   },
+   "2016": {
+    "n": 799,
+    "E1_mean_edges": 2.618273,
+    "E2_participation": 0.684606,
+    "E3_mean_share_of_refs": 0.077764,
+    "E3_aggregate_share": 0.076793,
+    "edges": 2092
+   },
+   "2017": {
+    "n": 832,
+    "E1_mean_edges": 2.640625,
+    "E2_participation": 0.69351,
+    "E3_mean_share_of_refs": 0.076879,
+    "E3_aggregate_share": 0.075317,
+    "edges": 2197
+   },
+   "2018": {
+    "n": 830,
+    "E1_mean_edges": 2.819277,
+    "E2_participation": 0.690361,
+    "E3_mean_share_of_refs": 0.077787,
+    "E3_aggregate_share": 0.079062,
+    "edges": 2340
+   },
+   "2019": {
+    "n": 854,
+    "E1_mean_edges": 3.035129,
+    "E2_participation": 0.728337,
+    "E3_mean_share_of_refs": 0.082833,
+    "E3_aggregate_share": 0.079729,
+    "edges": 2592
+   },
+   "2020": {
+    "n": 928,
+    "E1_mean_edges": 2.96875,
+    "E2_participation": 0.725216,
+    "E3_mean_share_of_refs": 0.075646,
+    "E3_aggregate_share": 0.073367,
+    "edges": 2755
+   },
+   "2021": {
+    "n": 825,
+    "E1_mean_edges": 3.387879,
+    "E2_participation": 0.767273,
+    "E3_mean_share_of_refs": 0.082519,
+    "E3_aggregate_share": 0.080457,
+    "edges": 2795
+   },
+   "2022": {
+    "n": 680,
+    "E1_mean_edges": 3.355882,
+    "E2_participation": 0.733824,
+    "E3_mean_share_of_refs": 0.080518,
+    "E3_aggregate_share": 0.07729,
+    "edges": 2282
+   },
+   "2023": {
+    "n": 813,
+    "E1_mean_edges": 3.239852,
+    "E2_participation": 0.756458,
+    "E3_mean_share_of_refs": 0.074401,
+    "E3_aggregate_share": 0.07326,
+    "edges": 2634
+   },
+   "2024": {
+    "n": 874,
+    "E1_mean_edges": 3.340961,
+    "E2_participation": 0.757437,
+    "E3_mean_share_of_refs": 0.078402,
+    "E3_aggregate_share": 0.0754,
+    "edges": 2920
+   },
+   "2025": {
+    "n": 689,
+    "E1_mean_edges": 3.16836,
+    "E2_participation": 0.761974,
+    "E3_mean_share_of_refs": 0.073486,
+    "E3_aggregate_share": 0.073353,
+    "edges": 2183
+   }
+  },
+  "full_NON_EC_to_EC": {
+   "2005": {
+    "n": 1099,
+    "E1_mean_edges": 0.085532,
+    "E2_participation": 0.061874,
+    "E3_mean_share_of_refs": 0.005614,
+    "E3_aggregate_share": 0.006125,
+    "edges": 94
+   },
+   "2006": {
+    "n": 1323,
+    "E1_mean_edges": 0.126984,
+    "E2_participation": 0.077853,
+    "E3_mean_share_of_refs": 0.008321,
+    "E3_aggregate_share": 0.008507,
+    "edges": 168
+   },
+   "2007": {
+    "n": 2140,
+    "E1_mean_edges": 0.164953,
+    "E2_participation": 0.1,
+    "E3_mean_share_of_refs": 0.010326,
+    "E3_aggregate_share": 0.009851,
+    "edges": 353
+   },
+   "2008": {
+    "n": 2021,
+    "E1_mean_edges": 0.221178,
+    "E2_participation": 0.119743,
+    "E3_mean_share_of_refs": 0.011452,
+    "E3_aggregate_share": 0.013181,
+    "edges": 447
+   },
+   "2009": {
+    "n": 3235,
+    "E1_mean_edges": 0.23524,
+    "E2_participation": 0.127357,
+    "E3_mean_share_of_refs": 0.011755,
+    "E3_aggregate_share": 0.012987,
+    "edges": 761
+   },
+   "2010": {
+    "n": 2434,
+    "E1_mean_edges": 0.33977,
+    "E2_participation": 0.140509,
+    "E3_mean_share_of_refs": 0.012837,
+    "E3_aggregate_share": 0.018594,
+    "edges": 827
+   },
+   "2011": {
+    "n": 3019,
+    "E1_mean_edges": 0.393508,
+    "E2_participation": 0.202385,
+    "E3_mean_share_of_refs": 0.016183,
+    "E3_aggregate_share": 0.017527,
+    "edges": 1188
+   },
+   "2012": {
+    "n": 2927,
+    "E1_mean_edges": 0.454732,
+    "E2_participation": 0.231636,
+    "E3_mean_share_of_refs": 0.018771,
+    "E3_aggregate_share": 0.018189,
+    "edges": 1331
+   },
+   "2013": {
+    "n": 3184,
+    "E1_mean_edges": 0.527638,
+    "E2_participation": 0.228329,
+    "E3_mean_share_of_refs": 0.019516,
+    "E3_aggregate_share": 0.020042,
+    "edges": 1680
+   },
+   "2014": {
+    "n": 3745,
+    "E1_mean_edges": 0.588251,
+    "E2_participation": 0.220828,
+    "E3_mean_share_of_refs": 0.020199,
+    "E3_aggregate_share": 0.021434,
+    "edges": 2203
+   },
+   "2015": {
+    "n": 3576,
+    "E1_mean_edges": 0.673658,
+    "E2_participation": 0.267058,
+    "E3_mean_share_of_refs": 0.022902,
+    "E3_aggregate_share": 0.022672,
+    "edges": 2409
+   },
+   "2016": {
+    "n": 3758,
+    "E1_mean_edges": 0.686801,
+    "E2_participation": 0.250931,
+    "E3_mean_share_of_refs": 0.022548,
+    "E3_aggregate_share": 0.022572,
+    "edges": 2581
+   },
+   "2017": {
+    "n": 3905,
+    "E1_mean_edges": 0.70525,
+    "E2_participation": 0.249936,
+    "E3_mean_share_of_refs": 0.023233,
+    "E3_aggregate_share": 0.022627,
+    "edges": 2754
+   },
+   "2018": {
+    "n": 4248,
+    "E1_mean_edges": 0.686205,
+    "E2_participation": 0.254473,
+    "E3_mean_share_of_refs": 0.021552,
+    "E3_aggregate_share": 0.021541,
+    "edges": 2915
+   },
+   "2019": {
+    "n": 4559,
+    "E1_mean_edges": 0.739417,
+    "E2_participation": 0.259925,
+    "E3_mean_share_of_refs": 0.023496,
+    "E3_aggregate_share": 0.022387,
+    "edges": 3371
+   },
+   "2020": {
+    "n": 5168,
+    "E1_mean_edges": 0.710333,
+    "E2_participation": 0.252902,
+    "E3_mean_share_of_refs": 0.020415,
+    "E3_aggregate_share": 0.02049,
+    "edges": 3671
+   },
+   "2021": {
+    "n": 6842,
+    "E1_mean_edges": 0.746127,
+    "E2_participation": 0.264396,
+    "E3_mean_share_of_refs": 0.02063,
+    "E3_aggregate_share": 0.019798,
+    "edges": 5105
+   },
+   "2022": {
+    "n": 7386,
+    "E1_mean_edges": 0.710669,
+    "E2_participation": 0.248714,
+    "E3_mean_share_of_refs": 0.017847,
+    "E3_aggregate_share": 0.018203,
+    "edges": 5249
+   },
+   "2023": {
+    "n": 8387,
+    "E1_mean_edges": 0.661858,
+    "E2_participation": 0.241445,
+    "E3_mean_share_of_refs": 0.017239,
+    "E3_aggregate_share": 0.016892,
+    "edges": 5551
+   },
+   "2024": {
+    "n": 11032,
+    "E1_mean_edges": 0.622915,
+    "E2_participation": 0.22897,
+    "E3_mean_share_of_refs": 0.015291,
+    "E3_aggregate_share": 0.015606,
+    "edges": 6872
+   },
+   "2025": {
+    "n": 10978,
+    "E1_mean_edges": 0.549645,
+    "E2_participation": 0.204682,
+    "E3_mean_share_of_refs": 0.013857,
+    "E3_aggregate_share": 0.014186,
+    "edges": 6034
+   }
+  },
+  "full_EC_to_NON_EC": {
+   "2005": {
+    "n": 1093,
+    "E1_mean_edges": 0.116194,
+    "E2_participation": 0.075023,
+    "E3_mean_share_of_refs": 0.00766,
+    "E3_aggregate_share": 0.010149,
+    "edges": 127
+   },
+   "2006": {
+    "n": 1155,
+    "E1_mean_edges": 0.181818,
+    "E2_participation": 0.122944,
+    "E3_mean_share_of_refs": 0.011468,
+    "E3_aggregate_share": 0.014859,
+    "edges": 210
+   },
+   "2007": {
+    "n": 1802,
+    "E1_mean_edges": 0.235294,
+    "E2_participation": 0.130411,
+    "E3_mean_share_of_refs": 0.013399,
+    "E3_aggregate_share": 0.018968,
+    "edges": 424
+   },
+   "2008": {
+    "n": 1534,
+    "E1_mean_edges": 0.312907,
+    "E2_participation": 0.162973,
+    "E3_mean_share_of_refs": 0.017239,
+    "E3_aggregate_share": 0.022989,
+    "edges": 480
+   },
+   "2009": {
+    "n": 1777,
+    "E1_mean_edges": 0.521103,
+    "E2_participation": 0.249297,
+    "E3_mean_share_of_refs": 0.026865,
+    "E3_aggregate_share": 0.033705,
+    "edges": 926
+   },
+   "2010": {
+    "n": 1948,
+    "E1_mean_edges": 0.505647,
+    "E2_participation": 0.221766,
+    "E3_mean_share_of_refs": 0.023037,
+    "E3_aggregate_share": 0.034386,
+    "edges": 985
+   },
+   "2011": {
+    "n": 1733,
+    "E1_mean_edges": 0.870167,
+    "E2_participation": 0.323716,
+    "E3_mean_share_of_refs": 0.036299,
+    "E3_aggregate_share": 0.04542,
+    "edges": 1508
+   },
+   "2012": {
+    "n": 1790,
+    "E1_mean_edges": 0.972626,
+    "E2_participation": 0.360894,
+    "E3_mean_share_of_refs": 0.03916,
+    "E3_aggregate_share": 0.046689,
+    "edges": 1741
+   },
+   "2013": {
+    "n": 2236,
+    "E1_mean_edges": 0.841234,
+    "E2_participation": 0.305456,
+    "E3_mean_share_of_refs": 0.032055,
+    "E3_aggregate_share": 0.04054,
+    "edges": 1881
+   },
+   "2014": {
+    "n": 2212,
+    "E1_mean_edges": 0.946655,
+    "E2_participation": 0.342676,
+    "E3_mean_share_of_refs": 0.034336,
+    "E3_aggregate_share": 0.042194,
+    "edges": 2094
+   },
+   "2015": {
+    "n": 2296,
+    "E1_mean_edges": 1.125871,
+    "E2_participation": 0.381098,
+    "E3_mean_share_of_refs": 0.03913,
+    "E3_aggregate_share": 0.046709,
+    "edges": 2585
+   },
+   "2016": {
+    "n": 2494,
+    "E1_mean_edges": 1.168404,
+    "E2_participation": 0.398156,
+    "E3_mean_share_of_refs": 0.039314,
+    "E3_aggregate_share": 0.047598,
+    "edges": 2914
+   },
+   "2017": {
+    "n": 2252,
+    "E1_mean_edges": 1.319272,
+    "E2_participation": 0.436945,
+    "E3_mean_share_of_refs": 0.041895,
+    "E3_aggregate_share": 0.0484,
+    "edges": 2971
+   },
+   "2018": {
+    "n": 2325,
+    "E1_mean_edges": 1.372903,
+    "E2_participation": 0.428387,
+    "E3_mean_share_of_refs": 0.043538,
+    "E3_aggregate_share": 0.051867,
+    "edges": 3192
+   },
+   "2019": {
+    "n": 2655,
+    "E1_mean_edges": 1.474576,
+    "E2_participation": 0.459134,
+    "E3_mean_share_of_refs": 0.046226,
+    "E3_aggregate_share": 0.052102,
+    "edges": 3915
+   },
+   "2020": {
+    "n": 2561,
+    "E1_mean_edges": 1.565795,
+    "E2_participation": 0.488481,
+    "E3_mean_share_of_refs": 0.045636,
+    "E3_aggregate_share": 0.050954,
+    "edges": 4010
+   },
+   "2021": {
+    "n": 2749,
+    "E1_mean_edges": 1.841033,
+    "E2_participation": 0.53474,
+    "E3_mean_share_of_refs": 0.048316,
+    "E3_aggregate_share": 0.0537,
+    "edges": 5061
+   },
+   "2022": {
+    "n": 2694,
+    "E1_mean_edges": 1.76392,
+    "E2_participation": 0.535635,
+    "E3_mean_share_of_refs": 0.046809,
+    "E3_aggregate_share": 0.050465,
+    "edges": 4752
+   },
+   "2023": {
+    "n": 2689,
+    "E1_mean_edges": 1.914094,
+    "E2_participation": 0.577166,
+    "E3_mean_share_of_refs": 0.048666,
+    "E3_aggregate_share": 0.050733,
+    "edges": 5147
+   },
+   "2024": {
+    "n": 3026,
+    "E1_mean_edges": 1.993391,
+    "E2_participation": 0.581295,
+    "E3_mean_share_of_refs": 0.050241,
+    "E3_aggregate_share": 0.052196,
+    "edges": 6032
+   },
+   "2025": {
+    "n": 2815,
+    "E1_mean_edges": 2.030551,
+    "E2_participation": 0.606394,
+    "E3_mean_share_of_refs": 0.051407,
+    "E3_aggregate_share": 0.052433,
+    "edges": 5716
+   }
+  }
+ },
+ "endpoints_2021_2025": {
+  "stable8_NON_EC_to_EC": {
+   "E1_mean_edges": {
+    "2021": 0.830477,
+    "2025": 0.502669,
+    "rel_change": -0.3947
+   },
+   "E2_participation": {
+    "2021": 0.290875,
+    "2025": 0.197891,
+    "rel_change": -0.3197
+   },
+   "E3_mean_share_of_refs": {
+    "2021": 0.0208,
+    "2025": 0.012131,
+    "rel_change": -0.4168
+   },
+   "E3_aggregate_share": {
+    "2021": 0.021978,
+    "2025": 0.013261,
+    "rel_change": -0.3966
+   },
+   "edges": {
+    "2021": 3586,
+    "2025": 3861,
+    "rel_change": 0.0767
+   }
+  },
+  "stable8_EC_to_NON_EC": {
+   "E1_mean_edges": {
+    "2021": 3.387879,
+    "2025": 3.16836,
+    "rel_change": -0.0648
+   },
+   "E2_participation": {
+    "2021": 0.767273,
+    "2025": 0.761974,
+    "rel_change": -0.0069
+   },
+   "E3_mean_share_of_refs": {
+    "2021": 0.082519,
+    "2025": 0.073486,
+    "rel_change": -0.1095
+   },
+   "E3_aggregate_share": {
+    "2021": 0.080457,
+    "2025": 0.073353,
+    "rel_change": -0.0883
+   },
+   "edges": {
+    "2021": 2795,
+    "2025": 2183,
+    "rel_change": -0.219
+   }
+  },
+  "full_NON_EC_to_EC": {
+   "E1_mean_edges": {
+    "2021": 0.746127,
+    "2025": 0.549645,
+    "rel_change": -0.2633
+   },
+   "E2_participation": {
+    "2021": 0.264396,
+    "2025": 0.204682,
+    "rel_change": -0.2259
+   },
+   "E3_mean_share_of_refs": {
+    "2021": 0.02063,
+    "2025": 0.013857,
+    "rel_change": -0.3283
+   },
+   "E3_aggregate_share": {
+    "2021": 0.019798,
+    "2025": 0.014186,
+    "rel_change": -0.2835
+   },
+   "edges": {
+    "2021": 5105,
+    "2025": 6034,
+    "rel_change": 0.182
+   }
+  },
+  "full_EC_to_NON_EC": {
+   "E1_mean_edges": {
+    "2021": 1.841033,
+    "2025": 2.030551,
+    "rel_change": 0.1029
+   },
+   "E2_participation": {
+    "2021": 0.53474,
+    "2025": 0.606394,
+    "rel_change": 0.134
+   },
+   "E3_mean_share_of_refs": {
+    "2021": 0.048316,
+    "2025": 0.051407,
+    "rel_change": 0.064
+   },
+   "E3_aggregate_share": {
+    "2021": 0.0537,
+    "2025": 0.052433,
+    "rel_change": -0.0236
+   },
+   "edges": {
+    "2021": 5061,
+    "2025": 5716,
+    "rel_change": 0.1294
+   }
+  }
+ },
+ "endpoints_2021_2024": {
+  "stable8_NON_EC_to_EC": {
+   "E1_mean_edges": {
+    "2021": 0.830477,
+    "2024": 0.616719,
+    "rel_change": -0.2574
+   },
+   "E2_participation": {
+    "2021": 0.290875,
+    "2024": 0.232256,
+    "rel_change": -0.2015
+   },
+   "E3_mean_share_of_refs": {
+    "2021": 0.0208,
+    "2024": 0.014294,
+    "rel_change": -0.3128
+   },
+   "E3_aggregate_share": {
+    "2021": 0.021978,
+    "2024": 0.015648,
+    "rel_change": -0.288
+   },
+   "edges": {
+    "2021": 3586,
+    "2024": 4692,
+    "rel_change": 0.3084
+   }
+  },
+  "stable8_EC_to_NON_EC": {
+   "E1_mean_edges": {
+    "2021": 3.387879,
+    "2024": 3.340961,
+    "rel_change": -0.0138
+   },
+   "E2_participation": {
+    "2021": 0.767273,
+    "2024": 0.757437,
+    "rel_change": -0.0128
+   },
+   "E3_mean_share_of_refs": {
+    "2021": 0.082519,
+    "2024": 0.078402,
+    "rel_change": -0.0499
+   },
+   "E3_aggregate_share": {
+    "2021": 0.080457,
+    "2024": 0.0754,
+    "rel_change": -0.0629
+   },
+   "edges": {
+    "2021": 2795,
+    "2024": 2920,
+    "rel_change": 0.0447
+   }
+  },
+  "full_NON_EC_to_EC": {
+   "E1_mean_edges": {
+    "2021": 0.746127,
+    "2024": 0.622915,
+    "rel_change": -0.1651
+   },
+   "E2_participation": {
+    "2021": 0.264396,
+    "2024": 0.22897,
+    "rel_change": -0.134
+   },
+   "E3_mean_share_of_refs": {
+    "2021": 0.02063,
+    "2024": 0.015291,
+    "rel_change": -0.2588
+   },
+   "E3_aggregate_share": {
+    "2021": 0.019798,
+    "2024": 0.015606,
+    "rel_change": -0.2117
+   },
+   "edges": {
+    "2021": 5105,
+    "2024": 6872,
+    "rel_change": 0.3461
+   }
+  },
+  "full_EC_to_NON_EC": {
+   "E1_mean_edges": {
+    "2021": 1.841033,
+    "2024": 1.993391,
+    "rel_change": 0.0828
+   },
+   "E2_participation": {
+    "2021": 0.53474,
+    "2024": 0.581295,
+    "rel_change": 0.0871
+   },
+   "E3_mean_share_of_refs": {
+    "2021": 0.048316,
+    "2024": 0.050241,
+    "rel_change": 0.0398
+   },
+   "E3_aggregate_share": {
+    "2021": 0.0537,
+    "2024": 0.052196,
+    "rel_change": -0.028
+   },
+   "edges": {
+    "2021": 5061,
+    "2024": 6032,
+    "rel_change": 0.1919
+   }
+  }
+ }
+}

@@ -1,0 +1,3367 @@
+{
+ "task": "Minimal sensitivity analysis for the bidirectional asymmetry",
+ "script": "research/nature/asymmetry_sensitivity.py",
+ "input": {
+  "database": "db/ec_papers.db",
+  "access": "SQLite read-only URI (ecdb.raw_sql default); no writes",
+  "meta_sql": "SELECT p.accession_no AS acc, p.pub_year AS y, p.source AS src, d.label AS lab, d.tier AS tier, d.confidence AS conf, p.num_references AS nrefs_declared FROM papers p JOIN paper_domain d ON d.accession_no = p.accession_no",
+  "refs_sql": "SELECT r.accession_no AS acc, COUNT(DISTINCT CASE WHEN d.label='EC' THEN pc.accession_no END) AS n_ec, COUNT(DISTINCT CASE WHEN d.label='NON_EC' THEN pc.accession_no END) AS n_non, COUNT(DISTINCT CASE WHEN d.label='EC' AND d.tier='llm' AND d.confidence<0.75 THEN pc.accession_no END) AS n_ec_lowconf, COUNT(DISTINCT CASE WHEN d.label='NON_EC' AND d.tier='llm' AND d.confidence<0.75 THEN pc.accession_no END) AS n_non_lowconf, COUNT(DISTINCT r.cited_doi) AS n_refs_doi, COUNT(*) AS n_rows_all, COUNT(r.cited_doi) AS n_rows_doi FROM paper_refs_out r LEFT JOIN papers pc ON pc.doi = r.cited_doi LEFT JOIN paper_domain d ON d.accession_no = pc.accession_no GROUP BY r.accession_no",
+  "paper_cit_edges_used": false,
+  "reused_from": "research/nature/paper_bootstrap_asymmetry.py (imported for CANON, STABLE8, SEED and helpers; its two extraction SELECTs are extended in the same single pass, so no extra full-DB queries)",
+  "frozen_cross_check_inputs": [
+   "research/nature/out/paper_bootstrap_asymmetry.json (read-only)",
+   "research/nature/out/stable8_merged.json (read-only)",
+   "research/nature/out/bidirectional_asymmetry.json (read-only)"
+  ]
+ },
+ "disclaimer": {
+  "zh": "本包是最小敏感性分析组，全部为按已锁定估计规范进行的只读点估计重算，不新增不确定性区间，不改变论文级分层重抽的结论表述。低置信队列对比是标签队列稳健性检查（不是校正）；共同来源留一是来源构成敏感性（TFS 反向样本量极小，其读数本身不稳定）；解析率诊断是描述性覆盖检查，不能当成校正；2025 为右删失端点，须与 2024 并读；gap 为非配对描述性比较。",
+  "en": "Minimal sensitivity analysis: read-only point-estimate recomputations under locked definitions only; no new uncertainty intervals and no change to the paper-level resampling statements. The low-confidence queue contrast is a label-queue robustness check (not a correction); the common-source leave-one-out is a source-composition sensitivity (TFS reverse pools are tiny and individually unstable); the parse-rate diagnostic is a descriptive coverage check and must not be used as a correction; 2025 is right-censored and must be read next to 2024; the gap is a non-paired descriptive comparison."
+ },
+ "spec": {
+  "scope_years": [
+   2019,
+   2021,
+   2024,
+   2025
+  ],
+  "gate1_support_years": [
+   2021,
+   2024,
+   2025
+  ],
+  "bidirectional_support_years": [
+   2019,
+   2021,
+   2024,
+   2025
+  ],
+  "window_start_year": 2021,
+  "window_ends": [
+   2024,
+   2025
+  ],
+  "base_years": [
+   2019,
+   2021,
+   2024
+  ],
+  "metrics": {
+   "E1": "mean target edges per citing paper",
+   "E2": "share of citing papers with >= 1 target edge",
+   "E3": "mean share of DOI-resolved references pointing at the target; zero-DOI-reference papers contribute 0.0"
+  },
+  "directions": {
+   "forward": "NON_EC citing papers -> EC target",
+   "reverse": "EC citing papers -> NON_EC target"
+  },
+  "gap_definition": "100 * (reverse relative change - forward relative change), percentage points",
+  "weighting": "per base year: source composition weights over the support, renormalised over available strata",
+  "low_conf_queue": {
+   "predicate": "tier='llm' AND confidence<0.75",
+   "pre_registered_queue": "archive/labeling/low_confidence_review.csv",
+   "frozen": true
+  },
+  "seed_reused": 20261015,
+  "no_new_resampling": true
+ },
+ "sample_sizes": {
+  "in_scope_papers_by_direction_year_support": {
+   "forward|2019": 2786,
+   "forward|2021": 4426,
+   "forward|2024": 8537,
+   "forward|2025": 8771,
+   "reverse|2019": 719,
+   "reverse|2021": 1038,
+   "reverse|2024": 1209,
+   "reverse|2025": 947
+  },
+  "per_cell_n_all_stable8_in_scope_years": {
+   "forward|2019|Applied Soft Computing": 355,
+   "forward|2019|Computers and Industrial Engineering": 504,
+   "forward|2019|Computers and Operations Research": 172,
+   "forward|2019|Engineering Applications of Artificial Intelligence": 165,
+   "forward|2019|European Journal of Operational Research": 602,
+   "forward|2019|Expert Systems with Applications": 589,
+   "forward|2019|IEEE Transactions on Fuzzy Systems": 176,
+   "forward|2019|Information Sciences": 727,
+   "forward|2021|Applied Soft Computing": 667,
+   "forward|2021|Computers and Industrial Engineering": 559,
+   "forward|2021|Computers and Operations Research": 204,
+   "forward|2021|Engineering Applications of Artificial Intelligence": 284,
+   "forward|2021|European Journal of Operational Research": 586,
+   "forward|2021|Expert Systems with Applications": 1209,
+   "forward|2021|IEEE Transactions on Fuzzy Systems": 315,
+   "forward|2021|Information Sciences": 1161,
+   "forward|2024|Applied Soft Computing": 929,
+   "forward|2024|Computers and Operations Research": 211,
+   "forward|2024|Engineering Applications of Artificial Intelligence": 1859,
+   "forward|2024|European Journal of Operational Research": 537,
+   "forward|2024|Expert Systems with Applications": 3282,
+   "forward|2024|IEEE Transactions on Fuzzy Systems": 574,
+   "forward|2024|Information Sciences": 1145,
+   "forward|2025|Applied Soft Computing": 1090,
+   "forward|2025|Computers and Operations Research": 226,
+   "forward|2025|Engineering Applications of Artificial Intelligence": 2767,
+   "forward|2025|European Journal of Operational Research": 421,
+   "forward|2025|Expert Systems with Applications": 2997,
+   "forward|2025|IEEE Transactions on Fuzzy Systems": 342,
+   "forward|2025|Information Sciences": 928,
+   "reverse|2019|Applied Soft Computing": 307,
+   "reverse|2019|Computers and Industrial Engineering": 162,
+   "reverse|2019|Computers and Operations Research": 73,
+   "reverse|2019|Engineering Applications of Artificial Intelligence": 45,
+   "reverse|2019|European Journal of Operational Research": 57,
+   "reverse|2019|Expert Systems with Applications": 120,
+   "reverse|2019|IEEE Transactions on Fuzzy Systems": 18,
+   "reverse|2019|Information Sciences": 99,
+   "reverse|2021|Applied Soft Computing": 380,
+   "reverse|2021|Computers and Industrial Engineering": 167,
+   "reverse|2021|Computers and Operations Research": 87,
+   "reverse|2021|Engineering Applications of Artificial Intelligence": 76,
+   "reverse|2021|European Journal of Operational Research": 57,
+   "reverse|2021|Expert Systems with Applications": 290,
+   "reverse|2021|IEEE Transactions on Fuzzy Systems": 11,
+   "reverse|2021|Information Sciences": 137,
+   "reverse|2024|Applied Soft Computing": 335,
+   "reverse|2024|Computers and Operations Research": 109,
+   "reverse|2024|Engineering Applications of Artificial Intelligence": 156,
+   "reverse|2024|European Journal of Operational Research": 57,
+   "reverse|2024|Expert Systems with Applications": 405,
+   "reverse|2024|IEEE Transactions on Fuzzy Systems": 10,
+   "reverse|2024|Information Sciences": 137,
+   "reverse|2025|Applied Soft Computing": 258,
+   "reverse|2025|Computers and Operations Research": 99,
+   "reverse|2025|Engineering Applications of Artificial Intelligence": 162,
+   "reverse|2025|European Journal of Operational Research": 50,
+   "reverse|2025|Expert Systems with Applications": 270,
+   "reverse|2025|IEEE Transactions on Fuzzy Systems": 9,
+   "reverse|2025|Information Sciences": 99
+  }
+ },
+ "s1_gate1_replica": {
+  "support": [
+   "Applied Soft Computing",
+   "Computers and Operations Research",
+   "Engineering Applications of Artificial Intelligence",
+   "European Journal of Operational Research",
+   "Expert Systems with Applications",
+   "IEEE Transactions on Fuzzy Systems",
+   "Information Sciences"
+  ],
+  "rule": "sources non-empty in (2021, 2024, 2025) in both directions",
+  "weights_2021": {
+   "forward": {
+    "Applied Soft Computing": 0.1507,
+    "Computers and Operations Research": 0.046091,
+    "Engineering Applications of Artificial Intelligence": 0.064166,
+    "European Journal of Operational Research": 0.132399,
+    "Expert Systems with Applications": 0.273159,
+    "IEEE Transactions on Fuzzy Systems": 0.07117,
+    "Information Sciences": 0.262314
+   },
+   "reverse": {
+    "Applied Soft Computing": 0.366089,
+    "Computers and Operations Research": 0.083815,
+    "Engineering Applications of Artificial Intelligence": 0.073218,
+    "European Journal of Operational Research": 0.054913,
+    "Expert Systems with Applications": 0.279383,
+    "IEEE Transactions on Fuzzy Systems": 0.010597,
+    "Information Sciences": 0.131985
+   }
+  },
+  "n_base_2021": {
+   "forward": 4426,
+   "reverse": 1038
+  },
+  "point_estimates": {
+   "2021->2024": {
+    "E1": {
+     "forward_rel_change": -0.0183,
+     "reverse_rel_change": 0.1471,
+     "gap_pp": 16.5319
+    },
+    "E2": {
+     "forward_rel_change": -0.0579,
+     "reverse_rel_change": 0.0341,
+     "gap_pp": 9.2021
+    },
+    "E3": {
+     "forward_rel_change": -0.0742,
+     "reverse_rel_change": 0.12,
+     "gap_pp": 19.4217
+    }
+   },
+   "2021->2025": {
+    "E1": {
+     "forward_rel_change": -0.161,
+     "reverse_rel_change": 0.0915,
+     "gap_pp": 25.2459
+    },
+    "E2": {
+     "forward_rel_change": -0.164,
+     "reverse_rel_change": 0.0821,
+     "gap_pp": 24.6177
+    },
+    "E3": {
+     "forward_rel_change": -0.1916,
+     "reverse_rel_change": 0.0509,
+     "gap_pp": 24.2548
+    }
+   }
+  }
+ },
+ "s2_low_confidence_queue": {
+  "queue": {
+   "predicate": "tier='llm' AND confidence<0.75",
+   "source_field": "paper_domain.tier / paper_domain.confidence",
+   "pre_registered_queue": "archive/labeling/low_confidence_review.csv",
+   "inventory": {
+    "forward": {
+     "total": 167,
+     "per_year": {
+      "2021": {
+       "n": 34,
+       "per_source": {
+        "Applied Soft Computing": 4,
+        "Computers and Operations Research": 6,
+        "Engineering Applications of Artificial Intelligence": 2,
+        "European Journal of Operational Research": 2,
+        "Expert Systems with Applications": 8,
+        "IEEE Transactions on Fuzzy Systems": 2,
+        "Information Sciences": 10
+       },
+       "pool_n": 4426,
+       "share_of_pool": 0.007682
+      },
+      "2024": {
+       "n": 72,
+       "per_source": {
+        "Applied Soft Computing": 10,
+        "Computers and Operations Research": 14,
+        "Engineering Applications of Artificial Intelligence": 14,
+        "European Journal of Operational Research": 9,
+        "Expert Systems with Applications": 20,
+        "IEEE Transactions on Fuzzy Systems": 1,
+        "Information Sciences": 4
+       },
+       "pool_n": 8537,
+       "share_of_pool": 0.008434
+      },
+      "2025": {
+       "n": 61,
+       "per_source": {
+        "Applied Soft Computing": 7,
+        "Computers and Operations Research": 12,
+        "Engineering Applications of Artificial Intelligence": 11,
+        "European Journal of Operational Research": 6,
+        "Expert Systems with Applications": 18,
+        "IEEE Transactions on Fuzzy Systems": 2,
+        "Information Sciences": 5
+       },
+       "pool_n": 8771,
+       "share_of_pool": 0.006955
+      }
+     },
+     "conf_values": {
+      "0.72": 90,
+      "0.62": 32,
+      "0.55": 6,
+      "0.65": 12,
+      "0.7": 17,
+      "0.6": 6,
+      "0.58": 1,
+      "0.68": 2,
+      "0.5": 1
+     },
+     "out_of_support": 13,
+     "share_of_pool_2021_24_25": 0.007684
+    },
+    "reverse": {
+     "total": 225,
+     "per_year": {
+      "2021": {
+       "n": 63,
+       "per_source": {
+        "Applied Soft Computing": 18,
+        "Computers and Operations Research": 9,
+        "Engineering Applications of Artificial Intelligence": 3,
+        "European Journal of Operational Research": 16,
+        "Expert Systems with Applications": 13,
+        "Information Sciences": 4
+       },
+       "pool_n": 1038,
+       "share_of_pool": 0.060694
+      },
+      "2024": {
+       "n": 68,
+       "per_source": {
+        "Applied Soft Computing": 9,
+        "Computers and Operations Research": 12,
+        "Engineering Applications of Artificial Intelligence": 13,
+        "European Journal of Operational Research": 10,
+        "Expert Systems with Applications": 21,
+        "IEEE Transactions on Fuzzy Systems": 1,
+        "Information Sciences": 2
+       },
+       "pool_n": 1209,
+       "share_of_pool": 0.056245
+      },
+      "2025": {
+       "n": 94,
+       "per_source": {
+        "Applied Soft Computing": 16,
+        "Computers and Operations Research": 14,
+        "Engineering Applications of Artificial Intelligence": 23,
+        "European Journal of Operational Research": 9,
+        "Expert Systems with Applications": 25,
+        "IEEE Transactions on Fuzzy Systems": 2,
+        "Information Sciences": 5
+       },
+       "pool_n": 947,
+       "share_of_pool": 0.099261
+      }
+     },
+     "conf_values": {
+      "0.55": 18,
+      "0.72": 129,
+      "0.65": 9,
+      "0.62": 48,
+      "0.7": 5,
+      "0.58": 4,
+      "0.6": 10,
+      "0.52": 1,
+      "0.68": 1
+     },
+     "out_of_support": 11,
+     "share_of_pool_2021_24_25": 0.070445
+    }
+   },
+   "queue_own_record_levels": {
+    "forward": {
+     "n": 167,
+     "n_edges": 885,
+     "E1": 5.299401,
+     "E2": 0.844311,
+     "E3": 0.108091,
+     "n_refs_doi": 7912,
+     "n_edges_with_queue_paper_as_target": 12694,
+     "n_citing_papers_with_queue_target_edge": 4925
+    },
+    "reverse": {
+     "n": 225,
+     "n_edges": 1072,
+     "E1": 4.764444,
+     "E2": 0.888889,
+     "E3": 0.112174,
+     "n_refs_doi": 9567,
+     "n_edges_with_queue_paper_as_target": 8937,
+     "n_citing_papers_with_queue_target_edge": 2282
+    }
+   },
+   "note": "queue_own_record_levels are the queue papers' own E1/E2/E3 levels in their pool (descriptive mechanism read), not additive decompositions of the gap change; the queue sits far above its pool's target-edge levels, which is consistent with borderline labels but is not a labeling verdict (the queue is not manually reviewed here); 'out_of_support' counts queue papers in in-scope years that sit in a STABLE8 source outside the frozen support (Computers and Industrial Engineering 2021) and are not in the analysis pool."
+  },
+  "variants": {
+   "unit_excluded": {
+    "label": "queue removed as citing units only",
+    "support": [
+     "Applied Soft Computing",
+     "Computers and Operations Research",
+     "Engineering Applications of Artificial Intelligence",
+     "European Journal of Operational Research",
+     "Expert Systems with Applications",
+     "IEEE Transactions on Fuzzy Systems",
+     "Information Sciences"
+    ],
+    "support_unchanged_vs_full": true,
+    "n_base_2021": {
+     "forward": 4392,
+     "reverse": 975
+    },
+    "weights_2021": {
+     "forward": {
+      "Applied Soft Computing": 0.150956,
+      "Computers and Operations Research": 0.045082,
+      "Engineering Applications of Artificial Intelligence": 0.064208,
+      "European Journal of Operational Research": 0.132969,
+      "Expert Systems with Applications": 0.273452,
+      "IEEE Transactions on Fuzzy Systems": 0.071266,
+      "Information Sciences": 0.262067
+     },
+     "reverse": {
+      "Applied Soft Computing": 0.371282,
+      "Computers and Operations Research": 0.08,
+      "Engineering Applications of Artificial Intelligence": 0.074872,
+      "European Journal of Operational Research": 0.042051,
+      "Expert Systems with Applications": 0.284103,
+      "IEEE Transactions on Fuzzy Systems": 0.011282,
+      "Information Sciences": 0.13641
+     }
+    },
+    "point_estimates": {
+     "2021->2024": {
+      "E1": {
+       "forward_rel_change": -0.0355,
+       "reverse_rel_change": 0.1282,
+       "gap_pp": 16.3639
+      },
+      "E2": {
+       "forward_rel_change": -0.0621,
+       "reverse_rel_change": 0.0343,
+       "gap_pp": 9.6454
+      },
+      "E3": {
+       "forward_rel_change": -0.0832,
+       "reverse_rel_change": 0.1093,
+       "gap_pp": 19.2456
+      }
+     },
+     "2021->2025": {
+      "E1": {
+       "forward_rel_change": -0.1503,
+       "reverse_rel_change": 0.0411,
+       "gap_pp": 19.1441
+      },
+      "E2": {
+       "forward_rel_change": -0.1699,
+       "reverse_rel_change": 0.0726,
+       "gap_pp": 24.247
+      },
+      "E3": {
+       "forward_rel_change": -0.1851,
+       "reverse_rel_change": 0.0168,
+       "gap_pp": 20.1886
+      }
+     }
+    },
+    "point_estimates_frozen_2021_weights": {
+     "2021->2024": {
+      "E1": {
+       "forward_rel_change": -0.0353,
+       "reverse_rel_change": 0.1309,
+       "gap_pp": 16.622
+      },
+      "E2": {
+       "forward_rel_change": -0.0619,
+       "reverse_rel_change": 0.0354,
+       "gap_pp": 9.7276
+      },
+      "E3": {
+       "forward_rel_change": -0.0825,
+       "reverse_rel_change": 0.1094,
+       "gap_pp": 19.1867
+      }
+     },
+     "2021->2025": {
+      "E1": {
+       "forward_rel_change": -0.1494,
+       "reverse_rel_change": 0.0494,
+       "gap_pp": 19.8845
+      },
+      "E2": {
+       "forward_rel_change": -0.1695,
+       "reverse_rel_change": 0.0722,
+       "gap_pp": 24.1793
+      },
+      "E3": {
+       "forward_rel_change": -0.1843,
+       "reverse_rel_change": 0.0205,
+       "gap_pp": 20.4817
+      }
+     }
+    },
+    "delta_vs_full_pp": {
+     "2021->2024": {
+      "E1": -0.168,
+      "E2": 0.4434,
+      "E3": -0.1761
+     },
+     "2021->2025": {
+      "E1": -6.1018,
+      "E2": -0.3707,
+      "E3": -4.0662
+     }
+    }
+   },
+   "full_excluded": {
+    "label": "queue removed as citing units AND as edge targets (deleted, not relabelled)",
+    "support": [
+     "Applied Soft Computing",
+     "Computers and Operations Research",
+     "Engineering Applications of Artificial Intelligence",
+     "European Journal of Operational Research",
+     "Expert Systems with Applications",
+     "IEEE Transactions on Fuzzy Systems",
+     "Information Sciences"
+    ],
+    "support_unchanged_vs_full": true,
+    "n_base_2021": {
+     "forward": 4392,
+     "reverse": 975
+    },
+    "weights_2021": {
+     "forward": {
+      "Applied Soft Computing": 0.150956,
+      "Computers and Operations Research": 0.045082,
+      "Engineering Applications of Artificial Intelligence": 0.064208,
+      "European Journal of Operational Research": 0.132969,
+      "Expert Systems with Applications": 0.273452,
+      "IEEE Transactions on Fuzzy Systems": 0.071266,
+      "Information Sciences": 0.262067
+     },
+     "reverse": {
+      "Applied Soft Computing": 0.371282,
+      "Computers and Operations Research": 0.08,
+      "Engineering Applications of Artificial Intelligence": 0.074872,
+      "European Journal of Operational Research": 0.042051,
+      "Expert Systems with Applications": 0.284103,
+      "IEEE Transactions on Fuzzy Systems": 0.011282,
+      "Information Sciences": 0.13641
+     }
+    },
+    "point_estimates": {
+     "2021->2024": {
+      "E1": {
+       "forward_rel_change": -0.0435,
+       "reverse_rel_change": 0.1266,
+       "gap_pp": 17.0124
+      },
+      "E2": {
+       "forward_rel_change": -0.066,
+       "reverse_rel_change": 0.0355,
+       "gap_pp": 10.1486
+      },
+      "E3": {
+       "forward_rel_change": -0.0944,
+       "reverse_rel_change": 0.1088,
+       "gap_pp": 20.3183
+      }
+     },
+     "2021->2025": {
+      "E1": {
+       "forward_rel_change": -0.1535,
+       "reverse_rel_change": 0.0262,
+       "gap_pp": 17.9685
+      },
+      "E2": {
+       "forward_rel_change": -0.1665,
+       "reverse_rel_change": 0.0571,
+       "gap_pp": 22.3586
+      },
+      "E3": {
+       "forward_rel_change": -0.1837,
+       "reverse_rel_change": 0.0009,
+       "gap_pp": 18.4671
+      }
+     }
+    },
+    "point_estimates_frozen_2021_weights": {
+     "2021->2024": {
+      "E1": {
+       "forward_rel_change": -0.0435,
+       "reverse_rel_change": 0.1286,
+       "gap_pp": 17.2147
+      },
+      "E2": {
+       "forward_rel_change": -0.0658,
+       "reverse_rel_change": 0.037,
+       "gap_pp": 10.28
+      },
+      "E3": {
+       "forward_rel_change": -0.0939,
+       "reverse_rel_change": 0.109,
+       "gap_pp": 20.2908
+      }
+     },
+     "2021->2025": {
+      "E1": {
+       "forward_rel_change": -0.1526,
+       "reverse_rel_change": 0.0341,
+       "gap_pp": 18.6673
+      },
+      "E2": {
+       "forward_rel_change": -0.1662,
+       "reverse_rel_change": 0.057,
+       "gap_pp": 22.3228
+      },
+      "E3": {
+       "forward_rel_change": -0.183,
+       "reverse_rel_change": 0.0053,
+       "gap_pp": 18.8246
+      }
+     }
+    },
+    "delta_vs_full_pp": {
+     "2021->2024": {
+      "E1": 0.4804,
+      "E2": 0.9465,
+      "E3": 0.8966
+     },
+     "2021->2025": {
+      "E1": -7.2775,
+      "E2": -2.259,
+      "E3": -5.7877
+     }
+    }
+   }
+  }
+ },
+ "s3_reverse_loo": {
+  "support": [
+   "Applied Soft Computing",
+   "Computers and Operations Research",
+   "Engineering Applications of Artificial Intelligence",
+   "European Journal of Operational Research",
+   "Expert Systems with Applications",
+   "IEEE Transactions on Fuzzy Systems",
+   "Information Sciences"
+  ],
+  "rule": "sources non-empty in (2019, 2021, 2024, 2025) in both directions",
+  "direction_note": "Common-source LOO: the dropped source is removed from both the forward and reverse support pools, and base-year weights are recomputed and renormalised separately in each direction.",
+  "full_reference": {
+   "2019|2021->2024|E1": {
+    "gap_pp": 11.202388,
+    "forward_rel_change": 0.070739,
+    "reverse_rel_change": 0.182763,
+    "n_base": {
+     "forward": 2786,
+     "reverse": 719
+    }
+   },
+   "2019|2021->2024|E2": {
+    "gap_pp": 5.159802,
+    "forward_rel_change": -0.013691,
+    "reverse_rel_change": 0.037907,
+    "n_base": {
+     "forward": 2786,
+     "reverse": 719
+    }
+   },
+   "2019|2021->2024|E3": {
+    "gap_pp": 14.641187,
+    "forward_rel_change": -0.00498,
+    "reverse_rel_change": 0.141432,
+    "n_base": {
+     "forward": 2786,
+     "reverse": 719
+    }
+   },
+   "2019|2021->2025|E1": {
+    "gap_pp": 25.10625,
+    "forward_rel_change": -0.09514,
+    "reverse_rel_change": 0.155923,
+    "n_base": {
+     "forward": 2786,
+     "reverse": 719
+    }
+   },
+   "2019|2021->2025|E2": {
+    "gap_pp": 20.257314,
+    "forward_rel_change": -0.111978,
+    "reverse_rel_change": 0.090595,
+    "n_base": {
+     "forward": 2786,
+     "reverse": 719
+    }
+   },
+   "2019|2021->2025|E3": {
+    "gap_pp": 23.640385,
+    "forward_rel_change": -0.139547,
+    "reverse_rel_change": 0.096857,
+    "n_base": {
+     "forward": 2786,
+     "reverse": 719
+    }
+   },
+   "2021|2021->2024|E1": {
+    "gap_pp": 16.531922,
+    "forward_rel_change": -0.018252,
+    "reverse_rel_change": 0.147068,
+    "n_base": {
+     "forward": 4426,
+     "reverse": 1038
+    }
+   },
+   "2021|2021->2024|E2": {
+    "gap_pp": 9.202062,
+    "forward_rel_change": -0.057903,
+    "reverse_rel_change": 0.034118,
+    "n_base": {
+     "forward": 4426,
+     "reverse": 1038
+    }
+   },
+   "2021|2021->2024|E3": {
+    "gap_pp": 19.421702,
+    "forward_rel_change": -0.074237,
+    "reverse_rel_change": 0.11998,
+    "n_base": {
+     "forward": 4426,
+     "reverse": 1038
+    }
+   },
+   "2021|2021->2025|E1": {
+    "gap_pp": 25.245924,
+    "forward_rel_change": -0.160957,
+    "reverse_rel_change": 0.091502,
+    "n_base": {
+     "forward": 4426,
+     "reverse": 1038
+    }
+   },
+   "2021|2021->2025|E2": {
+    "gap_pp": 24.617658,
+    "forward_rel_change": -0.164048,
+    "reverse_rel_change": 0.082128,
+    "n_base": {
+     "forward": 4426,
+     "reverse": 1038
+    }
+   },
+   "2021|2021->2025|E3": {
+    "gap_pp": 24.254815,
+    "forward_rel_change": -0.191615,
+    "reverse_rel_change": 0.050933,
+    "n_base": {
+     "forward": 4426,
+     "reverse": 1038
+    }
+   },
+   "2024|2021->2024|E1": {
+    "gap_pp": 27.895612,
+    "forward_rel_change": -0.146018,
+    "reverse_rel_change": 0.132938,
+    "n_base": {
+     "forward": 8537,
+     "reverse": 1209
+    }
+   },
+   "2024|2021->2024|E2": {
+    "gap_pp": 15.649672,
+    "forward_rel_change": -0.112749,
+    "reverse_rel_change": 0.043748,
+    "n_base": {
+     "forward": 8537,
+     "reverse": 1209
+    }
+   },
+   "2024|2021->2024|E3": {
+    "gap_pp": 31.631343,
+    "forward_rel_change": -0.205349,
+    "reverse_rel_change": 0.110965,
+    "n_base": {
+     "forward": 8537,
+     "reverse": 1209
+    }
+   },
+   "2024|2021->2025|E1": {
+    "gap_pp": 33.971937,
+    "forward_rel_change": -0.27395,
+    "reverse_rel_change": 0.06577,
+    "n_base": {
+     "forward": 8537,
+     "reverse": 1209
+    }
+   },
+   "2024|2021->2025|E2": {
+    "gap_pp": 29.960194,
+    "forward_rel_change": -0.220435,
+    "reverse_rel_change": 0.079167,
+    "n_base": {
+     "forward": 8537,
+     "reverse": 1209
+    }
+   },
+   "2024|2021->2025|E3": {
+    "gap_pp": 33.195857,
+    "forward_rel_change": -0.294747,
+    "reverse_rel_change": 0.037212,
+    "n_base": {
+     "forward": 8537,
+     "reverse": 1209
+    }
+   }
+  },
+  "by_source": {
+   "Applied Soft Computing": {
+    "cells": {
+     "2019|2021->2024|E1": {
+      "gap_pp": 6.647933,
+      "reverse_rel_change": 0.168975,
+      "reverse_n_base": 412,
+      "delta_vs_full_pp": -4.554455
+     },
+     "2019|2021->2024|E2": {
+      "gap_pp": 3.696714,
+      "reverse_rel_change": 0.046015,
+      "reverse_n_base": 412,
+      "delta_vs_full_pp": -1.463088
+     },
+     "2019|2021->2024|E3": {
+      "gap_pp": 9.979619,
+      "reverse_rel_change": 0.126266,
+      "reverse_n_base": 412,
+      "delta_vs_full_pp": -4.661568
+     },
+     "2019|2021->2025|E1": {
+      "gap_pp": 19.11821,
+      "reverse_rel_change": 0.113043,
+      "reverse_n_base": 412,
+      "delta_vs_full_pp": -5.98804
+     },
+     "2019|2021->2025|E2": {
+      "gap_pp": 12.035379,
+      "reverse_rel_change": 0.033589,
+      "reverse_n_base": 412,
+      "delta_vs_full_pp": -8.221935
+     },
+     "2019|2021->2025|E3": {
+      "gap_pp": 16.439525,
+      "reverse_rel_change": 0.040835,
+      "reverse_n_base": 412,
+      "delta_vs_full_pp": -7.20086
+     },
+     "2021|2021->2024|E1": {
+      "gap_pp": 11.752033,
+      "reverse_rel_change": 0.120829,
+      "reverse_n_base": 658,
+      "delta_vs_full_pp": -4.779889
+     },
+     "2021|2021->2024|E2": {
+      "gap_pp": 7.888228,
+      "reverse_rel_change": 0.038632,
+      "reverse_n_base": 658,
+      "delta_vs_full_pp": -1.313834
+     },
+     "2021|2021->2024|E3": {
+      "gap_pp": 14.831681,
+      "reverse_rel_change": 0.098738,
+      "reverse_n_base": 658,
+      "delta_vs_full_pp": -4.590021
+     },
+     "2021|2021->2025|E1": {
+      "gap_pp": 18.257341,
+      "reverse_rel_change": 0.02912,
+      "reverse_n_base": 658,
+      "delta_vs_full_pp": -6.988583
+     },
+     "2021|2021->2025|E2": {
+      "gap_pp": 17.735912,
+      "reverse_rel_change": 0.032146,
+      "reverse_n_base": 658,
+      "delta_vs_full_pp": -6.881746
+     },
+     "2021|2021->2025|E3": {
+      "gap_pp": 16.820978,
+      "reverse_rel_change": -0.014712,
+      "reverse_n_base": 658,
+      "delta_vs_full_pp": -7.433837
+     },
+     "2024|2021->2024|E1": {
+      "gap_pp": 26.215919,
+      "reverse_rel_change": 0.111239,
+      "reverse_n_base": 874,
+      "delta_vs_full_pp": -1.679693
+     },
+     "2024|2021->2024|E2": {
+      "gap_pp": 15.975853,
+      "reverse_rel_change": 0.050151,
+      "reverse_n_base": 874,
+      "delta_vs_full_pp": 0.326181
+     },
+     "2024|2021->2024|E3": {
+      "gap_pp": 30.303067,
+      "reverse_rel_change": 0.093917,
+      "reverse_n_base": 874,
+      "delta_vs_full_pp": -1.328276
+     },
+     "2024|2021->2025|E1": {
+      "gap_pp": 30.296228,
+      "reverse_rel_change": 0.016374,
+      "reverse_n_base": 874,
+      "delta_vs_full_pp": -3.675709
+     },
+     "2024|2021->2025|E2": {
+      "gap_pp": 26.122314,
+      "reverse_rel_change": 0.04451,
+      "reverse_n_base": 874,
+      "delta_vs_full_pp": -3.83788
+     },
+     "2024|2021->2025|E3": {
+      "gap_pp": 29.374885,
+      "reverse_rel_change": -0.011715,
+      "reverse_n_base": 874,
+      "delta_vs_full_pp": -3.820972
+     }
+    },
+    "gap_min_pp": 3.696714,
+    "gap_max_pp": 30.303067,
+    "all_gaps_positive": true,
+    "reverse_n_by_year": {
+     "2019": 307,
+     "2021": 380,
+     "2024": 335,
+     "2025": 258
+    }
+   },
+   "Computers and Operations Research": {
+    "cells": {
+     "2019|2021->2024|E1": {
+      "gap_pp": 12.036228,
+      "reverse_rel_change": 0.182914,
+      "reverse_n_base": 646,
+      "delta_vs_full_pp": 0.83384
+     },
+     "2019|2021->2024|E2": {
+      "gap_pp": 7.03997,
+      "reverse_rel_change": 0.036448,
+      "reverse_n_base": 646,
+      "delta_vs_full_pp": 1.880168
+     },
+     "2019|2021->2024|E3": {
+      "gap_pp": 20.809016,
+      "reverse_rel_change": 0.159042,
+      "reverse_n_base": 646,
+      "delta_vs_full_pp": 6.167829
+     },
+     "2019|2021->2025|E1": {
+      "gap_pp": 34.38396,
+      "reverse_rel_change": 0.191661,
+      "reverse_n_base": 646,
+      "delta_vs_full_pp": 9.27771
+     },
+     "2019|2021->2025|E2": {
+      "gap_pp": 24.252372,
+      "reverse_rel_change": 0.100991,
+      "reverse_n_base": 646,
+      "delta_vs_full_pp": 3.995058
+     },
+     "2019|2021->2025|E3": {
+      "gap_pp": 34.219989,
+      "reverse_rel_change": 0.154108,
+      "reverse_n_base": 646,
+      "delta_vs_full_pp": 10.579604
+     },
+     "2021|2021->2024|E1": {
+      "gap_pp": 18.079008,
+      "reverse_rel_change": 0.14102,
+      "reverse_n_base": 951,
+      "delta_vs_full_pp": 1.547086
+     },
+     "2021|2021->2024|E2": {
+      "gap_pp": 11.022042,
+      "reverse_rel_change": 0.032462,
+      "reverse_n_base": 951,
+      "delta_vs_full_pp": 1.81998
+     },
+     "2021|2021->2024|E3": {
+      "gap_pp": 24.929188,
+      "reverse_rel_change": 0.130643,
+      "reverse_n_base": 951,
+      "delta_vs_full_pp": 5.507486
+     },
+     "2021|2021->2025|E1": {
+      "gap_pp": 32.49515,
+      "reverse_rel_change": 0.109831,
+      "reverse_n_base": 951,
+      "delta_vs_full_pp": 7.249226
+     },
+     "2021|2021->2025|E2": {
+      "gap_pp": 28.114842,
+      "reverse_rel_change": 0.089568,
+      "reverse_n_base": 951,
+      "delta_vs_full_pp": 3.497184
+     },
+     "2021|2021->2025|E3": {
+      "gap_pp": 32.653372,
+      "reverse_rel_change": 0.090118,
+      "reverse_n_base": 951,
+      "delta_vs_full_pp": 8.398557
+     },
+     "2024|2021->2024|E1": {
+      "gap_pp": 29.262066,
+      "reverse_rel_change": 0.123824,
+      "reverse_n_base": 1100,
+      "delta_vs_full_pp": 1.366454
+     },
+     "2024|2021->2024|E2": {
+      "gap_pp": 17.001952,
+      "reverse_rel_change": 0.043235,
+      "reverse_n_base": 1100,
+      "delta_vs_full_pp": 1.35228
+     },
+     "2024|2021->2024|E3": {
+      "gap_pp": 36.13018,
+      "reverse_rel_change": 0.120701,
+      "reverse_n_base": 1100,
+      "delta_vs_full_pp": 4.498837
+     },
+     "2024|2021->2025|E1": {
+      "gap_pp": 39.312171,
+      "reverse_rel_change": 0.080669,
+      "reverse_n_base": 1100,
+      "delta_vs_full_pp": 5.340234
+     },
+     "2024|2021->2025|E2": {
+      "gap_pp": 32.553877,
+      "reverse_rel_change": 0.086855,
+      "reverse_n_base": 1100,
+      "delta_vs_full_pp": 2.593683
+     },
+     "2024|2021->2025|E3": {
+      "gap_pp": 40.469306,
+      "reverse_rel_change": 0.077006,
+      "reverse_n_base": 1100,
+      "delta_vs_full_pp": 7.273449
+     }
+    },
+    "gap_min_pp": 7.03997,
+    "gap_max_pp": 40.469306,
+    "all_gaps_positive": true,
+    "reverse_n_by_year": {
+     "2019": 73,
+     "2021": 87,
+     "2024": 109,
+     "2025": 99
+    }
+   },
+   "Engineering Applications of Artificial Intelligence": {
+    "cells": {
+     "2019|2021->2024|E1": {
+      "gap_pp": 8.779378,
+      "reverse_rel_change": 0.18486,
+      "reverse_n_base": 674,
+      "delta_vs_full_pp": -2.42301
+     },
+     "2019|2021->2024|E2": {
+      "gap_pp": 3.105048,
+      "reverse_rel_change": 0.025491,
+      "reverse_n_base": 674,
+      "delta_vs_full_pp": -2.054754
+     },
+     "2019|2021->2024|E3": {
+      "gap_pp": 11.995252,
+      "reverse_rel_change": 0.140467,
+      "reverse_n_base": 674,
+      "delta_vs_full_pp": -2.645935
+     },
+     "2019|2021->2025|E1": {
+      "gap_pp": 22.801557,
+      "reverse_rel_change": 0.157294,
+      "reverse_n_base": 674,
+      "delta_vs_full_pp": -2.304693
+     },
+     "2019|2021->2025|E2": {
+      "gap_pp": 18.595192,
+      "reverse_rel_change": 0.084442,
+      "reverse_n_base": 674,
+      "delta_vs_full_pp": -1.662122
+     },
+     "2019|2021->2025|E3": {
+      "gap_pp": 20.339872,
+      "reverse_rel_change": 0.085732,
+      "reverse_n_base": 674,
+      "delta_vs_full_pp": -3.300513
+     },
+     "2021|2021->2024|E1": {
+      "gap_pp": 14.076019,
+      "reverse_rel_change": 0.147216,
+      "reverse_n_base": 962,
+      "delta_vs_full_pp": -2.455903
+     },
+     "2021|2021->2024|E2": {
+      "gap_pp": 7.031298,
+      "reverse_rel_change": 0.018993,
+      "reverse_n_base": 962,
+      "delta_vs_full_pp": -2.170764
+     },
+     "2021|2021->2024|E3": {
+      "gap_pp": 16.695977,
+      "reverse_rel_change": 0.117557,
+      "reverse_n_base": 962,
+      "delta_vs_full_pp": -2.725725
+     },
+     "2021|2021->2025|E1": {
+      "gap_pp": 22.581838,
+      "reverse_rel_change": 0.088829,
+      "reverse_n_base": 962,
+      "delta_vs_full_pp": -2.664086
+     },
+     "2021|2021->2025|E2": {
+      "gap_pp": 22.949206,
+      "reverse_rel_change": 0.074181,
+      "reverse_n_base": 962,
+      "delta_vs_full_pp": -1.668452
+     },
+     "2021|2021->2025|E3": {
+      "gap_pp": 20.441163,
+      "reverse_rel_change": 0.03455,
+      "reverse_n_base": 962,
+      "delta_vs_full_pp": -3.813652
+     },
+     "2024|2021->2024|E1": {
+      "gap_pp": 20.681208,
+      "reverse_rel_change": 0.131465,
+      "reverse_n_base": 1053,
+      "delta_vs_full_pp": -7.214404
+     },
+     "2024|2021->2024|E2": {
+      "gap_pp": 11.459921,
+      "reverse_rel_change": 0.016828,
+      "reverse_n_base": 1053,
+      "delta_vs_full_pp": -4.189751
+     },
+     "2024|2021->2024|E3": {
+      "gap_pp": 23.877736,
+      "reverse_rel_change": 0.105559,
+      "reverse_n_base": 1053,
+      "delta_vs_full_pp": -7.753607
+     },
+     "2024|2021->2025|E1": {
+      "gap_pp": 26.017247,
+      "reverse_rel_change": 0.057697,
+      "reverse_n_base": 1053,
+      "delta_vs_full_pp": -7.95469
+     },
+     "2024|2021->2025|E2": {
+      "gap_pp": 26.088523,
+      "reverse_rel_change": 0.063995,
+      "reverse_n_base": 1053,
+      "delta_vs_full_pp": -3.871671
+     },
+     "2024|2021->2025|E3": {
+      "gap_pp": 23.423624,
+      "reverse_rel_change": 0.00566,
+      "reverse_n_base": 1053,
+      "delta_vs_full_pp": -9.772233
+     }
+    },
+    "gap_min_pp": 3.105048,
+    "gap_max_pp": 26.088523,
+    "all_gaps_positive": true,
+    "reverse_n_by_year": {
+     "2019": 45,
+     "2021": 76,
+     "2024": 156,
+     "2025": 162
+    }
+   },
+   "European Journal of Operational Research": {
+    "cells": {
+     "2019|2021->2024|E1": {
+      "gap_pp": 30.162797,
+      "reverse_rel_change": 0.172299,
+      "reverse_n_base": 662,
+      "delta_vs_full_pp": 18.960409
+     },
+     "2019|2021->2024|E2": {
+      "gap_pp": 12.886812,
+      "reverse_rel_change": 0.035674,
+      "reverse_n_base": 662,
+      "delta_vs_full_pp": 7.72701
+     },
+     "2019|2021->2024|E3": {
+      "gap_pp": 26.21642,
+      "reverse_rel_change": 0.145126,
+      "reverse_n_base": 662,
+      "delta_vs_full_pp": 11.575233
+     },
+     "2019|2021->2025|E1": {
+      "gap_pp": 31.113299,
+      "reverse_rel_change": 0.105848,
+      "reverse_n_base": 662,
+      "delta_vs_full_pp": 6.007049
+     },
+     "2019|2021->2025|E2": {
+      "gap_pp": 30.741295,
+      "reverse_rel_change": 0.097391,
+      "reverse_n_base": 662,
+      "delta_vs_full_pp": 10.483981
+     },
+     "2019|2021->2025|E3": {
+      "gap_pp": 29.387638,
+      "reverse_rel_change": 0.075908,
+      "reverse_n_base": 662,
+      "delta_vs_full_pp": 5.747253
+     },
+     "2021|2021->2024|E1": {
+      "gap_pp": 28.685994,
+      "reverse_rel_change": 0.136079,
+      "reverse_n_base": 981,
+      "delta_vs_full_pp": 12.154072
+     },
+     "2021|2021->2024|E2": {
+      "gap_pp": 14.156067,
+      "reverse_rel_change": 0.032313,
+      "reverse_n_base": 981,
+      "delta_vs_full_pp": 4.954005
+     },
+     "2021|2021->2024|E3": {
+      "gap_pp": 27.0175,
+      "reverse_rel_change": 0.119871,
+      "reverse_n_base": 981,
+      "delta_vs_full_pp": 7.595798
+     },
+     "2021|2021->2025|E1": {
+      "gap_pp": 28.735726,
+      "reverse_rel_change": 0.050377,
+      "reverse_n_base": 981,
+      "delta_vs_full_pp": 3.489802
+     },
+     "2021|2021->2025|E2": {
+      "gap_pp": 31.311463,
+      "reverse_rel_change": 0.086091,
+      "reverse_n_base": 981,
+      "delta_vs_full_pp": 6.693805
+     },
+     "2021|2021->2025|E3": {
+      "gap_pp": 27.620628,
+      "reverse_rel_change": 0.030791,
+      "reverse_n_base": 981,
+      "delta_vs_full_pp": 3.365813
+     },
+     "2024|2021->2024|E1": {
+      "gap_pp": 33.960334,
+      "reverse_rel_change": 0.122506,
+      "reverse_n_base": 1152,
+      "delta_vs_full_pp": 6.064722
+     },
+     "2024|2021->2024|E2": {
+      "gap_pp": 18.311589,
+      "reverse_rel_change": 0.04284,
+      "reverse_n_base": 1152,
+      "delta_vs_full_pp": 2.661917
+     },
+     "2024|2021->2024|E3": {
+      "gap_pp": 36.032837,
+      "reverse_rel_change": 0.109933,
+      "reverse_n_base": 1152,
+      "delta_vs_full_pp": 4.401494
+     },
+     "2024|2021->2025|E1": {
+      "gap_pp": 34.718232,
+      "reverse_rel_change": 0.029163,
+      "reverse_n_base": 1152,
+      "delta_vs_full_pp": 0.746295
+     },
+     "2024|2021->2025|E2": {
+      "gap_pp": 33.582772,
+      "reverse_rel_change": 0.082342,
+      "reverse_n_base": 1152,
+      "delta_vs_full_pp": 3.622578
+     },
+     "2024|2021->2025|E3": {
+      "gap_pp": 34.620334,
+      "reverse_rel_change": 0.018835,
+      "reverse_n_base": 1152,
+      "delta_vs_full_pp": 1.424477
+     }
+    },
+    "gap_min_pp": 12.886812,
+    "gap_max_pp": 36.032837,
+    "all_gaps_positive": true,
+    "reverse_n_by_year": {
+     "2019": 57,
+     "2021": 57,
+     "2024": 57,
+     "2025": 50
+    }
+   },
+   "Expert Systems with Applications": {
+    "cells": {
+     "2019|2021->2024|E1": {
+      "gap_pp": 8.747841,
+      "reverse_rel_change": 0.215548,
+      "reverse_n_base": 599,
+      "delta_vs_full_pp": -2.454547
+     },
+     "2019|2021->2024|E2": {
+      "gap_pp": 2.494207,
+      "reverse_rel_change": 0.046371,
+      "reverse_n_base": 599,
+      "delta_vs_full_pp": -2.665595
+     },
+     "2019|2021->2024|E3": {
+      "gap_pp": 10.622526,
+      "reverse_rel_change": 0.158714,
+      "reverse_n_base": 599,
+      "delta_vs_full_pp": -4.018661
+     },
+     "2019|2021->2025|E1": {
+      "gap_pp": 24.988115,
+      "reverse_rel_change": 0.207323,
+      "reverse_n_base": 599,
+      "delta_vs_full_pp": -0.118135
+     },
+     "2019|2021->2025|E2": {
+      "gap_pp": 17.124043,
+      "reverse_rel_change": 0.102126,
+      "reverse_n_base": 599,
+      "delta_vs_full_pp": -3.133271
+     },
+     "2019|2021->2025|E3": {
+      "gap_pp": 22.740102,
+      "reverse_rel_change": 0.133378,
+      "reverse_n_base": 599,
+      "delta_vs_full_pp": -0.900283
+     },
+     "2021|2021->2024|E1": {
+      "gap_pp": 16.060924,
+      "reverse_rel_change": 0.198883,
+      "reverse_n_base": 748,
+      "delta_vs_full_pp": -0.470998
+     },
+     "2021|2021->2024|E2": {
+      "gap_pp": 7.243876,
+      "reverse_rel_change": 0.049269,
+      "reverse_n_base": 748,
+      "delta_vs_full_pp": -1.958186
+     },
+     "2021|2021->2024|E3": {
+      "gap_pp": 15.940109,
+      "reverse_rel_change": 0.147163,
+      "reverse_n_base": 748,
+      "delta_vs_full_pp": -3.481593
+     },
+     "2021|2021->2025|E1": {
+      "gap_pp": 27.351856,
+      "reverse_rel_change": 0.169398,
+      "reverse_n_base": 748,
+      "delta_vs_full_pp": 2.105932
+     },
+     "2021|2021->2025|E2": {
+      "gap_pp": 22.251768,
+      "reverse_rel_change": 0.101499,
+      "reverse_n_base": 748,
+      "delta_vs_full_pp": -2.36589
+     },
+     "2021|2021->2025|E3": {
+      "gap_pp": 24.979506,
+      "reverse_rel_change": 0.108162,
+      "reverse_n_base": 748,
+      "delta_vs_full_pp": 0.724691
+     },
+     "2024|2021->2024|E1": {
+      "gap_pp": 30.992147,
+      "reverse_rel_change": 0.19195,
+      "reverse_n_base": 804,
+      "delta_vs_full_pp": 3.096535
+     },
+     "2024|2021->2024|E2": {
+      "gap_pp": 15.241105,
+      "reverse_rel_change": 0.068255,
+      "reverse_n_base": 804,
+      "delta_vs_full_pp": -0.408567
+     },
+     "2024|2021->2024|E3": {
+      "gap_pp": 31.001252,
+      "reverse_rel_change": 0.141764,
+      "reverse_n_base": 804,
+      "delta_vs_full_pp": -0.630091
+     },
+     "2024|2021->2025|E1": {
+      "gap_pp": 38.947928,
+      "reverse_rel_change": 0.152219,
+      "reverse_n_base": 804,
+      "delta_vs_full_pp": 4.975991
+     },
+     "2024|2021->2025|E2": {
+      "gap_pp": 28.100002,
+      "reverse_rel_change": 0.102865,
+      "reverse_n_base": 804,
+      "delta_vs_full_pp": -1.860192
+     },
+     "2024|2021->2025|E3": {
+      "gap_pp": 36.79205,
+      "reverse_rel_change": 0.104491,
+      "reverse_n_base": 804,
+      "delta_vs_full_pp": 3.596193
+     }
+    },
+    "gap_min_pp": 2.494207,
+    "gap_max_pp": 38.947928,
+    "all_gaps_positive": true,
+    "reverse_n_by_year": {
+     "2019": 120,
+     "2021": 290,
+     "2024": 405,
+     "2025": 270
+    }
+   },
+   "IEEE Transactions on Fuzzy Systems": {
+    "cells": {
+     "2019|2021->2024|E1": {
+      "gap_pp": 6.781235,
+      "reverse_rel_change": 0.160657,
+      "reverse_n_base": 701,
+      "delta_vs_full_pp": -4.421153
+     },
+     "2019|2021->2024|E2": {
+      "gap_pp": 3.266528,
+      "reverse_rel_change": 0.036071,
+      "reverse_n_base": 701,
+      "delta_vs_full_pp": -1.893274
+     },
+     "2019|2021->2024|E3": {
+      "gap_pp": 10.302777,
+      "reverse_rel_change": 0.118191,
+      "reverse_n_base": 701,
+      "delta_vs_full_pp": -4.33841
+     },
+     "2019|2021->2025|E1": {
+      "gap_pp": 20.385351,
+      "reverse_rel_change": 0.114766,
+      "reverse_n_base": 701,
+      "delta_vs_full_pp": -4.720899
+     },
+     "2019|2021->2025|E2": {
+      "gap_pp": 20.33334,
+      "reverse_rel_change": 0.086702,
+      "reverse_n_base": 701,
+      "delta_vs_full_pp": 0.076026
+     },
+     "2019|2021->2025|E3": {
+      "gap_pp": 18.802231,
+      "reverse_rel_change": 0.054732,
+      "reverse_n_base": 701,
+      "delta_vs_full_pp": -4.838154
+     },
+     "2021|2021->2024|E1": {
+      "gap_pp": 13.321663,
+      "reverse_rel_change": 0.136971,
+      "reverse_n_base": 1027,
+      "delta_vs_full_pp": -3.210259
+     },
+     "2021|2021->2024|E2": {
+      "gap_pp": 7.453089,
+      "reverse_rel_change": 0.033297,
+      "reverse_n_base": 1027,
+      "delta_vs_full_pp": -1.748973
+     },
+     "2021|2021->2024|E3": {
+      "gap_pp": 16.339389,
+      "reverse_rel_change": 0.109533,
+      "reverse_n_base": 1027,
+      "delta_vs_full_pp": -3.082313
+     },
+     "2021|2021->2025|E1": {
+      "gap_pp": 22.975093,
+      "reverse_rel_change": 0.072743,
+      "reverse_n_base": 1027,
+      "delta_vs_full_pp": -2.270831
+     },
+     "2021|2021->2025|E2": {
+      "gap_pp": 25.334128,
+      "reverse_rel_change": 0.080382,
+      "reverse_n_base": 1027,
+      "delta_vs_full_pp": 0.71647
+     },
+     "2021|2021->2025|E3": {
+      "gap_pp": 21.866852,
+      "reverse_rel_change": 0.031861,
+      "reverse_n_base": 1027,
+      "delta_vs_full_pp": -2.387963
+     },
+     "2024|2021->2024|E1": {
+      "gap_pp": 25.554798,
+      "reverse_rel_change": 0.124979,
+      "reverse_n_base": 1199,
+      "delta_vs_full_pp": -2.340814
+     },
+     "2024|2021->2024|E2": {
+      "gap_pp": 14.313113,
+      "reverse_rel_change": 0.043202,
+      "reverse_n_base": 1199,
+      "delta_vs_full_pp": -1.336559
+     },
+     "2024|2021->2024|E3": {
+      "gap_pp": 29.424258,
+      "reverse_rel_change": 0.102732,
+      "reverse_n_base": 1199,
+      "delta_vs_full_pp": -2.207085
+     },
+     "2024|2021->2025|E1": {
+      "gap_pp": 32.663032,
+      "reverse_rel_change": 0.050991,
+      "reverse_n_base": 1199,
+      "delta_vs_full_pp": -1.308905
+     },
+     "2024|2021->2025|E2": {
+      "gap_pp": 31.086658,
+      "reverse_rel_change": 0.077778,
+      "reverse_n_base": 1199,
+      "delta_vs_full_pp": 1.126464
+     },
+     "2024|2021->2025|E3": {
+      "gap_pp": 31.729491,
+      "reverse_rel_change": 0.022223,
+      "reverse_n_base": 1199,
+      "delta_vs_full_pp": -1.466366
+     }
+    },
+    "gap_min_pp": 3.266528,
+    "gap_max_pp": 32.663032,
+    "all_gaps_positive": true,
+    "reverse_n_by_year": {
+     "2019": 18,
+     "2021": 11,
+     "2024": 10,
+     "2025": 9
+    }
+   },
+   "Information Sciences": {
+    "cells": {
+     "2019|2021->2024|E1": {
+      "gap_pp": 7.712053,
+      "reverse_rel_change": 0.193732,
+      "reverse_n_base": 620,
+      "delta_vs_full_pp": -3.490335
+     },
+     "2019|2021->2024|E2": {
+      "gap_pp": 4.453908,
+      "reverse_rel_change": 0.043414,
+      "reverse_n_base": 620,
+      "delta_vs_full_pp": -0.705894
+     },
+     "2019|2021->2024|E3": {
+      "gap_pp": 14.014845,
+      "reverse_rel_change": 0.143098,
+      "reverse_n_base": 620,
+      "delta_vs_full_pp": -0.626342
+     },
+     "2019|2021->2025|E1": {
+      "gap_pp": 24.089777,
+      "reverse_rel_change": 0.197522,
+      "reverse_n_base": 620,
+      "delta_vs_full_pp": -1.016473
+     },
+     "2019|2021->2025|E2": {
+      "gap_pp": 17.070598,
+      "reverse_rel_change": 0.112774,
+      "reverse_n_base": 620,
+      "delta_vs_full_pp": -3.186716
+     },
+     "2019|2021->2025|E3": {
+      "gap_pp": 24.133222,
+      "reverse_rel_change": 0.130385,
+      "reverse_n_base": 620,
+      "delta_vs_full_pp": 0.492837
+     },
+     "2021|2021->2024|E1": {
+      "gap_pp": 14.133518,
+      "reverse_rel_change": 0.154024,
+      "reverse_n_base": 901,
+      "delta_vs_full_pp": -2.398404
+     },
+     "2021|2021->2024|E2": {
+      "gap_pp": 9.57944,
+      "reverse_rel_change": 0.038908,
+      "reverse_n_base": 901,
+      "delta_vs_full_pp": 0.377378
+     },
+     "2021|2021->2024|E3": {
+      "gap_pp": 20.115232,
+      "reverse_rel_change": 0.118881,
+      "reverse_n_base": 901,
+      "delta_vs_full_pp": 0.69353
+     },
+     "2021|2021->2025|E1": {
+      "gap_pp": 24.451209,
+      "reverse_rel_change": 0.125558,
+      "reverse_n_base": 901,
+      "delta_vs_full_pp": -0.794715
+     },
+     "2021|2021->2025|E2": {
+      "gap_pp": 22.504441,
+      "reverse_rel_change": 0.102374,
+      "reverse_n_base": 901,
+      "delta_vs_full_pp": -2.113217
+     },
+     "2021|2021->2025|E3": {
+      "gap_pp": 25.228936,
+      "reverse_rel_change": 0.078603,
+      "reverse_n_base": 901,
+      "delta_vs_full_pp": 0.974121
+     },
+     "2024|2021->2024|E1": {
+      "gap_pp": 28.114933,
+      "reverse_rel_change": 0.137465,
+      "reverse_n_base": 1072,
+      "delta_vs_full_pp": 0.219321
+     },
+     "2024|2021->2024|E2": {
+      "gap_pp": 16.820896,
+      "reverse_rel_change": 0.048923,
+      "reverse_n_base": 1072,
+      "delta_vs_full_pp": 1.171224
+     },
+     "2024|2021->2024|E3": {
+      "gap_pp": 33.349764,
+      "reverse_rel_change": 0.109061,
+      "reverse_n_base": 1072,
+      "delta_vs_full_pp": 1.718421
+     },
+     "2024|2021->2025|E1": {
+      "gap_pp": 35.656914,
+      "reverse_rel_change": 0.091848,
+      "reverse_n_base": 1072,
+      "delta_vs_full_pp": 1.684977
+     },
+     "2024|2021->2025|E2": {
+      "gap_pp": 30.376061,
+      "reverse_rel_change": 0.095874,
+      "reverse_n_base": 1072,
+      "delta_vs_full_pp": 0.415867
+     },
+     "2024|2021->2025|E3": {
+      "gap_pp": 35.692096,
+      "reverse_rel_change": 0.058985,
+      "reverse_n_base": 1072,
+      "delta_vs_full_pp": 2.496239
+     }
+    },
+    "gap_min_pp": 4.453908,
+    "gap_max_pp": 35.692096,
+    "all_gaps_positive": true,
+    "reverse_n_by_year": {
+     "2019": 99,
+     "2021": 137,
+     "2024": 137,
+     "2025": 99
+    }
+   }
+  },
+  "focus_tfs": {
+   "source": "IEEE Transactions on Fuzzy Systems",
+   "reverse_n_by_year": {
+    "2019": 18,
+    "2021": 11,
+    "2024": 10,
+    "2025": 9
+   },
+   "cells": {
+    "2019|2021->2024|E1": {
+     "gap_pp": 6.781235,
+     "reverse_rel_change": 0.160657,
+     "reverse_n_base": 701,
+     "delta_vs_full_pp": -4.421153
+    },
+    "2019|2021->2024|E2": {
+     "gap_pp": 3.266528,
+     "reverse_rel_change": 0.036071,
+     "reverse_n_base": 701,
+     "delta_vs_full_pp": -1.893274
+    },
+    "2019|2021->2024|E3": {
+     "gap_pp": 10.302777,
+     "reverse_rel_change": 0.118191,
+     "reverse_n_base": 701,
+     "delta_vs_full_pp": -4.33841
+    },
+    "2019|2021->2025|E1": {
+     "gap_pp": 20.385351,
+     "reverse_rel_change": 0.114766,
+     "reverse_n_base": 701,
+     "delta_vs_full_pp": -4.720899
+    },
+    "2019|2021->2025|E2": {
+     "gap_pp": 20.33334,
+     "reverse_rel_change": 0.086702,
+     "reverse_n_base": 701,
+     "delta_vs_full_pp": 0.076026
+    },
+    "2019|2021->2025|E3": {
+     "gap_pp": 18.802231,
+     "reverse_rel_change": 0.054732,
+     "reverse_n_base": 701,
+     "delta_vs_full_pp": -4.838154
+    },
+    "2021|2021->2024|E1": {
+     "gap_pp": 13.321663,
+     "reverse_rel_change": 0.136971,
+     "reverse_n_base": 1027,
+     "delta_vs_full_pp": -3.210259
+    },
+    "2021|2021->2024|E2": {
+     "gap_pp": 7.453089,
+     "reverse_rel_change": 0.033297,
+     "reverse_n_base": 1027,
+     "delta_vs_full_pp": -1.748973
+    },
+    "2021|2021->2024|E3": {
+     "gap_pp": 16.339389,
+     "reverse_rel_change": 0.109533,
+     "reverse_n_base": 1027,
+     "delta_vs_full_pp": -3.082313
+    },
+    "2021|2021->2025|E1": {
+     "gap_pp": 22.975093,
+     "reverse_rel_change": 0.072743,
+     "reverse_n_base": 1027,
+     "delta_vs_full_pp": -2.270831
+    },
+    "2021|2021->2025|E2": {
+     "gap_pp": 25.334128,
+     "reverse_rel_change": 0.080382,
+     "reverse_n_base": 1027,
+     "delta_vs_full_pp": 0.71647
+    },
+    "2021|2021->2025|E3": {
+     "gap_pp": 21.866852,
+     "reverse_rel_change": 0.031861,
+     "reverse_n_base": 1027,
+     "delta_vs_full_pp": -2.387963
+    },
+    "2024|2021->2024|E1": {
+     "gap_pp": 25.554798,
+     "reverse_rel_change": 0.124979,
+     "reverse_n_base": 1199,
+     "delta_vs_full_pp": -2.340814
+    },
+    "2024|2021->2024|E2": {
+     "gap_pp": 14.313113,
+     "reverse_rel_change": 0.043202,
+     "reverse_n_base": 1199,
+     "delta_vs_full_pp": -1.336559
+    },
+    "2024|2021->2024|E3": {
+     "gap_pp": 29.424258,
+     "reverse_rel_change": 0.102732,
+     "reverse_n_base": 1199,
+     "delta_vs_full_pp": -2.207085
+    },
+    "2024|2021->2025|E1": {
+     "gap_pp": 32.663032,
+     "reverse_rel_change": 0.050991,
+     "reverse_n_base": 1199,
+     "delta_vs_full_pp": -1.308905
+    },
+    "2024|2021->2025|E2": {
+     "gap_pp": 31.086658,
+     "reverse_rel_change": 0.077778,
+     "reverse_n_base": 1199,
+     "delta_vs_full_pp": 1.126464
+    },
+    "2024|2021->2025|E3": {
+     "gap_pp": 31.729491,
+     "reverse_rel_change": 0.022223,
+     "reverse_n_base": 1199,
+     "delta_vs_full_pp": -1.466366
+    }
+   },
+   "gap_min_pp": 3.266528,
+   "gap_max_pp": 32.663032,
+   "all_gaps_positive": true,
+   "note": "TFS reverse pools are tiny (n per year above), so both the full and the dropped variant rest on a handful of extreme papers; this LOO quantifies weight leverage of a small extreme source, not estimate stability."
+  },
+  "both_direction_loo": "recomputed only inside cross_check.frozen_loo_126 (read-only check; not re-emitted)"
+ },
+ "s4_base_period_endpoint_summary": {
+  "support": [
+   "Applied Soft Computing",
+   "Computers and Operations Research",
+   "Engineering Applications of Artificial Intelligence",
+   "European Journal of Operational Research",
+   "Expert Systems with Applications",
+   "IEEE Transactions on Fuzzy Systems",
+   "Information Sciences"
+  ],
+  "spec": {
+   "base_years": [
+    2019,
+    2021,
+    2024
+   ],
+   "window_start_year": 2021,
+   "end_years": [
+    2024,
+    2025
+   ],
+   "base_year_role": "the base year fixes the composition weights; the compared levels are always 2021 vs the endpoint (identical to the frozen bidirectional matrix spec)"
+  },
+  "cells": {
+   "2019|2021->2024|E1": {
+    "forward_rel_change": 0.070739,
+    "reverse_rel_change": 0.182763,
+    "gap_pp": 11.202388,
+    "right_censored_endpoint": false,
+    "n_base": {
+     "forward": 2786,
+     "reverse": 719
+    },
+    "weight_sum_start": {
+     "forward": 1.0,
+     "reverse": 1.0
+    },
+    "weight_sum_end": {
+     "forward": 1.0,
+     "reverse": 1.0
+    }
+   },
+   "2019|2021->2024|E2": {
+    "forward_rel_change": -0.013691,
+    "reverse_rel_change": 0.037907,
+    "gap_pp": 5.159802,
+    "right_censored_endpoint": false,
+    "n_base": {
+     "forward": 2786,
+     "reverse": 719
+    },
+    "weight_sum_start": {
+     "forward": 1.0,
+     "reverse": 1.0
+    },
+    "weight_sum_end": {
+     "forward": 1.0,
+     "reverse": 1.0
+    }
+   },
+   "2019|2021->2024|E3": {
+    "forward_rel_change": -0.00498,
+    "reverse_rel_change": 0.141432,
+    "gap_pp": 14.641187,
+    "right_censored_endpoint": false,
+    "n_base": {
+     "forward": 2786,
+     "reverse": 719
+    },
+    "weight_sum_start": {
+     "forward": 1.0,
+     "reverse": 1.0
+    },
+    "weight_sum_end": {
+     "forward": 1.0,
+     "reverse": 1.0
+    }
+   },
+   "2019|2021->2025|E1": {
+    "forward_rel_change": -0.09514,
+    "reverse_rel_change": 0.155923,
+    "gap_pp": 25.10625,
+    "right_censored_endpoint": true,
+    "n_base": {
+     "forward": 2786,
+     "reverse": 719
+    },
+    "weight_sum_start": {
+     "forward": 1.0,
+     "reverse": 1.0
+    },
+    "weight_sum_end": {
+     "forward": 1.0,
+     "reverse": 1.0
+    }
+   },
+   "2019|2021->2025|E2": {
+    "forward_rel_change": -0.111978,
+    "reverse_rel_change": 0.090595,
+    "gap_pp": 20.257314,
+    "right_censored_endpoint": true,
+    "n_base": {
+     "forward": 2786,
+     "reverse": 719
+    },
+    "weight_sum_start": {
+     "forward": 1.0,
+     "reverse": 1.0
+    },
+    "weight_sum_end": {
+     "forward": 1.0,
+     "reverse": 1.0
+    }
+   },
+   "2019|2021->2025|E3": {
+    "forward_rel_change": -0.139547,
+    "reverse_rel_change": 0.096857,
+    "gap_pp": 23.640385,
+    "right_censored_endpoint": true,
+    "n_base": {
+     "forward": 2786,
+     "reverse": 719
+    },
+    "weight_sum_start": {
+     "forward": 1.0,
+     "reverse": 1.0
+    },
+    "weight_sum_end": {
+     "forward": 1.0,
+     "reverse": 1.0
+    }
+   },
+   "2021|2021->2024|E1": {
+    "forward_rel_change": -0.018252,
+    "reverse_rel_change": 0.147068,
+    "gap_pp": 16.531922,
+    "right_censored_endpoint": false,
+    "n_base": {
+     "forward": 4426,
+     "reverse": 1038
+    },
+    "weight_sum_start": {
+     "forward": 1.0,
+     "reverse": 1.0
+    },
+    "weight_sum_end": {
+     "forward": 1.0,
+     "reverse": 1.0
+    }
+   },
+   "2021|2021->2024|E2": {
+    "forward_rel_change": -0.057903,
+    "reverse_rel_change": 0.034118,
+    "gap_pp": 9.202062,
+    "right_censored_endpoint": false,
+    "n_base": {
+     "forward": 4426,
+     "reverse": 1038
+    },
+    "weight_sum_start": {
+     "forward": 1.0,
+     "reverse": 1.0
+    },
+    "weight_sum_end": {
+     "forward": 1.0,
+     "reverse": 1.0
+    }
+   },
+   "2021|2021->2024|E3": {
+    "forward_rel_change": -0.074237,
+    "reverse_rel_change": 0.11998,
+    "gap_pp": 19.421702,
+    "right_censored_endpoint": false,
+    "n_base": {
+     "forward": 4426,
+     "reverse": 1038
+    },
+    "weight_sum_start": {
+     "forward": 1.0,
+     "reverse": 1.0
+    },
+    "weight_sum_end": {
+     "forward": 1.0,
+     "reverse": 1.0
+    }
+   },
+   "2021|2021->2025|E1": {
+    "forward_rel_change": -0.160957,
+    "reverse_rel_change": 0.091502,
+    "gap_pp": 25.245924,
+    "right_censored_endpoint": true,
+    "n_base": {
+     "forward": 4426,
+     "reverse": 1038
+    },
+    "weight_sum_start": {
+     "forward": 1.0,
+     "reverse": 1.0
+    },
+    "weight_sum_end": {
+     "forward": 1.0,
+     "reverse": 1.0
+    }
+   },
+   "2021|2021->2025|E2": {
+    "forward_rel_change": -0.164048,
+    "reverse_rel_change": 0.082128,
+    "gap_pp": 24.617658,
+    "right_censored_endpoint": true,
+    "n_base": {
+     "forward": 4426,
+     "reverse": 1038
+    },
+    "weight_sum_start": {
+     "forward": 1.0,
+     "reverse": 1.0
+    },
+    "weight_sum_end": {
+     "forward": 1.0,
+     "reverse": 1.0
+    }
+   },
+   "2021|2021->2025|E3": {
+    "forward_rel_change": -0.191615,
+    "reverse_rel_change": 0.050933,
+    "gap_pp": 24.254815,
+    "right_censored_endpoint": true,
+    "n_base": {
+     "forward": 4426,
+     "reverse": 1038
+    },
+    "weight_sum_start": {
+     "forward": 1.0,
+     "reverse": 1.0
+    },
+    "weight_sum_end": {
+     "forward": 1.0,
+     "reverse": 1.0
+    }
+   },
+   "2024|2021->2024|E1": {
+    "forward_rel_change": -0.146018,
+    "reverse_rel_change": 0.132938,
+    "gap_pp": 27.895612,
+    "right_censored_endpoint": false,
+    "n_base": {
+     "forward": 8537,
+     "reverse": 1209
+    },
+    "weight_sum_start": {
+     "forward": 1.0,
+     "reverse": 1.0
+    },
+    "weight_sum_end": {
+     "forward": 1.0,
+     "reverse": 1.0
+    }
+   },
+   "2024|2021->2024|E2": {
+    "forward_rel_change": -0.112749,
+    "reverse_rel_change": 0.043748,
+    "gap_pp": 15.649672,
+    "right_censored_endpoint": false,
+    "n_base": {
+     "forward": 8537,
+     "reverse": 1209
+    },
+    "weight_sum_start": {
+     "forward": 1.0,
+     "reverse": 1.0
+    },
+    "weight_sum_end": {
+     "forward": 1.0,
+     "reverse": 1.0
+    }
+   },
+   "2024|2021->2024|E3": {
+    "forward_rel_change": -0.205349,
+    "reverse_rel_change": 0.110965,
+    "gap_pp": 31.631343,
+    "right_censored_endpoint": false,
+    "n_base": {
+     "forward": 8537,
+     "reverse": 1209
+    },
+    "weight_sum_start": {
+     "forward": 1.0,
+     "reverse": 1.0
+    },
+    "weight_sum_end": {
+     "forward": 1.0,
+     "reverse": 1.0
+    }
+   },
+   "2024|2021->2025|E1": {
+    "forward_rel_change": -0.27395,
+    "reverse_rel_change": 0.06577,
+    "gap_pp": 33.971937,
+    "right_censored_endpoint": true,
+    "n_base": {
+     "forward": 8537,
+     "reverse": 1209
+    },
+    "weight_sum_start": {
+     "forward": 1.0,
+     "reverse": 1.0
+    },
+    "weight_sum_end": {
+     "forward": 1.0,
+     "reverse": 1.0
+    }
+   },
+   "2024|2021->2025|E2": {
+    "forward_rel_change": -0.220435,
+    "reverse_rel_change": 0.079167,
+    "gap_pp": 29.960194,
+    "right_censored_endpoint": true,
+    "n_base": {
+     "forward": 8537,
+     "reverse": 1209
+    },
+    "weight_sum_start": {
+     "forward": 1.0,
+     "reverse": 1.0
+    },
+    "weight_sum_end": {
+     "forward": 1.0,
+     "reverse": 1.0
+    }
+   },
+   "2024|2021->2025|E3": {
+    "forward_rel_change": -0.294747,
+    "reverse_rel_change": 0.037212,
+    "gap_pp": 33.195857,
+    "right_censored_endpoint": true,
+    "n_base": {
+     "forward": 8537,
+     "reverse": 1209
+    },
+    "weight_sum_start": {
+     "forward": 1.0,
+     "reverse": 1.0
+    },
+    "weight_sum_end": {
+     "forward": 1.0,
+     "reverse": 1.0
+    }
+   }
+  },
+  "endpoint_gap_delta_pp": {
+   "2019|E1": 13.903862,
+   "2019|E2": 15.097512,
+   "2019|E3": 8.999198,
+   "2021|E1": 8.714002,
+   "2021|E2": 15.415596,
+   "2021|E3": 4.833113,
+   "2024|E1": 6.076325,
+   "2024|E2": 14.310522,
+   "2024|E3": 1.564514
+  },
+  "summary": {
+   "n_cells": 18,
+   "gap_min_pp": 5.159802,
+   "gap_max_pp": 33.971937,
+   "all_gaps_positive": true,
+   "censored_endpoints": [
+    2025
+   ],
+   "censoring_note": "2025 is the final collection year (right censoring); every 2025 number mixes trend with truncation and must be read next to its 2024 counterpart. endpoint_gap_delta_pp = gap(2021->2025) - gap(2021->2024) per base year and metric."
+  }
+ },
+ "s5_reference_doi_diagnostics": {
+  "cells": {
+   "forward|2019|Applied Soft Computing": {
+    "in_frozen_support": true,
+    "n_papers": 355,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 1,
+    "share_papers_with_doi_ref": 0.997183,
+    "ref_rows_total": 20544,
+    "ref_rows_doi": 13942,
+    "doi_row_rate": 0.678641,
+    "distinct_doi_refs": 12860,
+    "mean_distinct_doi_per_paper": 36.225352,
+    "n_papers_declared_refs": 355,
+    "declared_refs_sum": 18453,
+    "distinct_doi_over_declared": 0.696906,
+    "edges": 430,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2019|Computers and Industrial Engineering": {
+    "in_frozen_support": false,
+    "n_papers": 504,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 34057,
+    "ref_rows_doi": 22277,
+    "doi_row_rate": 0.654109,
+    "distinct_doi_refs": 20211,
+    "mean_distinct_doi_per_paper": 40.10119,
+    "n_papers_declared_refs": 504,
+    "declared_refs_sum": 25534,
+    "distinct_doi_over_declared": 0.791533,
+    "edges": 528,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2019|Computers and Operations Research": {
+    "in_frozen_support": true,
+    "n_papers": 172,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 10336,
+    "ref_rows_doi": 6412,
+    "doi_row_rate": 0.620356,
+    "distinct_doi_refs": 5277,
+    "mean_distinct_doi_per_paper": 30.680233,
+    "n_papers_declared_refs": 172,
+    "declared_refs_sum": 6742,
+    "distinct_doi_over_declared": 0.782705,
+    "edges": 373,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2019|Engineering Applications of Artificial Intelligence": {
+    "in_frozen_support": true,
+    "n_papers": 165,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 14982,
+    "ref_rows_doi": 7032,
+    "doi_row_rate": 0.469363,
+    "distinct_doi_refs": 6099,
+    "mean_distinct_doi_per_paper": 36.963636,
+    "n_papers_declared_refs": 165,
+    "declared_refs_sum": 9309,
+    "distinct_doi_over_declared": 0.655172,
+    "edges": 148,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2019|European Journal of Operational Research": {
+    "in_frozen_support": true,
+    "n_papers": 602,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 44836,
+    "ref_rows_doi": 28640,
+    "doi_row_rate": 0.638772,
+    "distinct_doi_refs": 23324,
+    "mean_distinct_doi_per_paper": 38.744186,
+    "n_papers_declared_refs": 602,
+    "declared_refs_sum": 28900,
+    "distinct_doi_over_declared": 0.807059,
+    "edges": 386,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2019|Expert Systems with Applications": {
+    "in_frozen_support": true,
+    "n_papers": 589,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 1,
+    "share_papers_with_doi_ref": 0.998302,
+    "ref_rows_total": 39095,
+    "ref_rows_doi": 24147,
+    "doi_row_rate": 0.617649,
+    "distinct_doi_refs": 20371,
+    "mean_distinct_doi_per_paper": 34.585739,
+    "n_papers_declared_refs": 589,
+    "declared_refs_sum": 31805,
+    "distinct_doi_over_declared": 0.640497,
+    "edges": 477,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2019|IEEE Transactions on Fuzzy Systems": {
+    "in_frozen_support": true,
+    "n_papers": 176,
+    "n_papers_no_ref_rows": 1,
+    "n_papers_zero_doi_refs": 1,
+    "share_papers_with_doi_ref": 0.994318,
+    "ref_rows_total": 9305,
+    "ref_rows_doi": 7443,
+    "doi_row_rate": 0.799893,
+    "distinct_doi_refs": 6974,
+    "mean_distinct_doi_per_paper": 39.625,
+    "n_papers_declared_refs": 176,
+    "declared_refs_sum": 7845,
+    "distinct_doi_over_declared": 0.888974,
+    "edges": 59,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2019|Information Sciences": {
+    "in_frozen_support": true,
+    "n_papers": 727,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 1,
+    "share_papers_with_doi_ref": 0.998624,
+    "ref_rows_total": 36738,
+    "ref_rows_doi": 23777,
+    "doi_row_rate": 0.647205,
+    "distinct_doi_refs": 20909,
+    "mean_distinct_doi_per_paper": 28.76066,
+    "n_papers_declared_refs": 727,
+    "declared_refs_sum": 30647,
+    "distinct_doi_over_declared": 0.682253,
+    "edges": 292,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2021|Applied Soft Computing": {
+    "in_frozen_support": true,
+    "n_papers": 667,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 44456,
+    "ref_rows_doi": 30715,
+    "doi_row_rate": 0.690908,
+    "distinct_doi_refs": 25924,
+    "mean_distinct_doi_per_paper": 38.866567,
+    "n_papers_declared_refs": 667,
+    "declared_refs_sum": 36387,
+    "distinct_doi_over_declared": 0.712452,
+    "edges": 633,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2021|Computers and Industrial Engineering": {
+    "in_frozen_support": false,
+    "n_papers": 559,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 40148,
+    "ref_rows_doi": 26674,
+    "doi_row_rate": 0.664392,
+    "distinct_doi_refs": 23871,
+    "mean_distinct_doi_per_paper": 42.703041,
+    "n_papers_declared_refs": 559,
+    "declared_refs_sum": 29709,
+    "distinct_doi_over_declared": 0.803494,
+    "edges": 737,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2021|Computers and Operations Research": {
+    "in_frozen_support": true,
+    "n_papers": 204,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 14541,
+    "ref_rows_doi": 9505,
+    "doi_row_rate": 0.653669,
+    "distinct_doi_refs": 7709,
+    "mean_distinct_doi_per_paper": 37.789216,
+    "n_papers_declared_refs": 204,
+    "declared_refs_sum": 9432,
+    "distinct_doi_over_declared": 0.817324,
+    "edges": 513,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2021|Engineering Applications of Artificial Intelligence": {
+    "in_frozen_support": true,
+    "n_papers": 284,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 23825,
+    "ref_rows_doi": 11599,
+    "doi_row_rate": 0.486842,
+    "distinct_doi_refs": 10400,
+    "mean_distinct_doi_per_paper": 36.619718,
+    "n_papers_declared_refs": 284,
+    "declared_refs_sum": 15378,
+    "distinct_doi_over_declared": 0.676291,
+    "edges": 206,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2021|European Journal of Operational Research": {
+    "in_frozen_support": true,
+    "n_papers": 586,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 5,
+    "share_papers_with_doi_ref": 0.991468,
+    "ref_rows_total": 50000,
+    "ref_rows_doi": 31214,
+    "doi_row_rate": 0.62428,
+    "distinct_doi_refs": 24550,
+    "mean_distinct_doi_per_paper": 41.894198,
+    "n_papers_declared_refs": 586,
+    "declared_refs_sum": 30690,
+    "distinct_doi_over_declared": 0.799935,
+    "edges": 536,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2021|Expert Systems with Applications": {
+    "in_frozen_support": true,
+    "n_papers": 1209,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 79714,
+    "ref_rows_doi": 54371,
+    "doi_row_rate": 0.682076,
+    "distinct_doi_refs": 46757,
+    "mean_distinct_doi_per_paper": 38.674111,
+    "n_papers_declared_refs": 1209,
+    "declared_refs_sum": 66290,
+    "distinct_doi_over_declared": 0.70534,
+    "edges": 836,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2021|IEEE Transactions on Fuzzy Systems": {
+    "in_frozen_support": true,
+    "n_papers": 315,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 16558,
+    "ref_rows_doi": 13586,
+    "doi_row_rate": 0.82051,
+    "distinct_doi_refs": 12725,
+    "mean_distinct_doi_per_paper": 40.396825,
+    "n_papers_declared_refs": 315,
+    "declared_refs_sum": 13986,
+    "distinct_doi_over_declared": 0.909838,
+    "edges": 166,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2021|Information Sciences": {
+    "in_frozen_support": true,
+    "n_papers": 1161,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 58987,
+    "ref_rows_doi": 41417,
+    "doi_row_rate": 0.702138,
+    "distinct_doi_refs": 37148,
+    "mean_distinct_doi_per_paper": 31.996555,
+    "n_papers_declared_refs": 1161,
+    "declared_refs_sum": 51347,
+    "distinct_doi_over_declared": 0.72347,
+    "edges": 592,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2024|Applied Soft Computing": {
+    "in_frozen_support": true,
+    "n_papers": 929,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 58384,
+    "ref_rows_doi": 41717,
+    "doi_row_rate": 0.714528,
+    "distinct_doi_refs": 37704,
+    "mean_distinct_doi_per_paper": 40.585576,
+    "n_papers_declared_refs": 929,
+    "declared_refs_sum": 52737,
+    "distinct_doi_over_declared": 0.714944,
+    "edges": 780,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2024|Computers and Operations Research": {
+    "in_frozen_support": true,
+    "n_papers": 211,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 16018,
+    "ref_rows_doi": 10980,
+    "doi_row_rate": 0.685479,
+    "distinct_doi_refs": 8170,
+    "mean_distinct_doi_per_paper": 38.720379,
+    "n_papers_declared_refs": 211,
+    "declared_refs_sum": 9912,
+    "distinct_doi_over_declared": 0.824253,
+    "edges": 587,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2024|Engineering Applications of Artificial Intelligence": {
+    "in_frozen_support": true,
+    "n_papers": 1859,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 1,
+    "share_papers_with_doi_ref": 0.999462,
+    "ref_rows_total": 173279,
+    "ref_rows_doi": 89151,
+    "doi_row_rate": 0.514494,
+    "distinct_doi_refs": 76707,
+    "mean_distinct_doi_per_paper": 41.262507,
+    "n_papers_declared_refs": 1859,
+    "declared_refs_sum": 112434,
+    "distinct_doi_over_declared": 0.68224,
+    "edges": 794,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2024|European Journal of Operational Research": {
+    "in_frozen_support": true,
+    "n_papers": 537,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 7,
+    "share_papers_with_doi_ref": 0.986965,
+    "ref_rows_total": 55361,
+    "ref_rows_doi": 37377,
+    "doi_row_rate": 0.67515,
+    "distinct_doi_refs": 25263,
+    "mean_distinct_doi_per_paper": 47.044693,
+    "n_papers_declared_refs": 537,
+    "declared_refs_sum": 30451,
+    "distinct_doi_over_declared": 0.829628,
+    "edges": 840,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2024|Expert Systems with Applications": {
+    "in_frozen_support": true,
+    "n_papers": 3282,
+    "n_papers_no_ref_rows": 1,
+    "n_papers_zero_doi_refs": 4,
+    "share_papers_with_doi_ref": 0.998781,
+    "ref_rows_total": 216492,
+    "ref_rows_doi": 151768,
+    "doi_row_rate": 0.701033,
+    "distinct_doi_refs": 132216,
+    "mean_distinct_doi_per_paper": 40.285192,
+    "n_papers_declared_refs": 3282,
+    "declared_refs_sum": 187390,
+    "distinct_doi_over_declared": 0.705566,
+    "edges": 1822,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2024|IEEE Transactions on Fuzzy Systems": {
+    "in_frozen_support": true,
+    "n_papers": 574,
+    "n_papers_no_ref_rows": 1,
+    "n_papers_zero_doi_refs": 1,
+    "share_papers_with_doi_ref": 0.998258,
+    "ref_rows_total": 30288,
+    "ref_rows_doi": 25866,
+    "doi_row_rate": 0.854002,
+    "distinct_doi_refs": 24426,
+    "mean_distinct_doi_per_paper": 42.554007,
+    "n_papers_declared_refs": 574,
+    "declared_refs_sum": 25844,
+    "distinct_doi_over_declared": 0.945132,
+    "edges": 164,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2024|Information Sciences": {
+    "in_frozen_support": true,
+    "n_papers": 1145,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 1,
+    "share_papers_with_doi_ref": 0.999127,
+    "ref_rows_total": 55388,
+    "ref_rows_doi": 35876,
+    "doi_row_rate": 0.647722,
+    "distinct_doi_refs": 33063,
+    "mean_distinct_doi_per_paper": 28.875983,
+    "n_papers_declared_refs": 1145,
+    "declared_refs_sum": 50407,
+    "distinct_doi_over_declared": 0.655921,
+    "edges": 485,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2025|Applied Soft Computing": {
+    "in_frozen_support": true,
+    "n_papers": 1090,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 70485,
+    "ref_rows_doi": 47571,
+    "doi_row_rate": 0.67491,
+    "distinct_doi_refs": 43486,
+    "mean_distinct_doi_per_paper": 39.895413,
+    "n_papers_declared_refs": 1090,
+    "declared_refs_sum": 64341,
+    "distinct_doi_over_declared": 0.675868,
+    "edges": 833,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2025|Computers and Operations Research": {
+    "in_frozen_support": true,
+    "n_papers": 226,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 19683,
+    "ref_rows_doi": 13313,
+    "doi_row_rate": 0.67637,
+    "distinct_doi_refs": 10010,
+    "mean_distinct_doi_per_paper": 44.292035,
+    "n_papers_declared_refs": 226,
+    "declared_refs_sum": 12032,
+    "distinct_doi_over_declared": 0.831948,
+    "edges": 655,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2025|Engineering Applications of Artificial Intelligence": {
+    "in_frozen_support": true,
+    "n_papers": 2767,
+    "n_papers_no_ref_rows": 1,
+    "n_papers_zero_doi_refs": 5,
+    "share_papers_with_doi_ref": 0.998193,
+    "ref_rows_total": 247534,
+    "ref_rows_doi": 124846,
+    "doi_row_rate": 0.504359,
+    "distinct_doi_refs": 109166,
+    "mean_distinct_doi_per_paper": 39.452837,
+    "n_papers_declared_refs": 2766,
+    "declared_refs_sum": 162292,
+    "distinct_doi_over_declared": 0.672652,
+    "edges": 919,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2025|European Journal of Operational Research": {
+    "in_frozen_support": true,
+    "n_papers": 421,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 43663,
+    "ref_rows_doi": 30657,
+    "doi_row_rate": 0.702128,
+    "distinct_doi_refs": 21054,
+    "mean_distinct_doi_per_paper": 50.009501,
+    "n_papers_declared_refs": 421,
+    "declared_refs_sum": 24552,
+    "distinct_doi_over_declared": 0.857527,
+    "edges": 484,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2025|Expert Systems with Applications": {
+    "in_frozen_support": true,
+    "n_papers": 2997,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 1,
+    "share_papers_with_doi_ref": 0.999666,
+    "ref_rows_total": 190513,
+    "ref_rows_doi": 126818,
+    "doi_row_rate": 0.665666,
+    "distinct_doi_refs": 111869,
+    "mean_distinct_doi_per_paper": 37.326994,
+    "n_papers_declared_refs": 2997,
+    "declared_refs_sum": 166407,
+    "distinct_doi_over_declared": 0.672261,
+    "edges": 1366,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2025|IEEE Transactions on Fuzzy Systems": {
+    "in_frozen_support": true,
+    "n_papers": 342,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 17490,
+    "ref_rows_doi": 14914,
+    "doi_row_rate": 0.852716,
+    "distinct_doi_refs": 14364,
+    "mean_distinct_doi_per_paper": 42.0,
+    "n_papers_declared_refs": 342,
+    "declared_refs_sum": 15434,
+    "distinct_doi_over_declared": 0.930673,
+    "edges": 137,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "forward|2025|Information Sciences": {
+    "in_frozen_support": true,
+    "n_papers": 928,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 1,
+    "share_papers_with_doi_ref": 0.998922,
+    "ref_rows_total": 42230,
+    "ref_rows_doi": 26649,
+    "doi_row_rate": 0.631044,
+    "distinct_doi_refs": 24685,
+    "mean_distinct_doi_per_paper": 26.600216,
+    "n_papers_declared_refs": 928,
+    "declared_refs_sum": 39000,
+    "distinct_doi_over_declared": 0.632949,
+    "edges": 300,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2019|Applied Soft Computing": {
+    "in_frozen_support": true,
+    "n_papers": 307,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 18369,
+    "ref_rows_doi": 13676,
+    "doi_row_rate": 0.744515,
+    "distinct_doi_refs": 12305,
+    "mean_distinct_doi_per_paper": 40.081433,
+    "n_papers_declared_refs": 307,
+    "declared_refs_sum": 16244,
+    "distinct_doi_over_declared": 0.75751,
+    "edges": 582,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2019|Computers and Industrial Engineering": {
+    "in_frozen_support": false,
+    "n_papers": 162,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 10430,
+    "ref_rows_doi": 6850,
+    "doi_row_rate": 0.656759,
+    "distinct_doi_refs": 6345,
+    "mean_distinct_doi_per_paper": 39.166667,
+    "n_papers_declared_refs": 162,
+    "declared_refs_sum": 7948,
+    "distinct_doi_over_declared": 0.798314,
+    "edges": 707,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2019|Computers and Operations Research": {
+    "in_frozen_support": true,
+    "n_papers": 73,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 5217,
+    "ref_rows_doi": 3291,
+    "doi_row_rate": 0.630822,
+    "distinct_doi_refs": 2553,
+    "mean_distinct_doi_per_paper": 34.972603,
+    "n_papers_declared_refs": 73,
+    "declared_refs_sum": 3179,
+    "distinct_doi_over_declared": 0.803083,
+    "edges": 318,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2019|Engineering Applications of Artificial Intelligence": {
+    "in_frozen_support": true,
+    "n_papers": 45,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 3769,
+    "ref_rows_doi": 2197,
+    "doi_row_rate": 0.582913,
+    "distinct_doi_refs": 1818,
+    "mean_distinct_doi_per_paper": 40.4,
+    "n_papers_declared_refs": 45,
+    "declared_refs_sum": 2442,
+    "distinct_doi_over_declared": 0.744472,
+    "edges": 106,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2019|European Journal of Operational Research": {
+    "in_frozen_support": true,
+    "n_papers": 57,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 3425,
+    "ref_rows_doi": 2221,
+    "doi_row_rate": 0.648467,
+    "distinct_doi_refs": 1889,
+    "mean_distinct_doi_per_paper": 33.140351,
+    "n_papers_declared_refs": 57,
+    "declared_refs_sum": 2367,
+    "distinct_doi_over_declared": 0.798057,
+    "edges": 275,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2019|Expert Systems with Applications": {
+    "in_frozen_support": true,
+    "n_papers": 120,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 7394,
+    "ref_rows_doi": 5293,
+    "doi_row_rate": 0.715851,
+    "distinct_doi_refs": 4705,
+    "mean_distinct_doi_per_paper": 39.208333,
+    "n_papers_declared_refs": 120,
+    "declared_refs_sum": 6635,
+    "distinct_doi_over_declared": 0.709118,
+    "edges": 398,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2019|IEEE Transactions on Fuzzy Systems": {
+    "in_frozen_support": true,
+    "n_papers": 18,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 1216,
+    "ref_rows_doi": 934,
+    "doi_row_rate": 0.768092,
+    "distinct_doi_refs": 821,
+    "mean_distinct_doi_per_paper": 45.611111,
+    "n_papers_declared_refs": 18,
+    "declared_refs_sum": 898,
+    "distinct_doi_over_declared": 0.914254,
+    "edges": 75,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2019|Information Sciences": {
+    "in_frozen_support": true,
+    "n_papers": 99,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 5066,
+    "ref_rows_doi": 3490,
+    "doi_row_rate": 0.688906,
+    "distinct_doi_refs": 3163,
+    "mean_distinct_doi_per_paper": 31.949495,
+    "n_papers_declared_refs": 99,
+    "declared_refs_sum": 4425,
+    "distinct_doi_over_declared": 0.714802,
+    "edges": 190,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2021|Applied Soft Computing": {
+    "in_frozen_support": true,
+    "n_papers": 380,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 24321,
+    "ref_rows_doi": 17751,
+    "doi_row_rate": 0.729863,
+    "distinct_doi_refs": 15742,
+    "mean_distinct_doi_per_paper": 41.426316,
+    "n_papers_declared_refs": 380,
+    "declared_refs_sum": 21308,
+    "distinct_doi_over_declared": 0.738784,
+    "edges": 832,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2021|Computers and Industrial Engineering": {
+    "in_frozen_support": false,
+    "n_papers": 167,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 10729,
+    "ref_rows_doi": 7489,
+    "doi_row_rate": 0.698015,
+    "distinct_doi_refs": 6935,
+    "mean_distinct_doi_per_paper": 41.526946,
+    "n_papers_declared_refs": 167,
+    "declared_refs_sum": 8492,
+    "distinct_doi_over_declared": 0.816651,
+    "edges": 778,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2021|Computers and Operations Research": {
+    "in_frozen_support": true,
+    "n_papers": 87,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 5976,
+    "ref_rows_doi": 3916,
+    "doi_row_rate": 0.655288,
+    "distinct_doi_refs": 3419,
+    "mean_distinct_doi_per_paper": 39.298851,
+    "n_papers_declared_refs": 87,
+    "declared_refs_sum": 4257,
+    "distinct_doi_over_declared": 0.803148,
+    "edges": 420,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2021|Engineering Applications of Artificial Intelligence": {
+    "in_frozen_support": true,
+    "n_papers": 76,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 6281,
+    "ref_rows_doi": 3793,
+    "doi_row_rate": 0.603885,
+    "distinct_doi_refs": 3335,
+    "mean_distinct_doi_per_paper": 43.881579,
+    "n_papers_declared_refs": 76,
+    "declared_refs_sum": 4384,
+    "distinct_doi_over_declared": 0.760721,
+    "edges": 180,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2021|European Journal of Operational Research": {
+    "in_frozen_support": true,
+    "n_papers": 57,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 1,
+    "share_papers_with_doi_ref": 0.982456,
+    "ref_rows_total": 4361,
+    "ref_rows_doi": 2751,
+    "doi_row_rate": 0.630819,
+    "distinct_doi_refs": 2098,
+    "mean_distinct_doi_per_paper": 36.807018,
+    "n_papers_declared_refs": 57,
+    "declared_refs_sum": 2630,
+    "distinct_doi_over_declared": 0.797719,
+    "edges": 277,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2021|Expert Systems with Applications": {
+    "in_frozen_support": true,
+    "n_papers": 290,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 19200,
+    "ref_rows_doi": 14651,
+    "doi_row_rate": 0.763073,
+    "distinct_doi_refs": 13524,
+    "mean_distinct_doi_per_paper": 46.634483,
+    "n_papers_declared_refs": 290,
+    "declared_refs_sum": 17513,
+    "distinct_doi_over_declared": 0.772226,
+    "edges": 807,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2021|IEEE Transactions on Fuzzy Systems": {
+    "in_frozen_support": true,
+    "n_papers": 11,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 519,
+    "ref_rows_doi": 439,
+    "doi_row_rate": 0.845857,
+    "distinct_doi_refs": 439,
+    "mean_distinct_doi_per_paper": 39.909091,
+    "n_papers_declared_refs": 11,
+    "declared_refs_sum": 480,
+    "distinct_doi_over_declared": 0.914583,
+    "edges": 55,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2021|Information Sciences": {
+    "in_frozen_support": true,
+    "n_papers": 137,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 7402,
+    "ref_rows_doi": 5612,
+    "doi_row_rate": 0.758173,
+    "distinct_doi_refs": 4989,
+    "mean_distinct_doi_per_paper": 36.416058,
+    "n_papers_declared_refs": 137,
+    "declared_refs_sum": 6417,
+    "distinct_doi_over_declared": 0.777466,
+    "edges": 278,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2024|Applied Soft Computing": {
+    "in_frozen_support": true,
+    "n_papers": 335,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 21488,
+    "ref_rows_doi": 16599,
+    "doi_row_rate": 0.772478,
+    "distinct_doi_refs": 15118,
+    "mean_distinct_doi_per_paper": 45.128358,
+    "n_papers_declared_refs": 335,
+    "declared_refs_sum": 19580,
+    "distinct_doi_over_declared": 0.772114,
+    "edges": 888,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2024|Computers and Operations Research": {
+    "in_frozen_support": true,
+    "n_papers": 109,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 8633,
+    "ref_rows_doi": 5955,
+    "doi_row_rate": 0.689795,
+    "distinct_doi_refs": 4840,
+    "mean_distinct_doi_per_paper": 44.40367,
+    "n_papers_declared_refs": 109,
+    "declared_refs_sum": 5876,
+    "distinct_doi_over_declared": 0.82369,
+    "edges": 622,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2024|Engineering Applications of Artificial Intelligence": {
+    "in_frozen_support": true,
+    "n_papers": 156,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 13623,
+    "ref_rows_doi": 8683,
+    "doi_row_rate": 0.637378,
+    "distinct_doi_refs": 7559,
+    "mean_distinct_doi_per_paper": 48.455128,
+    "n_papers_declared_refs": 156,
+    "declared_refs_sum": 9664,
+    "distinct_doi_over_declared": 0.782181,
+    "edges": 423,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2024|European Journal of Operational Research": {
+    "in_frozen_support": true,
+    "n_papers": 57,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 4681,
+    "ref_rows_doi": 2955,
+    "doi_row_rate": 0.631275,
+    "distinct_doi_refs": 2385,
+    "mean_distinct_doi_per_paper": 41.842105,
+    "n_papers_declared_refs": 57,
+    "declared_refs_sum": 2847,
+    "distinct_doi_over_declared": 0.837724,
+    "edges": 346,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2024|Expert Systems with Applications": {
+    "in_frozen_support": true,
+    "n_papers": 405,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 25670,
+    "ref_rows_doi": 20945,
+    "doi_row_rate": 0.815933,
+    "distinct_doi_refs": 18825,
+    "mean_distinct_doi_per_paper": 46.481481,
+    "n_papers_declared_refs": 405,
+    "declared_refs_sum": 23007,
+    "distinct_doi_over_declared": 0.818229,
+    "edges": 1145,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2024|IEEE Transactions on Fuzzy Systems": {
+    "in_frozen_support": true,
+    "n_papers": 10,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 619,
+    "ref_rows_doi": 519,
+    "doi_row_rate": 0.838449,
+    "distinct_doi_refs": 434,
+    "mean_distinct_doi_per_paper": 43.4,
+    "n_papers_declared_refs": 10,
+    "declared_refs_sum": 457,
+    "distinct_doi_over_declared": 0.949672,
+    "edges": 83,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2024|Information Sciences": {
+    "in_frozen_support": true,
+    "n_papers": 137,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 6645,
+    "ref_rows_doi": 5023,
+    "doi_row_rate": 0.755907,
+    "distinct_doi_refs": 4684,
+    "mean_distinct_doi_per_paper": 34.189781,
+    "n_papers_declared_refs": 137,
+    "declared_refs_sum": 6199,
+    "distinct_doi_over_declared": 0.755606,
+    "edges": 301,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2025|Applied Soft Computing": {
+    "in_frozen_support": true,
+    "n_papers": 258,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 17384,
+    "ref_rows_doi": 13537,
+    "doi_row_rate": 0.778705,
+    "distinct_doi_refs": 12234,
+    "mean_distinct_doi_per_paper": 47.418605,
+    "n_papers_declared_refs": 258,
+    "declared_refs_sum": 15621,
+    "distinct_doi_over_declared": 0.783176,
+    "edges": 702,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2025|Computers and Operations Research": {
+    "in_frozen_support": true,
+    "n_papers": 99,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 7189,
+    "ref_rows_doi": 5165,
+    "doi_row_rate": 0.718459,
+    "distinct_doi_refs": 4290,
+    "mean_distinct_doi_per_paper": 43.333333,
+    "n_papers_declared_refs": 99,
+    "declared_refs_sum": 5124,
+    "distinct_doi_over_declared": 0.837237,
+    "edges": 471,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2025|Engineering Applications of Artificial Intelligence": {
+    "in_frozen_support": true,
+    "n_papers": 162,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 1,
+    "share_papers_with_doi_ref": 0.993827,
+    "ref_rows_total": 12814,
+    "ref_rows_doi": 8242,
+    "doi_row_rate": 0.643203,
+    "distinct_doi_refs": 7163,
+    "mean_distinct_doi_per_paper": 44.216049,
+    "n_papers_declared_refs": 162,
+    "declared_refs_sum": 9141,
+    "distinct_doi_over_declared": 0.783612,
+    "edges": 434,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2025|European Journal of Operational Research": {
+    "in_frozen_support": true,
+    "n_papers": 50,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 5048,
+    "ref_rows_doi": 3784,
+    "doi_row_rate": 0.749604,
+    "distinct_doi_refs": 2529,
+    "mean_distinct_doi_per_paper": 50.58,
+    "n_papers_declared_refs": 50,
+    "declared_refs_sum": 2924,
+    "distinct_doi_over_declared": 0.864911,
+    "edges": 358,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2025|Expert Systems with Applications": {
+    "in_frozen_support": true,
+    "n_papers": 270,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 16835,
+    "ref_rows_doi": 13449,
+    "doi_row_rate": 0.798871,
+    "distinct_doi_refs": 12099,
+    "mean_distinct_doi_per_paper": 44.811111,
+    "n_papers_declared_refs": 270,
+    "declared_refs_sum": 15119,
+    "distinct_doi_over_declared": 0.800251,
+    "edges": 672,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2025|IEEE Transactions on Fuzzy Systems": {
+    "in_frozen_support": true,
+    "n_papers": 9,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 529,
+    "ref_rows_doi": 431,
+    "doi_row_rate": 0.814745,
+    "distinct_doi_refs": 403,
+    "mean_distinct_doi_per_paper": 44.777778,
+    "n_papers_declared_refs": 9,
+    "declared_refs_sum": 425,
+    "distinct_doi_over_declared": 0.948235,
+    "edges": 92,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   },
+   "reverse|2025|Information Sciences": {
+    "in_frozen_support": true,
+    "n_papers": 99,
+    "n_papers_no_ref_rows": 0,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "ref_rows_total": 4945,
+    "ref_rows_doi": 3579,
+    "doi_row_rate": 0.723761,
+    "distinct_doi_refs": 3276,
+    "mean_distinct_doi_per_paper": 33.090909,
+    "n_papers_declared_refs": 99,
+    "declared_refs_sum": 4498,
+    "distinct_doi_over_declared": 0.728324,
+    "edges": 156,
+    "edges_in_zero_doi_papers": 0,
+    "edge_share_in_zero_doi_papers": 0.0
+   }
+  },
+  "pooled_by_direction_year_support_only": {
+   "forward|2019": {
+    "n_papers": 2786,
+    "n_papers_zero_doi_refs": 4,
+    "share_papers_with_doi_ref": 0.998564,
+    "doi_row_rate": 0.633505,
+    "mean_distinct_doi_per_paper": 34.391242,
+    "distinct_doi_over_declared": 0.716629,
+    "edges": 2165,
+    "edges_in_zero_doi_papers": 0
+   },
+   "forward|2021": {
+    "n_papers": 4426,
+    "n_papers_zero_doi_refs": 5,
+    "share_papers_with_doi_ref": 0.99887,
+    "doi_row_rate": 0.667892,
+    "mean_distinct_doi_per_paper": 37.327836,
+    "distinct_doi_over_declared": 0.739175,
+    "edges": 3482,
+    "edges_in_zero_doi_papers": 0
+   },
+   "forward|2024": {
+    "n_papers": 8537,
+    "n_papers_zero_doi_refs": 14,
+    "share_papers_with_doi_ref": 0.99836,
+    "doi_row_rate": 0.648924,
+    "mean_distinct_doi_per_paper": 39.539534,
+    "distinct_doi_over_declared": 0.719452,
+    "edges": 5472,
+    "edges_in_zero_doi_papers": 0
+   },
+   "forward|2025": {
+    "n_papers": 8771,
+    "n_papers_zero_doi_refs": 7,
+    "share_papers_with_doi_ref": 0.999202,
+    "doi_row_rate": 0.609198,
+    "mean_distinct_doi_per_paper": 38.15232,
+    "distinct_doi_over_declared": 0.69131,
+    "edges": 4694,
+    "edges_in_zero_doi_papers": 0
+   },
+   "reverse|2019": {
+    "n_papers": 719,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "doi_row_rate": 0.699613,
+    "mean_distinct_doi_per_paper": 37.905424,
+    "distinct_doi_over_declared": 0.753081,
+    "edges": 1944,
+    "edges_in_zero_doi_papers": 0
+   },
+   "reverse|2021": {
+    "n_papers": 1038,
+    "n_papers_zero_doi_refs": 1,
+    "share_papers_with_doi_ref": 0.999037,
+    "doi_row_rate": 0.718675,
+    "mean_distinct_doi_per_paper": 41.95183,
+    "distinct_doi_over_declared": 0.764112,
+    "edges": 2849,
+    "edges_in_zero_doi_papers": 0
+   },
+   "reverse|2024": {
+    "n_papers": 1209,
+    "n_papers_zero_doi_refs": 0,
+    "share_papers_with_doi_ref": 1.0,
+    "doi_row_rate": 0.745818,
+    "mean_distinct_doi_per_paper": 44.536807,
+    "distinct_doi_over_declared": 0.79617,
+    "edges": 3808,
+    "edges_in_zero_doi_papers": 0
+   },
+   "reverse|2025": {
+    "n_papers": 947,
+    "n_papers_zero_doi_refs": 1,
+    "share_papers_with_doi_ref": 0.998944,
+    "doi_row_rate": 0.74427,
+    "mean_distinct_doi_per_paper": 44.344245,
+    "distinct_doi_over_declared": 0.794558,
+    "edges": 2885,
+    "edges_in_zero_doi_papers": 0
+   }
+  },
+  "pooled_observation": {
+   "forward_doi_row_rate_by_year": {
+    "2019": 0.633505,
+    "2021": 0.667892,
+    "2024": 0.648924,
+    "2025": 0.609198
+   },
+   "reverse_doi_row_rate_by_year": {
+    "2019": 0.699613,
+    "2021": 0.718675,
+    "2024": 0.745818,
+    "2025": 0.74427
+   },
+   "note": "Observed pattern: the reverse pool parses at a HIGHER rate than the forward pool in every scope year, and the two pools' rates do not move together (forward falls from 2021 to 2025, reverse rises). Because a target edge is only counted when the cited reference carries a DOI matching an in-corpus paper, this is a shared exposure of E1/E2/E3 and a plausible confound direction for the measured gap. It still does NOT license a correction: the target mix of the unparsed references is unobserved, so the diagnostic cannot sign or bound the resulting bias, and no rescaling is applied anywhere in this package."
+  },
+  "definitions": {
+   "doi_row_rate": "rows with non-null cited_doi / all reference rows in paper_refs_out (per direction/year/source cell)",
+   "share_papers_with_doi_ref": "citing papers with >= 1 distinct DOI reference (E3 denominator > 0)",
+   "distinct_doi_over_declared": "distinct DOI references / EI-declared num_references (papers with a declared count only)",
+   "edges_in_zero_doi_papers": "structurally expected to be 0: an edge is counted only when the cited reference has a DOI that matches an in-corpus paper DOI, so E1/E2 also depend on reference-DOI availability"
+  },
+  "interpretation": {
+   "role": "descriptive coverage diagnostic only",
+   "zh": "本诊断只描述参考文献 DOI 可用率与 E3 分母覆盖（多少施引论文有可解析的参考文献分母）。它不是校正：没有插补、没有重加权、没有按解析率外推；缺 DOI 的参考文献并非随机缺失（随年份、期刊、语料来源与存缴习惯变化），任何把观测值除以解析率或按解析率放大的做法都预设了缺失机制，本包不做这种假设，也不给出偏差方向或大小的界限。E3 是三估计量中唯一以 DOI 解析为分母的读数；E1/E2 的边也要求被引侧 DOI 能匹配库内论文，因此解析可用率是全部三估计量的共同暴露面，但本诊断不能把这种暴露换算成校正。",
+   "en": "This diagnostic only describes reference-DOI availability and E3 denominator coverage (how many citing papers have a resolvable reference denominator). It is NOT a correction: no imputation, no reweighting, no division/extrapolation by the observed parse rate. References without a DOI are not missing at random (they vary by year, source and venue deposit practice), so scaling by the observed rate would assume the missingness mechanism; this package makes no such assumption and offers no bias bound. E3 is the only estimator whose denominator is DOI-resolved references; E1/E2 edges also require the cited side's DOI to match an in-corpus paper, so parse availability is a shared exposure of all three estimators -- which this diagnostic cannot convert into a correction.",
+   "must_not": [
+    "must not be used to rescale or correct E3 (or any other estimate)",
+    "must not be read as an upper or lower bound on the true cross-domain citation share",
+    "must not be read as evidence that E1/E2 are parse-rate immune"
+   ]
+  }
+ },
+ "cross_check": {
+  "tolerance_note": "tolerances: E1/E2 gap 5e-4 pp / rel 1e-5; E3 gap 5e-3 pp / rel 1e-4, because frozen source means are r6-rounded and E3's small base amplifies the rounding",
+  "gate1_point_estimates": {
+   "checked": 18,
+   "mismatch": []
+  },
+  "gate1_strata": {
+   "checked": 42,
+   "mismatch": []
+  },
+  "frozen_matrix_18": {
+   "checked": 18,
+   "mismatch": []
+  },
+  "frozen_loo_126": {
+   "checked": 126,
+   "mismatch": []
+  },
+  "stable8_2019_cells": {
+   "checked": 14,
+   "mismatch": []
+  },
+  "support_lists": {
+   "checked": 3,
+   "mismatch": []
+  }
+ },
+ "limitations": [
+  "All numbers are point estimates under frozen definitions; this package adds no uncertainty intervals and no coverage claims.",
+  "Low-confidence exclusion (tier='llm' & confidence<0.75) is a robustness contrast, not a label correction; the queue is pre-registered and not manually reviewed here.",
+  "The 'full_excluded' variant deletes edges whose target is a queue paper (and can flip a paper's E2 to 0); it does not relabel targets, so the true effect of label error could differ in either direction.",
+  "Common-source leave-one-source-out reduces the same support source in both directions and renormalises each direction separately; it is a source-composition sensitivity and does not address source-selection uncertainty in general.",
+  "TFS reverse pools have 9-18 papers per scope year (18 in 2019, 11 in 2021, 10 in 2024, 9 in 2025); both the full and dropped variants rest on a handful of extreme papers.",
+  "Reference-DOI availability and denominator coverage are descriptive; no imputation, reweighting or scaling is performed, and no bias bound is claimed (missing DOIs are not missing at random).",
+  "E1/E2 edges also require the cited side's DOI to match an in-corpus paper, so the parse-rate exposure is shared by all three estimators.",
+  "2025 is right-censored; every 2025 window and endpoint number must be read next to its 2024 counterpart.",
+  "The forward and reverse pools are non-paired; every gap is a descriptive between-pool comparison.",
+  "Composition weights change between base years by design (that is what the base-period summary measures); weights under exclusion are recomputed from retained papers and reported alongside the frozen-weight variant.",
+  "Database untouched: the two SELECTs are read-only via ecdb.raw_sql; no build/enrich/cite writes were executed."
+ ]
+}

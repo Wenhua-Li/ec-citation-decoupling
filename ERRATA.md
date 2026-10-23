@@ -3,8 +3,8 @@
 ## 2026-10-17 — Supplementary Table 6 ("C2 composition sensitivity"): estimand labelling corrected
 
 **What was wrong.** In the version of Supplementary Table 6 (S06) submitted with
-the NHB version of this work, the row "C2 composition sensitivity" reported the
-pair **0.291 → 0.232 (−20.2%)** (source-standardized) and **0.291 → 0.203
+an earlier version of this work, the row "C2 composition sensitivity" reported
+the pair **0.291 → 0.232 (−20.2%)** (source-standardized) and **0.291 → 0.203
 (−30.3%)** (topic-standardized) under a per-paper-rate ("edges per paper")
 reading. These two values are in fact the **participation share** (the share of
 citing papers with at least one target-domain edge, estimand E2), not the
@@ -26,10 +26,19 @@ weight 0.129); this is handled by explicit coverage-share reweighting (0.871),
 not silently. This analysis is a sensitivity check and does not replace the
 registered main specification.
 
-**Status of the public record.** Repository v1.0.0 (2026-10-06) did not include
-the C2 composition-sensitivity row anywhere (the mislabelled row exists only in
-the NHB-submitted SI package). v2.0.0 adds the row to
-`paper/si/tables/s06_robustness.csv|.tex` and the registry index
-`s13_registry_index.csv|.tex` in corrected form, so the public tables now match
-the corrected analysis. No value previously published in this repository was
-altered; this erratum documents the correction affecting the submitted SI.
+**Status of the public record.** The initial repository contents (2026-10-06)
+did not include the C2 composition-sensitivity row anywhere (the mislabelled
+row exists only in the earlier submission's Supplementary Information). The
+corrected pair was added to the public record on 2026-10-17 and remains
+registered in `research/nature/NUMBERS.md` — the registry row labelled
+"Q57/Q58 C2 composition sensitivity". Note that in the current quantity index
+(`paper/build/doc_ids.md`) Q57 and Q58 are assigned to the R3a subfamily
+declines, so the C2 row should be cited by its registry label. The current
+Supplementary Information reports the corrected values. No value previously
+published in this repository was altered; this erratum documents a correction
+affecting an earlier submitted Supplementary Information.
+
+*Note added 2026-10-23.* The per-table CSV/LaTeX exports
+(`paper/si/tables/`) are no longer part of this repository; the corrected
+values remain available through the number registry and the frozen output of
+the sensitivity script (`research/nature/out/c2_composition_sensitivity.json`).

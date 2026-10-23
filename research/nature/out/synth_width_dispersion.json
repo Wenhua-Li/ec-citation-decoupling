@@ -1,0 +1,184 @@
+{
+ "task": "synthetic calibration of dispersion -> baseline-choice width (Phase B)",
+ "seed": 20261017,
+ "reps_per_stratum": 4000,
+ "n_panels": 840000,
+ "grids": {
+  "S": [
+   2,
+   3,
+   5,
+   7,
+   10
+  ],
+  "tau": [
+   0.05,
+   0.2,
+   0.5
+  ],
+  "mu_r": [
+   0.0,
+   0.15
+  ],
+  "sigma_r": [
+   0.05,
+   0.1,
+   0.2,
+   0.35,
+   0.5,
+   0.75,
+   1.0
+  ]
+ },
+ "definitions": {
+  "width": "|Paasche - Laspeyres| on the aggregate ratio (U1 section 10)",
+  "dispersion": "sample sd of per-source relative changes r_s",
+  "migration": "0.5 * sum|w_s(Y) - w_s(X)| (total variation)"
+ },
+ "checks": {
+  "pairwise_identity_max_abs_error": 1.794571435898007e-15,
+  "low_dispersion_low_migration_stratum": {
+   "spearman_width_dispersion": 0.32377627761101735,
+   "median_width_pp": 0.041861255662312136,
+   "median_dispersion": 0.04537685947257611
+  }
+ },
+ "global": {
+  "spearman_width_dispersion": 0.583682525402328,
+  "spearman_width_migration": 0.6053156001748425,
+  "r2_width_on_dispersion": 0.18323266972567742,
+  "r2_width_on_migration": 0.21767323622120427,
+  "r2_width_on_dispersion_migration": 0.39476398909413724,
+  "r2_width_on_dispersion_migration_S": 0.39926713278939185,
+  "r2_loglog_width_on_dispersion_migration": 0.7029211202682712
+ },
+ "spearman_width_dispersion_by_tau": {
+  "0.05": 0.6783237513789312,
+  "0.2": 0.6794391758661672,
+  "0.5": 0.681362487010298
+ },
+ "spearman_width_dispersion_by_S": {
+  "2": 0.6203832144160754,
+  "3": 0.5728959798986185,
+  "5": 0.5592454330430977,
+  "7": 0.5579049537366291,
+  "10": 0.5563817207659953
+ },
+ "decile_calibration": [
+  {
+   "decile": 1,
+   "dispersion_range": [
+    0.0,
+    0.04363928571107968
+   ],
+   "width_pp_q10": 0.0036620529770781114,
+   "width_pp_q50": 0.06172226240097611,
+   "width_pp_q90": 0.475167237999774
+  },
+  {
+   "decile": 2,
+   "dispersion_range": [
+    0.04363928571107968,
+    0.0709654304986417
+   ],
+   "width_pp_q10": 0.016441967269105184,
+   "width_pp_q50": 0.15790973849603152,
+   "width_pp_q90": 0.976160779863562
+  },
+  {
+   "decile": 3,
+   "dispersion_range": [
+    0.0709654304986417,
+    0.11294804091298755
+   ],
+   "width_pp_q10": 0.026059826339435155,
+   "width_pp_q50": 0.25258218288485845,
+   "width_pp_q90": 1.5750178827972083
+  },
+  {
+   "decile": 4,
+   "dispersion_range": [
+    0.11294804091298755,
+    0.17819526118312223
+   ],
+   "width_pp_q10": 0.040820517603168405,
+   "width_pp_q50": 0.39873168937402115,
+   "width_pp_q90": 2.479623785201679
+  },
+  {
+   "decile": 5,
+   "dispersion_range": [
+    0.17819526118312223,
+    0.25997728650376073
+   ],
+   "width_pp_q10": 0.0632675598386323,
+   "width_pp_q50": 0.6049419688087143,
+   "width_pp_q90": 3.791634402519713
+  },
+  {
+   "decile": 6,
+   "dispersion_range": [
+    0.25997728650376073,
+    0.3631571684752473
+   ],
+   "width_pp_q10": 0.09345440985462528,
+   "width_pp_q50": 0.8716054174599974,
+   "width_pp_q90": 5.403737949202687
+  },
+  {
+   "decile": 7,
+   "dispersion_range": [
+    0.3631571684752473,
+    0.48110804088324405
+   ],
+   "width_pp_q10": 0.1308435305262301,
+   "width_pp_q50": 1.2217161435458201,
+   "width_pp_q90": 7.333459063316594
+  },
+  {
+   "decile": 8,
+   "dispersion_range": [
+    0.48110804088324405,
+    0.6277448770935011
+   ],
+   "width_pp_q10": 0.17345526614390927,
+   "width_pp_q50": 1.578610893273369,
+   "width_pp_q90": 9.764693330331449
+  },
+  {
+   "decile": 9,
+   "dispersion_range": [
+    0.6277448770935011,
+    0.8291007441284943
+   ],
+   "width_pp_q10": 0.22867155821023277,
+   "width_pp_q50": 2.1106106980781245,
+   "width_pp_q90": 12.835628189506249
+  },
+  {
+   "decile": 10,
+   "dispersion_range": [
+    0.8291007441284943,
+    3.5213022864810077
+   ],
+   "width_pp_q10": 0.3048369151180996,
+   "width_pp_q50": 2.959167610389546,
+   "width_pp_q90": 18.221435997234053
+  }
+ ],
+ "sign_diagnostics": {
+  "p_sign_mismatch_given_mixed": 0.040200096232018714,
+  "p_sign_mismatch_given_consistent": 0.0,
+  "share_mixed": 0.7175119047619047
+ },
+ "width_pp_quantiles_pooled": {
+  "q10": 0.03630538602454658,
+  "q50": 0.6147708555703513,
+  "q90": 6.271745861280976
+ },
+ "notes": [
+  "Population-level panels: no paper-level sampling noise; the mapping tested here is between aggregate quantities.",
+  "Dispersion alone cannot pin down width: migration enters the pairwise identity multiplicatively; R^2 values quantify the gap.",
+  "Zero-start sources (a_s = 0) are not generated here; the frozen rule excludes them from dispersion and reports them separately."
+ ]
+}

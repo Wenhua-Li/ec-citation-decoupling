@@ -1,0 +1,123 @@
+{
+ "spec": {
+  "gold_sample": "archive/labeling/gold_set_200.csv (frozen 200-paper hand-labelled audit; rules in gold_set_README.md)",
+  "noise_model": "symmetric independent EC<->NON_EC label flips at rate pi; flipped papers move pools and retarget edges; composition weights recomputed per replicate at the 2021 baseline; frozen seven-source common support retained",
+  "windows": "2021->2024 primary window, E1 edge-count estimand",
+  "replicates": 2000,
+  "seed": "fixed seed recorded in gold_label_audit.py (code-internal, not cited in prose)",
+  "scope": "sensitivity of the headline bidirectional E1 readings to hypothetical label noise; NOT a bias correction of any headline estimate"
+ },
+ "gold_confusion": {
+  "n": 200,
+  "gold_ec": 56,
+  "gold_non_ec": 144,
+  "tp": 51,
+  "fp": 1,
+  "fn": 5,
+  "tn": 143,
+  "accuracy": 0.97,
+  "precision_ec": 0.9808,
+  "precision_non_ec": 0.9662,
+  "recall_ec": 0.9107,
+  "recall_non_ec": 0.9931,
+  "strata_composition": {
+   "A纯EC刊源(验证假设)": 20,
+   "B×待判(LLM层)": 15,
+   "B×规则EC": 15,
+   "B×规则非EC": 26,
+   "C×待判(LLM层)": 15,
+   "C×规则EC": 16,
+   "C×规则非EC": 93
+  },
+  "registered_accuracy_Q33": 0.97,
+  "accuracy_matches_registered": true
+ },
+ "zero_noise_consistency": {
+  "forward_rel_change": {
+   "mine": -0.018252,
+   "frozen": -0.0183,
+   "abs_diff": 4.8e-05
+  },
+  "reverse_rel_change": {
+   "mine": 0.147068,
+   "frozen": 0.1471,
+   "abs_diff": 3.2e-05
+  },
+  "gap_pp": {
+   "mine": 16.531922,
+   "frozen": 16.5319,
+   "abs_diff": 2.2e-05
+  }
+ },
+ "flip_noise": {
+  "0.03": {
+   "flip_rate": 0.03,
+   "n_reps": 2000,
+   "forward_rel_change": {
+    "q025": -0.086534,
+    "q50": -0.031971,
+    "q975": 0.02134
+   },
+   "reverse_rel_change": {
+    "q025": 0.099071,
+    "q50": 0.163333,
+    "q975": 0.231886
+   },
+   "gap_pp": {
+    "q025": 10.87412,
+    "q50": 19.537807,
+    "q975": 28.10468
+   },
+   "gap_positive_share": 1.0,
+   "forward_positive_share": 0.121,
+   "reverse_positive_share": 1.0,
+   "median_gap_retention_vs_observed": 1.1818
+  },
+  "0.05": {
+   "flip_rate": 0.05,
+   "n_reps": 2000,
+   "forward_rel_change": {
+    "q025": -0.10744,
+    "q50": -0.044734,
+    "q975": 0.028296
+   },
+   "reverse_rel_change": {
+    "q025": 0.100035,
+    "q50": 0.167387,
+    "q975": 0.243551
+   },
+   "gap_pp": {
+    "q025": 11.464251,
+    "q50": 21.244664,
+    "q975": 31.176782
+   },
+   "gap_positive_share": 1.0,
+   "forward_positive_share": 0.111,
+   "reverse_positive_share": 1.0,
+   "median_gap_retention_vs_observed": 1.2851
+  },
+  "0.1": {
+   "flip_rate": 0.1,
+   "n_reps": 2000,
+   "forward_rel_change": {
+    "q025": -0.136326,
+    "q50": -0.061545,
+    "q975": 0.021396
+   },
+   "reverse_rel_change": {
+    "q025": 0.093982,
+    "q50": 0.166288,
+    "q975": 0.242044
+   },
+   "gap_pp": {
+    "q025": 11.498284,
+    "q50": 22.793793,
+    "q975": 33.641542
+   },
+   "gap_positive_share": 1.0,
+   "forward_positive_share": 0.07,
+   "reverse_positive_share": 1.0,
+   "median_gap_retention_vs_observed": 1.3788
+  }
+ }
+}

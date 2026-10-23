@@ -23,9 +23,9 @@
 ### 1.1 文献主数据：EI Compendex 数据库导出
 
 - **来源平台**：Engineering Village 平台的 EI Compendex（工程索引）数据库。
-- **导出格式**：detailed（详细）格式 CSV，共 86 个文件、469 MB，存于 `archive/data_from_EI/`（原始数据唯一副本）。
+- **导出格式**：detailed（详细）格式 CSV，共 86 个文件、469 MB。**2026-10-22 超瘦身（用户批准）后本机原始 CSV 已删除**；主库 `db/ec_papers.db` 与快照 `archive/db_backup/ec_papers.db.bak-w4b-20260929` 仍在，原始导出如需回溯须使用外部备份。
 - **venue_tag（来源标签）**：由导出文件名推导（小写化），如 `tevc`、`gecco_21_25`、`eswa_26_1`。它是**导出批次标签，不是刊名**——同一期刊可能分多个批次导出。
-- **检索与导出细节**：暂不记录（用户 2026-09-29 决定）。原始 CSV 的文件名与批次标签（venue_tag）是获取方式的直接线索；如日后需要补记 EI 检索式、导出设置、导出日期等信息，再行补入本节。
+- **检索与导出细节**：暂不记录（用户 2026-09-29 决定）。原始 CSV 已于 2026-10-22 删除；如日后需要补记 EI 检索式、导出设置、导出日期等信息，须先从外部备份恢复 CSV 再补入本节。
 
 ### 1.2 引文数据：一个旧库迁移 + 三个公开 API
 
@@ -107,30 +107,30 @@
 
 ### 2.6 清洗留痕
 
-每次 build 自动生成清洗报告（概览数字、各规则命中数与 5 条样例、去重组明细、回填日志）。最新一版（2026-09-26）已随归档移至 `archive/db_cleaning_report.md`；重跑 build 会再生成到 `db/cleaning_report.md`。
+每次 build 自动生成清洗报告（概览数字、各规则命中数与 5 条样例、去重组明细、回填日志）。历史版（2026-09-26）已于 2026-10-22 按用户批准删除；重跑 build 会再生成到 `db/cleaning_report.md`（重建需原始 CSV，本机原始 CSV 已删除）。
 
 ---
 
 ## 3. 数据增强与范围裁剪（`ecdb enrich`，2026-09-27，一次性完成）
 
-全库质量审查（总报告 `archive/audit/data_quality_report.html`）后的一次性补全，全部为**对库的持久性变更**：
+全库质量审查后的一次性补全，全部为**对库的持久性变更**（审计报告与明细 CSV 已于 2026-10-22 按用户批准删除；重建需外部原始 CSV）：
 
 | 变更 | 说明 | 明细留痕 |
 |---|---|---|
-| **范围裁剪（用户确认的方案 A）** | 保留 `pub_year ∈ [2000, 2025]` 且摘要/DOI/作者完整的论文；删除 19,199 篇（年份出界 17,767 + 字段缺失 1,432）。**引文数据不按年份过滤**：保留论文的参考文献/被引列表原样保留，被删论文名下的引文行作孤儿清理，库内引文网络重建后 1,908,020 边。裁剪前备份 `archive/db_backup/ec_papers.db.bak-scope-20260927` | `archive/audit/scope_deleted.csv` |
-| DOI 回写 | 标题匹配找回的 DOI 回写 `papers.doi`；与其他论文撞车的跳过 | `archive/audit/doi_writeback.csv` 等 |
-| 摘要补全 | 有 DOI 且无摘要的论文按 DOI 从三个来源取摘要（≥80 字符、排除占位文本） | `archive/audit/abstract_fill.csv` |
+| **范围裁剪（用户确认的方案 A）** | 保留 `pub_year ∈ [2000, 2025]` 且摘要/DOI/作者完整的论文；删除 19,199 篇（年份出界 17,767 + 字段缺失 1,432）。**引文数据不按年份过滤**：保留论文的参考文献/被引列表原样保留，被删论文名下的引文行作孤儿清理，库内引文网络重建后 1,908,020 边。裁剪前备份 `archive/db_backup/ec_papers.db.bak-scope-20260927` 已于 2026-10-22 删除 | 已删除（2026-10-22） |
+| DOI 回写 | 标题匹配找回的 DOI 回写 `papers.doi`；与其他论文撞车的跳过 | 已删除（2026-10-22） |
+| 摘要补全 | 有 DOI 且无摘要的论文按 DOI 从三个来源取摘要（≥80 字符、排除占位文本） | 已删除（2026-10-22） |
 | 占位摘要清理 | 205 条 "No abstract available" 置为空值 | — |
-| 作者回填 | 3 篇无作者的实质研究论文按 DOI 补作者与机构 | `archive/audit/authors_fill.csv` |
+| 作者回填 | 3 篇无作者的实质研究论文按 DOI 补作者与机构 | 已删除（2026-10-22） |
 | 年份修正 | 1 条年份与 DOI/卷期冲突的记录按正式出版年修正（2014→1995） | — |
 | 坏 DOI 修正 | `10.1016./j.cor.2003.11.016` → 去掉多余点 | — |
 | 垃圾关键词删除 | 216 行单字符关键词（解析伪影） | — |
 | 悬挂机构引用清理 | 作者指向不存在机构编号的引用摘除 | — |
 | publisher 回填 | 缺失出版商按同批次众数回填（推导值，权威性弱于原始数据） | — |
-| 非研究文献删除 | 18 条采访/编委名单/卷首语/会议致辞 | `archive/audit/deletion_review.csv` |
+| 非研究文献删除 | 18 条采访/编委名单/卷首语/会议致辞 | 已删除（2026-10-22） |
 | 质量标签重算 | 按清洗口径重算并新增 `no_affiliations` | — |
 
-> ⚠️ **重要**：`python -m ecdb build` 重新导入原始 CSV 会**覆盖**以上全部增强（DOI 回写、摘要、作者、出版商都回到 CSV 原始状态）。重建后必须重跑 enrich 步骤。
+> ⚠️ **重要**：`python -m ecdb build` 重新导入原始 CSV 会**覆盖**以上全部增强（DOI 回写、摘要、作者、出版商都回到 CSV 原始状态）。重建后必须重跑 enrich 步骤。**本机原始 CSV 已于 2026-10-22 删除；重建须先恢复外部备份的 CSV。**
 
 ---
 
@@ -147,7 +147,7 @@ init（建表）→ migrate（旧库迁移）→ fetch-s2 / fetch-cr / fetch-coc
 
 - **存储**：四张引文表建在主库内（表结构与字段含义见 DATA_USAGE.md 第 5 节）；
 - **写入方式**：小事务分批提交 + 忙等待 60 秒，与主库的其他操作可并存；
-- **验收**：2026-09-27 通过全部 14 项验收检查（迁移完整性、抓取覆盖、数据质量、幂等性四组），报告在 `archive/reports/`；
+- **验收**：2026-09-27 通过全部 14 项验收检查（迁移完整性、抓取覆盖、数据质量、幂等性四组）；历史报告已随 2026-10-22 瘦身删除；
 - **已知口径差异（遗留）**：`paper_cit_edges` 当前 990,612 行，与验收时 1,908,020 不一致（疑似对账收尾时重建所致）。分析脚本均自行从参考文献列表回连计算，不依赖此表；投稿前应 `python -m eccite edges` 重建核对。见 progress.md 遗留事项。
 
 ---
@@ -158,18 +158,18 @@ init（建表）→ migrate（旧库迁移）→ fetch-s2 / fetch-cr / fetch-coc
 
 | 文件 | 是什么节点的快照 |
 |---|---|
-| `ec_papers.db.bak-scope-20260927` | **范围裁剪前**（166,002 篇全量，2026-09-27）——回到裁剪前的唯一凭据 |
+| `ec_papers.db.bak-w4b-20260929` | **2026-09-29 写库前快照；当前唯一保留的库快照**（2026-10-22 瘦身后） |
 
-> 更早的两个备份（`ec_papers.db.bak`、`ec_papers.db.bak-20260927`）已于 2026-09-29 经用户确认删除，释放 6.9 GB。
+> 旧的裁剪前快照 `ec_papers.db.bak-scope-20260927` 已于 2026-10-22 按用户批准删除；更早的两个备份（`ec_papers.db.bak`、`ec_papers.db.bak-20260927`）已于 2026-09-29 经用户确认删除。
 
 ### 常见恢复场景
 
 | 场景 | 操作 |
 |---|---|
-| 想回到范围裁剪之前的状态 | 用 `archive/db_backup/ec_papers.db.bak-scope-20260927` 覆盖 `db/ec_papers.db`（覆盖前先留一份当前快照） |
+| 想回到最近一次写库前状态 | 用 `archive/db_backup/ec_papers.db.bak-w4b-20260929` 覆盖 `db/ec_papers.db`（覆盖前先留一份当前快照）。旧快照 `bak-scope-20260927` 已于 2026-10-22 按用户批准删除 |
 | `build --rebuild` 整库重建后引文表丢失 | `python -m eccite init` → `python -m eccite migrate --meta-only`（需 EC_History 旧库）→ `python -m eccite load`——从 `cache_citations/*.jsonl` **零 API 调用**恢复 |
 | 重建后增强丢失 | 重跑 `python -m ecdb enrich <step>` 各步骤（见第 3 节警告） |
-| 新增了 EI 导出想入库 | CSV 放回 `data_from_EI/`（或设环境变量 `ECDB_DATA` 指向 `archive/data_from_EI`）→ `python -m ecdb build`（仅用户明确要求时运行） |
+| 新增了 EI 导出想入库 | 先把 CSV 放到外部目录（本机 `archive/data_from_EI/` 已于 2026-10-22 删除），设环境变量 `ECDB_DATA` 指向该目录 → `python -m ecdb build`（仅用户明确要求时运行） |
 
 ### 动库前的约定
 
@@ -183,9 +183,10 @@ init（建表）→ migrate（旧库迁移）→ fetch-s2 / fetch-cr / fetch-coc
 
 | 内容 | 位置 |
 |---|---|
-| 86 个 EI 原始 CSV | `archive/data_from_EI/` |
-| 清洗报告（规则命中/去重明细/回填日志） | `archive/db_cleaning_report.md` |
-| 数据质量审查总报告 | `archive/audit/data_quality_report.html` |
-| 引文验收与覆盖率报告 | `archive/reports/` |
-| 领域打标报告、venue 核定说明 | `archive/reports/`、`archive/labeling/` |
+| 86 个 EI 原始 CSV | **2026-10-22 已删除（本机无副本）；仅外部备份可恢复** |
+| 清洗报告（规则命中/去重明细/回填日志） | **2026-10-22 已删除**（关键数字已进本文档与 `db/ec_papers.db` 元数据） |
+| 数据质量审查总报告 | **2026-10-22 已删除** |
+| 引文验收与覆盖率报告 | **2026-10-22 已删除** |
+| 领域打标报告、venue 核定说明 | `archive/labeling/`（`venue_tier_review.csv` 等） |
 | 人工金标准（200 篇） | `archive/labeling/gold_set_200.csv` |
+| 历史评审与旧方案 | `archive/reviews/`、`archive/history/`（见 `archive/ARCHIVE_INDEX.md`） |

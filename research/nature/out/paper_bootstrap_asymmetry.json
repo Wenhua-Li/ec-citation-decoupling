@@ -1,0 +1,947 @@
+{
+ "task": "Gate 1 paper-level stratified bootstrap of the reverse-forward asymmetry gap",
+ "script": "research/nature/paper_bootstrap_asymmetry.py",
+ "input": {
+  "database": "db/ec_papers.db",
+  "access": "SQLite read-only URI (ecdb.raw_sql default); no writes",
+  "meta_sql": "SELECT p.accession_no AS acc, p.pub_year AS y, p.source AS src, d.label AS lab, d.tier AS tier, d.confidence AS conf FROM papers p JOIN paper_domain d ON d.accession_no = p.accession_no",
+  "refs_sql": "SELECT r.accession_no AS acc, COUNT(DISTINCT CASE WHEN d.label='EC' THEN pc.accession_no END) AS n_ec, COUNT(DISTINCT CASE WHEN d.label='NON_EC' THEN pc.accession_no END) AS n_non, COUNT(DISTINCT r.cited_doi) AS n_refs_doi FROM paper_refs_out r LEFT JOIN papers pc ON pc.doi = r.cited_doi LEFT JOIN paper_domain d ON d.accession_no = pc.accession_no WHERE r.cited_doi IS NOT NULL GROUP BY r.accession_no",
+  "paper_cit_edges_used": false,
+  "cross_check_inputs": [
+   "research/nature/out/stable8_merged.json (read-only)",
+   "research/nature/out/bidirectional_asymmetry.json (read-only)"
+  ]
+ },
+ "disclaimer": {
+  "zh": "本输出是论文级分层 bootstrap：在 方向×年份×刊源 分层内对引用论文有放回重抽，每篇论文的到EC/到NON边数与 DOI 参考文献分母一起被重抽，边不作为独立样本；正向（NON_EC 引用论文池）与反向（EC 引用论文池）相互独立、非配对。q025/q50/q975 只是该重抽分布的分位区间，不是自动 95% 置信区间，也不承诺频率派覆盖；刊源选择、领域标注与参考文献解析的不确定性不在重抽模型内。2025 端点为右删失年份，其窗口结果须与 2024 端点并读。",
+  "en": "Paper-level stratified bootstrap: citing papers are resampled with replacement within direction x year x source strata, each paper carrying its own edge counts and DOI-reference denominator together (edges are never independent samples); forward (NON_EC citing) and reverse (EC citing) pools are resampled independently and are not paired. q025/q50/q975 are percentile intervals of this resampling distribution only - NOT an automatic 95% confidence interval, with no frequentist coverage guarantee. Source selection, domain labeling and reference-parsing uncertainty lie outside the resampling model. 2025 is right-censored; read it next to the 2024 endpoint."
+ },
+ "spec": {
+  "start_year": 2021,
+  "windows": [
+   "2021->2024",
+   "2021->2025"
+  ],
+  "metrics": {
+   "E1": "mean target edges per citing paper",
+   "E2": "share of citing papers with >= 1 target edge",
+   "E3": "mean share of DOI-resolved references pointing at the target; papers with zero DOI refs contribute 0.0 and stay in the denominators"
+  },
+  "strata": "direction x year x canonical source",
+  "resampling_unit": "citing paper (edges and DOI-reference denominator resampled together)",
+  "weighting": "fixed 2021 composition weights per direction over the support, renormalised over available strata",
+  "pairing": "forward and reverse pools are non-paired; independent seeded RNG streams",
+  "reps": 4000,
+  "seed": 20261015,
+  "seed_forward": [
+   20261015,
+   1
+  ],
+  "seed_reverse": [
+   20261015,
+   2
+  ],
+  "quantile_method": "linear interpolation",
+  "e3_denominator": "COUNT(DISTINCT cited_doi) per citing paper"
+ },
+ "support": {
+  "rule": "canonical source with non-empty paper pool in 2021, 2024 and 2025 in BOTH directions",
+  "sources": [
+   "Applied Soft Computing",
+   "Computers and Operations Research",
+   "Engineering Applications of Artificial Intelligence",
+   "European Journal of Operational Research",
+   "Expert Systems with Applications",
+   "IEEE Transactions on Fuzzy Systems",
+   "Information Sciences"
+  ],
+  "n_sources": 7,
+  "excluded_stable8_strata_counts": {
+   "Computers and Industrial Engineering": {
+    "2021": {
+     "forward": 559,
+     "reverse": 167
+    }
+   }
+  },
+  "weights_2021": {
+   "forward": {
+    "Applied Soft Computing": 0.1507,
+    "Computers and Operations Research": 0.046091,
+    "Engineering Applications of Artificial Intelligence": 0.064166,
+    "European Journal of Operational Research": 0.132399,
+    "Expert Systems with Applications": 0.273159,
+    "IEEE Transactions on Fuzzy Systems": 0.07117,
+    "Information Sciences": 0.262314
+   },
+   "reverse": {
+    "Applied Soft Computing": 0.366089,
+    "Computers and Operations Research": 0.083815,
+    "Engineering Applications of Artificial Intelligence": 0.073218,
+    "European Journal of Operational Research": 0.054913,
+    "Expert Systems with Applications": 0.279383,
+    "IEEE Transactions on Fuzzy Systems": 0.010597,
+    "Information Sciences": 0.131985
+   }
+  },
+  "coverage": {
+   "forward": {
+    "2021": {
+     "n_papers_in_support": 4426,
+     "n_papers_stable8_pool": 4985,
+     "share_of_stable8_pool": 0.887864,
+     "weight_sum_2021_weights": 1.0
+    },
+    "2024": {
+     "n_papers_in_support": 8537,
+     "n_papers_stable8_pool": 8537,
+     "share_of_stable8_pool": 1.0,
+     "weight_sum_2021_weights": 1.0
+    },
+    "2025": {
+     "n_papers_in_support": 8771,
+     "n_papers_stable8_pool": 8771,
+     "share_of_stable8_pool": 1.0,
+     "weight_sum_2021_weights": 1.0
+    }
+   },
+   "reverse": {
+    "2021": {
+     "n_papers_in_support": 1038,
+     "n_papers_stable8_pool": 1205,
+     "share_of_stable8_pool": 0.861411,
+     "weight_sum_2021_weights": 1.0
+    },
+    "2024": {
+     "n_papers_in_support": 1209,
+     "n_papers_stable8_pool": 1209,
+     "share_of_stable8_pool": 1.0,
+     "weight_sum_2021_weights": 1.0
+    },
+    "2025": {
+     "n_papers_in_support": 947,
+     "n_papers_stable8_pool": 947,
+     "share_of_stable8_pool": 1.0,
+     "weight_sum_2021_weights": 1.0
+    }
+   }
+  }
+ },
+ "strata": {
+  "forward|2021|Applied Soft Computing": {
+   "n": 667,
+   "tier_counts": {
+    "llm": 93,
+    "rule": 574
+   },
+   "min_confidence": 0.55,
+   "n_edges": 633,
+   "n_participating": 247,
+   "n_refs_doi": 25924,
+   "sum_share_of_refs": 16.290933306790834,
+   "E1": 0.949025,
+   "E2": 0.370315,
+   "E3": 0.024424
+  },
+  "forward|2021|Computers and Operations Research": {
+   "n": 204,
+   "tier_counts": {
+    "llm": 131,
+    "rule": 73
+   },
+   "min_confidence": 0.55,
+   "n_edges": 513,
+   "n_participating": 131,
+   "n_refs_doi": 7709,
+   "sum_share_of_refs": 12.780990855356242,
+   "E1": 2.514706,
+   "E2": 0.642157,
+   "E3": 0.062652
+  },
+  "forward|2021|Engineering Applications of Artificial Intelligence": {
+   "n": 284,
+   "tier_counts": {
+    "llm": 45,
+    "rule": 239
+   },
+   "min_confidence": 0.7,
+   "n_edges": 206,
+   "n_participating": 65,
+   "n_refs_doi": 10400,
+   "sum_share_of_refs": 4.964379494360147,
+   "E1": 0.725352,
+   "E2": 0.228873,
+   "E3": 0.01748
+  },
+  "forward|2021|European Journal of Operational Research": {
+   "n": 586,
+   "tier_counts": {
+    "llm": 170,
+    "rule": 416
+   },
+   "min_confidence": 0.6,
+   "n_edges": 536,
+   "n_participating": 156,
+   "n_refs_doi": 24550,
+   "sum_share_of_refs": 11.919937088953287,
+   "E1": 0.914676,
+   "E2": 0.266212,
+   "E3": 0.020341
+  },
+  "forward|2021|Expert Systems with Applications": {
+   "n": 1209,
+   "tier_counts": {
+    "llm": 148,
+    "rule": 1061
+   },
+   "min_confidence": 0.62,
+   "n_edges": 836,
+   "n_participating": 320,
+   "n_refs_doi": 46757,
+   "sum_share_of_refs": 20.874252960300232,
+   "E1": 0.691481,
+   "E2": 0.264682,
+   "E3": 0.017266
+  },
+  "forward|2021|IEEE Transactions on Fuzzy Systems": {
+   "n": 315,
+   "tier_counts": {
+    "llm": 22,
+    "rule": 293
+   },
+   "min_confidence": 0.62,
+   "n_edges": 166,
+   "n_participating": 81,
+   "n_refs_doi": 12725,
+   "sum_share_of_refs": 4.165001207543621,
+   "E1": 0.526984,
+   "E2": 0.257143,
+   "E3": 0.013222
+  },
+  "forward|2021|Information Sciences": {
+   "n": 1161,
+   "tier_counts": {
+    "llm": 128,
+    "rule": 1033
+   },
+   "min_confidence": 0.58,
+   "n_edges": 592,
+   "n_participating": 268,
+   "n_refs_doi": 37148,
+   "sum_share_of_refs": 16.844563706256647,
+   "E1": 0.509905,
+   "E2": 0.230835,
+   "E3": 0.014509
+  },
+  "forward|2024|Applied Soft Computing": {
+   "n": 929,
+   "tier_counts": {
+    "llm": 134,
+    "rule": 795
+   },
+   "min_confidence": 0.62,
+   "n_edges": 780,
+   "n_participating": 299,
+   "n_refs_doi": 37704,
+   "sum_share_of_refs": 18.548370046275764,
+   "E1": 0.839612,
+   "E2": 0.321851,
+   "E3": 0.019966
+  },
+  "forward|2024|Computers and Operations Research": {
+   "n": 211,
+   "tier_counts": {
+    "llm": 134,
+    "rule": 77
+   },
+   "min_confidence": 0.55,
+   "n_edges": 587,
+   "n_participating": 151,
+   "n_refs_doi": 8170,
+   "sum_share_of_refs": 15.686126718607852,
+   "E1": 2.781991,
+   "E2": 0.71564,
+   "E3": 0.074342
+  },
+  "forward|2024|Engineering Applications of Artificial Intelligence": {
+   "n": 1859,
+   "tier_counts": {
+    "llm": 197,
+    "rule": 1662
+   },
+   "min_confidence": 0.55,
+   "n_edges": 794,
+   "n_participating": 349,
+   "n_refs_doi": 76707,
+   "sum_share_of_refs": 16.611594172813433,
+   "E1": 0.427111,
+   "E2": 0.187735,
+   "E3": 0.008936
+  },
+  "forward|2024|European Journal of Operational Research": {
+   "n": 537,
+   "tier_counts": {
+    "llm": 184,
+    "rule": 353
+   },
+   "min_confidence": 0.55,
+   "n_edges": 840,
+   "n_participating": 187,
+   "n_refs_doi": 25263,
+   "sum_share_of_refs": 15.404479052816374,
+   "E1": 1.564246,
+   "E2": 0.348231,
+   "E3": 0.028686
+  },
+  "forward|2024|Expert Systems with Applications": {
+   "n": 3282,
+   "tier_counts": {
+    "llm": 432,
+    "rule": 2850
+   },
+   "min_confidence": 0.62,
+   "n_edges": 1822,
+   "n_participating": 729,
+   "n_refs_doi": 132216,
+   "sum_share_of_refs": 41.1888079472571,
+   "E1": 0.555149,
+   "E2": 0.222121,
+   "E3": 0.01255
+  },
+  "forward|2024|IEEE Transactions on Fuzzy Systems": {
+   "n": 574,
+   "tier_counts": {
+    "llm": 71,
+    "rule": 503
+   },
+   "min_confidence": 0.62,
+   "n_edges": 164,
+   "n_participating": 103,
+   "n_refs_doi": 24426,
+   "sum_share_of_refs": 3.91931303221332,
+   "E1": 0.285714,
+   "E2": 0.179443,
+   "E3": 0.006828
+  },
+  "forward|2024|Information Sciences": {
+   "n": 1145,
+   "tier_counts": {
+    "llm": 117,
+    "rule": 1028
+   },
+   "min_confidence": 0.65,
+   "n_edges": 485,
+   "n_participating": 248,
+   "n_refs_doi": 33063,
+   "sum_share_of_refs": 15.941771542712026,
+   "E1": 0.423581,
+   "E2": 0.216594,
+   "E3": 0.013923
+  },
+  "forward|2025|Applied Soft Computing": {
+   "n": 1090,
+   "tier_counts": {
+    "llm": 161,
+    "rule": 929
+   },
+   "min_confidence": 0.5,
+   "n_edges": 833,
+   "n_participating": 306,
+   "n_refs_doi": 43486,
+   "sum_share_of_refs": 20.504650582066482,
+   "E1": 0.76422,
+   "E2": 0.280734,
+   "E3": 0.018812
+  },
+  "forward|2025|Computers and Operations Research": {
+   "n": 226,
+   "tier_counts": {
+    "llm": 111,
+    "rule": 115
+   },
+   "min_confidence": 0.62,
+   "n_edges": 655,
+   "n_participating": 156,
+   "n_refs_doi": 10010,
+   "sum_share_of_refs": 15.171517151126688,
+   "E1": 2.89823,
+   "E2": 0.690265,
+   "E3": 0.067131
+  },
+  "forward|2025|Engineering Applications of Artificial Intelligence": {
+   "n": 2767,
+   "tier_counts": {
+    "llm": 324,
+    "rule": 2443
+   },
+   "min_confidence": 0.6,
+   "n_edges": 919,
+   "n_participating": 427,
+   "n_refs_doi": 109166,
+   "sum_share_of_refs": 21.53427916335294,
+   "E1": 0.332129,
+   "E2": 0.154319,
+   "E3": 0.007783
+  },
+  "forward|2025|European Journal of Operational Research": {
+   "n": 421,
+   "tier_counts": {
+    "llm": 120,
+    "rule": 301
+   },
+   "min_confidence": 0.6,
+   "n_edges": 484,
+   "n_participating": 144,
+   "n_refs_doi": 21054,
+   "sum_share_of_refs": 9.8571443936605,
+   "E1": 1.149644,
+   "E2": 0.342043,
+   "E3": 0.023414
+  },
+  "forward|2025|Expert Systems with Applications": {
+   "n": 2997,
+   "tier_counts": {
+    "llm": 331,
+    "rule": 2666
+   },
+   "min_confidence": 0.55,
+   "n_edges": 1366,
+   "n_participating": 562,
+   "n_refs_doi": 111869,
+   "sum_share_of_refs": 33.53289573656078,
+   "E1": 0.455789,
+   "E2": 0.187521,
+   "E3": 0.011189
+  },
+  "forward|2025|IEEE Transactions on Fuzzy Systems": {
+   "n": 342,
+   "tier_counts": {
+    "llm": 46,
+    "rule": 296
+   },
+   "min_confidence": 0.65,
+   "n_edges": 137,
+   "n_participating": 85,
+   "n_refs_doi": 14364,
+   "sum_share_of_refs": 3.2187296068190037,
+   "E1": 0.400585,
+   "E2": 0.248538,
+   "E3": 0.009411
+  },
+  "forward|2025|Information Sciences": {
+   "n": 928,
+   "tier_counts": {
+    "llm": 97,
+    "rule": 831
+   },
+   "min_confidence": 0.62,
+   "n_edges": 300,
+   "n_participating": 146,
+   "n_refs_doi": 24685,
+   "sum_share_of_refs": 9.866708689108348,
+   "E1": 0.323276,
+   "E2": 0.157328,
+   "E3": 0.010632
+  },
+  "reverse|2021|Applied Soft Computing": {
+   "n": 380,
+   "tier_counts": {
+    "llm": 380
+   },
+   "min_confidence": 0.55,
+   "n_edges": 832,
+   "n_participating": 250,
+   "n_refs_doi": 15742,
+   "sum_share_of_refs": 18.867942802735847,
+   "E1": 2.189474,
+   "E2": 0.657895,
+   "E3": 0.049652
+  },
+  "reverse|2021|Computers and Operations Research": {
+   "n": 87,
+   "tier_counts": {
+    "llm": 87
+   },
+   "min_confidence": 0.55,
+   "n_edges": 420,
+   "n_participating": 80,
+   "n_refs_doi": 3419,
+   "sum_share_of_refs": 10.835955152798615,
+   "E1": 4.827586,
+   "E2": 0.91954,
+   "E3": 0.124551
+  },
+  "reverse|2021|Engineering Applications of Artificial Intelligence": {
+   "n": 76,
+   "tier_counts": {
+    "llm": 76
+   },
+   "min_confidence": 0.6,
+   "n_edges": 180,
+   "n_participating": 47,
+   "n_refs_doi": 3335,
+   "sum_share_of_refs": 3.685471403910242,
+   "E1": 2.368421,
+   "E2": 0.618421,
+   "E3": 0.048493
+  },
+  "reverse|2021|European Journal of Operational Research": {
+   "n": 57,
+   "tier_counts": {
+    "llm": 57
+   },
+   "min_confidence": 0.62,
+   "n_edges": 277,
+   "n_participating": 52,
+   "n_refs_doi": 2098,
+   "sum_share_of_refs": 7.484304007378497,
+   "E1": 4.859649,
+   "E2": 0.912281,
+   "E3": 0.131304
+  },
+  "reverse|2021|Expert Systems with Applications": {
+   "n": 290,
+   "tier_counts": {
+    "llm": 290
+   },
+   "min_confidence": 0.62,
+   "n_edges": 807,
+   "n_participating": 203,
+   "n_refs_doi": 13524,
+   "sum_share_of_refs": 17.960246890339356,
+   "E1": 2.782759,
+   "E2": 0.7,
+   "E3": 0.061932
+  },
+  "reverse|2021|IEEE Transactions on Fuzzy Systems": {
+   "n": 11,
+   "tier_counts": {
+    "llm": 11
+   },
+   "min_confidence": 0.85,
+   "n_edges": 55,
+   "n_participating": 9,
+   "n_refs_doi": 439,
+   "sum_share_of_refs": 1.286273449847606,
+   "E1": 5.0,
+   "E2": 0.818182,
+   "E3": 0.116934
+  },
+  "reverse|2021|Information Sciences": {
+   "n": 137,
+   "tier_counts": {
+    "llm": 137
+   },
+   "min_confidence": 0.55,
+   "n_edges": 278,
+   "n_participating": 90,
+   "n_refs_doi": 4989,
+   "sum_share_of_refs": 7.763580241192168,
+   "E1": 2.029197,
+   "E2": 0.656934,
+   "E3": 0.056668
+  },
+  "reverse|2024|Applied Soft Computing": {
+   "n": 335,
+   "tier_counts": {
+    "llm": 335
+   },
+   "min_confidence": 0.55,
+   "n_edges": 888,
+   "n_participating": 226,
+   "n_refs_doi": 15118,
+   "sum_share_of_refs": 19.5471887018598,
+   "E1": 2.650746,
+   "E2": 0.674627,
+   "E3": 0.05835
+  },
+  "reverse|2024|Computers and Operations Research": {
+   "n": 109,
+   "tier_counts": {
+    "llm": 109
+   },
+   "min_confidence": 0.52,
+   "n_edges": 622,
+   "n_participating": 105,
+   "n_refs_doi": 4840,
+   "sum_share_of_refs": 14.442867520978018,
+   "E1": 5.706422,
+   "E2": 0.963303,
+   "E3": 0.132503
+  },
+  "reverse|2024|Engineering Applications of Artificial Intelligence": {
+   "n": 156,
+   "tier_counts": {
+    "llm": 156
+   },
+   "min_confidence": 0.55,
+   "n_edges": 423,
+   "n_participating": 121,
+   "n_refs_doi": 7559,
+   "sum_share_of_refs": 8.791964894235495,
+   "E1": 2.711538,
+   "E2": 0.775641,
+   "E3": 0.056359
+  },
+  "reverse|2024|European Journal of Operational Research": {
+   "n": 57,
+   "tier_counts": {
+    "llm": 57
+   },
+   "min_confidence": 0.62,
+   "n_edges": 346,
+   "n_participating": 55,
+   "n_refs_doi": 2385,
+   "sum_share_of_refs": 8.388894777422271,
+   "E1": 6.070175,
+   "E2": 0.964912,
+   "E3": 0.147174
+  },
+  "reverse|2024|Expert Systems with Applications": {
+   "n": 405,
+   "tier_counts": {
+    "llm": 405
+   },
+   "min_confidence": 0.55,
+   "n_edges": 1145,
+   "n_participating": 282,
+   "n_refs_doi": 18825,
+   "sum_share_of_refs": 26.19662510017342,
+   "E1": 2.82716,
+   "E2": 0.696296,
+   "E3": 0.064683
+  },
+  "reverse|2024|IEEE Transactions on Fuzzy Systems": {
+   "n": 10,
+   "tier_counts": {
+    "llm": 10
+   },
+   "min_confidence": 0.72,
+   "n_edges": 83,
+   "n_participating": 9,
+   "n_refs_doi": 434,
+   "sum_share_of_refs": 1.9421400299250136,
+   "E1": 8.3,
+   "E2": 0.9,
+   "E3": 0.194214
+  },
+  "reverse|2024|Information Sciences": {
+   "n": 137,
+   "tier_counts": {
+    "llm": 137
+   },
+   "min_confidence": 0.62,
+   "n_edges": 301,
+   "n_participating": 90,
+   "n_refs_doi": 4684,
+   "sum_share_of_refs": 8.761180746919658,
+   "E1": 2.19708,
+   "E2": 0.656934,
+   "E3": 0.06395
+  },
+  "reverse|2025|Applied Soft Computing": {
+   "n": 258,
+   "tier_counts": {
+    "llm": 257,
+    "venue": 1
+   },
+   "min_confidence": 0.55,
+   "n_edges": 702,
+   "n_participating": 200,
+   "n_refs_doi": 12234,
+   "sum_share_of_refs": 15.647418485713056,
+   "E1": 2.72093,
+   "E2": 0.775194,
+   "E3": 0.060649
+  },
+  "reverse|2025|Computers and Operations Research": {
+   "n": 99,
+   "tier_counts": {
+    "llm": 99
+   },
+   "min_confidence": 0.55,
+   "n_edges": 471,
+   "n_participating": 93,
+   "n_refs_doi": 4290,
+   "sum_share_of_refs": 10.414845441766658,
+   "E1": 4.757576,
+   "E2": 0.939394,
+   "E3": 0.1052
+  },
+  "reverse|2025|Engineering Applications of Artificial Intelligence": {
+   "n": 162,
+   "tier_counts": {
+    "llm": 162
+   },
+   "min_confidence": 0.55,
+   "n_edges": 434,
+   "n_participating": 120,
+   "n_refs_doi": 7163,
+   "sum_share_of_refs": 10.497822420261944,
+   "E1": 2.679012,
+   "E2": 0.740741,
+   "E3": 0.064801
+  },
+  "reverse|2025|European Journal of Operational Research": {
+   "n": 50,
+   "tier_counts": {
+    "llm": 50
+   },
+   "min_confidence": 0.55,
+   "n_edges": 358,
+   "n_participating": 47,
+   "n_refs_doi": 2529,
+   "sum_share_of_refs": 7.96671757160363,
+   "E1": 7.16,
+   "E2": 0.94,
+   "E3": 0.159334
+  },
+  "reverse|2025|Expert Systems with Applications": {
+   "n": 270,
+   "tier_counts": {
+    "llm": 270
+   },
+   "min_confidence": 0.55,
+   "n_edges": 672,
+   "n_participating": 195,
+   "n_refs_doi": 12099,
+   "sum_share_of_refs": 14.913218096617822,
+   "E1": 2.488889,
+   "E2": 0.722222,
+   "E3": 0.055234
+  },
+  "reverse|2025|IEEE Transactions on Fuzzy Systems": {
+   "n": 9,
+   "tier_counts": {
+    "llm": 9
+   },
+   "min_confidence": 0.72,
+   "n_edges": 92,
+   "n_participating": 9,
+   "n_refs_doi": 403,
+   "sum_share_of_refs": 2.145203120346021,
+   "E1": 10.222222,
+   "E2": 1.0,
+   "E3": 0.238356
+  },
+  "reverse|2025|Information Sciences": {
+   "n": 99,
+   "tier_counts": {
+    "llm": 99
+   },
+   "min_confidence": 0.62,
+   "n_edges": 156,
+   "n_participating": 61,
+   "n_refs_doi": 3276,
+   "sum_share_of_refs": 4.693807912379512,
+   "E1": 1.575758,
+   "E2": 0.616162,
+   "E3": 0.047412
+  }
+ },
+ "point_estimates": {
+  "2021->2024": {
+   "E1": {
+    "forward_rel_change": -0.0183,
+    "reverse_rel_change": 0.1471,
+    "gap_pp": 16.5319
+   },
+   "E2": {
+    "forward_rel_change": -0.0579,
+    "reverse_rel_change": 0.0341,
+    "gap_pp": 9.2021
+   },
+   "E3": {
+    "forward_rel_change": -0.0742,
+    "reverse_rel_change": 0.12,
+    "gap_pp": 19.4217
+   }
+  },
+  "2021->2025": {
+   "E1": {
+    "forward_rel_change": -0.161,
+    "reverse_rel_change": 0.0915,
+    "gap_pp": 25.2459
+   },
+   "E2": {
+    "forward_rel_change": -0.164,
+    "reverse_rel_change": 0.0821,
+    "gap_pp": 24.6177
+   },
+   "E3": {
+    "forward_rel_change": -0.1916,
+    "reverse_rel_change": 0.0509,
+    "gap_pp": 24.2548
+   }
+  }
+ },
+ "bootstrap": {
+  "2021->2024|E1": {
+   "window": "2021->2024",
+   "metric": "E1",
+   "right_censored": false,
+   "n_reps": 4000,
+   "n_valid": 4000,
+   "gap_pp": {
+    "q025": -0.570702,
+    "q50": 16.574925,
+    "q975": 33.139444
+   },
+   "positive_share": 0.97175,
+   "forward_rel_change": {
+    "q025": -0.131955,
+    "q50": -0.017981,
+    "q975": 0.108923
+   },
+   "reverse_rel_change": {
+    "q025": 0.03916,
+    "q50": 0.146045,
+    "q975": 0.265601
+   }
+  },
+  "2021->2024|E2": {
+   "window": "2021->2024",
+   "metric": "E2",
+   "right_censored": false,
+   "n_reps": 4000,
+   "n_valid": 4000,
+   "gap_pp": {
+    "q025": 1.314376,
+    "q50": 9.319911,
+    "q975": 17.011303
+   },
+   "positive_share": 0.9885,
+   "forward_rel_change": {
+    "q025": -0.113098,
+    "q50": -0.058445,
+    "q975": 0.000874
+   },
+   "reverse_rel_change": {
+    "q025": -0.019258,
+    "q50": 0.034555,
+    "q975": 0.091152
+   }
+  },
+  "2021->2024|E3": {
+   "window": "2021->2024",
+   "metric": "E3",
+   "right_censored": false,
+   "n_reps": 4000,
+   "n_valid": 4000,
+   "gap_pp": {
+    "q025": 5.272329,
+    "q50": 19.207113,
+    "q975": 33.667872
+   },
+   "positive_share": 0.996,
+   "forward_rel_change": {
+    "q025": -0.168007,
+    "q50": -0.074608,
+    "q975": 0.028081
+   },
+   "reverse_rel_change": {
+    "q025": 0.022354,
+    "q50": 0.118546,
+    "q975": 0.229771
+   }
+  },
+  "2021->2025|E1": {
+   "window": "2021->2025",
+   "metric": "E1",
+   "right_censored": true,
+   "n_reps": 4000,
+   "n_valid": 4000,
+   "gap_pp": {
+    "q025": 10.333137,
+    "q50": 25.248796,
+    "q975": 39.793959
+   },
+   "positive_share": 0.99975,
+   "forward_rel_change": {
+    "q025": -0.255392,
+    "q50": -0.160749,
+    "q975": -0.05798
+   },
+   "reverse_rel_change": {
+    "q025": -0.010794,
+    "q50": 0.090887,
+    "q975": 0.201754
+   }
+  },
+  "2021->2025|E2": {
+   "window": "2021->2025",
+   "metric": "E2",
+   "right_censored": true,
+   "n_reps": 4000,
+   "n_valid": 4000,
+   "gap_pp": {
+    "q025": 16.820948,
+    "q50": 24.690889,
+    "q975": 32.453997
+   },
+   "positive_share": 1.0,
+   "forward_rel_change": {
+    "q025": -0.215933,
+    "q50": -0.16506,
+    "q975": -0.108851
+   },
+   "reverse_rel_change": {
+    "q025": 0.026149,
+    "q50": 0.082432,
+    "q975": 0.142371
+   }
+  },
+  "2021->2025|E3": {
+   "window": "2021->2025",
+   "metric": "E3",
+   "right_censored": true,
+   "n_reps": 4000,
+   "n_valid": 4000,
+   "gap_pp": {
+    "q025": 11.10494,
+    "q50": 24.442273,
+    "q975": 37.639182
+   },
+   "positive_share": 0.99975,
+   "forward_rel_change": {
+    "q025": -0.275479,
+    "q50": -0.192261,
+    "q975": -0.097438
+   },
+   "reverse_rel_change": {
+    "q025": -0.042039,
+    "q50": 0.051193,
+    "q975": 0.155443
+   }
+  }
+ },
+ "endpoint_censoring": {
+  "censored_endpoint_years": [
+   2025
+  ],
+  "note": "2025 is the final collection year (right censoring). Every 2021->2025 number mixes trend with truncation and must be read next to its 2021->2024 counterpart (registered full-run sensitivity ~13 pp of extra decline on 2021->2025 vs 2021->2024, same sign in both directions)."
+ },
+ "cross_check": {
+  "point_estimate_check": {
+   "checked": 12,
+   "mismatch": []
+  },
+  "per_source_cell_check": {
+   "checked": 42,
+   "mismatch": []
+  },
+  "gap_matrix_check": {
+   "checked": 6,
+   "mismatch": []
+  }
+ },
+ "limitations": [
+  "Composition is frozen at the 2021 mix (fixed 2021 weights); source-mix shifts in 2024/2025 are intentionally not re-sampled.",
+  "Papers from sources outside the support (notably Computers and Industrial Engineering, collection ends 2021) are excluded; coverage share is reported per direction and year.",
+  "Resampling models within-stratum variability of the citing-paper pool only; labeling (LLM-tier), source-selection and reference-parsing uncertainty are outside the model.",
+  "Percentile intervals only; no bias correction (no BCa, no studentisation) and no coverage claim.",
+  "Forward and reverse pools differ in size and coverage; they are treated as independent (non-paired) in every replicate.",
+  "E3 uses DOI-resolved references only; papers with zero DOI references contribute 0.0 and remain in all E1/E2/E3 denominators (matches stable8_merged.py).",
+  "Edge counts are distinct cited in-corpus papers per citing paper (COUNT(DISTINCT pc.accession_no)); edges within one paper move together under resampling."
+ ]
+}

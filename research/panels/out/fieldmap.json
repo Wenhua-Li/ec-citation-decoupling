@@ -1,0 +1,3208 @@
+{
+ "design": {
+  "windows": {
+   "early": [
+    "2011-01-01",
+    "2013-12-31"
+   ],
+   "modern": [
+    "2021-01-01",
+    "2023-12-31"
+   ]
+  },
+  "tier_edges_threshold": 100,
+  "nboot": 2000,
+  "seed_base": 20261018,
+  "note": "共同支持=两窗均有文章；零基源单列；E3 无参考文献计 0；符号稳健=逐源同号（命题2 反面）；gap=反向−正向（pp）；来源级聚类重抽未做（3–5 源近退化）"
+ },
+ "directions": {
+  "physics->materials": {
+   "per_source": {
+    "S24807848": {
+     "early": {
+      "n_articles": 11231,
+      "edges": 2531,
+      "refs_total": 313017,
+      "with_edge": 1280,
+      "E1": 0.225358,
+      "E2": 0.11397,
+      "E3": 0.007551
+     },
+     "modern": {
+      "n_articles": 6657,
+      "edges": 2681,
+      "refs_total": 355980,
+      "with_edge": 1140,
+      "E1": 0.402734,
+      "E2": 0.171248,
+      "E3": 0.007724
+     }
+    },
+    "S4210237713": {
+     "early": {
+      "n_articles": 0,
+      "edges": 0,
+      "refs_total": 0,
+      "with_edge": 0,
+      "E1": 0.0,
+      "E2": 0.0,
+      "E3": 0.0
+     },
+     "modern": {
+      "n_articles": 14894,
+      "edges": 13841,
+      "refs_total": 847609,
+      "with_edge": 5487,
+      "E1": 0.9293,
+      "E2": 0.368403,
+      "E3": 0.016611
+     }
+    },
+    "S105243760": {
+     "early": {
+      "n_articles": 15076,
+      "edges": 16765,
+      "refs_total": 324995,
+      "with_edge": 6284,
+      "E1": 1.112032,
+      "E2": 0.416821,
+      "E3": 0.04719
+     },
+     "modern": {
+      "n_articles": 6904,
+      "edges": 14694,
+      "refs_total": 262961,
+      "with_edge": 4061,
+      "E1": 2.128331,
+      "E2": 0.58821,
+      "E3": 0.05279
+     }
+    },
+    "S164566984": {
+     "early": {
+      "n_articles": 8437,
+      "edges": 377,
+      "refs_total": 295976,
+      "with_edge": 224,
+      "E1": 0.044684,
+      "E2": 0.02655,
+      "E3": 0.001174
+     },
+     "modern": {
+      "n_articles": 6771,
+      "edges": 604,
+      "refs_total": 357664,
+      "with_edge": 357,
+      "E1": 0.089204,
+      "E2": 0.052725,
+      "E3": 0.001585
+     }
+    }
+   },
+   "support": [
+    "S24807848",
+    "S105243760",
+    "S164566984"
+   ],
+   "zero_base_sources": [],
+   "scorecard": {
+    "E1": {
+     "signs": [
+      1,
+      1,
+      1
+     ],
+     "consistent": true,
+     "direction": "up"
+    },
+    "E2": {
+     "signs": [
+      1,
+      1,
+      1
+     ],
+     "consistent": true,
+     "direction": "up"
+    },
+    "E3": {
+     "signs": [
+      1,
+      1,
+      1
+     ],
+     "consistent": true,
+     "direction": "up"
+    }
+   },
+   "aggregates": {
+    "E1": {
+     "laspeyres_rel": 0.899174,
+     "paasche_rel": 0.896472,
+     "pooled_rel": 0.561689,
+     "width_pp": -0.2702
+    },
+    "E2": {
+     "laspeyres_rel": 0.442731,
+     "paasche_rel": 0.456423,
+     "pooled_rel": 0.21953,
+     "width_pp": 1.3691
+    },
+    "E3": {
+     "laspeyres_rel": 0.111439,
+     "paasche_rel": 0.110925,
+     "pooled_rel": -0.125988,
+     "width_pp": -0.0514
+    }
+   },
+   "pooled_edges": {
+    "early": 19673,
+    "modern": 17979
+   },
+   "tier": "full",
+   "loo_e1": {
+    "S24807848": {
+     "pooled_rel": 0.534454,
+     "laspeyres_rel": 0.915724,
+     "paasche_rel": 0.917036
+    },
+    "S105243760": {
+     "pooled_rel": 0.654588,
+     "laspeyres_rel": 0.814212,
+     "paasche_rel": 0.822203
+    },
+    "S164566984": {
+     "pooled_rel": 0.746776,
+     "laspeyres_rel": 0.897276,
+     "paasche_rel": 0.89318
+    }
+   },
+   "bootstrap_pooled_e1": {
+    "q025": 0.498658,
+    "q50": 0.561405,
+    "q975": 0.628384,
+    "pos_share": 1.0,
+    "n_valid": 2000
+   }
+  },
+  "chemistry->chemical_engineering": {
+   "per_source": {
+    "S111155417": {
+     "early": {
+      "n_articles": 9341,
+      "edges": 405,
+      "refs_total": 452015,
+      "with_edge": 244,
+      "E1": 0.043357,
+      "E2": 0.026121,
+      "E3": 0.000977
+     },
+     "modern": {
+      "n_articles": 7961,
+      "edges": 518,
+      "refs_total": 472629,
+      "with_edge": 345,
+      "E1": 0.065067,
+      "E2": 0.043336,
+      "E3": 0.00116
+     }
+    },
+    "S67393510": {
+     "early": {
+      "n_articles": 8062,
+      "edges": 342,
+      "refs_total": 344959,
+      "with_edge": 185,
+      "E1": 0.042421,
+      "E2": 0.022947,
+      "E3": 0.000942
+     },
+     "modern": {
+      "n_articles": 11225,
+      "edges": 923,
+      "refs_total": 663702,
+      "with_edge": 573,
+      "E1": 0.082227,
+      "E2": 0.051047,
+      "E3": 0.001309
+     }
+    },
+    "S184645833": {
+     "early": {
+      "n_articles": 1478,
+      "edges": 110,
+      "refs_total": 83171,
+      "with_edge": 57,
+      "E1": 0.074425,
+      "E2": 0.038566,
+      "E3": 0.00153
+     },
+     "modern": {
+      "n_articles": 4393,
+      "edges": 382,
+      "refs_total": 285922,
+      "with_edge": 213,
+      "E1": 0.086957,
+      "E2": 0.048486,
+      "E3": 0.001184
+     }
+    },
+    "S191963794": {
+     "early": {
+      "n_articles": 4486,
+      "edges": 219,
+      "refs_total": 178441,
+      "with_edge": 136,
+      "E1": 0.048819,
+      "E2": 0.030317,
+      "E3": 0.001258
+     },
+     "modern": {
+      "n_articles": 6236,
+      "edges": 171,
+      "refs_total": 274499,
+      "with_edge": 133,
+      "E1": 0.027421,
+      "E2": 0.021328,
+      "E3": 0.000604
+     }
+    }
+   },
+   "support": [
+    "S111155417",
+    "S67393510",
+    "S184645833",
+    "S191963794"
+   ],
+   "zero_base_sources": [],
+   "scorecard": {
+    "E1": {
+     "signs": [
+      1,
+      1,
+      1,
+      -1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    },
+    "E2": {
+     "signs": [
+      1,
+      1,
+      1,
+      -1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    },
+    "E3": {
+     "signs": [
+      1,
+      1,
+      -1,
+      -1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    }
+   },
+   "aggregates": {
+    "E1": {
+     "laspeyres_rel": 0.414722,
+     "paasche_rel": 0.37259,
+     "pooled_rel": 0.452383,
+     "width_pp": -4.2132
+    },
+    "E2": {
+     "laspeyres_rel": 0.581489,
+     "paasche_rel": 0.533969,
+     "pooled_rel": 0.592666,
+     "width_pp": -4.7519
+    },
+    "E3": {
+     "laspeyres_rel": 0.049661,
+     "paasche_rel": -0.000665,
+     "pooled_rel": 0.156167,
+     "width_pp": -5.0326
+    }
+   },
+   "pooled_edges": {
+    "early": 1076,
+    "modern": 1994
+   },
+   "tier": "full",
+   "loo_e1": {
+    "S111155417": {
+     "pooled_rel": 0.411779,
+     "laspeyres_rel": 0.362812,
+     "paasche_rel": 0.332657
+    },
+    "S67393510": {
+     "pooled_rel": 0.201289,
+     "laspeyres_rel": 0.170741,
+     "paasche_rel": 0.096717
+    },
+    "S184645833": {
+     "pooled_rel": 0.436826,
+     "laspeyres_rel": 0.442773,
+     "paasche_rel": 0.431896
+    },
+    "S191963794": {
+     "pooled_rel": 0.703356,
+     "laspeyres_rel": 0.632712,
+     "paasche_rel": 0.587577
+    }
+   },
+   "bootstrap_pooled_e1": {
+    "q025": 0.265737,
+    "q50": 0.453324,
+    "q975": 0.674143,
+    "pos_share": 1.0,
+    "n_valid": 2000
+   }
+  },
+  "biology->medicine": {
+   "per_source": {
+    "S110447773": {
+     "early": {
+      "n_articles": 1801,
+      "edges": 560,
+      "refs_total": 79393,
+      "with_edge": 238,
+      "E1": 0.310938,
+      "E2": 0.132149,
+      "E3": 0.006355
+     },
+     "modern": {
+      "n_articles": 1390,
+      "edges": 1503,
+      "refs_total": 100090,
+      "with_edge": 443,
+      "E1": 1.081295,
+      "E2": 0.318705,
+      "E3": 0.017917
+     }
+    },
+    "S154343897": {
+     "early": {
+      "n_articles": 804,
+      "edges": 134,
+      "refs_total": 35212,
+      "with_edge": 76,
+      "E1": 0.166667,
+      "E2": 0.094527,
+      "E3": 0.003877
+     },
+     "modern": {
+      "n_articles": 1182,
+      "edges": 518,
+      "refs_total": 76247,
+      "with_edge": 211,
+      "E1": 0.43824,
+      "E2": 0.178511,
+      "E3": 0.009368
+     }
+    },
+    "S127916151": {
+     "early": {
+      "n_articles": 1111,
+      "edges": 113,
+      "refs_total": 58251,
+      "with_edge": 68,
+      "E1": 0.10171,
+      "E2": 0.061206,
+      "E3": 0.002552
+     },
+     "modern": {
+      "n_articles": 864,
+      "edges": 219,
+      "refs_total": 66506,
+      "with_edge": 123,
+      "E1": 0.253472,
+      "E2": 0.142361,
+      "E3": 0.003414
+     }
+    },
+    "S134668137": {
+     "early": {
+      "n_articles": 4175,
+      "edges": 306,
+      "refs_total": 195229,
+      "with_edge": 221,
+      "E1": 0.073293,
+      "E2": 0.052934,
+      "E3": 0.001559
+     },
+     "modern": {
+      "n_articles": 3671,
+      "edges": 485,
+      "refs_total": 237307,
+      "with_edge": 309,
+      "E1": 0.132117,
+      "E2": 0.084173,
+      "E3": 0.002145
+     }
+    }
+   },
+   "support": [
+    "S110447773",
+    "S154343897",
+    "S127916151",
+    "S134668137"
+   ],
+   "zero_base_sources": [],
+   "scorecard": {
+    "E1": {
+     "signs": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "consistent": true,
+     "direction": "up"
+    },
+    "E2": {
+     "signs": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "consistent": true,
+     "direction": "up"
+    },
+    "E3": {
+     "signs": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "consistent": true,
+     "direction": "up"
+    }
+   },
+   "aggregates": {
+    "E1": {
+     "laspeyres_rel": 1.814878,
+     "paasche_rel": 1.7633,
+     "pooled_rel": 1.718423,
+     "width_pp": -5.1579
+    },
+    "E2": {
+     "laspeyres_rel": 1.034987,
+     "paasche_rel": 1.001396,
+     "pooled_rel": 0.99967,
+     "width_pp": -3.3591
+    },
+    "E3": {
+     "laspeyres_rel": 1.198088,
+     "paasche_rel": 1.19272,
+     "pooled_rel": 0.876906,
+     "width_pp": -0.5368
+    }
+   },
+   "pooled_edges": {
+    "early": 1113,
+    "modern": 2725
+   },
+   "tier": "full",
+   "loo_e1": {
+    "S110447773": {
+     "pooled_rel": 1.353939,
+     "laspeyres_rel": 1.143842,
+     "paasche_rel": 1.206031
+    },
+    "S154343897": {
+     "pooled_rel": 1.696458,
+     "laspeyres_rel": 1.840261,
+     "paasche_rel": 1.796718
+    },
+    "S127916151": {
+     "pooled_rel": 1.721557,
+     "laspeyres_rel": 1.851352,
+     "paasche_rel": 1.789831
+    },
+    "S134668137": {
+     "pooled_rel": 2.001906,
+     "laspeyres_rel": 2.198719,
+     "paasche_rel": 2.123772
+    }
+   },
+   "bootstrap_pooled_e1": {
+    "q025": 1.364324,
+    "q50": 1.714593,
+    "q975": 2.137151,
+    "pos_share": 1.0,
+    "n_valid": 2000
+   }
+  },
+  "computer_science->electrical_engineering": {
+   "per_source": {
+    "S118992489": {
+     "early": {
+      "n_articles": 102,
+      "edges": 45,
+      "refs_total": 4179,
+      "with_edge": 21,
+      "E1": 0.441176,
+      "E2": 0.205882,
+      "E3": 0.008835
+     },
+     "modern": {
+      "n_articles": 133,
+      "edges": 72,
+      "refs_total": 5724,
+      "with_edge": 22,
+      "E1": 0.541353,
+      "E2": 0.165414,
+      "E3": 0.013815
+     }
+    },
+    "S199944782": {
+     "early": {
+      "n_articles": 728,
+      "edges": 265,
+      "refs_total": 26984,
+      "with_edge": 153,
+      "E1": 0.364011,
+      "E2": 0.210165,
+      "E3": 0.008148
+     },
+     "modern": {
+      "n_articles": 1864,
+      "edges": 653,
+      "refs_total": 137434,
+      "with_edge": 371,
+      "E1": 0.350322,
+      "E2": 0.199034,
+      "E3": 0.005626
+     }
+    },
+    "S103482838": {
+     "early": {
+      "n_articles": 904,
+      "edges": 43,
+      "refs_total": 7188,
+      "with_edge": 29,
+      "E1": 0.047566,
+      "E2": 0.03208,
+      "E3": 0.003169
+     },
+     "modern": {
+      "n_articles": 885,
+      "edges": 24,
+      "refs_total": 6909,
+      "with_edge": 20,
+      "E1": 0.027119,
+      "E2": 0.022599,
+      "E3": 0.001518
+     }
+    }
+   },
+   "support": [
+    "S118992489",
+    "S199944782",
+    "S103482838"
+   ],
+   "zero_base_sources": [],
+   "scorecard": {
+    "E1": {
+     "signs": [
+      1,
+      -1,
+      -1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    },
+    "E2": {
+     "signs": [
+      -1,
+      -1,
+      -1
+     ],
+     "consistent": true,
+     "direction": "down"
+    },
+    "E3": {
+     "signs": [
+      1,
+      -1,
+      -1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    }
+   },
+   "aggregates": {
+    "E1": {
+     "laspeyres_rel": -0.051648,
+     "paasche_rel": -0.038867,
+     "pooled_rel": 0.276622,
+     "width_pp": 1.2781
+    },
+    "E2": {
+     "laspeyres_rel": -0.102472,
+     "paasche_rel": -0.077139,
+     "pooled_rel": 0.224078,
+     "width_pp": 2.5334
+    },
+    "E3": {
+     "laspeyres_rel": -0.290849,
+     "paasche_rel": -0.286934,
+     "pooled_rel": -0.457751,
+     "width_pp": 0.3915
+    }
+   },
+   "pooled_edges": {
+    "early": 353,
+    "modern": 749
+   },
+   "tier": "e1_tier",
+   "loo_e1": {},
+   "bootstrap_pooled_e1": {
+    "q025": 0.028143,
+    "q50": 0.276663,
+    "q975": 0.58142,
+    "pos_share": 0.9885,
+    "n_valid": 2000
+   }
+  },
+  "neuroscience->psychology": {
+   "per_source": {
+    "S45757444": {
+     "early": {
+      "n_articles": 1388,
+      "edges": 386,
+      "refs_total": 86190,
+      "with_edge": 138,
+      "E1": 0.278098,
+      "E2": 0.099424,
+      "E3": 0.003321
+     },
+     "modern": {
+      "n_articles": 1154,
+      "edges": 258,
+      "refs_total": 77270,
+      "with_edge": 119,
+      "E1": 0.22357,
+      "E2": 0.10312,
+      "E3": 0.003067
+     }
+    },
+    "S2298632": {
+     "early": {
+      "n_articles": 875,
+      "edges": 171,
+      "refs_total": 35599,
+      "with_edge": 89,
+      "E1": 0.195429,
+      "E2": 0.101714,
+      "E3": 0.005245
+     },
+     "modern": {
+      "n_articles": 694,
+      "edges": 132,
+      "refs_total": 37066,
+      "with_edge": 71,
+      "E1": 0.190202,
+      "E2": 0.102305,
+      "E3": 0.00286
+     }
+    },
+    "S5555990": {
+     "early": {
+      "n_articles": 5454,
+      "edges": 1236,
+      "refs_total": 299485,
+      "with_edge": 631,
+      "E1": 0.226623,
+      "E2": 0.115695,
+      "E3": 0.004535
+     },
+     "modern": {
+      "n_articles": 2219,
+      "edges": 898,
+      "refs_total": 148663,
+      "with_edge": 400,
+      "E1": 0.404687,
+      "E2": 0.180261,
+      "E3": 0.00544
+     }
+    }
+   },
+   "support": [
+    "S45757444",
+    "S2298632",
+    "S5555990"
+   ],
+   "zero_base_sources": [],
+   "scorecard": {
+    "E1": {
+     "signs": [
+      -1,
+      -1,
+      1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    },
+    "E2": {
+     "signs": [
+      1,
+      1,
+      1
+     ],
+     "consistent": true,
+     "direction": "up"
+    },
+    "E3": {
+     "signs": [
+      -1,
+      -1,
+      1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    }
+   },
+   "aggregates": {
+    "E1": {
+     "laspeyres_rel": 0.496878,
+     "paasche_rel": 0.342465,
+     "pooled_rel": 0.363044,
+     "width_pp": -15.4412
+    },
+    "E2": {
+     "laspeyres_rel": 0.417004,
+     "paasche_rel": 0.334683,
+     "pooled_rel": 0.304785,
+     "width_pp": -8.2321
+    },
+    "E3": {
+     "laspeyres_rel": 0.07357,
+     "paasche_rel": 0.003415,
+     "pooled_rel": 0.150658,
+     "width_pp": -7.0155
+    }
+   },
+   "pooled_edges": {
+    "early": 1793,
+    "modern": 1288
+   },
+   "tier": "full",
+   "loo_e1": {
+    "S45757444": {
+     "pooled_rel": 0.590515,
+     "laspeyres_rel": 0.686984,
+     "paasche_rel": 0.613146
+    },
+    "S2298632": {
+     "pooled_rel": 0.445685,
+     "laspeyres_rel": 0.552081,
+     "paasche_rel": 0.403251
+    },
+    "S5555990": {
+     "pooled_rel": -0.142583,
+     "laspeyres_rel": -0.144091,
+     "paasche_rel": -0.145773
+    }
+   },
+   "bootstrap_pooled_e1": {
+    "q025": 0.190928,
+    "q50": 0.357478,
+    "q975": 0.542058,
+    "pos_share": 1.0,
+    "n_valid": 2000
+   }
+  },
+  "economics->business": {
+   "per_source": {
+    "S23254222": {
+     "early": {
+      "n_articles": 819,
+      "edges": 116,
+      "refs_total": 23348,
+      "with_edge": 61,
+      "E1": 0.141636,
+      "E2": 0.074481,
+      "E3": 0.003469
+     },
+     "modern": {
+      "n_articles": 320,
+      "edges": 115,
+      "refs_total": 16695,
+      "with_edge": 65,
+      "E1": 0.359375,
+      "E2": 0.203125,
+      "E3": 0.007151
+     }
+    },
+    "S203860005": {
+     "early": {
+      "n_articles": 152,
+      "edges": 27,
+      "refs_total": 8040,
+      "with_edge": 14,
+      "E1": 0.177632,
+      "E2": 0.092105,
+      "E3": 0.00315
+     },
+     "modern": {
+      "n_articles": 137,
+      "edges": 51,
+      "refs_total": 9395,
+      "with_edge": 28,
+      "E1": 0.372263,
+      "E2": 0.20438,
+      "E3": 0.005461
+     }
+    },
+    "S95323914": {
+     "early": {
+      "n_articles": 128,
+      "edges": 33,
+      "refs_total": 4717,
+      "with_edge": 13,
+      "E1": 0.257812,
+      "E2": 0.101562,
+      "E3": 0.005637
+     },
+     "modern": {
+      "n_articles": 308,
+      "edges": 63,
+      "refs_total": 10064,
+      "with_edge": 40,
+      "E1": 0.204545,
+      "E2": 0.12987,
+      "E3": 0.0047
+     }
+    },
+    "S95464858": {
+     "early": {
+      "n_articles": 243,
+      "edges": 16,
+      "refs_total": 7764,
+      "with_edge": 13,
+      "E1": 0.065844,
+      "E2": 0.053498,
+      "E3": 0.001315
+     },
+     "modern": {
+      "n_articles": 272,
+      "edges": 47,
+      "refs_total": 11595,
+      "with_edge": 28,
+      "E1": 0.172794,
+      "E2": 0.102941,
+      "E3": 0.003953
+     }
+    },
+    "S88935262": {
+     "early": {
+      "n_articles": 191,
+      "edges": 31,
+      "refs_total": 10320,
+      "with_edge": 22,
+      "E1": 0.162304,
+      "E2": 0.115183,
+      "E3": 0.003664
+     },
+     "modern": {
+      "n_articles": 282,
+      "edges": 83,
+      "refs_total": 15766,
+      "with_edge": 48,
+      "E1": 0.294326,
+      "E2": 0.170213,
+      "E3": 0.005363
+     }
+    }
+   },
+   "support": [
+    "S23254222",
+    "S203860005",
+    "S95323914",
+    "S95464858",
+    "S88935262"
+   ],
+   "zero_base_sources": [],
+   "scorecard": {
+    "E1": {
+     "signs": [
+      1,
+      1,
+      -1,
+      1,
+      1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    },
+    "E2": {
+     "signs": [
+      1,
+      1,
+      1,
+      1,
+      1
+     ],
+     "consistent": true,
+     "direction": "up"
+    },
+    "E3": {
+     "signs": [
+      1,
+      1,
+      -1,
+      1,
+      1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    }
+   },
+   "aggregates": {
+    "E1": {
+     "laspeyres_rel": 1.131386,
+     "paasche_rel": 0.687469,
+     "pooled_rel": 0.871057,
+     "width_pp": -44.3916
+    },
+    "E2": {
+     "laspeyres_rel": 1.207921,
+     "paasche_rel": 0.82109,
+     "pooled_rel": 0.97487,
+     "width_pp": -38.6831
+    },
+    "E3": {
+     "laspeyres_rel": 0.832363,
+     "paasche_rel": 0.514678,
+     "pooled_rel": 0.373487,
+     "width_pp": -31.7685
+    }
+   },
+   "pooled_edges": {
+    "early": 223,
+    "modern": 359
+   },
+   "tier": "e1_tier",
+   "loo_e1": {},
+   "bootstrap_pooled_e1": {
+    "q025": 0.434917,
+    "q50": 0.879258,
+    "q975": 1.470655,
+    "pos_share": 1.0,
+    "n_valid": 2000
+   }
+  },
+  "sociology->political_science": {
+   "per_source": {
+    "S157620343": {
+     "early": {
+      "n_articles": 136,
+      "edges": 112,
+      "refs_total": 11615,
+      "with_edge": 38,
+      "E1": 0.823529,
+      "E2": 0.279412,
+      "E3": 0.008288
+     },
+     "modern": {
+      "n_articles": 117,
+      "edges": 101,
+      "refs_total": 10503,
+      "with_edge": 32,
+      "E1": 0.863248,
+      "E2": 0.273504,
+      "E3": 0.008729
+     }
+    },
+    "S122471516": {
+     "early": {
+      "n_articles": 134,
+      "edges": 120,
+      "refs_total": 10059,
+      "with_edge": 46,
+      "E1": 0.895522,
+      "E2": 0.343284,
+      "E3": 0.009474
+     },
+     "modern": {
+      "n_articles": 158,
+      "edges": 97,
+      "refs_total": 10141,
+      "with_edge": 43,
+      "E1": 0.613924,
+      "E2": 0.272152,
+      "E3": 0.006985
+     }
+    },
+    "S130611943": {
+     "early": {
+      "n_articles": 442,
+      "edges": 93,
+      "refs_total": 10792,
+      "with_edge": 44,
+      "E1": 0.210407,
+      "E2": 0.099548,
+      "E3": 0.003828
+     },
+     "modern": {
+      "n_articles": 464,
+      "edges": 107,
+      "refs_total": 12627,
+      "with_edge": 42,
+      "E1": 0.230603,
+      "E2": 0.090517,
+      "E3": 0.004127
+     }
+    }
+   },
+   "support": [
+    "S157620343",
+    "S122471516",
+    "S130611943"
+   ],
+   "zero_base_sources": [],
+   "scorecard": {
+    "E1": {
+     "signs": [
+      1,
+      -1,
+      1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    },
+    "E2": {
+     "signs": [
+      -1,
+      -1,
+      -1
+     ],
+     "consistent": true,
+     "direction": "down"
+    },
+    "E3": {
+     "signs": [
+      1,
+      -1,
+      1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    }
+   },
+   "aggregates": {
+    "E1": {
+     "laspeyres_rel": -0.072018,
+     "paasche_rel": -0.09084,
+     "pooled_rel": -0.095826,
+     "width_pp": -1.8822
+    },
+    "E2": {
+     "laspeyres_rel": -0.111928,
+     "paasche_rel": -0.121097,
+     "pooled_rel": -0.119334,
+     "width_pp": -0.9169
+    },
+    "E3": {
+     "laspeyres_rel": -0.034582,
+     "paasche_rel": -0.047829,
+     "pooled_rel": -0.084245,
+     "width_pp": -1.3248
+    }
+   },
+   "pooled_edges": {
+    "early": 325,
+    "modern": 305
+   },
+   "tier": "e1_tier",
+   "loo_e1": {},
+   "bootstrap_pooled_e1": {
+    "q025": -0.352951,
+    "q50": -0.099528,
+    "q975": 0.238394,
+    "pos_share": 0.2665,
+    "n_valid": 2000
+   }
+  },
+  "statistics->computer_science": {
+   "per_source": {
+    "S119757635": {
+     "early": {
+      "n_articles": 332,
+      "edges": 33,
+      "refs_total": 10934,
+      "with_edge": 22,
+      "E1": 0.099398,
+      "E2": 0.066265,
+      "E3": 0.003229
+     },
+     "modern": {
+      "n_articles": 381,
+      "edges": 67,
+      "refs_total": 20153,
+      "with_edge": 54,
+      "E1": 0.175853,
+      "E2": 0.141732,
+      "E3": 0.002917
+     }
+    },
+    "S4394736638": {
+     "early": {
+      "n_articles": 442,
+      "edges": 29,
+      "refs_total": 16498,
+      "with_edge": 22,
+      "E1": 0.065611,
+      "E2": 0.049774,
+      "E3": 0.002161
+     },
+     "modern": {
+      "n_articles": 579,
+      "edges": 88,
+      "refs_total": 26912,
+      "with_edge": 62,
+      "E1": 0.151986,
+      "E2": 0.107081,
+      "E3": 0.003197
+     }
+    },
+    "S172180718": {
+     "early": {
+      "n_articles": 245,
+      "edges": 9,
+      "refs_total": 6857,
+      "with_edge": 9,
+      "E1": 0.036735,
+      "E2": 0.036735,
+      "E3": 0.001601
+     },
+     "modern": {
+      "n_articles": 192,
+      "edges": 16,
+      "refs_total": 7285,
+      "with_edge": 11,
+      "E1": 0.083333,
+      "E2": 0.057292,
+      "E3": 0.001702
+     }
+    }
+   },
+   "support": [
+    "S119757635",
+    "S4394736638",
+    "S172180718"
+   ],
+   "zero_base_sources": [],
+   "scorecard": {
+    "E1": {
+     "signs": [
+      1,
+      1,
+      1
+     ],
+     "consistent": true,
+     "direction": "up"
+    },
+    "E2": {
+     "signs": [
+      1,
+      1,
+      1
+     ],
+     "consistent": true,
+     "direction": "up"
+    },
+    "E3": {
+     "signs": [
+      -1,
+      1,
+      1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    }
+   },
+   "aggregates": {
+    "E1": {
+     "laspeyres_rel": 1.056015,
+     "paasche_rel": 1.062412,
+     "pooled_rel": 1.130392,
+     "width_pp": 0.6398
+    },
+    "E2": {
+     "laspeyres_rel": 1.04568,
+     "paasche_rel": 1.077903,
+     "pooled_rel": 1.119579,
+     "width_pp": 3.2223
+    },
+    "E3": {
+     "laspeyres_rel": 0.156678,
+     "paasche_rel": 0.179415,
+     "pooled_rel": 0.519473,
+     "width_pp": 2.2737
+    }
+   },
+   "pooled_edges": {
+    "early": 71,
+    "modern": 171
+   },
+   "tier": "refused",
+   "loo_e1": {},
+   "bootstrap_pooled_e1": {
+    "q025": 0.522235,
+    "q50": 1.134711,
+    "q975": 2.072782,
+    "pos_share": 1.0,
+    "n_valid": 2000
+   }
+  },
+  "materials->physics": {
+   "per_source": {
+    "S99352657": {
+     "early": {
+      "n_articles": 3266,
+      "edges": 8779,
+      "refs_total": 131199,
+      "with_edge": 1690,
+      "E1": 2.687998,
+      "E2": 0.517453,
+      "E3": 0.060315
+     },
+     "modern": {
+      "n_articles": 7489,
+      "edges": 11975,
+      "refs_total": 524711,
+      "with_edge": 2554,
+      "E1": 1.599012,
+      "E2": 0.341034,
+      "E3": 0.020521
+     }
+    },
+    "S64016596": {
+     "early": {
+      "n_articles": 2164,
+      "edges": 4354,
+      "refs_total": 84102,
+      "with_edge": 1139,
+      "E1": 2.012015,
+      "E2": 0.52634,
+      "E3": 0.048135
+     },
+     "modern": {
+      "n_articles": 2352,
+      "edges": 5966,
+      "refs_total": 139429,
+      "with_edge": 1490,
+      "E1": 2.536565,
+      "E2": 0.633503,
+      "E3": 0.04203
+     }
+    },
+    "S143846845": {
+     "early": {
+      "n_articles": 3042,
+      "edges": 11931,
+      "refs_total": 108704,
+      "with_edge": 2360,
+      "E1": 3.922091,
+      "E2": 0.775805,
+      "E3": 0.110639
+     },
+     "modern": {
+      "n_articles": 4166,
+      "edges": 15074,
+      "refs_total": 194286,
+      "with_edge": 2463,
+      "E1": 3.618339,
+      "E2": 0.591215,
+      "E3": 0.075239
+     }
+    },
+    "S135204980": {
+     "early": {
+      "n_articles": 2276,
+      "edges": 5289,
+      "refs_total": 95010,
+      "with_edge": 1110,
+      "E1": 2.323814,
+      "E2": 0.487698,
+      "E3": 0.051855
+     },
+     "modern": {
+      "n_articles": 8888,
+      "edges": 9282,
+      "refs_total": 555645,
+      "with_edge": 2747,
+      "E1": 1.044329,
+      "E2": 0.309068,
+      "E3": 0.01652
+     }
+    }
+   },
+   "support": [
+    "S99352657",
+    "S64016596",
+    "S143846845",
+    "S135204980"
+   ],
+   "zero_base_sources": [],
+   "scorecard": {
+    "E1": {
+     "signs": [
+      -1,
+      1,
+      -1,
+      -1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    },
+    "E2": {
+     "signs": [
+      -1,
+      1,
+      -1,
+      -1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    },
+    "E3": {
+     "signs": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "consistent": true,
+     "direction": "down"
+    }
+   },
+   "aggregates": {
+    "E1": {
+     "laspeyres_rel": -0.206162,
+     "paasche_rel": -0.316204,
+     "pooled_rel": -0.345823,
+     "width_pp": -11.0042
+    },
+    "E2": {
+     "laspeyres_rel": -0.208345,
+     "paasche_rel": -0.270179,
+     "pooled_rel": -0.310324,
+     "width_pp": -6.1833
+    },
+    "E3": {
+     "laspeyres_rel": -0.438363,
+     "paasche_rel": -0.520548,
+     "pooled_rel": -0.58708,
+     "width_pp": -8.2185
+    }
+   },
+   "pooled_edges": {
+    "early": 30353,
+    "modern": 42297
+   },
+   "tier": "full",
+   "loo_e1": {
+    "S99352657": {
+     "pooled_rel": -0.317418,
+     "laspeyres_rel": -0.125197,
+     "paasche_rel": -0.273303
+    },
+    "S64016596": {
+     "pooled_rel": -0.416089,
+     "laspeyres_rel": -0.284347,
+     "paasche_rel": -0.363997
+    },
+    "S143846845": {
+     "pooled_rel": -0.391986,
+     "laspeyres_rel": -0.289524,
+     "paasche_rel": -0.401912
+    },
+    "S135204980": {
+     "pooled_rel": -0.203287,
+     "laspeyres_rel": -0.133479,
+     "paasche_rel": -0.198706
+    }
+   },
+   "bootstrap_pooled_e1": {
+    "q025": -0.372509,
+    "q50": -0.345111,
+    "q975": -0.315632,
+    "pos_share": 0.0,
+    "n_valid": 2000
+   }
+  },
+  "chemical_engineering->chemistry": {
+   "per_source": {
+    "S147177414": {
+     "early": {
+      "n_articles": 893,
+      "edges": 587,
+      "refs_total": 34123,
+      "with_edge": 206,
+      "E1": 0.657335,
+      "E2": 0.230683,
+      "E3": 0.014766
+     },
+     "modern": {
+      "n_articles": 1135,
+      "edges": 1935,
+      "refs_total": 53544,
+      "with_edge": 475,
+      "E1": 1.704846,
+      "E2": 0.418502,
+      "E3": 0.03416
+     }
+    },
+    "S33892871": {
+     "early": {
+      "n_articles": 2047,
+      "edges": 634,
+      "refs_total": 70208,
+      "with_edge": 285,
+      "E1": 0.309722,
+      "E2": 0.139228,
+      "E3": 0.007717
+     },
+     "modern": {
+      "n_articles": 2803,
+      "edges": 2756,
+      "refs_total": 136573,
+      "with_edge": 925,
+      "E1": 0.983232,
+      "E2": 0.330004,
+      "E3": 0.018743
+     }
+    },
+    "S202680183": {
+     "early": {
+      "n_articles": 5299,
+      "edges": 3564,
+      "refs_total": 177805,
+      "with_edge": 1477,
+      "E1": 0.67258,
+      "E2": 0.278732,
+      "E3": 0.017504
+     },
+     "modern": {
+      "n_articles": 4964,
+      "edges": 6342,
+      "refs_total": 260585,
+      "with_edge": 2162,
+      "E1": 1.277599,
+      "E2": 0.435536,
+      "E3": 0.023597
+     }
+    }
+   },
+   "support": [
+    "S147177414",
+    "S33892871",
+    "S202680183"
+   ],
+   "zero_base_sources": [],
+   "scorecard": {
+    "E1": {
+     "signs": [
+      1,
+      1,
+      1
+     ],
+     "consistent": true,
+     "direction": "up"
+    },
+    "E2": {
+     "signs": [
+      1,
+      1,
+      1
+     ],
+     "consistent": true,
+     "direction": "up"
+    },
+    "E3": {
+     "signs": [
+      1,
+      1,
+      1
+     ],
+     "consistent": true,
+     "direction": "up"
+    }
+   },
+   "aggregates": {
+    "E1": {
+     "laspeyres_rel": 1.153625,
+     "paasche_rel": 1.227578,
+     "pooled_rel": 1.134021,
+     "width_pp": 7.3953
+    },
+    "E2": {
+     "laspeyres_rel": 0.705866,
+     "paasche_rel": 0.749762,
+     "pooled_rel": 0.675158,
+     "width_pp": 4.3895
+    },
+    "E3": {
+     "laspeyres_rel": 0.592886,
+     "paasche_rel": 0.663823,
+     "pooled_rel": 0.44338,
+     "width_pp": 7.0936
+    }
+   },
+   "pooled_edges": {
+    "early": 4785,
+    "modern": 11033
+   },
+   "tier": "full",
+   "loo_e1": {
+    "S147177414": {
+     "pooled_rel": 1.049751,
+     "laspeyres_rel": 1.092108,
+     "paasche_rel": 1.16267
+    },
+    "S33892871": {
+     "pooled_rel": 1.024382,
+     "laspeyres_rel": 0.997692,
+     "paasche_rel": 1.026312
+    },
+    "S202680183": {
+     "pooled_rel": 1.868279,
+     "laspeyres_rel": 1.89525,
+     "paasche_rel": 1.906036
+    }
+   },
+   "bootstrap_pooled_e1": {
+    "q025": 0.974421,
+    "q50": 1.137764,
+    "q975": 1.296874,
+    "pos_share": 1.0,
+    "n_valid": 2000
+   }
+  },
+  "medicine->biology": {
+   "per_source": {
+    "S49861241": {
+     "early": {
+      "n_articles": 5936,
+      "edges": 140,
+      "refs_total": 72497,
+      "with_edge": 76,
+      "E1": 0.023585,
+      "E2": 0.012803,
+      "E3": 0.000536
+     },
+     "modern": {
+      "n_articles": 4421,
+      "edges": 136,
+      "refs_total": 59627,
+      "with_edge": 92,
+      "E1": 0.030762,
+      "E2": 0.02081,
+      "E3": 0.000966
+     }
+    },
+    "S172573765": {
+     "early": {
+      "n_articles": 5824,
+      "edges": 38,
+      "refs_total": 41122,
+      "with_edge": 29,
+      "E1": 0.006525,
+      "E2": 0.004979,
+      "E3": 0.000276
+     },
+     "modern": {
+      "n_articles": 5233,
+      "edges": 50,
+      "refs_total": 41172,
+      "with_edge": 36,
+      "E1": 0.009555,
+      "E2": 0.006879,
+      "E3": 0.000769
+     }
+    },
+    "S4393917726": {
+     "early": {
+      "n_articles": 9308,
+      "edges": 10,
+      "refs_total": 34050,
+      "with_edge": 10,
+      "E1": 0.001074,
+      "E2": 0.001074,
+      "E3": 4.2e-05
+     },
+     "modern": {
+      "n_articles": 9481,
+      "edges": 90,
+      "refs_total": 57681,
+      "with_edge": 70,
+      "E1": 0.009493,
+      "E2": 0.007383,
+      "E3": 0.000491
+     }
+    },
+    "S62468778": {
+     "early": {
+      "n_articles": 3604,
+      "edges": 249,
+      "refs_total": 50684,
+      "with_edge": 146,
+      "E1": 0.06909,
+      "E2": 0.040511,
+      "E3": 0.00334
+     },
+     "modern": {
+      "n_articles": 3266,
+      "edges": 255,
+      "refs_total": 43186,
+      "with_edge": 156,
+      "E1": 0.078077,
+      "E2": 0.047765,
+      "E3": 0.004943
+     }
+    }
+   },
+   "support": [
+    "S49861241",
+    "S172573765",
+    "S4393917726",
+    "S62468778"
+   ],
+   "zero_base_sources": [],
+   "scorecard": {
+    "E1": {
+     "signs": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "consistent": true,
+     "direction": "up"
+    },
+    "E2": {
+     "signs": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "consistent": true,
+     "direction": "up"
+    },
+    "E3": {
+     "signs": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "consistent": true,
+     "direction": "up"
+    }
+   },
+   "aggregates": {
+    "E1": {
+     "laspeyres_rel": 0.391311,
+     "paasche_rel": 0.418863,
+     "pooled_rel": 0.338289,
+     "width_pp": 2.7552
+    },
+    "E2": {
+     "laspeyres_rel": 0.549677,
+     "paasche_rel": 0.572283,
+     "pooled_rel": 0.493825,
+     "width_pp": 2.2607
+    },
+    "E3": {
+     "laspeyres_rel": 0.893294,
+     "paasche_rel": 0.924121,
+     "pooled_rel": 0.195141,
+     "width_pp": 3.0827
+    }
+   },
+   "pooled_edges": {
+    "early": 437,
+    "modern": 531
+   },
+   "tier": "e1_tier",
+   "loo_e1": {},
+   "bootstrap_pooled_e1": {
+    "q025": 0.088649,
+    "q50": 0.339452,
+    "q975": 0.667562,
+    "pos_share": 0.9965,
+    "n_valid": 2000
+   }
+  },
+  "electrical_engineering->computer_science": {
+   "per_source": {
+    "S68686220": {
+     "early": {
+      "n_articles": 746,
+      "edges": 150,
+      "refs_total": 26426,
+      "with_edge": 70,
+      "E1": 0.201072,
+      "E2": 0.093834,
+      "E3": 0.003155
+     },
+     "modern": {
+      "n_articles": 375,
+      "edges": 273,
+      "refs_total": 32803,
+      "with_edge": 72,
+      "E1": 0.728,
+      "E2": 0.192,
+      "E3": 0.003837
+     }
+    },
+    "S4502562": {
+     "early": {
+      "n_articles": 1678,
+      "edges": 189,
+      "refs_total": 49970,
+      "with_edge": 146,
+      "E1": 0.112634,
+      "E2": 0.087008,
+      "E3": 0.0037
+     },
+     "modern": {
+      "n_articles": 1425,
+      "edges": 355,
+      "refs_total": 60642,
+      "with_edge": 229,
+      "E1": 0.249123,
+      "E2": 0.160702,
+      "E3": 0.005307
+     }
+    },
+    "S168680287": {
+     "early": {
+      "n_articles": 1714,
+      "edges": 227,
+      "refs_total": 53222,
+      "with_edge": 145,
+      "E1": 0.132439,
+      "E2": 0.084597,
+      "E3": 0.003348
+     },
+     "modern": {
+      "n_articles": 1183,
+      "edges": 369,
+      "refs_total": 58773,
+      "with_edge": 217,
+      "E1": 0.311919,
+      "E2": 0.183432,
+      "E3": 0.005932
+     }
+    }
+   },
+   "support": [
+    "S68686220",
+    "S4502562",
+    "S168680287"
+   ],
+   "zero_base_sources": [],
+   "scorecard": {
+    "E1": {
+     "signs": [
+      1,
+      1,
+      1
+     ],
+     "consistent": true,
+     "direction": "up"
+    },
+    "E2": {
+     "signs": [
+      1,
+      1,
+      1
+     ],
+     "consistent": true,
+     "direction": "up"
+    },
+    "E3": {
+     "signs": [
+      1,
+      1,
+      1
+     ],
+     "consistent": true,
+     "direction": "up"
+    }
+   },
+   "aggregates": {
+    "E1": {
+     "laspeyres_rel": 1.64266,
+     "paasche_rel": 1.539606,
+     "pooled_rel": 1.44352,
+     "width_pp": -10.3054
+    },
+    "E2": {
+     "laspeyres_rel": 1.014667,
+     "paasche_rel": 0.998054,
+     "pooled_rel": 0.990489,
+     "width_pp": -1.6612
+    },
+    "E3": {
+     "laspeyres_rel": 0.533841,
+     "paasche_rel": 0.537868,
+     "pooled_rel": 0.499954,
+     "width_pp": 0.4027
+    }
+   },
+   "pooled_edges": {
+    "early": 566,
+    "modern": 997
+   },
+   "tier": "full",
+   "loo_e1": {
+    "S68686220": {
+     "pooled_rel": 1.263568,
+     "laspeyres_rel": 1.290041,
+     "paasche_rel": 1.282626
+    },
+    "S4502562": {
+     "pooled_rel": 1.688818,
+     "laspeyres_rel": 1.858665,
+     "paasche_rel": 1.76632
+    },
+    "S168680287": {
+     "pooled_rel": 1.49471,
+     "laspeyres_rel": 1.835155,
+     "paasche_rel": 1.662085
+    }
+   },
+   "bootstrap_pooled_e1": {
+    "q025": 1.055974,
+    "q50": 1.442216,
+    "q975": 1.90226,
+    "pos_share": 1.0,
+    "n_valid": 2000
+   }
+  },
+  "psychology->neuroscience": {
+   "per_source": {
+    "S58854535": {
+     "early": {
+      "n_articles": 828,
+      "edges": 638,
+      "refs_total": 25435,
+      "with_edge": 231,
+      "E1": 0.770531,
+      "E2": 0.278986,
+      "E3": 0.022852
+     },
+     "modern": {
+      "n_articles": 423,
+      "edges": 434,
+      "refs_total": 16582,
+      "with_edge": 134,
+      "E1": 1.026005,
+      "E2": 0.316785,
+      "E3": 0.021954
+     }
+    },
+    "S62013203": {
+     "early": {
+      "n_articles": 310,
+      "edges": 485,
+      "refs_total": 17754,
+      "with_edge": 121,
+      "E1": 1.564516,
+      "E2": 0.390323,
+      "E3": 0.024135
+     },
+     "modern": {
+      "n_articles": 522,
+      "edges": 424,
+      "refs_total": 16328,
+      "with_edge": 125,
+      "E1": 0.812261,
+      "E2": 0.239464,
+      "E3": 0.011918
+     }
+    },
+    "S88198767": {
+     "early": {
+      "n_articles": 503,
+      "edges": 402,
+      "refs_total": 25913,
+      "with_edge": 162,
+      "E1": 0.799205,
+      "E2": 0.322068,
+      "E3": 0.015062
+     },
+     "modern": {
+      "n_articles": 809,
+      "edges": 1147,
+      "refs_total": 57962,
+      "with_edge": 359,
+      "E1": 1.4178,
+      "E2": 0.443758,
+      "E3": 0.019864
+     }
+    },
+    "S35223124": {
+     "early": {
+      "n_articles": 111,
+      "edges": 318,
+      "refs_total": 11499,
+      "with_edge": 44,
+      "E1": 2.864865,
+      "E2": 0.396396,
+      "E3": 0.022924
+     },
+     "modern": {
+      "n_articles": 193,
+      "edges": 479,
+      "refs_total": 12556,
+      "with_edge": 73,
+      "E1": 2.481865,
+      "E2": 0.378238,
+      "E3": 0.023968
+     }
+    }
+   },
+   "support": [
+    "S58854535",
+    "S62013203",
+    "S88198767",
+    "S35223124"
+   ],
+   "zero_base_sources": [],
+   "scorecard": {
+    "E1": {
+     "signs": [
+      1,
+      -1,
+      1,
+      -1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    },
+    "E2": {
+     "signs": [
+      1,
+      -1,
+      1,
+      -1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    },
+    "E3": {
+     "signs": [
+      -1,
+      -1,
+      1,
+      1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    }
+   },
+   "aggregates": {
+    "E1": {
+     "laspeyres_rel": 0.134006,
+     "paasche_rel": 0.060592,
+     "pooled_rel": 0.212815,
+     "width_pp": -7.3414
+    },
+    "E2": {
+     "laspeyres_rel": 0.078362,
+     "paasche_rel": 0.04885,
+     "pooled_rel": 0.114325,
+     "width_pp": -2.9511
+    },
+    "E3": {
+     "laspeyres_rel": -0.054745,
+     "paasche_rel": -0.068704,
+     "pooled_rel": 0.050337,
+     "width_pp": -1.3958
+    }
+   },
+   "pooled_edges": {
+    "early": 1843,
+    "modern": 2484
+   },
+   "tier": "full",
+   "loo_e1": {
+    "S58854535": {
+     "pooled_rel": 0.031463,
+     "laspeyres_rel": 0.029412,
+     "paasche_rel": 0.016788
+    },
+    "S62013203": {
+     "pooled_rel": 0.535033,
+     "laspeyres_rel": 0.353588,
+     "paasche_rel": 0.350456
+    },
+    "S88198767": {
+     "pooled_rel": 0.018328,
+     "laspeyres_rel": -0.044538,
+     "paasche_rel": -0.211456
+    },
+    "S35223124": {
+     "pooled_rel": 0.230052,
+     "laspeyres_rel": 0.189827,
+     "paasche_rel": 0.120632
+    }
+   },
+   "bootstrap_pooled_e1": {
+    "q025": 0.038494,
+    "q50": 0.213173,
+    "q975": 0.415047,
+    "pos_share": 0.992,
+    "n_valid": 2000
+   }
+  },
+  "business->economics": {
+   "per_source": {
+    "S117778295": {
+     "early": {
+      "n_articles": 272,
+      "edges": 259,
+      "refs_total": 25614,
+      "with_edge": 92,
+      "E1": 0.952206,
+      "E2": 0.338235,
+      "E3": 0.009493
+     },
+     "modern": {
+      "n_articles": 172,
+      "edges": 144,
+      "refs_total": 17477,
+      "with_edge": 69,
+      "E1": 0.837209,
+      "E2": 0.401163,
+      "E3": 0.007676
+     }
+    },
+    "S143668711": {
+     "early": {
+      "n_articles": 137,
+      "edges": 149,
+      "refs_total": 5620,
+      "with_edge": 35,
+      "E1": 1.087591,
+      "E2": 0.255474,
+      "E3": 0.016343
+     },
+     "modern": {
+      "n_articles": 128,
+      "edges": 90,
+      "refs_total": 7729,
+      "with_edge": 35,
+      "E1": 0.703125,
+      "E2": 0.273438,
+      "E3": 0.006761
+     }
+    },
+    "S206124708": {
+     "early": {
+      "n_articles": 296,
+      "edges": 525,
+      "refs_total": 27226,
+      "with_edge": 153,
+      "E1": 1.773649,
+      "E2": 0.516892,
+      "E3": 0.019039
+     },
+     "modern": {
+      "n_articles": 321,
+      "edges": 615,
+      "refs_total": 30734,
+      "with_edge": 174,
+      "E1": 1.915888,
+      "E2": 0.542056,
+      "E3": 0.021733
+     }
+    },
+    "S33323087": {
+     "early": {
+      "n_articles": 745,
+      "edges": 2447,
+      "refs_total": 27055,
+      "with_edge": 419,
+      "E1": 3.284564,
+      "E2": 0.562416,
+      "E3": 0.068011
+     },
+     "modern": {
+      "n_articles": 1209,
+      "edges": 6185,
+      "refs_total": 55471,
+      "with_edge": 995,
+      "E1": 5.115798,
+      "E2": 0.822994,
+      "E3": 0.114976
+     }
+    }
+   },
+   "support": [
+    "S117778295",
+    "S143668711",
+    "S206124708",
+    "S33323087"
+   ],
+   "zero_base_sources": [],
+   "scorecard": {
+    "E1": {
+     "signs": [
+      -1,
+      -1,
+      1,
+      1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    },
+    "E2": {
+     "signs": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "consistent": true,
+     "direction": "up"
+    },
+    "E3": {
+     "signs": [
+      -1,
+      -1,
+      1,
+      1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    }
+   },
+   "aggregates": {
+    "E1": {
+     "laspeyres_rel": 0.391249,
+     "paasche_rel": 0.452294,
+     "pooled_rel": 0.648931,
+     "width_pp": 6.1046
+    },
+    "E2": {
+     "laspeyres_rel": 0.31639,
+     "paasche_rel": 0.358939,
+     "pooled_rel": 0.443006,
+     "width_pp": 4.2548
+    },
+    "E3": {
+     "laspeyres_rel": 0.555902,
+     "paasche_rel": 0.609445,
+     "pooled_rel": 0.597349,
+     "width_pp": 5.3543
+    }
+   },
+   "pooled_edges": {
+    "early": 3380,
+    "modern": 7034
+   },
+   "tier": "e1_tier",
+   "loo_e1": {},
+   "bootstrap_pooled_e1": {
+    "q025": 0.496414,
+    "q50": 0.647683,
+    "q975": 0.83243,
+    "pos_share": 1.0,
+    "n_valid": 2000
+   }
+  },
+  "political_science->sociology": {
+   "per_source": {
+    "S176007004": {
+     "early": {
+      "n_articles": 168,
+      "edges": 143,
+      "refs_total": 12266,
+      "with_edge": 60,
+      "E1": 0.85119,
+      "E2": 0.357143,
+      "E3": 0.008495
+     },
+     "modern": {
+      "n_articles": 411,
+      "edges": 290,
+      "refs_total": 25224,
+      "with_edge": 137,
+      "E1": 0.705596,
+      "E2": 0.333333,
+      "E3": 0.011256
+     }
+    },
+    "S90314269": {
+     "early": {
+      "n_articles": 231,
+      "edges": 178,
+      "refs_total": 14979,
+      "with_edge": 88,
+      "E1": 0.770563,
+      "E2": 0.380952,
+      "E3": 0.011479
+     },
+     "modern": {
+      "n_articles": 226,
+      "edges": 71,
+      "refs_total": 11339,
+      "with_edge": 43,
+      "E1": 0.314159,
+      "E2": 0.190265,
+      "E3": 0.006138
+     }
+    },
+    "S95650557": {
+     "early": {
+      "n_articles": 430,
+      "edges": 180,
+      "refs_total": 13162,
+      "with_edge": 67,
+      "E1": 0.418605,
+      "E2": 0.155814,
+      "E3": 0.006799
+     },
+     "modern": {
+      "n_articles": 386,
+      "edges": 138,
+      "refs_total": 15659,
+      "with_edge": 82,
+      "E1": 0.357513,
+      "E2": 0.212435,
+      "E3": 0.009022
+     }
+    }
+   },
+   "support": [
+    "S176007004",
+    "S90314269",
+    "S95650557"
+   ],
+   "zero_base_sources": [],
+   "scorecard": {
+    "E1": {
+     "signs": [
+      -1,
+      -1,
+      -1
+     ],
+     "consistent": true,
+     "direction": "down"
+    },
+    "E2": {
+     "signs": [
+      -1,
+      -1,
+      1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    },
+    "E3": {
+     "signs": [
+      1,
+      -1,
+      1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    }
+   },
+   "aggregates": {
+    "E1": {
+     "laspeyres_rel": -0.311694,
+     "paasche_rel": -0.272136,
+     "pooled_rel": -0.192873,
+     "width_pp": 3.9558
+    },
+    "E2": {
+     "laspeyres_rel": -0.110241,
+     "paasche_rel": -0.10588,
+     "pooled_rel": -0.012489,
+     "width_pp": 0.4361
+    },
+    "E3": {
+     "laspeyres_rel": 0.026558,
+     "paasche_rel": 0.090215,
+     "pooled_rel": -0.229334,
+     "width_pp": 6.3657
+    }
+   },
+   "pooled_edges": {
+    "early": 501,
+    "modern": 499
+   },
+   "tier": "e1_tier",
+   "loo_e1": {},
+   "bootstrap_pooled_e1": {
+    "q025": -0.354947,
+    "q50": -0.189638,
+    "q975": 0.018855,
+    "pos_share": 0.0405,
+    "n_valid": 2000
+   }
+  },
+  "computer_science->statistics": {
+   "per_source": {
+    "S118992489": {
+     "early": {
+      "n_articles": 102,
+      "edges": 10,
+      "refs_total": 4179,
+      "with_edge": 10,
+      "E1": 0.098039,
+      "E2": 0.098039,
+      "E3": 0.002223
+     },
+     "modern": {
+      "n_articles": 133,
+      "edges": 20,
+      "refs_total": 5724,
+      "with_edge": 14,
+      "E1": 0.150376,
+      "E2": 0.105263,
+      "E3": 0.003316
+     }
+    },
+    "S199944782": {
+     "early": {
+      "n_articles": 728,
+      "edges": 256,
+      "refs_total": 26984,
+      "with_edge": 127,
+      "E1": 0.351648,
+      "E2": 0.174451,
+      "E3": 0.007486
+     },
+     "modern": {
+      "n_articles": 1864,
+      "edges": 368,
+      "refs_total": 137434,
+      "with_edge": 175,
+      "E1": 0.197425,
+      "E2": 0.093884,
+      "E3": 0.003352
+     }
+    },
+    "S103482838": {
+     "early": {
+      "n_articles": 904,
+      "edges": 10,
+      "refs_total": 7188,
+      "with_edge": 8,
+      "E1": 0.011062,
+      "E2": 0.00885,
+      "E3": 0.000274
+     },
+     "modern": {
+      "n_articles": 885,
+      "edges": 7,
+      "refs_total": 6909,
+      "with_edge": 6,
+      "E1": 0.00791,
+      "E2": 0.00678,
+      "E3": 0.000945
+     }
+    }
+   },
+   "support": [
+    "S118992489",
+    "S199944782",
+    "S103482838"
+   ],
+   "zero_base_sources": [],
+   "scorecard": {
+    "E1": {
+     "signs": [
+      1,
+      -1,
+      -1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    },
+    "E2": {
+     "signs": [
+      1,
+      -1,
+      -1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    },
+    "E3": {
+     "signs": [
+      1,
+      -1,
+      1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    }
+   },
+   "aggregates": {
+    "E1": {
+     "laspeyres_rel": -0.397773,
+     "paasche_rel": -0.417662,
+     "pooled_rel": -0.138921,
+     "width_pp": -1.9888
+    },
+    "E2": {
+     "laspeyres_rel": -0.412324,
+     "paasche_rel": -0.436494,
+     "pooled_rel": -0.190864,
+     "width_pp": -2.4171
+    },
+    "E3": {
+     "laspeyres_rel": -0.386797,
+     "paasche_rel": -0.480717,
+     "pooled_rel": -0.634254,
+     "width_pp": -9.392
+    }
+   },
+   "pooled_edges": {
+    "early": 276,
+    "modern": 395
+   },
+   "tier": "e1_tier",
+   "loo_e1": {},
+   "bootstrap_pooled_e1": {
+    "q025": -0.359092,
+    "q50": -0.13537,
+    "q975": 0.186578,
+    "pos_share": 0.175,
+    "n_valid": 2000
+   }
+  },
+  "ecology->earth_science": {
+   "per_source": {
+    "S80967739": {
+     "early": {
+      "n_articles": 513,
+      "edges": 76,
+      "refs_total": 29242,
+      "with_edge": 39,
+      "E1": 0.148148,
+      "E2": 0.076023,
+      "E3": 0.002097
+     },
+     "modern": {
+      "n_articles": 613,
+      "edges": 28,
+      "refs_total": 48305,
+      "with_edge": 23,
+      "E1": 0.045677,
+      "E2": 0.03752,
+      "E3": 0.000819
+     }
+    },
+    "S35917800": {
+     "early": {
+      "n_articles": 941,
+      "edges": 43,
+      "refs_total": 42194,
+      "with_edge": 33,
+      "E1": 0.045696,
+      "E2": 0.035069,
+      "E3": 0.000891
+     },
+     "modern": {
+      "n_articles": 845,
+      "edges": 39,
+      "refs_total": 41403,
+      "with_edge": 29,
+      "E1": 0.046154,
+      "E2": 0.03432,
+      "E3": 0.000714
+     }
+    },
+    "S74970393": {
+     "early": {
+      "n_articles": 915,
+      "edges": 902,
+      "refs_total": 61208,
+      "with_edge": 314,
+      "E1": 0.985792,
+      "E2": 0.343169,
+      "E3": 0.014963
+     },
+     "modern": {
+      "n_articles": 1519,
+      "edges": 952,
+      "refs_total": 129584,
+      "with_edge": 447,
+      "E1": 0.626728,
+      "E2": 0.294273,
+      "E3": 0.007537
+     }
+    }
+   },
+   "support": [
+    "S80967739",
+    "S35917800",
+    "S74970393"
+   ],
+   "zero_base_sources": [],
+   "scorecard": {
+    "E1": {
+     "signs": [
+      -1,
+      1,
+      -1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    },
+    "E2": {
+     "signs": [
+      -1,
+      -1,
+      -1
+     ],
+     "consistent": true,
+     "direction": "down"
+    },
+    "E3": {
+     "signs": [
+      -1,
+      -1,
+      -1
+     ],
+     "consistent": true,
+     "direction": "down"
+    }
+   },
+   "aggregates": {
+    "E1": {
+     "laspeyres_rel": -0.372851,
+     "paasche_rel": -0.373635,
+     "pooled_rel": -0.205791,
+     "width_pp": -0.0784
+    },
+    "E2": {
+     "laspeyres_rel": -0.168904,
+     "paasche_rel": -0.164865,
+     "pooled_rel": 0.028725,
+     "width_pp": 0.4039
+    },
+    "E3": {
+     "laspeyres_rel": -0.4881,
+     "paasche_rel": -0.493116,
+     "pooled_rel": -0.396311,
+     "width_pp": -0.5016
+    }
+   },
+   "pooled_edges": {
+    "early": 1021,
+    "modern": 1019
+   },
+   "tier": "e1_tier",
+   "loo_e1": {},
+   "bootstrap_pooled_e1": {
+    "q025": -0.337119,
+    "q50": -0.209204,
+    "q975": -0.043161,
+    "pos_share": 0.0075,
+    "n_valid": 2000
+   }
+  },
+  "biomedical_engineering->medicine": {
+   "per_source": {
+    "S163807576": {
+     "early": {
+      "n_articles": 2884,
+      "edges": 938,
+      "refs_total": 136257,
+      "with_edge": 568,
+      "E1": 0.325243,
+      "E2": 0.196949,
+      "E3": 0.007305
+     },
+     "modern": {
+      "n_articles": 1478,
+      "edges": 882,
+      "refs_total": 107450,
+      "with_edge": 471,
+      "E1": 0.596752,
+      "E2": 0.318674,
+      "E3": 0.008864
+     }
+    },
+    "S5240358": {
+     "early": {
+      "n_articles": 1211,
+      "edges": 290,
+      "refs_total": 36702,
+      "with_edge": 189,
+      "E1": 0.239472,
+      "E2": 0.156069,
+      "E3": 0.007635
+     },
+     "modern": {
+      "n_articles": 1078,
+      "edges": 252,
+      "refs_total": 46863,
+      "with_edge": 178,
+      "E1": 0.233766,
+      "E2": 0.165121,
+      "E3": 0.00519
+     }
+    },
+    "S173145877": {
+     "early": {
+      "n_articles": 1412,
+      "edges": 257,
+      "refs_total": 74357,
+      "with_edge": 174,
+      "E1": 0.182011,
+      "E2": 0.123229,
+      "E3": 0.003623
+     },
+     "modern": {
+      "n_articles": 1928,
+      "edges": 753,
+      "refs_total": 144708,
+      "with_edge": 471,
+      "E1": 0.39056,
+      "E2": 0.244295,
+      "E3": 0.005641
+     }
+    }
+   },
+   "support": [
+    "S163807576",
+    "S5240358",
+    "S173145877"
+   ],
+   "zero_base_sources": [],
+   "scorecard": {
+    "E1": {
+     "signs": [
+      1,
+      -1,
+      1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    },
+    "E2": {
+     "signs": [
+      1,
+      1,
+      1
+     ],
+     "consistent": true,
+     "direction": "up"
+    },
+    "E3": {
+     "signs": [
+      1,
+      -1,
+      1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    }
+   },
+   "aggregates": {
+    "E1": {
+     "laspeyres_rel": 0.720938,
+     "paasche_rel": 0.731546,
+     "pooled_rel": 0.560612,
+     "width_pp": 1.0608
+    },
+    "E2": {
+     "laspeyres_rel": 0.572462,
+     "paasche_rel": 0.607077,
+     "pooled_rel": 0.477467,
+     "width_pp": 3.4614
+    },
+    "E3": {
+     "laspeyres_rel": 0.123759,
+     "paasche_rel": 0.136827,
+     "pooled_rel": 0.050984,
+     "width_pp": 1.3068
+    }
+   },
+   "pooled_edges": {
+    "early": 1485,
+    "modern": 1887
+   },
+   "tier": "full",
+   "loo_e1": {
+    "S163807576": {
+     "pooled_rel": 0.603201,
+     "laspeyres_rel": 0.525706,
+     "paasche_rel": 0.650061
+    },
+    "S5240358": {
+     "pooled_rel": 0.725717,
+     "laspeyres_rel": 0.901676,
+     "paasche_rel": 0.966026
+    },
+    "S173145877": {
+     "pooled_rel": 0.479475,
+     "laspeyres_rel": 0.63202,
+     "paasche_rel": 0.534796
+    }
+   },
+   "bootstrap_pooled_e1": {
+    "q025": 0.417816,
+    "q50": 0.561384,
+    "q975": 0.73167,
+    "pos_share": 1.0,
+    "n_valid": 2000
+   }
+  },
+  "mathematics->physics": {
+   "per_source": {
+    "S45918994": {
+     "early": {
+      "n_articles": 212,
+      "edges": 23,
+      "refs_total": 7199,
+      "with_edge": 10,
+      "E1": 0.108491,
+      "E2": 0.04717,
+      "E3": 0.003215
+     },
+     "modern": {
+      "n_articles": 98,
+      "edges": 7,
+      "refs_total": 2518,
+      "with_edge": 3,
+      "E1": 0.071429,
+      "E2": 0.030612,
+      "E3": 0.001931
+     }
+    },
+    "S98347115": {
+     "early": {
+      "n_articles": 178,
+      "edges": 17,
+      "refs_total": 6337,
+      "with_edge": 8,
+      "E1": 0.095506,
+      "E2": 0.044944,
+      "E3": 0.002133
+     },
+     "modern": {
+      "n_articles": 201,
+      "edges": 51,
+      "refs_total": 9833,
+      "with_edge": 15,
+      "E1": 0.253731,
+      "E2": 0.074627,
+      "E3": 0.004029
+     }
+    },
+    "S130224168": {
+     "early": {
+      "n_articles": 89,
+      "edges": 8,
+      "refs_total": 2915,
+      "with_edge": 4,
+      "E1": 0.089888,
+      "E2": 0.044944,
+      "E3": 0.003235
+     },
+     "modern": {
+      "n_articles": 65,
+      "edges": 12,
+      "refs_total": 3217,
+      "with_edge": 6,
+      "E1": 0.184615,
+      "E2": 0.092308,
+      "E3": 0.002882
+     }
+    },
+    "S171170845": {
+     "early": {
+      "n_articles": 200,
+      "edges": 10,
+      "refs_total": 5966,
+      "with_edge": 6,
+      "E1": 0.05,
+      "E2": 0.03,
+      "E3": 0.002157
+     },
+     "modern": {
+      "n_articles": 190,
+      "edges": 36,
+      "refs_total": 7750,
+      "with_edge": 13,
+      "E1": 0.189474,
+      "E2": 0.068421,
+      "E3": 0.003484
+     }
+    }
+   },
+   "support": [
+    "S45918994",
+    "S98347115",
+    "S130224168",
+    "S171170845"
+   ],
+   "zero_base_sources": [],
+   "scorecard": {
+    "E1": {
+     "signs": [
+      -1,
+      1,
+      1,
+      1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    },
+    "E2": {
+     "signs": [
+      -1,
+      1,
+      1,
+      1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    },
+    "E3": {
+     "signs": [
+      -1,
+      1,
+      -1,
+      1
+     ],
+     "consistent": false,
+     "direction": "mixed"
+    }
+   },
+   "aggregates": {
+    "E1": {
+     "laspeyres_rel": 0.976418,
+     "paasche_rel": 1.34661,
+     "pooled_rel": 1.239948,
+     "width_pp": 37.0193
+    },
+    "E2": {
+     "laspeyres_rel": 0.488315,
+     "paasche_rel": 0.660849,
+     "pooled_rel": 0.619585,
+     "width_pp": 17.2534
+    },
+    "E3": {
+     "laspeyres_rel": 0.168072,
+     "paasche_rel": 0.355192,
+     "pooled_rel": 0.756969,
+     "width_pp": 18.712
+    }
+   },
+   "pooled_edges": {
+    "early": 58,
+    "modern": 106
+   },
+   "tier": "refused",
+   "loo_e1": {},
+   "bootstrap_pooled_e1": {
+    "q025": 0.205063,
+    "q50": 1.224295,
+    "q975": 3.289711,
+    "pos_share": 0.994,
+    "n_valid": 2000
+   }
+  },
+  "mechanical_engineering->materials": {
+   "per_source": {
+    "S128368299": {
+     "early": {
+      "n_articles": 754,
+      "edges": 6,
+      "refs_total": 22275,
+      "with_edge": 6,
+      "E1": 0.007958,
+      "E2": 0.007958,
+      "E3": 0.000309
+     },
+     "modern": {
+      "n_articles": 2951,
+      "edges": 223,
+      "refs_total": 132119,
+      "with_edge": 123,
+      "E1": 0.075568,
+      "E2": 0.041681,
+      "E3": 0.001398
+     }
+    },
+    "S72716621": {
+     "early": {
+      "n_articles": 524,
+      "edges": 121,
+      "refs_total": 15642,
+      "with_edge": 56,
+      "E1": 0.230916,
+      "E2": 0.10687,
+      "E3": 0.00627
+     },
+     "modern": {
+      "n_articles": 2027,
+      "edges": 2758,
+      "refs_total": 139239,
+      "with_edge": 759,
+      "E1": 1.360631,
+      "E2": 0.374445,
+      "E3": 0.019451
+     }
+    },
+    "S154368109": {
+     "early": {
+      "n_articles": 303,
+      "edges": 24,
+      "refs_total": 8117,
+      "with_edge": 14,
+      "E1": 0.079208,
+      "E2": 0.046205,
+      "E3": 0.001957
+     },
+     "modern": {
+      "n_articles": 160,
+      "edges": 455,
+      "refs_total": 12221,
+      "with_edge": 90,
+      "E1": 2.84375,
+      "E2": 0.5625,
+      "E3": 0.035894
+     }
+    }
+   },
+   "support": [
+    "S128368299",
+    "S72716621",
+    "S154368109"
+   ],
+   "zero_base_sources": [],
+   "scorecard": {
+    "E1": {
+     "signs": [
+      1,
+      1,
+      1
+     ],
+     "consistent": true,
+     "direction": "up"
+    },
+    "E2": {
+     "signs": [
+      1,
+      1,
+      1
+     ],
+     "consistent": true,
+     "direction": "up"
+    },
+    "E3": {
+     "signs": [
+      1,
+      1,
+      1
+     ],
+     "consistent": true,
+     "direction": "up"
+    }
+   },
+   "aggregates": {
+    "E1": {
+     "laspeyres_rel": 9.805308,
+     "paasche_rel": 5.814431,
+     "pooled_rel": 6.001869,
+     "width_pp": -399.0877
+    },
+    "E2": {
+     "laspeyres_rel": 4.237795,
+     "paasche_rel": 2.927238,
+     "pooled_rel": 2.935414,
+     "width_pp": -131.0557
+    },
+    "E3": {
+     "laspeyres_rel": 4.380673,
+     "paasche_rel": 2.537732,
+     "pooled_rel": 2.693864,
+     "width_pp": -184.2941
+    }
+   },
+   "pooled_edges": {
+    "early": 151,
+    "modern": 3436
+   },
+   "tier": "e1_tier",
+   "loo_e1": {},
+   "bootstrap_pooled_e1": {
+    "q025": 4.220027,
+    "q50": 5.996636,
+    "q975": 8.716987,
+    "pos_share": 1.0,
+    "n_valid": 2000
+   }
+  }
+ },
+ "pair_gaps_pp": {
+  "physics<->materials": {
+   "E1.laspeyres_rel": -110.5336,
+   "E1.paasche_rel": -121.2676,
+   "E1.pooled_rel": -90.7512,
+   "E2.laspeyres_rel": -65.1076,
+   "E2.paasche_rel": -72.6602,
+   "E2.pooled_rel": -52.9854,
+   "E3.laspeyres_rel": -54.9802,
+   "E3.paasche_rel": -63.1473,
+   "E3.pooled_rel": -46.1092
+  },
+  "chemistry<->chemical_engineering": {
+   "E1.laspeyres_rel": 73.8903,
+   "E1.paasche_rel": 85.4988,
+   "E1.pooled_rel": 68.1638,
+   "E2.laspeyres_rel": 12.4377,
+   "E2.paasche_rel": 21.5793,
+   "E2.pooled_rel": 8.2492,
+   "E3.laspeyres_rel": 54.3225,
+   "E3.paasche_rel": 66.4488,
+   "E3.pooled_rel": 28.7213
+  },
+  "biology<->medicine": {
+   "E1.laspeyres_rel": -142.3567,
+   "E1.paasche_rel": -134.4437,
+   "E1.pooled_rel": -138.0134,
+   "E2.laspeyres_rel": -48.531,
+   "E2.paasche_rel": -42.9113,
+   "E2.pooled_rel": -50.5845,
+   "E3.laspeyres_rel": -30.4794,
+   "E3.paasche_rel": -26.8599,
+   "E3.pooled_rel": -68.1765
+  },
+  "computer_science<->electrical_engineering": {
+   "E1.laspeyres_rel": 169.4308,
+   "E1.paasche_rel": 157.8473,
+   "E1.pooled_rel": 116.6898,
+   "E2.laspeyres_rel": 111.7139,
+   "E2.paasche_rel": 107.5193,
+   "E2.pooled_rel": 76.6411,
+   "E3.laspeyres_rel": 82.469,
+   "E3.paasche_rel": 82.4802,
+   "E3.pooled_rel": 95.7705
+  },
+  "neuroscience<->psychology": {
+   "E1.laspeyres_rel": -36.2872,
+   "E1.paasche_rel": -28.1873,
+   "E1.pooled_rel": -15.0229,
+   "E2.laspeyres_rel": -33.8642,
+   "E2.paasche_rel": -28.5833,
+   "E2.pooled_rel": -19.046,
+   "E3.laspeyres_rel": -12.8315,
+   "E3.paasche_rel": -7.2119,
+   "E3.pooled_rel": -10.0321
+  },
+  "economics<->business": {
+   "E1.laspeyres_rel": -74.0137,
+   "E1.paasche_rel": -23.5175,
+   "E1.pooled_rel": -22.2126,
+   "E2.laspeyres_rel": -89.1531,
+   "E2.paasche_rel": -46.2151,
+   "E2.pooled_rel": -53.1864,
+   "E3.laspeyres_rel": -27.6461,
+   "E3.paasche_rel": 9.4767,
+   "E3.pooled_rel": 22.3862
+  },
+  "sociology<->political_science": {
+   "E1.laspeyres_rel": -23.9676,
+   "E1.paasche_rel": -18.1296,
+   "E1.pooled_rel": -9.7047,
+   "E2.laspeyres_rel": 0.1687,
+   "E2.paasche_rel": 1.5217,
+   "E2.pooled_rel": 10.6845,
+   "E3.laspeyres_rel": 6.114,
+   "E3.paasche_rel": 13.8044,
+   "E3.pooled_rel": -14.5089
+  },
+  "statistics<->computer_science": {
+   "E1.laspeyres_rel": -145.3788,
+   "E1.paasche_rel": -148.0074,
+   "E1.pooled_rel": -126.9313,
+   "E2.laspeyres_rel": -145.8004,
+   "E2.paasche_rel": -151.4397,
+   "E2.pooled_rel": -131.0443,
+   "E3.laspeyres_rel": -54.3475,
+   "E3.paasche_rel": -66.0132,
+   "E3.pooled_rel": -115.3727
+  }
+ },
+ "pair_gap_bootstrap_e1": {
+  "physics<->materials": {
+   "q025": -97.7754,
+   "q50": -90.991,
+   "q975": -83.6564,
+   "pos_share": 0.0,
+   "n_valid": 2000
+  },
+  "chemistry<->chemical_engineering": {
+   "q025": 40.2066,
+   "q50": 68.6466,
+   "q975": 94.0441,
+   "pos_share": 1.0,
+   "n_valid": 2000
+  },
+  "biology<->medicine": {
+   "q025": -186.0575,
+   "q50": -135.2945,
+   "q975": -88.4281,
+   "pos_share": 0.0,
+   "n_valid": 2000
+  },
+  "computer_science<->electrical_engineering": {
+   "q025": 66.4466,
+   "q50": 116.2141,
+   "q975": 168.983,
+   "pos_share": 1.0,
+   "n_valid": 2000
+  },
+  "neuroscience<->psychology": {
+   "q025": -41.323,
+   "q50": -15.0475,
+   "q975": 11.3471,
+   "pos_share": 0.122,
+   "n_valid": 2000
+  },
+  "economics<->business": {
+   "q025": -82.8357,
+   "q50": -21.985,
+   "q975": 25.9928,
+   "pos_share": 0.1885,
+   "n_valid": 2000
+  },
+  "sociology<->political_science": {
+   "q025": -51.7296,
+   "q50": -9.6925,
+   "q975": 22.7947,
+   "pos_share": 0.294,
+   "n_valid": 2000
+  },
+  "statistics<->computer_science": {
+   "q025": -226.7264,
+   "q50": -127.6891,
+   "q975": -59.1701,
+   "pos_share": 0.0,
+   "n_valid": 2000
+  }
+ }
+}

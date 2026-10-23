@@ -34,6 +34,8 @@ DOC_IDS = os.path.join(ROOT, "paper", "build", "doc_ids.md")
 OUT_JSON = os.path.join(ROOT, "research", "nature", "out")
 PLAN_OUTLINE = os.path.join(ROOT, "paper", "plan", "01_narrative_and_outline.md")
 PAPER_DRAFT = os.path.join(ROOT, "paper", "draft")
+PAPER_SI = os.path.join(ROOT, "paper", "si")
+PAPER_MANUSCRIPT = os.path.join(ROOT, "paper", "manuscript")
 REPORT_OUT = os.path.join(ROOT, "paper", "build")
 
 # 旧默认扫描目标（研究草稿）+ 新增（paper/ 工作稿）
@@ -303,16 +305,25 @@ def step3_q_lookup(numbers_md, out):
             bad += 1
     out.append(f"Q lookup: {len(q_rows)} 行解析, {hard_checked} 条硬核对, {bad} 问题")
 
-    if os.path.exists(PLAN_OUTLINE):
-        body = open(PLAN_OUTLINE, encoding="utf-8").read()
-        used = set(re.findall(r"\\qid\{([^}]+)\}", body))
-        declared = {q for q, _ in q_rows}
-        missing = sorted(used - declared)
-        if missing:
-            out.append(f"[Q-UNDECLARED] 正文引用了未分配的 Q 编号: {', '.join(missing)}")
-            bad += len(missing)
-        out.append(f"Q 正文引用: {len(used)} 个" + ("，均已分配" if not missing
-                                                else f"，未分配 {len(missing)} 个"))
+    # 扫描当前新稿骨架（draft + SI + manuscript 英文成稿）以及计划文件；支持 \qid{Q7,Q8,Q9} 组合写法。
+    qid_targets = [PLAN_OUTLINE]
+    qid_targets += sorted(glob.glob(os.path.join(PAPER_DRAFT, "*.md")))
+    qid_targets += sorted(glob.glob(os.path.join(PAPER_SI, "*.md")))
+    qid_targets += sorted(glob.glob(os.path.join(PAPER_MANUSCRIPT, "*.md")))
+    used = set()
+    for target in qid_targets:
+        if not os.path.exists(target):
+            continue
+        body = open(target, encoding="utf-8").read()
+        for group in re.findall(r"\\qid\{([^}]+)\}", body):
+            used.update(x.strip() for x in group.split(",") if re.fullmatch(r"Q\d+[a-z]?", x.strip()))
+    declared = {q for q, _ in q_rows}
+    missing = sorted(used - declared)
+    if missing:
+        out.append(f"[Q-UNDECLARED] 稿件引用了未分配的 Q 编号: {', '.join(missing)}")
+        bad += len(missing)
+    out.append(f"Q 稿件引用: {len(used)} 个" + ("，均已分配" if not missing
+                                            else f"，未分配 {len(missing)} 个"))
     return bad
 
 
@@ -323,6 +334,13 @@ def step4_matrix_rowcount(out):
     此处以机器校验固定口径，防止后续编辑悄悄改行数。
     """
     plan = os.path.join(ROOT, "research", "nature", "PLAN.md")
+    if not os.path.exists(plan):
+        plan = os.path.join(ROOT, "archive", "2026-10_nc_reboot", "nature_docs", "PLAN.md")
+    if not os.path.exists(plan):
+        # 2026-10-22 超瘦身：旧 NHB 归档已按用户批准删除；稳健性矩阵已在 2026-10-02 固定口径，
+        # 历史 PLAN.md 不再保留时跳过行数校验（不改变其余三段核验）。
+        out.append("[MATRIX] 历史 PLAN.md 已随瘦身归档删除，跳过行数校验")
+        return 0
     expected = 17
     lines = open(plan, encoding="utf-8").read().split("\n")
     start = None
@@ -348,9 +366,11 @@ def step4_matrix_rowcount(out):
 
 def main():
     targets = sys.argv[1:] or DEFAULT_DRAFTS
-    # 默认加入 paper/draft 下全部 md（英文稿扩展后）
+    # 默认加入 paper/draft、paper/si 与 paper/manuscript 下全部工作稿
     if len(sys.argv) <= 1:
         targets += sorted(glob.glob(os.path.join(PAPER_DRAFT, "*.md")))
+        targets += sorted(glob.glob(os.path.join(PAPER_SI, "*.md")))
+        targets += sorted(glob.glob(os.path.join(PAPER_MANUSCRIPT, "*.md")))
     numbers_md = open(NUMBERS, encoding="utf-8").read()
     out = []
 

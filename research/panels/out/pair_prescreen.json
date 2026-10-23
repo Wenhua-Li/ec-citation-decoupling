@@ -1,0 +1,537 @@
+{
+ "design": {
+  "sample": "first 150 articles x first 2 sources, 2021-2023 window",
+  "thresholds": "E2_pool < 0.01 or edges/year/source < 2.5 -> REFUSE",
+  "note": "go/no-go 估计，不进正文数字；v2 修订三处见脚本 docstring"
+ },
+ "directions": {
+  "physics->materials": {
+   "probes": [
+    {
+     "source": "S24807848",
+     "n_articles": 150,
+     "E1_est": 0.3467,
+     "E2_est": 0.14,
+     "edges_per_year": 17.3
+    },
+    {
+     "source": "S4210237713",
+     "n_articles": 150,
+     "E1_est": 1.1333,
+     "E2_est": 0.3933,
+     "edges_per_year": 56.7
+    }
+   ],
+   "E1_pool": 0.74,
+   "E2_pool": 0.2666,
+   "edges_per_year_per_source": 37.0,
+   "verdict": "PASS"
+  },
+  "materials->physics": {
+   "probes": [
+    {
+     "source": "S99352657",
+     "n_articles": 150,
+     "E1_est": 1.64,
+     "E2_est": 0.32,
+     "edges_per_year": 82.0
+    },
+    {
+     "source": "S64016596",
+     "n_articles": 150,
+     "E1_est": 1.4533,
+     "E2_est": 0.4933,
+     "edges_per_year": 72.7
+    }
+   ],
+   "E1_pool": 1.5467,
+   "E2_pool": 0.4067,
+   "edges_per_year_per_source": 77.3,
+   "verdict": "PASS"
+  },
+  "chemistry->chemical_engineering": {
+   "probes": [
+    {
+     "source": "S111155417",
+     "n_articles": 150,
+     "E1_est": 0.14,
+     "E2_est": 0.0933,
+     "edges_per_year": 7.0
+    },
+    {
+     "source": "S67393510",
+     "n_articles": 150,
+     "E1_est": 0.08,
+     "E2_est": 0.06,
+     "edges_per_year": 4.0
+    }
+   ],
+   "E1_pool": 0.11,
+   "E2_pool": 0.0766,
+   "edges_per_year_per_source": 5.5,
+   "verdict": "PASS"
+  },
+  "chemical_engineering->chemistry": {
+   "probes": [
+    {
+     "source": "S147177414",
+     "n_articles": 150,
+     "E1_est": 2.44,
+     "E2_est": 0.5467,
+     "edges_per_year": 122.0
+    },
+    {
+     "source": "S33892871",
+     "n_articles": 150,
+     "E1_est": 1.5933,
+     "E2_est": 0.3867,
+     "edges_per_year": 79.7
+    }
+   ],
+   "E1_pool": 2.0166,
+   "E2_pool": 0.4667,
+   "edges_per_year_per_source": 100.8,
+   "verdict": "PASS"
+  },
+  "biology->medicine": {
+   "probes": [
+    {
+     "source": "S110447773",
+     "n_articles": 150,
+     "E1_est": 3.2733,
+     "E2_est": 0.6133,
+     "edges_per_year": 163.7
+    },
+    {
+     "source": "S154343897",
+     "n_articles": 150,
+     "E1_est": 1.2333,
+     "E2_est": 0.34,
+     "edges_per_year": 61.7
+    }
+   ],
+   "E1_pool": 2.2533,
+   "E2_pool": 0.4767,
+   "edges_per_year_per_source": 112.7,
+   "verdict": "PASS"
+  },
+  "medicine->biology": {
+   "probes": [
+    {
+     "source": "S49861241",
+     "n_articles": 150,
+     "E1_est": 0.2867,
+     "E2_est": 0.1467,
+     "edges_per_year": 14.3
+    },
+    {
+     "source": "S172573765",
+     "n_articles": 150,
+     "E1_est": 0.0667,
+     "E2_est": 0.0467,
+     "edges_per_year": 3.3
+    }
+   ],
+   "E1_pool": 0.1767,
+   "E2_pool": 0.0967,
+   "edges_per_year_per_source": 8.8,
+   "verdict": "PASS"
+  },
+  "computer_science->electrical_engineering": {
+   "probes": [
+    {
+     "source": "S118992489",
+     "n_articles": 133,
+     "E1_est": 0.5414,
+     "E2_est": 0.1654,
+     "edges_per_year": 24.0
+    },
+    {
+     "source": "S199944782",
+     "n_articles": 150,
+     "E1_est": 0.3933,
+     "E2_est": 0.2667,
+     "edges_per_year": 19.7
+    }
+   ],
+   "E1_pool": 0.4629,
+   "E2_pool": 0.2191,
+   "edges_per_year_per_source": 21.9,
+   "verdict": "PASS"
+  },
+  "electrical_engineering->computer_science": {
+   "probes": [
+    {
+     "source": "S68686220",
+     "n_articles": 150,
+     "E1_est": 1.64,
+     "E2_est": 0.3667,
+     "edges_per_year": 82.0
+    },
+    {
+     "source": "S4502562",
+     "n_articles": 150,
+     "E1_est": 0.36,
+     "E2_est": 0.2,
+     "edges_per_year": 18.0
+    }
+   ],
+   "E1_pool": 1.0,
+   "E2_pool": 0.2833,
+   "edges_per_year_per_source": 50.0,
+   "verdict": "PASS"
+  },
+  "neuroscience->psychology": {
+   "probes": [
+    {
+     "source": "S45757444",
+     "n_articles": 150,
+     "E1_est": 0.28,
+     "E2_est": 0.1467,
+     "edges_per_year": 14.0
+    },
+    {
+     "source": "S2298632",
+     "n_articles": 150,
+     "E1_est": 0.2533,
+     "E2_est": 0.12,
+     "edges_per_year": 12.7
+    }
+   ],
+   "E1_pool": 0.2666,
+   "E2_pool": 0.1333,
+   "edges_per_year_per_source": 13.3,
+   "verdict": "PASS"
+  },
+  "psychology->neuroscience": {
+   "probes": [
+    {
+     "source": "S58854535",
+     "n_articles": 150,
+     "E1_est": 1.1,
+     "E2_est": 0.34,
+     "edges_per_year": 55.0
+    },
+    {
+     "source": "S62013203",
+     "n_articles": 150,
+     "E1_est": 0.9933,
+     "E2_est": 0.2733,
+     "edges_per_year": 49.7
+    }
+   ],
+   "E1_pool": 1.0467,
+   "E2_pool": 0.3067,
+   "edges_per_year_per_source": 52.4,
+   "verdict": "PASS"
+  },
+  "economics->business": {
+   "probes": [
+    {
+     "source": "S23254222",
+     "n_articles": 150,
+     "E1_est": 0.3067,
+     "E2_est": 0.1867,
+     "edges_per_year": 15.3
+    },
+    {
+     "source": "S203860005",
+     "n_articles": 137,
+     "E1_est": 0.3723,
+     "E2_est": 0.2044,
+     "edges_per_year": 17.0
+    }
+   ],
+   "E1_pool": 0.338,
+   "E2_pool": 0.1951,
+   "edges_per_year_per_source": 16.1,
+   "verdict": "PASS"
+  },
+  "business->economics": {
+   "probes": [
+    {
+     "source": "S117778295",
+     "n_articles": 150,
+     "E1_est": 0.8667,
+     "E2_est": 0.4133,
+     "edges_per_year": 43.3
+    },
+    {
+     "source": "S143668711",
+     "n_articles": 128,
+     "E1_est": 0.7031,
+     "E2_est": 0.2734,
+     "edges_per_year": 30.0
+    }
+   ],
+   "E1_pool": 0.7914,
+   "E2_pool": 0.3489,
+   "edges_per_year_per_source": 36.6,
+   "verdict": "PASS"
+  },
+  "sociology->political_science": {
+   "probes": [
+    {
+     "source": "S157620343",
+     "n_articles": 117,
+     "E1_est": 0.8632,
+     "E2_est": 0.2735,
+     "edges_per_year": 33.7
+    },
+    {
+     "source": "S122471516",
+     "n_articles": 150,
+     "E1_est": 0.6467,
+     "E2_est": 0.2867,
+     "edges_per_year": 32.3
+    }
+   ],
+   "E1_pool": 0.7416,
+   "E2_pool": 0.2809,
+   "edges_per_year_per_source": 33.0,
+   "verdict": "PASS"
+  },
+  "political_science->sociology": {
+   "probes": [
+    {
+     "source": "S176007004",
+     "n_articles": 150,
+     "E1_est": 0.74,
+     "E2_est": 0.3867,
+     "edges_per_year": 37.0
+    },
+    {
+     "source": "S90314269",
+     "n_articles": 150,
+     "E1_est": 0.4133,
+     "E2_est": 0.24,
+     "edges_per_year": 20.7
+    }
+   ],
+   "E1_pool": 0.5766,
+   "E2_pool": 0.3133,
+   "edges_per_year_per_source": 28.9,
+   "verdict": "PASS"
+  },
+  "ecology->earth_science": {
+   "probes": [
+    {
+     "source": "S80967739",
+     "n_articles": 150,
+     "E1_est": 0.1,
+     "E2_est": 0.08,
+     "edges_per_year": 5.0
+    },
+    {
+     "source": "S35917800",
+     "n_articles": 150,
+     "E1_est": 0.14,
+     "E2_est": 0.0933,
+     "edges_per_year": 7.0
+    }
+   ],
+   "E1_pool": 0.12,
+   "E2_pool": 0.0866,
+   "edges_per_year_per_source": 6.0,
+   "verdict": "PASS"
+  },
+  "earth_science->ecology": {
+   "probes": [
+    {
+     "source": "S119230507",
+     "n_articles": 150,
+     "E1_est": 0.0133,
+     "E2_est": 0.0133,
+     "edges_per_year": 0.7
+    },
+    {
+     "source": "S56162041",
+     "n_articles": 150,
+     "E1_est": 0.0,
+     "E2_est": 0.0,
+     "edges_per_year": 0.0
+    }
+   ],
+   "E1_pool": 0.0066,
+   "E2_pool": 0.0066,
+   "edges_per_year_per_source": 0.3,
+   "verdict": "REFUSE"
+  },
+  "statistics->computer_science": {
+   "probes": [
+    {
+     "source": "S119757635",
+     "n_articles": 150,
+     "E1_est": 0.2333,
+     "E2_est": 0.1667,
+     "edges_per_year": 11.7
+    },
+    {
+     "source": "S4394736638",
+     "n_articles": 150,
+     "E1_est": 0.12,
+     "E2_est": 0.08,
+     "edges_per_year": 6.0
+    }
+   ],
+   "E1_pool": 0.1767,
+   "E2_pool": 0.1233,
+   "edges_per_year_per_source": 8.8,
+   "verdict": "PASS"
+  },
+  "computer_science->statistics": {
+   "probes": [
+    {
+     "source": "S118992489",
+     "n_articles": 133,
+     "E1_est": 0.1504,
+     "E2_est": 0.1053,
+     "edges_per_year": 6.7
+    },
+    {
+     "source": "S199944782",
+     "n_articles": 150,
+     "E1_est": 0.1267,
+     "E2_est": 0.0667,
+     "edges_per_year": 6.3
+    }
+   ],
+   "E1_pool": 0.1378,
+   "E2_pool": 0.0848,
+   "edges_per_year_per_source": 6.5,
+   "verdict": "PASS"
+  },
+  "biomedical_engineering->medicine": {
+   "probes": [
+    {
+     "source": "S163807576",
+     "n_articles": 150,
+     "E1_est": 0.58,
+     "E2_est": 0.34,
+     "edges_per_year": 29.0
+    },
+    {
+     "source": "S5240358",
+     "n_articles": 150,
+     "E1_est": 0.3133,
+     "E2_est": 0.2133,
+     "edges_per_year": 15.7
+    }
+   ],
+   "E1_pool": 0.4466,
+   "E2_pool": 0.2767,
+   "edges_per_year_per_source": 22.4,
+   "verdict": "PASS"
+  },
+  "medicine->biomedical_engineering": {
+   "probes": [
+    {
+     "source": "S49861241",
+     "n_articles": 150,
+     "E1_est": 0.0067,
+     "E2_est": 0.0067,
+     "edges_per_year": 0.3
+    },
+    {
+     "source": "S172573765",
+     "n_articles": 150,
+     "E1_est": 0.0,
+     "E2_est": 0.0,
+     "edges_per_year": 0.0
+    }
+   ],
+   "E1_pool": 0.0034,
+   "E2_pool": 0.0034,
+   "edges_per_year_per_source": 0.1,
+   "verdict": "REFUSE"
+  },
+  "mathematics->physics": {
+   "probes": [
+    {
+     "source": "S45918994",
+     "n_articles": 98,
+     "E1_est": 0.0714,
+     "E2_est": 0.0306,
+     "edges_per_year": 2.3
+    },
+    {
+     "source": "S98347115",
+     "n_articles": 150,
+     "E1_est": 0.3067,
+     "E2_est": 0.0867,
+     "edges_per_year": 15.3
+    }
+   ],
+   "E1_pool": 0.2137,
+   "E2_pool": 0.0645,
+   "edges_per_year_per_source": 8.8,
+   "verdict": "PASS"
+  },
+  "physics->mathematics": {
+   "probes": [
+    {
+     "source": "S24807848",
+     "n_articles": 150,
+     "E1_est": 0.02,
+     "E2_est": 0.02,
+     "edges_per_year": 1.0
+    },
+    {
+     "source": "S4210237713",
+     "n_articles": 150,
+     "E1_est": 0.0667,
+     "E2_est": 0.04,
+     "edges_per_year": 3.3
+    }
+   ],
+   "E1_pool": 0.0433,
+   "E2_pool": 0.03,
+   "edges_per_year_per_source": 2.1,
+   "verdict": "REFUSE"
+  },
+  "mechanical_engineering->materials": {
+   "probes": [
+    {
+     "source": "S128368299",
+     "n_articles": 150,
+     "E1_est": 0.2467,
+     "E2_est": 0.0733,
+     "edges_per_year": 12.3
+    },
+    {
+     "source": "S72716621",
+     "n_articles": 150,
+     "E1_est": 1.4333,
+     "E2_est": 0.4067,
+     "edges_per_year": 71.7
+    }
+   ],
+   "E1_pool": 0.84,
+   "E2_pool": 0.24,
+   "edges_per_year_per_source": 42.0,
+   "verdict": "PASS"
+  },
+  "materials->mechanical_engineering": {
+   "probes": [
+    {
+     "source": "S99352657",
+     "n_articles": 150,
+     "E1_est": 0.02,
+     "E2_est": 0.02,
+     "edges_per_year": 1.0
+    },
+    {
+     "source": "S64016596",
+     "n_articles": 150,
+     "E1_est": 0.0467,
+     "E2_est": 0.04,
+     "edges_per_year": 2.3
+    }
+   ],
+   "E1_pool": 0.0333,
+   "E2_pool": 0.03,
+   "edges_per_year_per_source": 1.6,
+   "verdict": "REFUSE"
+  }
+ }
+}

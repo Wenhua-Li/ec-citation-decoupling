@@ -1,0 +1,55 @@
+{
+  "scope": "seven-source common support (merged canonical benchmark set minus Computers and Industrial Engineering)",
+  "definition": "zero-denominator paper: COUNT(DISTINCT cited_doi)=0 over paper_refs_out rows with cited_doi IS NOT NULL (mirrors stable8_merged.py tot_refs; papers without any refs_out row count as zero)",
+  "empty_string_cited_doi_rows": 0,
+  "years": {
+    "2019": {
+      "forward_non_ec": {
+        "n_papers": 2786,
+        "n_zero_denominator": 4,
+        "share": 0.0014
+      },
+      "reverse_ec": {
+        "n_papers": 719,
+        "n_zero_denominator": 0,
+        "share": 0.0
+      }
+    },
+    "2021": {
+      "forward_non_ec": {
+        "n_papers": 4426,
+        "n_zero_denominator": 5,
+        "share": 0.0011
+      },
+      "reverse_ec": {
+        "n_papers": 1038,
+        "n_zero_denominator": 1,
+        "share": 0.001
+      }
+    },
+    "2024": {
+      "forward_non_ec": {
+        "n_papers": 8537,
+        "n_zero_denominator": 14,
+        "share": 0.0016
+      },
+      "reverse_ec": {
+        "n_papers": 1209,
+        "n_zero_denominator": 0,
+        "share": 0.0
+      }
+    },
+    "2025": {
+      "forward_non_ec": {
+        "n_papers": 8771,
+        "n_zero_denominator": 7,
+        "share": 0.0008
+      },
+      "reverse_ec": {
+        "n_papers": 947,
+        "n_zero_denominator": 1,
+        "share": 0.0011
+      }
+    }
+  }
+}

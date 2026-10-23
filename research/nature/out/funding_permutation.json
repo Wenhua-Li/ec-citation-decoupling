@@ -1,0 +1,17 @@
+{
+ "spec": {
+  "series": "grant-funded EC subset external-frontier theme share vs full-EC external theme share, 2016-2025 main segment; first differences (n=9 pairs); lag 0; series rebuilt from frozen funding_agenda.json and terms.json",
+  "null_model": "exact enumeration of all 9! = 362,880 reorderings of one differenced series (>= pre-specified 10,000 permutations; seed-free)",
+  "interpretation": "permutation tail for a Pearson correlation under exchangeability of the year pairs; no causal or lead-lag claim",
+  "note": "funded series enters at its registered 4-decimal precision; the observed r is recomputed from those registered values"
+ },
+ "n_pairs": 9,
+ "observed_r_lag0_first_difference": 0.9258,
+ "registered_r": 0.926,
+ "n_permutations": 362880,
+ "null_mean": 0.0,
+ "null_sd": 0.353553,
+ "null_max": 0.955125,
+ "exact_p_one_sided": 0.000309,
+ "exact_p_two_sided": 0.000309
+}

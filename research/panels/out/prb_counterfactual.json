@@ -1,0 +1,27 @@
+{
+ "direction": "physics->materials",
+ "split_source": "S4210237713",
+ "split_source_articles": {
+  "early": 0,
+  "modern": 14894
+ },
+ "split_source_edges": {
+  "early": 0,
+  "modern": 13841
+ },
+ "excluded": {
+  "early_edges": 19673,
+  "early_articles": 34744,
+  "modern_edges": 17979,
+  "modern_articles": 20332,
+  "pooled_e1_rel_change": 0.561689
+ },
+ "included": {
+  "early_edges": 19673,
+  "early_articles": 34744,
+  "modern_edges": 31820,
+  "modern_articles": 35226,
+  "pooled_e1_rel_change": 0.595314
+ },
+ "distortion_pp": 3.36
+}

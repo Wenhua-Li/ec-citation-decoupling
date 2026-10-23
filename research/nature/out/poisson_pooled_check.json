@@ -1,0 +1,48 @@
+{
+ "spec": {
+  "statistic_definition": "pooled statistic = SUM of edge counts over k=4 sources, baseline split equally (Pois(lambda0/4) each); by Poisson additive closure the sum is distributionally identical to a single Pois(lambda0) draw, so pooled and per-source columns at the same total coincide up to Monte Carlo error",
+  "sign_error_rule": "P(m1 <= m0) with ties conservatively counted as errors (frozen rule)",
+  "replicates": 20000,
+  "seed": "fresh fixed seed recorded in poisson_pooled_check.py (code-internal)",
+  "exact_method": "direct Poisson pmf summation (no simulation)"
+ },
+ "cells": [
+  {
+   "lambda0_total": 50,
+   "delta": 0.2,
+   "column": "pooled k=4, delta=+20%",
+   "exact_sign_error": 0.182303,
+   "mc_pooled_k4_rerun": 0.1868,
+   "mc_single_poisson_rerun": 0.1855,
+   "registered_mc_value": 0.1772,
+   "mc_standard_error": 0.00273,
+   "abs_diff_exact_vs_registered": 0.005103,
+   "within_mc_error": true
+  },
+  {
+   "lambda0_total": 100,
+   "delta": 0.2,
+   "column": "pooled k=4, delta=+20%",
+   "exact_sign_error": 0.094086,
+   "mc_pooled_k4_rerun": 0.08945,
+   "mc_single_poisson_rerun": 0.09675,
+   "registered_mc_value": 0.0949,
+   "mc_standard_error": 0.002064,
+   "abs_diff_exact_vs_registered": 0.000814,
+   "within_mc_error": true
+  },
+  {
+   "lambda0_total": 100,
+   "delta": 0.2,
+   "column": "per-source, delta=+20% (locked gate)",
+   "exact_sign_error": 0.094086,
+   "mc_pooled_k4_rerun": 0.0924,
+   "mc_single_poisson_rerun": 0.09425,
+   "registered_mc_value": 0.092,
+   "mc_standard_error": 0.002064,
+   "abs_diff_exact_vs_registered": 0.002086,
+   "within_mc_error": true
+  }
+ ],
+ "all_within_mc_error": true
+}

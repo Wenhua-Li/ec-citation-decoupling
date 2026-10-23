@@ -1,7 +1,0 @@
-﻿Item,Value,Definition,Provenance,Note
-Edge construction,DOI join of the reference lists against the corpus DOI table,Distinct directed edges,Analysis outputs,De-duplicated across sources
-Edge count,"922,842",Distinct directed edges,Analysis outputs,
-Derived edge table,Not used,The derived edge table shipped with the pipeline participates in no reading reported here,Methods,
-Right-censoring,"607,204 rows",Citing year beyond 2025,Analysis outputs,Removed in every analysis
-Cohort endpoint,2020,Last cohort observable with a 5-year window,General conventions,
-Venue aggregation,Corpus source field,"Venue tags are export-batch labels, not journals",General conventions,
